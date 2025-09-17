@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
+  }
+
+  html.dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  ::selection {
+    @apply bg-brand text-brand-foreground;
+  }
+}
+
+@layer components {
+  .container-xl {
+    @apply container mx-auto max-w-6xl px-6 sm:px-10;
+  }
+}
