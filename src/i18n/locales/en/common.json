@@ -1,189 +1,179 @@
-{
-  "nav": {
-    "home": "Home",
-    "projects": "Projects",
-    "about": "About",
-    "contact": "Contact",
-    "themeToggle": {
-      "light": "Light mode",
-      "dark": "Dark mode"
-    },
-    "languageToggle": {
-      "label": "Language",
-      "en": "EN",
-      "cz": "CZ"
-    }
-  },
-  "hero": {
-    "eyebrow": "Jakub Dolének - Network Engineer",
-    "headline": "Building reliable infrastructure that scales gracefully.",
-    "description": "I design, automate, and monitor networks so teams can ship fast without sacrificing reliability. From data-center rollouts to edge connectivity, I focus on measurable impact and smooth developer experiences.",
-    "primaryCta": "View projects",
-    "secondaryCta": "About me",
-    "highlights": [
-      "5+ years designing and operating hybrid networks",
-      "Automation-first workflows with TypeScript & Python",
-      "Championing observability and incident readiness"
-    ],
-    "snapshot": {
-      "title": "Jakub in short",
-      "contactLabel": "Contact",
-      "contactValue": "jakub.dolenek@seznam.cz",
-      "focusLabel": "Focus",
-      "focusValue": "Network automation & reliability",
-      "locationLabel": "Home base",
-      "locationValue": "Brno, Czech Republic"
-    }
-  },
-  "projects": {
-    "heading": "Selected projects",
-    "subheading": "Automation, observability, and experience design for resilient systems.",
-    "items": {
-      "network-automation": {
-        "title": "Network automation toolkit",
-        "summary": "Composable CLI and workflow library that orchestrates configuration drift checks, intent validation, and zero-downtime changes across Cisco Nexus and Juniper fabrics.",
-        "impact": "Reduced manual change windows by 45% and prevented misconfigurations with pre-flight guardrails."
-      },
-      "incident-simulator": {
-        "title": "Incident readiness simulator",
-        "summary": "Browser-based lab that spins up containerized network topologies, injects latency or packet loss, and guides responders through incident runbooks.",
-        "impact": "Improved on-call response time by 30% and created reusable training scenarios for new hires."
-      },
-      "portfolio": {
-        "title": "Personal portfolio",
-        "summary": "The site you are browsing�crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
-        "impact": "Highlights core projects, skills, and a bit of personality while keeping performance and accessibility in check."
-      }
-    },
-    "techLabel": "Stack",
-    "ctaLabel": "View case study",
-    "repoLabel": "Source"
-  },
-  "skills": {
-    "heading": "Expertise snapshot",
-    "subheading": "From core routing to front-end polish�here is what I work with daily.",
-    "categories": {
-      "networking": {
-        "title": "Networking & infrastructure",
-        "description": "Routing, switching, WAN, SD-WAN, firewalls, and hybrid connectivity.",
-        "items": [
-          "Cisco IOS/NX-OS",
-          "Juniper",
-          "MikroTik",
-          "VyOS",
-          "Fortinet"
-        ]
-      },
-      "automation": {
-        "title": "Automation & reliability",
-        "description": "Repeatable deployments, testing pipelines, and observability.",
-        "items": [
-          "Ansible",
-          "Terraform",
-          "Python",
-          "TypeScript",
-          "GitHub Actions"
-        ]
-      },
-      "cloud": {
-        "title": "Cloud & platforms",
-        "description": "Modern infrastructure platforms for app and service delivery.",
-        "items": [
-          "AWS",
-          "Azure",
-          "Docker",
-          "Kubernetes",
-          "Proxmox"
-        ]
-      },
-      "frontend": {
-        "title": "UI & collaboration",
-        "description": "Helping teams understand complex systems with purposeful interfaces.",
-        "items": [
-          "React",
-          "Tailwind CSS",
-          "Framer Motion",
-          "Figma",
-          "Miro"
-        ]
-      }
-    }
-  },
-  "contact": {
-    "heading": "Let's build something resilient",
-    "description": "Whether you need help scaling a network, hardening reliability, or bringing ideas to life, I'd love to hear from you.",
-    "emailLabel": "Email",
-    "copy": "Copy email",
-    "copied": "Copied!",
-    "platforms": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
-    }
-  },
-  "about": {
-    "title": "About Jakub",
-    "intro": "My path into networking started with curiosity about how packets find their way across the world. Today, I help teams ship dependable services by pairing solid infrastructure with automation and observability.",
-    "snapshot": {
-      "location": "Based in Brno, Czech Republic",
-      "focus": "Focus: network design, automation, and site reliability",
-      "mindset": "Mindset: collaborative, measurement-driven, and calm under pressure"
-    },
-    "timelineHeading": "Experience & education",
-    "timeline": [
-      {
-        "id": "network-engineer",
-        "title": "Network engineer",
-        "period": "2023 � Present",
-        "location": "Enterprise service provider � Brno, CZ",
-        "description": "Lead technical ownership for multi-site WAN redesign, implemented IaC pipelines with Terraform, and automated configuration compliance.",
-        "tags": [
-          "Terraform",
-          "IaC",
-          "Monitoring"
-        ]
-      },
-      {
-        "id": "noc-analyst",
-        "title": "NOC / infrastructure analyst",
-        "period": "2020 � 2023",
-        "location": "Managed services � Remote",
-        "description": "Maintained 24/7 operations, built internal dashboards for incident visibility, and coordinated cross-team response routines.",
-        "tags": [
-          "On-call",
-          "Dashboards",
-          "Scripting"
-        ]
-      },
-      {
-        "id": "education",
-        "title": "Brno University of Technology",
-        "period": "2016 � 2020",
-        "location": "Faculty of Information Technology",
-        "description": "Bachelor studies focused on computer networks, distributed systems, and applied security.",
-        "tags": [
-          "Networking",
-          "Distributed systems"
-        ]
-      }
-    ],
-    "valuesHeading": "Working style",
-    "values": [
-      {
-        "title": "Reliability-first",
-        "description": "I design with rollback plans, metrics, and failure drills in mind so launches feel boring (in the best way)."
-      },
-      {
-        "title": "Empathy for operators",
-        "description": "Clear runbooks, observability, and human-friendly tooling help teams move faster and feel confident."
-      },
-      {
-        "title": "Continuous learning",
-        "description": "From labbing new routing protocols to experimenting with UI micro-interactions, I'm always exploring."
-      }
-    ],
-    "backCta": "Back to home"
-  },
-  "footer": {
-    "note": "� {{year}} Jakub Dolének. Built with care and plenty of coffee."
-  }
+﻿{
+    "nav":  {
+                "home":  "Home",
+                "projects":  "Projects",
+                "about":  "About",
+                "contact":  "Contact",
+                "themeToggle":  {
+                                    "light":  "Light mode",
+                                    "dark":  "Dark mode"
+                                },
+                "languageToggle":  {
+                                       "label":  "Language",
+                                       "en":  "EN",
+                                       "cz":  "CZ"
+                                   }
+            },
+    "hero":  {
+                 "intro":  "I\u0027m Jakub Dolének, and I can\u0027t resist automating the boring stuff.",
+                 "headline":  {
+                                  "lead":  "Designing human-centered",
+                                  "accent":  "automation",
+                                  "trail":  "that keeps teams in flow."
+                              },
+                 "subheadline":  "Full-stack engineer",
+                 "description":  "I love turning repeatable workflows into orchestrated systems so products ship faster without losing the personal touch.",
+                 "portraitCaption":  "Automation frees me to focus on the craft and the people behind every project."
+             },
+    "projects":  {
+                     "heading":  "Selected projects",
+                     "subheading":  "Automation, observability, and experience design for resilient systems.",
+                     "items":  {
+                                   "network-automation":  {
+                                                              "title":  "Network automation toolkit",
+                                                              "summary":  "Composable CLI and workflow library that orchestrates configuration drift checks, intent validation, and zero-downtime changes across Cisco Nexus and Juniper fabrics.",
+                                                              "impact":  "Reduced manual change windows by 45% and prevented misconfigurations with pre-flight guardrails."
+                                                          },
+                                   "incident-simulator":  {
+                                                              "title":  "Incident readiness simulator",
+                                                              "summary":  "Browser-based lab that spins up containerized network topologies, injects latency or packet loss, and guides responders through incident runbooks.",
+                                                              "impact":  "Improved on-call response time by 30% and created reusable training scenarios for new hires."
+                                                          },
+                                   "portfolio":  {
+                                                     "title":  "Personal portfolio",
+                                                     "summary":  "The site you are browsingďż˝crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
+                                                     "impact":  "Highlights core projects, skills, and a bit of personality while keeping performance and accessibility in check."
+                                                 }
+                               },
+                     "techLabel":  "Stack",
+                     "ctaLabel":  "View case study",
+                     "repoLabel":  "Source"
+                 },
+    "skills":  {
+                   "heading":  "Expertise snapshot",
+                   "subheading":  "From core routing to front-end polishďż˝here is what I work with daily.",
+                   "categories":  {
+                                      "networking":  {
+                                                         "title":  "Networking \u0026 infrastructure",
+                                                         "description":  "Routing, switching, WAN, SD-WAN, firewalls, and hybrid connectivity.",
+                                                         "items":  [
+                                                                       "Cisco IOS/NX-OS",
+                                                                       "Juniper",
+                                                                       "MikroTik",
+                                                                       "VyOS",
+                                                                       "Fortinet"
+                                                                   ]
+                                                     },
+                                      "automation":  {
+                                                         "title":  "Automation \u0026 reliability",
+                                                         "description":  "Repeatable deployments, testing pipelines, and observability.",
+                                                         "items":  [
+                                                                       "Ansible",
+                                                                       "Terraform",
+                                                                       "Python",
+                                                                       "TypeScript",
+                                                                       "GitHub Actions"
+                                                                   ]
+                                                     },
+                                      "cloud":  {
+                                                    "title":  "Cloud \u0026 platforms",
+                                                    "description":  "Modern infrastructure platforms for app and service delivery.",
+                                                    "items":  [
+                                                                  "AWS",
+                                                                  "Azure",
+                                                                  "Docker",
+                                                                  "Kubernetes",
+                                                                  "Proxmox"
+                                                              ]
+                                                },
+                                      "frontend":  {
+                                                       "title":  "UI \u0026 collaboration",
+                                                       "description":  "Helping teams understand complex systems with purposeful interfaces.",
+                                                       "items":  [
+                                                                     "React",
+                                                                     "Tailwind CSS",
+                                                                     "Framer Motion",
+                                                                     "Figma",
+                                                                     "Miro"
+                                                                 ]
+                                                   }
+                                  }
+               },
+    "contact":  {
+                    "heading":  "Let\u0027s build something resilient",
+                    "description":  "Whether you need help scaling a network, hardening reliability, or bringing ideas to life, I\u0027d love to hear from you.",
+                    "emailLabel":  "Email",
+                    "copy":  "Copy email",
+                    "copied":  "Copied!",
+                    "platforms":  {
+                                      "github":  "GitHub",
+                                      "linkedin":  "LinkedIn"
+                                  }
+                },
+    "about":  {
+                  "title":  "About Jakub",
+                  "intro":  "My path into networking started with curiosity about how packets find their way across the world. Today, I help teams ship dependable services by pairing solid infrastructure with automation and observability.",
+                  "snapshot":  {
+                                   "location":  "Based in Brno, Czech Republic",
+                                   "focus":  "Focus: network design, automation, and site reliability",
+                                   "mindset":  "Mindset: collaborative, measurement-driven, and calm under pressure"
+                               },
+                  "timelineHeading":  "Experience \u0026 education",
+                  "timeline":  [
+                                   {
+                                       "id":  "network-engineer",
+                                       "title":  "Network engineer",
+                                       "period":  "2023 ďż˝ Present",
+                                       "location":  "Enterprise service provider ďż˝ Brno, CZ",
+                                       "description":  "Lead technical ownership for multi-site WAN redesign, implemented IaC pipelines with Terraform, and automated configuration compliance.",
+                                       "tags":  [
+                                                    "Terraform",
+                                                    "IaC",
+                                                    "Monitoring"
+                                                ]
+                                   },
+                                   {
+                                       "id":  "noc-analyst",
+                                       "title":  "NOC / infrastructure analyst",
+                                       "period":  "2020 ďż˝ 2023",
+                                       "location":  "Managed services ďż˝ Remote",
+                                       "description":  "Maintained 24/7 operations, built internal dashboards for incident visibility, and coordinated cross-team response routines.",
+                                       "tags":  [
+                                                    "On-call",
+                                                    "Dashboards",
+                                                    "Scripting"
+                                                ]
+                                   },
+                                   {
+                                       "id":  "education",
+                                       "title":  "Brno University of Technology",
+                                       "period":  "2016 ďż˝ 2020",
+                                       "location":  "Faculty of Information Technology",
+                                       "description":  "Bachelor studies focused on computer networks, distributed systems, and applied security.",
+                                       "tags":  [
+                                                    "Networking",
+                                                    "Distributed systems"
+                                                ]
+                                   }
+                               ],
+                  "valuesHeading":  "Working style",
+                  "values":  [
+                                 {
+                                     "title":  "Reliability-first",
+                                     "description":  "I design with rollback plans, metrics, and failure drills in mind so launches feel boring (in the best way)."
+                                 },
+                                 {
+                                     "title":  "Empathy for operators",
+                                     "description":  "Clear runbooks, observability, and human-friendly tooling help teams move faster and feel confident."
+                                 },
+                                 {
+                                     "title":  "Continuous learning",
+                                     "description":  "From labbing new routing protocols to experimenting with UI micro-interactions, I\u0027m always exploring."
+                                 }
+                             ],
+                  "backCta":  "Back to home"
+              },
+    "footer":  {
+                   "note":  "ďż˝ {{year}} Jakub DolĂ©nek. Built with care and plenty of coffee."
+               }
 }

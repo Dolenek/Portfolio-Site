@@ -1,189 +1,179 @@
-{
-  "nav": {
-    "home": "Dom�",
-    "projects": "Projekty",
-    "about": "O mn�",
-    "contact": "Kontakt",
-    "themeToggle": {
-      "light": "Sv�tl� re�im",
-      "dark": "Tmav� re�im"
-    },
-    "languageToggle": {
-      "label": "Jazyk",
-      "en": "EN",
-      "cz": "CZ"
-    }
-  },
-  "hero": {
-    "eyebrow": "Jakub Dol�nek � S�ov� in�en�r",
-    "headline": "Budov�n� spolehliv� infrastruktury, kter� se �k�luje s p�ehledem.",
-    "description": "Navrhuji, automatizuji a monitoruji s�t� tak, aby t�my mohly dod�vat rychle a bez kompromis� v oblasti spolehlivosti. Od datov�ch center po hrani�n� spojen� se soust�ed�m na m��iteln� v�sledky a hladk� chod slu�eb.",
-    "primaryCta": "Zobrazit projekty",
-    "secondaryCta": "V�ce o mn�",
-    "highlights": [
-      "5+ let n�vrhu a provozu hybridn�ch s�t�",
-      "Workflows postaven� na automatizaci v TypeScriptu a Pythonu",
-      "D�raz na observabilitu a p�ipravenost na incidenty"
-    ],
-    "snapshot": {
-      "title": "Jakub ve zkratce",
-      "contactLabel": "Kontakt",
-      "contactValue": "jakub.dolenek@seznam.cz",
-      "focusLabel": "Zaměření",
-      "focusValue": "Síťová automatizace a spolehlivost",
-      "locationLabel": "Zázemí",
-      "locationValue": "Brno, Česká republika"
-    }
-  },
-  "projects": {
-    "heading": "Vybran� projekty",
-    "subheading": "Automatizace, observabilita a u�ivatelsk� zku�enost pro odoln� syst�my.",
-    "items": {
-      "network-automation": {
-        "title": "Toolkit pro s�ovou automatizaci",
-        "summary": "Modul�rn� CLI a workflow knihovna, kter� spou�t� kontroly konfigurace, ov��uje z�m�r a zaji��uje bezv�padkov� zm�ny nap��� Cisco Nexus a Juniper prost�ed�mi.",
-        "impact": "Zkr�cen� manu�ln�ch servisn�ch oken o 45 % a prevence chyb d�ky p�edb�n�m kontrol�m."
-      },
-      "incident-simulator": {
-        "title": "Simul�tor incident�",
-        "summary": "Webov� laborato�, kter� p�iprav� kontejnerov� topologie, injektuje zpo�d�n� �i ztr�tu paket� a provede t�m krok za krokem provozn�m runbookem.",
-        "impact": "Zlep�en� reak�n� doby pohotovosti o 30 % a vytvo�en� opakovateln�ch sc�n��� pro nov� kolegy."
-      },
-      "portfolio": {
-        "title": "Osobn� portfolio",
-        "summary": "Web, na kter�m pr�v� jste � postaven� v Reactu a Tailwindu s jemn�mi animacemi, kter� p�edstavuj� mou pr�ci i zku�enosti.",
-        "impact": "Zd�raz�uje kl��ov� projekty, dovednosti a osobn� p��stup p�i zachov�n� v�konu a p��stupnosti."
-      }
-    },
-    "techLabel": "Technologie",
-    "ctaLabel": "Zobrazit detail",
-    "repoLabel": "Zdroj"
-  },
-  "skills": {
-    "heading": "P�ehled expert�zy",
-    "subheading": "Od s�ov�ch z�klad� po frontend � n�stroje, se kter�mi pracuji ka�d� den.",
-    "categories": {
-      "networking": {
-        "title": "S�t� a infrastruktura",
-        "description": "Routov�n�, switching, WAN, SD-WAN, firewally a hybridn� konektivita.",
-        "items": [
-          "Cisco IOS/NX-OS",
-          "Juniper",
-          "MikroTik",
-          "VyOS",
-          "Fortinet"
-        ]
-      },
-      "automation": {
-        "title": "Automatizace a spolehlivost",
-        "description": "Opakovateln� nasazov�n�, testovac� pipeline a observabilita.",
-        "items": [
-          "Ansible",
-          "Terraform",
-          "Python",
-          "TypeScript",
-          "GitHub Actions"
-        ]
-      },
-      "cloud": {
-        "title": "Cloud a platformy",
-        "description": "Modern� prost�ed� pro doru�ov�n� aplikac� a slu�eb.",
-        "items": [
-          "AWS",
-          "Azure",
-          "Docker",
-          "Kubernetes",
-          "Proxmox"
-        ]
-      },
-      "frontend": {
-        "title": "UI a spolupr�ce",
-        "description": "Pom�h�m t�m�m ch�pat komplexn� syst�my skrze promy�len� rozhran�.",
-        "items": [
-          "React",
-          "Tailwind CSS",
-          "Framer Motion",
-          "Figma",
-          "Miro"
-        ]
-      }
-    }
-  },
-  "contact": {
-    "heading": "Poj�me vybudovat odoln� �e�en�",
-    "description": "Pot�ebujete �k�lovat s�, zlep�it spolehlivost nebo prom�nit n�pad v realitu? Budu r�d, kdy� se ozvete.",
-    "emailLabel": "E-mail",
-    "copy": "Zkop�rovat",
-    "copied": "Zkop�rov�no!",
-    "platforms": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
-    }
-  },
-  "about": {
-    "title": "O Jakubovi",
-    "intro": "Ke sv�tu s�t� m� p�ivedla zv�davost, jak se data dostanou z bodu A do bodu B. Dnes pom�h�m t�m�m doru�ovat spolehliv� slu�by d�ky kombinaci kvalitn� infrastruktury, automatizace a observability.",
-    "snapshot": {
-      "location": "S�dl�m v Brn�, �esk� republika",
-      "focus": "Zam��en�: n�vrh s�t�, automatizace a spolehlivost slu�eb",
-      "mindset": "P��stup: spolupr�ce, m��en� v�sledk� a klid v kriz�ch"
-    },
-    "timelineHeading": "Zku�enosti a vzd�l�n�",
-    "timeline": [
-      {
-        "id": "network-engineer",
-        "title": "S�ov� in�en�r",
-        "period": "2023 � sou�asnost",
-        "location": "Poskytovatel slu�eb � Brno, �R",
-        "description": "Technick� veden� p�i redesignu WAN s�t�, automatizace compliance pomoc� Terraformu a zaveden� IaC pipeline.",
-        "tags": [
-          "Terraform",
-          "IaC",
-          "Monitoring"
-        ]
-      },
-      {
-        "id": "noc-analyst",
-        "title": "NOC / infrastruktura analytik",
-        "period": "2020 � 2023",
-        "location": "Managed services � Remote",
-        "description": "Zaji�t�n� 24/7 provozu, tvorba intern�ch dashboard� pro sledov�n� incident� a koordinace z�sah� nap��� t�my.",
-        "tags": [
-          "On-call",
-          "Dashboardy",
-          "Skriptov�n�"
-        ]
-      },
-      {
-        "id": "education",
-        "title": "Vysok� u�en� technick� v Brn�",
-        "period": "2016 � 2020",
-        "location": "Fakulta informa�n�ch technologi�",
-        "description": "Bakal��sk� studium se zam��en�m na po��ta�ov� s�t�, distribuovan� syst�my a aplikovanou bezpe�nost.",
-        "tags": [
-          "S�t�",
-          "Distribuovan� syst�my"
-        ]
-      }
-    ],
-    "valuesHeading": "Jak pracuji",
-    "values": [
-      {
-        "title": "Spolehlivost na prvn�m m�st�",
-        "description": "Nasazen� p�ipravuji s mo�nost� rollbacku, metrikami a n�cviky selh�n�, aby �lo v�e hladce."
-      },
-      {
-        "title": "Empatie k oper�tor�m",
-        "description": "Srozumiteln� runbooky, observabilita a n�stroje p��v�tiv� pro lidi pom�haj� t�mu pracovat rychleji i jist�ji."
-      },
-      {
-        "title": "Neust�l� u�en�",
-        "description": "Od laborov�n� s nov�mi protokoly po experimenty s UI animacemi � st�le hled�m nov� postupy."
-      }
-    ],
-    "backCta": "Zp�t na hlavn� str�nku"
-  },
-  "footer": {
-    "note": "� {{year}} Jakub Dol�nek. Vytvo�eno s p��� a ��lkem k�vy."
-  }
+﻿{
+    "nav":  {
+                "home":  "Domďż˝",
+                "projects":  "Projekty",
+                "about":  "O mnďż˝",
+                "contact":  "Kontakt",
+                "themeToggle":  {
+                                    "light":  "Svďż˝tlďż˝ reďż˝im",
+                                    "dark":  "Tmavďż˝ reďż˝im"
+                                },
+                "languageToggle":  {
+                                       "label":  "Jazyk",
+                                       "en":  "EN",
+                                       "cz":  "CZ"
+                                   }
+            },
+    "hero":  {
+                 "intro":  "Jsem Jakub Dolínek a automatizace mě prostě baví.",
+                 "headline":  {
+                                  "lead":  "Navrhuji na lidi zaměřenou",
+                                  "accent":  "automatizaci",
+                                  "trail":  "která drží týmy v tempu."
+                              },
+                 "subheadline":  "Full-stack vývojář zaměřený na automatizaci",
+                 "description":  "Rád proměňuji opakující se postupy na orkestrované systémy, díky nimž mohou týmy dodávat rychleji bez ztráty kvality.",
+                 "portraitCaption":  "Automatizace mi nechává prostor soustředit se na detail i lidi v projektu."
+             },
+    "projects":  {
+                     "heading":  "Vybranďż˝ projekty",
+                     "subheading":  "Automatizace, observabilita a uďż˝ivatelskďż˝ zkuďż˝enost pro odolnďż˝ systďż˝my.",
+                     "items":  {
+                                   "network-automation":  {
+                                                              "title":  "Toolkit pro sďż˝ovou automatizaci",
+                                                              "summary":  "Modulďż˝rnďż˝ CLI a workflow knihovna, kterďż˝ spouďż˝tďż˝ kontroly konfigurace, ovďż˝ďż˝uje zďż˝mďż˝r a zajiďż˝ďż˝uje bezvďż˝padkovďż˝ zmďż˝ny napďż˝ďż˝ďż˝ Cisco Nexus a Juniper prostďż˝edďż˝mi.",
+                                                              "impact":  "Zkrďż˝cenďż˝ manuďż˝lnďż˝ch servisnďż˝ch oken o 45 % a prevence chyb dďż˝ky pďż˝edbďż˝nďż˝m kontrolďż˝m."
+                                                          },
+                                   "incident-simulator":  {
+                                                              "title":  "Simulďż˝tor incidentďż˝",
+                                                              "summary":  "Webovďż˝ laboratoďż˝, kterďż˝ pďż˝ipravďż˝ kontejnerovďż˝ topologie, injektuje zpoďż˝dďż˝nďż˝ ďż˝i ztrďż˝tu paketďż˝ a provede tďż˝m krok za krokem provoznďż˝m runbookem.",
+                                                              "impact":  "Zlepďż˝enďż˝ reakďż˝nďż˝ doby pohotovosti o 30 % a vytvoďż˝enďż˝ opakovatelnďż˝ch scďż˝nďż˝ďż˝ďż˝ pro novďż˝ kolegy."
+                                                          },
+                                   "portfolio":  {
+                                                     "title":  "Osobnďż˝ portfolio",
+                                                     "summary":  "Web, na kterďż˝m prďż˝vďż˝ jste ďż˝ postavenďż˝ v Reactu a Tailwindu s jemnďż˝mi animacemi, kterďż˝ pďż˝edstavujďż˝ mou prďż˝ci i zkuďż˝enosti.",
+                                                     "impact":  "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
+                                                 }
+                               },
+                     "techLabel":  "Technologie",
+                     "ctaLabel":  "Zobrazit detail",
+                     "repoLabel":  "Zdroj"
+                 },
+    "skills":  {
+                   "heading":  "Pďż˝ehled expertďż˝zy",
+                   "subheading":  "Od sďż˝ovďż˝ch zďż˝kladďż˝ po frontend ďż˝ nďż˝stroje, se kterďż˝mi pracuji kaďż˝dďż˝ den.",
+                   "categories":  {
+                                      "networking":  {
+                                                         "title":  "Sďż˝tďż˝ a infrastruktura",
+                                                         "description":  "Routovďż˝nďż˝, switching, WAN, SD-WAN, firewally a hybridnďż˝ konektivita.",
+                                                         "items":  [
+                                                                       "Cisco IOS/NX-OS",
+                                                                       "Juniper",
+                                                                       "MikroTik",
+                                                                       "VyOS",
+                                                                       "Fortinet"
+                                                                   ]
+                                                     },
+                                      "automation":  {
+                                                         "title":  "Automatizace a spolehlivost",
+                                                         "description":  "Opakovatelnďż˝ nasazovďż˝nďż˝, testovacďż˝ pipeline a observabilita.",
+                                                         "items":  [
+                                                                       "Ansible",
+                                                                       "Terraform",
+                                                                       "Python",
+                                                                       "TypeScript",
+                                                                       "GitHub Actions"
+                                                                   ]
+                                                     },
+                                      "cloud":  {
+                                                    "title":  "Cloud a platformy",
+                                                    "description":  "Modernďż˝ prostďż˝edďż˝ pro doruďż˝ovďż˝nďż˝ aplikacďż˝ a sluďż˝eb.",
+                                                    "items":  [
+                                                                  "AWS",
+                                                                  "Azure",
+                                                                  "Docker",
+                                                                  "Kubernetes",
+                                                                  "Proxmox"
+                                                              ]
+                                                },
+                                      "frontend":  {
+                                                       "title":  "UI a spoluprďż˝ce",
+                                                       "description":  "Pomďż˝hďż˝m tďż˝mďż˝m chďż˝pat komplexnďż˝ systďż˝my skrze promyďż˝lenďż˝ rozhranďż˝.",
+                                                       "items":  [
+                                                                     "React",
+                                                                     "Tailwind CSS",
+                                                                     "Framer Motion",
+                                                                     "Figma",
+                                                                     "Miro"
+                                                                 ]
+                                                   }
+                                  }
+               },
+    "contact":  {
+                    "heading":  "Pojďż˝me vybudovat odolnďż˝ ďż˝eďż˝enďż˝",
+                    "description":  "Potďż˝ebujete ďż˝kďż˝lovat sďż˝, zlepďż˝it spolehlivost nebo promďż˝nit nďż˝pad v realitu? Budu rďż˝d, kdyďż˝ se ozvete.",
+                    "emailLabel":  "E-mail",
+                    "copy":  "Zkopďż˝rovat",
+                    "copied":  "Zkopďż˝rovďż˝no!",
+                    "platforms":  {
+                                      "github":  "GitHub",
+                                      "linkedin":  "LinkedIn"
+                                  }
+                },
+    "about":  {
+                  "title":  "O Jakubovi",
+                  "intro":  "Ke svďż˝tu sďż˝tďż˝ mďż˝ pďż˝ivedla zvďż˝davost, jak se data dostanou z bodu A do bodu B. Dnes pomďż˝hďż˝m tďż˝mďż˝m doruďż˝ovat spolehlivďż˝ sluďż˝by dďż˝ky kombinaci kvalitnďż˝ infrastruktury, automatizace a observability.",
+                  "snapshot":  {
+                                   "location":  "Sďż˝dlďż˝m v Brnďż˝, ďż˝eskďż˝ republika",
+                                   "focus":  "Zamďż˝ďż˝enďż˝: nďż˝vrh sďż˝tďż˝, automatizace a spolehlivost sluďż˝eb",
+                                   "mindset":  "Pďż˝ďż˝stup: spoluprďż˝ce, mďż˝ďż˝enďż˝ vďż˝sledkďż˝ a klid v krizďż˝ch"
+                               },
+                  "timelineHeading":  "Zkuďż˝enosti a vzdďż˝lďż˝nďż˝",
+                  "timeline":  [
+                                   {
+                                       "id":  "network-engineer",
+                                       "title":  "Sďż˝ovďż˝ inďż˝enďż˝r",
+                                       "period":  "2023 ďż˝ souďż˝asnost",
+                                       "location":  "Poskytovatel sluďż˝eb ďż˝ Brno, ďż˝R",
+                                       "description":  "Technickďż˝ vedenďż˝ pďż˝i redesignu WAN sďż˝tďż˝, automatizace compliance pomocďż˝ Terraformu a zavedenďż˝ IaC pipeline.",
+                                       "tags":  [
+                                                    "Terraform",
+                                                    "IaC",
+                                                    "Monitoring"
+                                                ]
+                                   },
+                                   {
+                                       "id":  "noc-analyst",
+                                       "title":  "NOC / infrastruktura analytik",
+                                       "period":  "2020 ďż˝ 2023",
+                                       "location":  "Managed services ďż˝ Remote",
+                                       "description":  "Zajiďż˝tďż˝nďż˝ 24/7 provozu, tvorba internďż˝ch dashboardďż˝ pro sledovďż˝nďż˝ incidentďż˝ a koordinace zďż˝sahďż˝ napďż˝ďż˝ďż˝ tďż˝my.",
+                                       "tags":  [
+                                                    "On-call",
+                                                    "Dashboardy",
+                                                    "Skriptovďż˝nďż˝"
+                                                ]
+                                   },
+                                   {
+                                       "id":  "education",
+                                       "title":  "Vysokďż˝ uďż˝enďż˝ technickďż˝ v Brnďż˝",
+                                       "period":  "2016 ďż˝ 2020",
+                                       "location":  "Fakulta informaďż˝nďż˝ch technologiďż˝",
+                                       "description":  "Bakalďż˝ďż˝skďż˝ studium se zamďż˝ďż˝enďż˝m na poďż˝ďż˝taďż˝ovďż˝ sďż˝tďż˝, distribuovanďż˝ systďż˝my a aplikovanou bezpeďż˝nost.",
+                                       "tags":  [
+                                                    "Sďż˝tďż˝",
+                                                    "Distribuovanďż˝ systďż˝my"
+                                                ]
+                                   }
+                               ],
+                  "valuesHeading":  "Jak pracuji",
+                  "values":  [
+                                 {
+                                     "title":  "Spolehlivost na prvnďż˝m mďż˝stďż˝",
+                                     "description":  "Nasazenďż˝ pďż˝ipravuji s moďż˝nostďż˝ rollbacku, metrikami a nďż˝cviky selhďż˝nďż˝, aby ďż˝lo vďż˝e hladce."
+                                 },
+                                 {
+                                     "title":  "Empatie k operďż˝torďż˝m",
+                                     "description":  "Srozumitelnďż˝ runbooky, observabilita a nďż˝stroje pďż˝ďż˝vďż˝tivďż˝ pro lidi pomďż˝hajďż˝ tďż˝mu pracovat rychleji i jistďż˝ji."
+                                 },
+                                 {
+                                     "title":  "Neustďż˝lďż˝ uďż˝enďż˝",
+                                     "description":  "Od laborovďż˝nďż˝ s novďż˝mi protokoly po experimenty s UI animacemi ďż˝ stďż˝le hledďż˝m novďż˝ postupy."
+                                 }
+                             ],
+                  "backCta":  "Zpďż˝t na hlavnďż˝ strďż˝nku"
+              },
+    "footer":  {
+                   "note":  "ďż˝ {{year}} Jakub Dolďż˝nek. Vytvoďż˝eno s pďż˝ďż˝ďż˝ a ďż˝ďż˝lkem kďż˝vy."
+               }
 }
