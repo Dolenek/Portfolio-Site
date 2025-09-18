@@ -1,14 +1,14 @@
-# Jakub Dolének – Portfolio Site
+# Jakub DolÃ©nek ï¿½ Portfolio Site
 
-This repository hosts my personal portfolio built with React, Vite, and Tailwind CSS. The site showcases experience, featured projects, and contact details with smooth scroll navigation, theme switching, and room for localisation.
+This repository hosts my personal portfolio built with React, Vite, and Tailwindï¿½CSS. The site showcases experience, featured projects, and contact details with smooth scroll navigation, theme switching, and room for localisation.
 
 ## Features
-- **Modern stack** – React 19 + Vite 7 with TypeScript, Tailwind CSS, and Framer Motion animations.
-- **Single-page flow with deep links** – sticky header navigates sections on the home view (hero, projects, skills, contact) and routes to a dedicated About page.
-- **Theme persistence** – light/dark mode remembered in `localStorage` and synced with OS preference changes.
-- **Content driven** – projects, skills, and personal data stored in typed modules for easy updates without touching layout code.
-- **Internationalisation ready** – `react-i18next` scaffolded (EN ready, CZ placeholder) with language detector cache.
-- **Production friendly** – ESLint, TypeScript strictness, and Tailwind plugins for forms/typography.
+- **Modern stack** | React 19 + Vite 7 with TypeScript, Tailwind CSS, and Framer Motion animations.
+- **Single-page flow with deep links** | sticky header navigates sections on the home view (hero, projects, skills, contact) and routes to a dedicated About page.
+- **Theme persistence** | light/dark mode remembered in `localStorage` and synced with OS preference changes.
+- **Content driven** | projects, skills, and personal data stored in typed modules for easy updates without touching layout code.
+- **Internationalisation ready** | `react-i18next` scaffolded (EN ready, CZ placeholder) with language detector cache.
+- **Production friendly** | ESLint, TypeScript strictness, and Tailwind plugins for forms/typography.
 
 ## Project structure
 ```
@@ -34,11 +34,11 @@ npm run dev
 The dev server runs on <http://localhost:5173>. Update content in `src/data` and translation strings in `src/i18n/locales/en/common.json`. The Czech locale can be completed later by mirroring keys in `locales/cz`.
 
 ### Available scripts
-- `npm run dev` – launch Vite development server with HMR.
-- `npm run build` – type-check and output production build into `dist/`.
-- `npm run preview` – serve the built site locally.
-- `npm run lint` – run ESLint with zero-warning policy.
-- `npm run typecheck` – run TypeScript in no-emit mode.
+- `npm run dev`       | launch Vite development server with HMR.
+- `npm run build`     | type-check and output production build into `dist/`.
+- `npm run preview`   | serve the built site locally.
+- `npm run lint`      | run ESLint with zero-warning policy.
+- `npm run typecheck` | run TypeScript in no-emit mode.
 
 ## Styling & theming
 - Tailwind config (`tailwind.config.js`) defines brand palette, fonts, and background utilities. The project relies on the `dark` class on `<html>` managed by the custom `ThemeProvider`.
@@ -68,7 +68,7 @@ The dev server runs on <http://localhost:5173>. Update content in `src/data` and
    }
    ```
 3. **Copy build**: rsync or scp `dist/` to `/var/www/portfolio/dist` (or your chosen path).
-4. **Enable HTTPS via Cloudflare**: point the domain’s A record at your public IP, enable the Cloudflare proxy (orange cloud), and issue SSL (Full/Strict mode recommended). Optionally enable “Always Use HTTPS”.
+4. **Enable HTTPS via Cloudflare**: point the domainï¿½s A record at your public IP, enable the Cloudflare proxy (orange cloud), and issue SSL (Full/Strict mode recommended). Optionally enable ï¿½Always Use HTTPSï¿½.
 5. **Systemd service (optional)**: if serving with a Node static server (e.g., `serve`), create a unit to keep it alive.
 6. **CI hint**: hook up GitHub Actions or a simple script to run `npm run build` before deploying to keep output reproducible.
 

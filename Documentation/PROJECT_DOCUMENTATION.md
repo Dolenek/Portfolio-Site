@@ -138,7 +138,9 @@ Location: `src/providers/ThemeProvider.tsx`.
 ### Hero
 Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in locale JSON.
 - Two-column layout: left column hero portrait card, right column copy.
-- Background artwork toggles between animated night scene (stars, moon, mountains) and daytime variant (sun, clouds, brighter mountains).
+- Background artwork swaps between two bespoke SVG scenes:
+  - Dark mode: layered gradients build rounded mountain ridges, a floating moon, and a procedurally generated starfield that drifts left-to-right while flickering.
+  - Light mode: softened mountain layers, clouds, and a glowing sun with matching palette.
 - Uses Framer Motion for staged entrance animations.
 - Pulls dynamic strings `hero.intro`, `hero.headline` (object with `lead`, `accent`, `trail`), `hero.subheadline`, `hero.description`, `hero.portraitCaption`.
 - Portrait card currently displays initials derived from `profile.name`; swap with actual imagery by replacing the markup within `.hero-portrait-ring`.
@@ -178,7 +180,7 @@ These modules keep presentation components stateless and easy to localise.
 - Framer Motion is imported directly in sections requiring motion.
 - Shared transition config `TRANSITION_EASE` ensures consistent easing curves.
 - Hero uses `motion.div`/`motion.h1` with variant-based staggered reveals.
-- CSS keyframes (`HeroSection.css`) animate stars (`hero-twinkle`), moon float (`hero-float`), sun glow (`hero-sun-glow`), and daytime clouds (`hero-cloud-drift`).
+- CSS keyframes in `HeroSection.css` cover the full backdrop: stars use `hero-star-drift` + `hero-twinkle` for continuous movement and flicker, while `hero-float`, `hero-sun-glow`, and `hero-cloud-drift` animate the moon, sun, and clouds respectively.
 
 ## Accessibility Considerations
 - Theme toggle and nav buttons include `aria-label`/`aria-expanded` attributes (see `SiteHeader.tsx`).

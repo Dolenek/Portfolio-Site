@@ -17,9 +17,9 @@
 
 .hero-night {
   background:
-    radial-gradient(120% 140% at 60% 50%, rgba(22, 45, 90, 0.35) 0%, rgba(7, 11, 23, 0) 65%),
-    radial-gradient(110% 110% at 30% 30%, rgba(37, 99, 235, 0.18) 0%, rgba(15, 23, 42, 0) 55%),
-    linear-gradient(185deg, #040910 0%, #050c1a 38%, #050a18 55%, #020512 100%);
+    radial-gradient(140% 180% at 24% 26%, rgba(70, 132, 228, 0.28) 0%, rgba(8, 18, 46, 0) 58%),
+    radial-gradient(130% 160% at 70% 46%, rgba(32, 78, 175, 0.42) 0%, rgba(6, 16, 42, 0) 68%),
+    linear-gradient(196deg, #020c24 0%, #051c46 44%, #041233 72%, #010717 100%);
 }
 
 .hero-day {
@@ -37,7 +37,7 @@
 }
 
 .hero-night::after {
-  background: linear-gradient(180deg, rgba(2, 6, 23, 0.45) 0%, rgba(2, 6, 23, 0) 38%, rgba(2, 6, 23, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(3, 11, 32, 0.55) 0%, rgba(3, 11, 32, 0.05) 40%, rgba(1, 6, 20, 0.72) 100%);
   mix-blend-mode: soft-light;
 }
 
@@ -49,93 +49,86 @@
 .hero-mountains {
   position: absolute;
   inset: 0;
-  bottom: -4%;
+  bottom: -8%;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.hero-mountain {
+.hero-mountain-svg {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 155%;
-  height: 65%;
-  bottom: -18%;
-  border-radius: 60% 60% 0 0;
-  clip-path: polygon(0% 80%, 8% 68%, 18% 72%, 30% 58%, 42% 66%, 55% 52%, 66% 68%, 80% 58%, 90% 68%, 100% 62%, 100% 100%, 0% 100%);
-  transition: background 0.4s ease, opacity 0.4s ease;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.hero-mountain--back {
-  width: 170%;
-  height: 70%;
-  bottom: -24%;
-  filter: blur(1px);
+.hero-mountain-path {
+  transform-origin: 50% 100%;
+  transition: opacity 0.45s ease, filter 0.45s ease;
 }
 
-.hero-mountain--mid {
-  width: 158%;
-  height: 66%;
-  bottom: -20%;
+.hero-mountains--night .hero-mountain-path {
+  mix-blend-mode: screen;
 }
 
-.hero-mountain--front {
-  width: 150%;
-  height: 62%;
-  bottom: -22%;
-  clip-path: polygon(0% 82%, 10% 68%, 22% 74%, 35% 60%, 46% 70%, 58% 50%, 70% 68%, 84% 60%, 92% 70%, 100% 64%, 100% 100%, 0% 100%);
+.hero-mountains--day .hero-mountain-path {
+  mix-blend-mode: multiply;
 }
 
-.hero-mountains--night .hero-mountain--back {
-  opacity: 0.35;
-  background: linear-gradient(180deg, rgba(13, 24, 45, 0.85) 0%, rgba(7, 12, 22, 0.95) 60%, rgba(3, 5, 14, 1) 100%);
-}
-
-.hero-mountains--night .hero-mountain--mid {
-  opacity: 0.55;
-  background: linear-gradient(180deg, rgba(19, 32, 58, 0.9) 0%, rgba(8, 16, 36, 0.98) 60%, rgba(3, 7, 19, 1) 100%);
-}
-
-.hero-mountains--night .hero-mountain--front {
-  opacity: 0.82;
-  background: linear-gradient(180deg, rgba(18, 31, 59, 1) 0%, rgba(10, 18, 40, 1) 55%, rgba(4, 8, 22, 1) 100%);
-  box-shadow: 0 18px 60px rgba(8, 12, 24, 0.5);
-}
-
-.hero-mountains--day .hero-mountain--back {
-  opacity: 0.3;
-  background: linear-gradient(180deg, rgba(148, 163, 184, 0.35) 0%, rgba(203, 213, 225, 0.45) 60%, rgba(226, 232, 240, 0.55) 100%);
-}
-
-.hero-mountains--day .hero-mountain--mid {
-  opacity: 0.45;
-  background: linear-gradient(180deg, rgba(148, 163, 184, 0.45) 0%, rgba(203, 213, 225, 0.55) 60%, rgba(226, 232, 240, 0.65) 100%);
-}
-
-.hero-mountains--day .hero-mountain--front {
-  opacity: 0.65;
-  background: linear-gradient(180deg, rgba(148, 163, 184, 0.55) 0%, rgba(203, 213, 225, 0.75) 55%, rgba(241, 245, 249, 0.85) 100%);
-  box-shadow: 0 18px 60px rgba(148, 163, 184, 0.35);
+.hero-mountains--night .hero-mountain-path:last-of-type,
+.hero-mountains--day .hero-mountain-path:last-of-type {
+  mix-blend-mode: normal;
 }
 
 .hero-star {
   position: absolute;
   border-radius: 9999px;
-  background: rgba(226, 232, 240, 0.95);
-  box-shadow: 0 0 8px rgba(148, 163, 184, 0.6);
-  animation: hero-twinkle 4.5s ease-in-out infinite;
+  background: rgba(232, 238, 255, 0.95);
+  box-shadow: 0 0 14px rgba(86, 136, 220, 0.6);
+  filter: brightness(0.85);
+  opacity: 0;
+  transform: translate3d(0, var(--hero-star-vertical, 0px), 0);
+  z-index: 0;
+  will-change: transform, opacity, filter, box-shadow;
+  animation:
+    hero-star-drift var(--hero-star-travel, 32s) linear infinite,
+    hero-twinkle var(--hero-star-twinkle, 4.8s) ease-in-out infinite;
+  animation-delay:
+    var(--hero-star-travel-delay, 0s),
+    calc(var(--hero-star-twinkle-delay, 0s) + var(--hero-star-travel-delay, 0s));
+}
+
+@keyframes hero-star-drift {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, var(--hero-star-vertical, 0px), 0);
+  }
+  8% {
+    opacity: var(--hero-star-peak-opacity, 0.75);
+  }
+  92% {
+    opacity: var(--hero-star-peak-opacity, 0.75);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--hero-star-distance, 140vw), var(--hero-star-vertical, 0px), 0);
+  }
 }
 
 @keyframes hero-twinkle {
   0%,
   100% {
-    opacity: 0.25;
-    transform: scale(0.75);
+    filter: brightness(0.7) saturate(1);
+    box-shadow: 0 0 12px rgba(86, 136, 220, 0.4);
   }
-  50% {
-    opacity: 1;
-    transform: scale(1);
+  45% {
+    filter: brightness(1.25) saturate(1.25);
+    box-shadow: 0 0 20px rgba(116, 168, 255, 0.65);
+  }
+  70% {
+    filter: brightness(0.85) saturate(1.05);
+    box-shadow: 0 0 14px rgba(96, 150, 240, 0.5);
   }
 }
-
 .hero-moon {
   position: absolute;
   top: 12%;
