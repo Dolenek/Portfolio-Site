@@ -49,7 +49,7 @@
 .hero-mountains {
   position: absolute;
   inset: 0;
-  bottom: -8%;
+  bottom: -3rem;
   pointer-events: none;
   z-index: 1;
 }
@@ -64,19 +64,23 @@
 .hero-mountain-path {
   transform-origin: 50% 100%;
   transition: opacity 0.45s ease, filter 0.45s ease;
-}
-
-.hero-mountains--night .hero-mountain-path {
-  mix-blend-mode: screen;
-}
-
-.hero-mountains--day .hero-mountain-path {
-  mix-blend-mode: multiply;
-}
-
-.hero-mountains--night .hero-mountain-path:last-of-type,
-.hero-mountains--day .hero-mountain-path:last-of-type {
   mix-blend-mode: normal;
+  will-change: transform, opacity;
+}
+.hero-mountain-path--ridge-mid {
+  filter: drop-shadow(0 -20px 50px rgba(15, 23, 42, 0.2));
+}
+
+html.dark .hero-mountain-path--ridge-mid {
+  filter: drop-shadow(0 -24px 54px rgba(56, 120, 209, 0.28));
+}
+
+.hero-mountain-path--ridge-front {
+  filter: drop-shadow(0 -26px 72px rgba(15, 23, 42, 0.28));
+}
+
+html.dark .hero-mountain-path--ridge-front {
+  filter: drop-shadow(0 -30px 80px rgba(37, 99, 235, 0.32));
 }
 
 .hero-star {
@@ -376,3 +380,9 @@ html:not(.dark) .hero-headline-accent {
     border-radius: 2rem;
   }
 }
+
+
+
+
+
+

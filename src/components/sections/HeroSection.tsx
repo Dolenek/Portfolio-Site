@@ -86,385 +86,159 @@ const createHeroStarField = (count: number): StarConfig[] => {
 
 type MountainVariant = "day" | "night";
 
+type MountainLayerDefinition = {
+  key: string;
+  d: string;
+};
 
+const HERO_MOUNTAIN_LAYERS: readonly MountainLayerDefinition[] = [
+  {
+    key: "ridge-back",
+    d: "M0 260 C 150 238 280 246 420 254 S 720 246 890 260 S 1180 280 1310 266 S 1390 254 1440 260 L1440 400 L0 400 Z"
+  },
+  {
+    key: "ridge-mid",
+    d: "M0 280 C 180 264 340 274 520 292 S 880 286 1040 304 S 1290 322 1385 308 S 1425 294 1440 300 L1440 400 L0 400 Z"
+  },
+  {
+    key: "ridge-fore",
+    d: "M0 316 C 160 300 340 318 560 334 S 940 322 1120 342 S 1330 354 1440 346 L1440 400 L0 400 Z"
+  },
+  {
+    key: "ridge-front",
+    d: "M0 350 C 220 330 450 346 700 352 S 1120 360 1330 370 S 1405 376 1440 380 L1440 400 L0 400 Z"
+  }
+] as const;
 
-const HERO_MOUNTAIN_BASE_PATHS = {
-  back: "M0 336 Q220 296 440 318 T880 314 T1210 330 T1440 320 L1440 400 L0 400 Z",
-  mid: "M0 366 Q260 308 540 340 T1040 338 T1380 358 T1440 350 L1440 400 L0 400 Z",
-  front: "M0 398 Q320 300 660 344 T1200 368 T1440 352 L1440 400 L0 400 Z"
-} as const;
-
-
-
-type MountainLayer = keyof typeof HERO_MOUNTAIN_BASE_PATHS;
-
-
+type MountainLayerKey = (typeof HERO_MOUNTAIN_LAYERS)[number]["key"];
 
 type MountainGradientStop = {
-
   offset: string;
-
   color: string;
-
-  opacity: number;
-
+  opacity?: number;
 };
 
+type MountainVariantPalette = Record<
+  MountainLayerKey,
+  {
+    stops: readonly MountainGradientStop[];
+    opacity?: number;
+  }
+>;
 
-
-type MountainGradientConfig = {
-
-  id: string;
-
-  stops: readonly MountainGradientStop[];
-
-};
-
-
-
-type MountainCluster = {
-
-  key: string;
-
-  layer: MountainLayer;
-
-  gradient: MountainGradientConfig;
-
-  transform: string;
-
-  opacity: number;
-
-  blur?: number;
-
-  dropShadow?: string;
-
-  mixBlendMode?: CSSProperties["mixBlendMode"];
-
-};
-
-
-
-const HERO_MOUNTAIN_CLUSTERS: Record<MountainVariant, readonly MountainCluster[]> = {
-  night: [
-    {
-      key: "night-far-haze",
-      layer: "back",
-      gradient: {
-        id: "hero-night-gradient-far-haze",
-        stops: [
-          { offset: "0%", color: "#091631", opacity: 0.6 },
-          { offset: "60%", color: "#07122a", opacity: 0.74 },
-          { offset: "100%", color: "#030817", opacity: 0.88 }
-        ]
-      },
-      transform: "translate(-120 38) scale(1.45)",
-      opacity: 0.5,
-      blur: 30,
-      mixBlendMode: "screen"
+const HERO_MOUNTAIN_PALETTE: Record<MountainVariant, MountainVariantPalette> = {
+  day: {
+    "ridge-back": {
+      stops: [
+        { offset: "0%", color: "#e9f3ff" },
+        { offset: "100%", color: "#cadaf5" }
+      ],
+      opacity: 0.58
     },
-    {
-      key: "night-far-ridge",
-      layer: "back",
-      gradient: {
-        id: "hero-night-gradient-far-ridge",
-        stops: [
-          { offset: "0%", color: "#102243", opacity: 0.66 },
-          { offset: "60%", color: "#0b1a3b", opacity: 0.78 },
-          { offset: "100%", color: "#07112a", opacity: 0.88 }
-        ]
-      },
-      transform: "translate(80 12) scale(1.28)",
-      opacity: 0.62,
-      blur: 18,
-      mixBlendMode: "screen"
+    "ridge-mid": {
+      stops: [
+        { offset: "0%", color: "#dee9fb" },
+        { offset: "100%", color: "#bcd1f1" }
+      ],
+      opacity: 0.72
     },
-    {
-      key: "night-mid-ridge",
-      layer: "mid",
-      gradient: {
-        id: "hero-night-gradient-mid-ridge",
-        stops: [
-          { offset: "0%", color: "#152f5c", opacity: 0.72 },
-          { offset: "55%", color: "#102551", opacity: 0.86 },
-          { offset: "100%", color: "#081636", opacity: 0.96 }
-        ]
-      },
-      transform: "translate(-100 -6) scale(1.3)",
-      opacity: 0.7,
-      blur: 12,
-      mixBlendMode: "screen"
+    "ridge-fore": {
+      stops: [
+        { offset: "0%", color: "#d1e1f8" },
+        { offset: "100%", color: "#a7c2ea" }
+      ],
+      opacity: 0.88
     },
-    {
-      key: "night-mid-highlight",
-      layer: "mid",
-      gradient: {
-        id: "hero-night-gradient-mid-highlight",
-        stops: [
-          { offset: "0%", color: "#1e3e76", opacity: 0.78 },
-          { offset: "55%", color: "#163167", opacity: 0.9 },
-          { offset: "100%", color: "#0b1f4c", opacity: 0.98 }
-        ]
-      },
-      transform: "translate(40 -16) scale(1.24)",
-      opacity: 0.78,
-      blur: 8,
-      mixBlendMode: "screen"
-    },
-    {
-      key: "night-front-base",
-      layer: "front",
-      gradient: {
-        id: "hero-night-gradient-front-base",
-        stops: [
-          { offset: "0%", color: "#2c58a6", opacity: 1 },
-          { offset: "55%", color: "#1d3f84", opacity: 1 },
-          { offset: "100%", color: "#10275e", opacity: 1 }
-        ]
-      },
-      transform: "translate(-40 -58) scale(1.36)",
-      opacity: 0.95,
-      dropShadow: "0 44px 90px rgba(5, 11, 30, 0.78)",
-      mixBlendMode: "normal"
-    },
-    {
-      key: "night-front-highlight-left",
-      layer: "front",
-      gradient: {
-        id: "hero-night-gradient-front-highlight-left",
-        stops: [
-          { offset: "0%", color: "#3568c2", opacity: 0.9 },
-          { offset: "55%", color: "#244b9a", opacity: 0.88 },
-          { offset: "100%", color: "#183679", opacity: 0.8 }
-        ]
-      },
-      transform: "translate(-240 -34) scale(1.24)",
-      opacity: 0.7,
-      blur: 6,
-      mixBlendMode: "screen"
-    },
-    {
-      key: "night-front-highlight-right",
-      layer: "front",
-      gradient: {
-        id: "hero-night-gradient-front-highlight-right",
-        stops: [
-          { offset: "0%", color: "#2e63bd", opacity: 0.88 },
-          { offset: "55%", color: "#214491", opacity: 0.86 },
-          { offset: "100%", color: "#173379", opacity: 0.78 }
-        ]
-      },
-      transform: "translate(180 -36) scale(1.2)",
-      opacity: 0.66,
-      blur: 7,
-      mixBlendMode: "screen"
+    "ridge-front": {
+      stops: [
+        { offset: "0%", color: "#c6d6f2" },
+        { offset: "100%", color: "#f8fafc" }
+      ]
     }
-  ],
-  day: [
-    {
-      key: "day-far-haze",
-      layer: "back",
-      gradient: {
-        id: "hero-day-gradient-far-haze",
-        stops: [
-          { offset: "0%", color: "#dde8f6", opacity: 0.55 },
-          { offset: "60%", color: "#e5eef9", opacity: 0.65 },
-          { offset: "100%", color: "#f0f6fc", opacity: 0.75 }
-        ]
-      },
-      transform: "translate(-120 40) scale(1.42)",
-      opacity: 0.5,
-      blur: 28,
-      mixBlendMode: "multiply"
+  },
+  night: {
+    "ridge-back": {
+      stops: [
+        { offset: "0%", color: "#1e3760" },
+        { offset: "100%", color: "#142a4a" }
+      ],
+      opacity: 0.6
     },
-    {
-      key: "day-far-ridge",
-      layer: "back",
-      gradient: {
-        id: "hero-day-gradient-far-ridge",
-        stops: [
-          { offset: "0%", color: "#d1dff0", opacity: 0.6 },
-          { offset: "60%", color: "#dce7f5", opacity: 0.7 },
-          { offset: "100%", color: "#e8f0fa", opacity: 0.78 }
-        ]
-      },
-      transform: "translate(70 16) scale(1.28)",
-      opacity: 0.6,
-      blur: 18,
-      mixBlendMode: "multiply"
+    "ridge-mid": {
+      stops: [
+        { offset: "0%", color: "#162e56" },
+        { offset: "100%", color: "#0d203d" }
+      ],
+      opacity: 0.72
     },
-    {
-      key: "day-mid-ridge",
-      layer: "mid",
-      gradient: {
-        id: "hero-day-gradient-mid-ridge",
-        stops: [
-          { offset: "0%", color: "#c9d8eb", opacity: 0.65 },
-          { offset: "55%", color: "#d6e1f2", opacity: 0.75 },
-          { offset: "100%", color: "#e3ebf7", opacity: 0.85 }
-        ]
-      },
-      transform: "translate(-80 -4) scale(1.24)",
-      opacity: 0.68,
-      blur: 12,
-      mixBlendMode: "multiply"
+    "ridge-fore": {
+      stops: [
+        { offset: "0%", color: "#0e233f" },
+        { offset: "100%", color: "#08172c" }
+      ],
+      opacity: 0.9
     },
-    {
-      key: "day-mid-highlight",
-      layer: "mid",
-      gradient: {
-        id: "hero-day-gradient-mid-highlight",
-        stops: [
-          { offset: "0%", color: "#c0d2e9", opacity: 0.68 },
-          { offset: "55%", color: "#cedcf0", opacity: 0.78 },
-          { offset: "100%", color: "#dce6f6", opacity: 0.88 }
-        ]
-      },
-      transform: "translate(40 -12) scale(1.18)",
-      opacity: 0.72,
-      blur: 6,
-      mixBlendMode: "multiply"
-    },
-    {
-      key: "day-front-base",
-      layer: "front",
-      gradient: {
-        id: "hero-day-gradient-front-base",
-        stops: [
-          { offset: "0%", color: "#b7cbea", opacity: 0.85 },
-          { offset: "55%", color: "#c9daf2", opacity: 0.92 },
-          { offset: "100%", color: "#d9e5f8", opacity: 0.95 }
-        ]
-      },
-      transform: "translate(-30 -36) scale(1.28)",
-      opacity: 0.9,
-      dropShadow: "0 32px 70px rgba(148, 163, 184, 0.35)",
-      mixBlendMode: "normal"
-    },
-    {
-      key: "day-front-highlight",
-      layer: "front",
-      gradient: {
-        id: "hero-day-gradient-front-highlight",
-        stops: [
-          { offset: "0%", color: "#c7d9f3", opacity: 0.85 },
-          { offset: "55%", color: "#d5e4f9", opacity: 0.88 },
-          { offset: "100%", color: "#e2ecfb", opacity: 0.9 }
-        ]
-      },
-      transform: "translate(140 -26) scale(1.18)",
-      opacity: 0.68,
-      blur: 8,
-      mixBlendMode: "multiply"
+    "ridge-front": {
+      stops: [
+        { offset: "0%", color: "#020617" },
+        { offset: "100%", color: "#020617" }
+      ]
     }
-  ]
-} as const;
-
-
+  }
+};
 
 const HeroMountainsSvg = ({ variant }: { variant: MountainVariant }) => {
-
-  const clusters = HERO_MOUNTAIN_CLUSTERS[variant];
-
-
+  const palette = HERO_MOUNTAIN_PALETTE[variant];
 
   return (
-
-    <svg className="hero-mountain-svg" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true" xmlnsXlink="http://www.w3.org/1999/xlink">
-
+    <svg
+      className="hero-mountain-svg"
+      viewBox="0 0 1440 400"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
       <defs>
+        {HERO_MOUNTAIN_LAYERS.map((layer) => {
+          const gradient = palette[layer.key];
 
-        {Object.entries(HERO_MOUNTAIN_BASE_PATHS).map(([layer, d]) => (
-
-          <path key={layer} id={`hero-mountain-shape-${layer}`} d={d} />
-
-        ))}
-
-        {clusters.map((cluster) => (
-
-          <linearGradient key={cluster.gradient.id} id={cluster.gradient.id} x1="0" y1="0" x2="0" y2="1">
-
-            {cluster.gradient.stops.map((stop) => (
-
-              <stop
-
-                key={`${cluster.gradient.id}-${stop.offset}`}
-
-                offset={stop.offset}
-
-                stopColor={stop.color}
-
-                stopOpacity={stop.opacity}
-
-              />
-
-            ))}
-
-          </linearGradient>
-
-        ))}
-
+          return (
+            <linearGradient
+              key={`${variant}-${layer.key}-gradient`}
+              id={`hero-mountain-${variant}-${layer.key}`}
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              {gradient.stops.map((stop) => (
+                <stop
+                  key={`${variant}-${layer.key}-${stop.offset}`}
+                  offset={stop.offset}
+                  stopColor={stop.color}
+                  stopOpacity={stop.opacity ?? 1}
+                />
+              ))}
+            </linearGradient>
+          );
+        })}
       </defs>
 
-
-
-      {clusters.map((cluster) => {
-
-        const filterParts: string[] = [];
-
-        if (cluster.blur) {
-
-          filterParts.push(`blur(${cluster.blur}px)`);
-
-        }
-
-        if (cluster.dropShadow) {
-
-          filterParts.push(`drop-shadow(${cluster.dropShadow})`);
-
-        }
-
-        const filterValue = filterParts.join(" ");
-
-
+      {HERO_MOUNTAIN_LAYERS.map((layer) => {
+        const gradient = palette[layer.key];
 
         return (
-
-          <use
-
-            key={cluster.key}
-
-            href={`#hero-mountain-shape-${cluster.layer}`}
-            xlinkHref={`#hero-mountain-shape-${cluster.layer}`}
-
-            fill={`url(#${cluster.gradient.id})`}
-
-            opacity={cluster.opacity}
-
-            transform={cluster.transform}
-
-            className={`hero-mountain-path hero-mountain-path--${cluster.layer}`}
-
-            style={{
-
-              filter: filterValue || undefined,
-
-              mixBlendMode: cluster.mixBlendMode
-
-            }}
-
+          <path
+            key={`${variant}-${layer.key}`}
+            d={layer.d}
+            fill={`url(#hero-mountain-${variant}-${layer.key})`}
+            opacity={gradient.opacity ?? 1}
+            className={`hero-mountain-path hero-mountain-path--${layer.key}`}
           />
-
         );
-
       })}
-
     </svg>
-
   );
-
 };
-
-
 
 const HERO_STAR_FIELD = createHeroStarField(120);
 
@@ -559,7 +333,7 @@ export const HeroSection = () => {
     <section
       id="home"
       data-section="hero"
-      className="relative isolate min-h-[75vh] overflow-hidden pb-24 pt-16 sm:pb-32 sm:pt-20"
+      className="relative isolate -mt-16 min-h-[75vh] overflow-hidden pb-24 pt-16 sm:-mt-20 sm:pb-32 sm:pt-20"
     >
       <HeroBackdrop />
       <div className="container-xl relative z-10 grid items-center gap-16 lg:grid-cols-[minmax(0,_420px)_minmax(0,_1fr)]">
@@ -625,3 +399,11 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+
+
+
+
+
+
+
