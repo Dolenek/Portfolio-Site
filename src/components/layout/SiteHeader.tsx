@@ -64,7 +64,7 @@ export const SiteHeader = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/70 backdrop-blur-md transition dark:border-slate-800/60 dark:bg-slate-950/70">
+    <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-transparent backdrop-blur-md transition dark:border-slate-800/50 dark:bg-transparent">
       <div className="container-xl flex h-16 items-center justify-between gap-4">
         <button
           onClick={() => handleNavigate(NAV_ITEMS[0])}
@@ -80,10 +80,9 @@ export const SiteHeader = () => {
               onClick={() => handleNavigate(item)}
               className={cn(
                 "text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
-                isActive(item)
-                  ? "text-brand"
-                  : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+                "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
               )}
+              aria-current={isActive(item) ? "page" : undefined}
             >
               {t(item.labelKey)}
             </button>

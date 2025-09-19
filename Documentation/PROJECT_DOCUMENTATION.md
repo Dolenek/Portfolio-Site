@@ -116,8 +116,8 @@ Tailwind classes complement these styles for spacing, typography, and general la
 
 ## Routing & Layout
 - Routing is declared in `App.tsx` with `react-router-dom` using nested routes under `AppLayout`.
-- `AppLayout` wraps pages with shared header/footer and background effects.
-- `SiteHeader` integrates navigation, theme toggle, and mobile drawer. It collaborates with the `ScrollSpyProvider` to keep nav state in sync.
+- `AppLayout` wraps pages with shared header/footer and background effects. The light theme shell now pins the base gradient to `#e3ebf8` so the hero's front ridge blends seamlessly with the rest of the page.
+- `SiteHeader` integrates navigation, theme toggle, and mobile drawer. It collaborates with the `ScrollSpyProvider` to keep nav state in sync and now stays transparent across themes, relying on the hero sky for contrast.
 - `SiteFooter` renders translated footer copy and year metadata.
 
 ## Providers
@@ -140,8 +140,9 @@ Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in lo
 - Two-column layout: left column hero portrait card, right column copy.
 - Background artwork renders shared SVG ridge paths for both themes; each theme supplies its own gradient palette so the silhouettes stay identical while colours change.
   - Dark mode: four mountain layers in progressively darker blues, subtle drop-shadow glows, drifting starfield, and moon.
-  - Light mode: the same geometry with softened blues, sun, and animated clouds.
-- The front-most ridge colour matches the page background and the section applies a negative top margin so the mountains rise behind the transparent header without leaving a dark strip.
+  - Light mode: the same geometry with softened blues, sun, and clouds generated at runtime.
+- Day clouds are seeded by `createHeroCloudField` (HeroSection.tsx), which pseudo-randomises spawn height, scale, travel duration, and opacity for 11 drifting layers. Tweak density or range by adjusting the generator constants.
+- The front-most ridge colour matches the site background (`#e3ebf8`) and the section applies a negative top margin so the mountains rise behind the transparent header without leaving a dark strip.
 - Uses Framer Motion for staged entrance animations.
 - Pulls dynamic strings `hero.intro`, `hero.headline` (object with `lead`, `accent`, `trail`), `hero.subheadline`, `hero.description`, `hero.portraitCaption`.
 - Portrait card currently displays initials derived from `profile.name`; swap with actual imagery by replacing the markup within `.hero-portrait-ring`.
@@ -182,7 +183,7 @@ These modules keep presentation components stateless and easy to localise.
 - Framer Motion is imported directly in sections requiring motion.
 - Shared transition config `TRANSITION_EASE` ensures consistent easing curves.
 - Hero uses `motion.div`/`motion.h1` with variant-based staggered reveals.
-- CSS keyframes in `HeroSection.css` cover the full backdrop: stars use `hero-star-drift` + `hero-twinkle` for continuous movement and flicker, while `hero-float`, `hero-sun-glow`, and `hero-cloud-drift` animate the moon, sun, and clouds respectively.
+- CSS keyframes in `HeroSection.css` cover the full backdrop: stars use `hero-star-drift` + `hero-twinkle` for continuous movement and flicker, while `hero-float`, `hero-sun-glow`, and `hero-cloud-glide` drive the moon, sun, and day clouds moving right-to-left.
 
 ## Accessibility Considerations
 - Theme toggle and nav buttons include `aria-label`/`aria-expanded` attributes (see `SiteHeader.tsx`).
@@ -217,4 +218,10 @@ These modules keep presentation components stateless and easy to localise.
 
 ---
 For further questions or enhancements, review the component-specific comments inside the codebase or reach out to the maintainer listed in `profile.ts`.
+
+
+
+
+
+
 

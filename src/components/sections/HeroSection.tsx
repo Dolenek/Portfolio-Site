@@ -21,13 +21,14 @@ type StarConfig = {
 };
 
 type CloudConfig = {
-  top: string;
-  left: string;
+  top: number;
+  startOffset: number;
   scale: number;
-  duration: number;
-  delay: number;
-  floatX: string;
-  floatY: string;
+  travelDuration: number;
+  travelDelay: number;
+  distance: number;
+  floatY: number;
+  opacity: number;
 };
 
 type HeroHeadline = {
@@ -242,13 +243,36 @@ const HeroMountainsSvg = ({ variant }: { variant: MountainVariant }) => {
 
 const HERO_STAR_FIELD = createHeroStarField(120);
 
+const createHeroCloudField = (count: number): CloudConfig[] => {
+  const clouds: CloudConfig[] = [];
 
+  for (let index = 0; index < count; index += 1) {
+    const base = index + 200;
+    const top = 8 + pseudoRandom(base) * 40;
+    const startOffset = pseudoRandom(base + 7) * 32;
+    const scale = 0.7 + pseudoRandom(base + 11) * 0.8;
+    const travelDuration = 36 + pseudoRandom(base + 17) * 26;
+    const travelDelay = -pseudoRandom(base + 23) * travelDuration;
+    const distance = 130 + startOffset + pseudoRandom(base + 29) * 60;
+    const floatY = (pseudoRandom(base + 31) - 0.5) * 32;
+    const opacity = 0.55 + pseudoRandom(base + 37) * 0.2;
 
-const CLOUD_CONFIGS: readonly CloudConfig[] = [
-  { top: "18%", left: "6%", scale: 0.85, duration: 30, delay: 0, floatX: "26px", floatY: "-10px" },
-  { top: "30%", left: "38%", scale: 1.1, duration: 32, delay: 4, floatX: "24px", floatY: "-8px" },
-  { top: "22%", left: "68%", scale: 0.95, duration: 28, delay: 2, floatX: "20px", floatY: "-6px" }
-] as const;
+    clouds.push({
+      top,
+      startOffset,
+      scale,
+      travelDuration,
+      travelDelay,
+      distance,
+      floatY,
+      opacity
+    });
+  }
+
+  return clouds;
+};
+
+const HERO_DAY_CLOUDS = createHeroCloudField(11);
 
 const TRANSITION_EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -272,15 +296,16 @@ const HeroBackdrop = () => (
       <div className="hero-mountains hero-mountains--day">
         <HeroMountainsSvg variant="day" />
       </div>
-      {CLOUD_CONFIGS.map((cloud, index) => {
+      {HERO_DAY_CLOUDS.map((cloud, index) => {
         const style: CSSVariableStyles = {
-          top: cloud.top,
-          left: cloud.left,
-          animationDelay: `${cloud.delay}s`,
-          "--cloud-duration": `${cloud.duration}s`,
-          "--cloud-scale": `${cloud.scale}`,
-          "--float-x": cloud.floatX,
-          "--float-y": cloud.floatY
+          top: `${formatCssNumber(cloud.top)}%`,
+          left: `calc(100vw + ${formatCssNumber(cloud.startOffset)}vw)`,
+          animationDelay: `${formatCssNumber(cloud.travelDelay)}s`,
+          "--cloud-duration": `${formatCssNumber(cloud.travelDuration)}s`,
+          "--cloud-scale": `${formatCssNumber(cloud.scale)}`,
+          "--cloud-distance": `${formatCssNumber(cloud.distance)}vw`,
+          "--cloud-float-y": `${formatCssNumber(cloud.floatY)}px`,
+          "--cloud-opacity": `${formatCssNumber(cloud.opacity)}`
         };
 
         return <div key={`cloud-${index}`} className="hero-cloud" style={style} />;
@@ -399,11 +424,4 @@ export const HeroSection = () => {
     </section>
   );
 };
-
-
-
-
-
-
-
 

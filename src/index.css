@@ -13,7 +13,8 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
+    background-color: #e3ebf8;
+    @apply text-slate-900 antialiased transition-colors duration-300;
   }
 
   html.dark body {
