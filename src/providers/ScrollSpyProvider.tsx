@@ -8,7 +8,7 @@ import {
   type ReactNode
 } from "react";
 
-export type SectionId = "hero" | "projects" | "skills" | "contact";
+export type SectionId = "hero" | "projects" | "contact";
 
 type ScrollSpyContextValue = {
   activeSection: SectionId;

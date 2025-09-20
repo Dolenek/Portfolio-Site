@@ -7,6 +7,7 @@ export type Project = {
     demo?: string;
   };
   accent: string;
+  previewGradient: [string, string];
 };
 
 export const projects: Project[] = [
@@ -17,7 +18,8 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/Dolenek"
     },
-    accent: "from-brand/40 via-blue-400/30 to-indigo-500/40"
+    accent: "from-brand/40 via-blue-400/30 to-indigo-500/40",
+    previewGradient: ["#4c6ef5", "#0e2344"]
   },
   {
     id: "incident-simulator",
@@ -26,7 +28,8 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/Dolenek"
     },
-    accent: "from-amber-400/40 via-orange-400/30 to-rose-500/30"
+    accent: "from-amber-400/40 via-orange-400/30 to-rose-500/30",
+    previewGradient: ["#ff903b", "#5a1f53"]
   },
   {
     id: "portfolio",
@@ -35,6 +38,8 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/Dolenek/Portfolio-Site"
     },
-    accent: "from-emerald-400/40 via-teal-400/30 to-cyan-400/30"
+    accent: "from-emerald-400/40 via-teal-400/30 to-cyan-400/30",
+    previewGradient: ["#3ab795", "#0b3d5d"]
   }
 ];
+

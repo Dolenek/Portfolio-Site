@@ -26,8 +26,8 @@
                  "portraitCaption":  "Automatizace mi nechává prostor soustředit se na detail i lidi v projektu."
              },
     "projects":  {
-                     "heading":  "Vybranďż˝ projekty",
-                     "subheading":  "Automatizace, observabilita a uďż˝ivatelskďż˝ zkuďż˝enost pro odolnďż˝ systďż˝my.",
+                     "heading":  "Projekty",
+                     "subheading":  "Sledujte řeku a objevte každý projekt, jeho příběh i stack.",
                      "items":  {
                                    "network-automation":  {
                                                               "title":  "Toolkit pro sďż˝ovou automatizaci",

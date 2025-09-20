@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ContactSection } from "../components/sections/ContactSection";
 import { HeroSection } from "../components/sections/HeroSection";
 import { ProjectsSection } from "../components/sections/ProjectsSection";
-import { SkillsSection } from "../components/sections/SkillsSection";
 import { useScrollSpy, type SectionId } from "../providers/ScrollSpyProvider";
 
 type LocationState = {
@@ -35,7 +34,6 @@ export const HomePage = () => {
     <div className="space-y-28 pb-24 pt-12 sm:space-y-32 sm:pt-16">
       <HeroSection />
       <ProjectsSection />
-      <SkillsSection />
       <ContactSection />
     </div>
   );

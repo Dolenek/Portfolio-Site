@@ -20,7 +20,6 @@
 - [Content Sections](#content-sections)
   - [Hero](#hero)
   - [Projects](#projects)
-  - [Skills](#skills)
   - [Contact](#contact)
   - [About Page](#about-page)
 - [Data Sources](#data-sources)
@@ -78,7 +77,7 @@ src/
   components/
     common/             // Reusable UI primitives (ThemeToggle, LocaleToggle)
     layout/             // Shell layout components (header, footer, layout)
-    sections/           // Page sections (Hero, Projects, Skills, Contact)
+    sections/           // Page sections (Hero, Projects river, Contact)
   data/                 // Static data consumed by sections (profile, projects, skills)
   i18n/                 // i18next configuration and locale bundles
   pages/                // Route-level pages (Home, About)
@@ -99,6 +98,7 @@ Styling blends Tailwind utilities with targeted CSS modules for art-heavy sectio
 ### Section-Specific Styling
 Complex visuals (e.g. animated mountains, sun/moon, portrait card) are managed via dedicated CSS files:
 - `HeroSection.css` – Handles background gradients, star animations, mountain layers, sun/moon/cloud animations, and the portrait card styling.
+- `ProjectsSection.css` - Shapes the river path, alternating project card anchors, and icon states.
 Tailwind classes complement these styles for spacing, typography, and general layout.
 
 ## Internationalisation (i18n)
@@ -149,15 +149,11 @@ Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in lo
 - Adjust ridge heights or glow in `HERO_MOUNTAIN_LAYERS` and `.hero-mountain-path--ridge-*` respectively.
 
 ### Projects
-File: `ProjectsSection.tsx`.
-- Reads project definitions from `src/data/projects.ts` and localised strings.
-- Layout uses responsive grids and emphasises tags, stack, and summary text.
-- Each card offers optional CTA links (case study, repo) when provided.
-
-### Skills
-File: `SkillsSection.tsx`.
-- Groups skill categories (Networking, Automation, Cloud, UI) defined in `src/data/skills.ts`.
-- Utilises Tailwind grid + card styling, with icons from lucide-react.
+Files: `ProjectsSection.tsx`, `ProjectsSection.css`.
+- Renders a staggered column of large preview cards; each card paints a gradient placeholder via `project.previewGradient` and keeps the project title visible inside a base band that hugs the screenshot edge.
+- Hover/focus reveals the detail overlay by sliding it from the bottom: summary, impact, stack chips, and CTA icons animate upward using the shared cubic-bezier stored in `cardVariants`. Touch breakpoints keep the overlay visible and hide the duplicated base band.
+- GitHub and optional demo buttons live in the overlay footer beside the tech stack with translated `aria-label`s assembled from the project title.
+- Tweak sizing in `ProjectsSection.css` (`projects-river__card` width/height, overlay padding) and mirror any changes against Tailwind spacing in the JSX to maintain alignment for alternating left/right nodes.
 
 ### Contact
 File: `ContactSection.tsx`.
@@ -172,7 +168,7 @@ File: `pages/AboutPage.tsx`.
 ## Data Sources
 - `profile.ts` – Centralised personal info (name, email, social URLs, location). Hero initials derive from `profile.name`.
 - `projects.ts` – Metadata for portfolio entries: slug, type, tech stack, summary, and optional links.
-- `skills.ts` – Skill categories with icon references (`lucide-react` icon keys) and bullet items.
+- `skills.ts` - Legacy skill categories retained for potential future use; currently unmounted on the homepage.
 These modules keep presentation components stateless and easy to localise.
 
 ## Utilities
@@ -218,6 +214,16 @@ These modules keep presentation components stateless and easy to localise.
 
 ---
 For further questions or enhancements, review the component-specific comments inside the codebase or reach out to the maintainer listed in `profile.ts`.
+
+
+
+
+
+
+
+
+
+
 
 
 

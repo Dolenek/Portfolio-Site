@@ -1,4 +1,4 @@
-﻿{
+{
     "nav":  {
                 "home":  "Home",
                 "projects":  "Projects",
@@ -15,7 +15,7 @@
                                    }
             },
     "hero":  {
-                 "intro":  "I\u0027m Jakub Dolének, and I can\u0027t resist automating the boring stuff.",
+                 "intro":  "I\u0027m Jakub Dol�nek, and I can\u0027t resist automating the boring stuff.",
                  "headline":  {
                                   "lead":  "Designing human-centered",
                                   "accent":  "automation",
@@ -26,8 +26,8 @@
                  "portraitCaption":  "Automation frees me to focus on the craft and the people behind every project."
              },
     "projects":  {
-                     "heading":  "Selected projects",
-                     "subheading":  "Automation, observability, and experience design for resilient systems.",
+                     "heading":  "Projects",
+                     "subheading":  "Follow the river to explore each build, its story, and stack.",
                      "items":  {
                                    "network-automation":  {
                                                               "title":  "Network automation toolkit",
@@ -41,7 +41,7 @@
                                                           },
                                    "portfolio":  {
                                                      "title":  "Personal portfolio",
-                                                     "summary":  "The site you are browsingďż˝crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
+                                                     "summary":  "The site you are browsing�crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
                                                      "impact":  "Highlights core projects, skills, and a bit of personality while keeping performance and accessibility in check."
                                                  }
                                },
@@ -51,7 +51,7 @@
                  },
     "skills":  {
                    "heading":  "Expertise snapshot",
-                   "subheading":  "From core routing to front-end polishďż˝here is what I work with daily.",
+                   "subheading":  "From core routing to front-end polish�here is what I work with daily.",
                    "categories":  {
                                       "networking":  {
                                                          "title":  "Networking \u0026 infrastructure",
@@ -123,8 +123,8 @@
                                    {
                                        "id":  "network-engineer",
                                        "title":  "Network engineer",
-                                       "period":  "2023 ďż˝ Present",
-                                       "location":  "Enterprise service provider ďż˝ Brno, CZ",
+                                       "period":  "2023 � Present",
+                                       "location":  "Enterprise service provider � Brno, CZ",
                                        "description":  "Lead technical ownership for multi-site WAN redesign, implemented IaC pipelines with Terraform, and automated configuration compliance.",
                                        "tags":  [
                                                     "Terraform",
@@ -135,8 +135,8 @@
                                    {
                                        "id":  "noc-analyst",
                                        "title":  "NOC / infrastructure analyst",
-                                       "period":  "2020 ďż˝ 2023",
-                                       "location":  "Managed services ďż˝ Remote",
+                                       "period":  "2020 � 2023",
+                                       "location":  "Managed services � Remote",
                                        "description":  "Maintained 24/7 operations, built internal dashboards for incident visibility, and coordinated cross-team response routines.",
                                        "tags":  [
                                                     "On-call",
@@ -147,7 +147,7 @@
                                    {
                                        "id":  "education",
                                        "title":  "Brno University of Technology",
-                                       "period":  "2016 ďż˝ 2020",
+                                       "period":  "2016 � 2020",
                                        "location":  "Faculty of Information Technology",
                                        "description":  "Bachelor studies focused on computer networks, distributed systems, and applied security.",
                                        "tags":  [
@@ -174,6 +174,6 @@
                   "backCta":  "Back to home"
               },
     "footer":  {
-                   "note":  "ďż˝ {{year}} Jakub DolĂ©nek. Built with care and plenty of coffee."
+                   "note":  "� {{year}} Jakub Dolének. Built with care and plenty of coffee."
                }
 }
