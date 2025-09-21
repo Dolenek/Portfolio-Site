@@ -1,0 +1,28 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio hero preview</title>
+  <desc id="desc">Stylised illustration of overlapping mountains beneath a gradient sky.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b3d5d" />
+      <stop offset="65%" stop-color="#12345a" />
+      <stop offset="100%" stop-color="#0e2344" />
+    </linearGradient>
+    <linearGradient id="ridgeFar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5787c9" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#4d6bb3" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="ridgeMid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#274e7d" />
+      <stop offset="100%" stop-color="#1f416d" />
+    </linearGradient>
+    <linearGradient id="ridgeNear" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f2744" />
+      <stop offset="100%" stop-color="#091b33" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <path d="M-40 440C120 400 190 330 360 360C530 390 550 450 720 420C890 390 1000 310 1160 340C1320 370 1330 440 1340 510L1340 720L-40 720Z" fill="url(#ridgeFar)" opacity="0.85" />
+  <path d="M-60 520C140 470 310 520 470 490C630 460 730 370 900 400C1070 430 1180 520 1340 500L1340 720L-60 720Z" fill="url(#ridgeMid)" opacity="0.92" />
+  <path d="M-80 620C80 600 240 650 420 610C600 570 760 480 940 500C1120 520 1200 600 1360 580L1360 720L-80 720Z" fill="url(#ridgeNear)" />
+  <path d="M-100 700C100 680 240 700 380 690C520 680 620 640 780 650C940 660 1120 690 1380 680L1380 720L-100 720Z" fill="#0e2344" opacity="0.85" />
+</svg>

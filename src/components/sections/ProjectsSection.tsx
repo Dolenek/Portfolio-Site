@@ -27,9 +27,13 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ project, copy, align, index, techLabel }: ProjectCardProps) => {
-  const previewStyle = {
-    backgroundImage: `linear-gradient(135deg, ${project.previewGradient[0]}, ${project.previewGradient[1]})`
-  } as const;
+  const hasImage = Boolean(project.previewImage);
+  const previewStyle = hasImage
+    ? undefined
+    : ({
+        backgroundImage: `linear-gradient(135deg, ${project.previewGradient[0]}, ${project.previewGradient[1]})`
+      } as const);
+  const previewAlt = `${copy?.title ?? project.id} preview`;
 
   return (
     <motion.li
@@ -45,6 +49,14 @@ const ProjectCard = ({ project, copy, align, index, techLabel }: ProjectCardProp
     >
       <article className="projects-river__card">
         <div className="projects-river__media" style={previewStyle}>
+          {project.previewImage ? (
+            <img
+              src={project.previewImage}
+              alt={previewAlt}
+              className="projects-river__media-image"
+              loading="lazy"
+            />
+          ) : null}
           <div className="projects-river__media-noise" aria-hidden="true" />
         </div>
 

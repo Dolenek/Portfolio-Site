@@ -1,5 +1,5 @@
 .projects-river {
-  --overlay-bg: rgba(13, 31, 56, 0.82);
+  --overlay-bg: transparent;
   --overlay-text: rgba(230, 239, 255, 0.94);
   --overlay-muted: rgba(200, 210, 230, 0.78);
   --overlay-chip: rgba(17, 39, 65, 0.72);
@@ -9,7 +9,7 @@
 }
 
 html.dark .projects-river {
-  --overlay-bg: rgba(9, 17, 32, 0.9);
+  --overlay-bg: transparent;
   --overlay-text: rgba(238, 244, 255, 0.96);
   --overlay-muted: rgba(190, 204, 230, 0.8);
   --overlay-chip: rgba(18, 27, 46, 0.78);
@@ -85,7 +85,15 @@ html.dark .projects-river__subtitle {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: saturate(120%);
+  filter: saturate(120%) blur(0px);
+  transition: filter 0.4s ease;
+}
+
+.projects-river__media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .projects-river__media-noise {
@@ -94,6 +102,11 @@ html.dark .projects-river__subtitle {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.18'/%3E%3C/svg%3E");
   mix-blend-mode: soft-light;
   opacity: 0.65;
+}
+
+.projects-river__card:hover .projects-river__media,
+.projects-river__card:focus-within .projects-river__media {
+  filter: saturate(108%) blur(3px) brightness(0.72);
 }
 
 .projects-river__base {
@@ -130,7 +143,7 @@ html.dark .projects-river__base {
   flex-direction: column;
   justify-content: flex-end;
   padding: clamp(2.3rem, 3.4vw, 3rem);
-  background: var(--overlay-bg);
+  background: transparent;
   color: var(--overlay-text);
   opacity: 0;
   transform: translateY(18%);
@@ -166,6 +179,7 @@ html.dark .projects-river__base {
   display: flex;
   flex-direction: column;
   gap: clamp(0.6rem, 2vw, 1rem);
+  text-shadow: 0 16px 38px rgba(6, 14, 28, 0.55);
 }
 
 .projects-river__overlay-footer {
@@ -175,6 +189,7 @@ html.dark .projects-river__base {
   justify-content: space-between;
   gap: clamp(1rem, 2.5vw, 1.6rem);
   margin-top: clamp(1.2rem, 2.6vw, 1.8rem);
+  text-shadow: 0 16px 38px rgba(6, 14, 28, 0.55);
 }
 
 .projects-river__links {
@@ -321,7 +336,7 @@ html.dark .projects-river__base {
     opacity: 1;
     transform: none;
     pointer-events: auto;
-    background: linear-gradient(200deg, rgba(13, 31, 56, 0.8), rgba(8, 18, 34, 0.7));
+    background: transparent;
   }
 
   .projects-river__overlay-body {

@@ -150,8 +150,9 @@ Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in lo
 
 ### Projects
 Files: `ProjectsSection.tsx`, `ProjectsSection.css`.
-- Renders a staggered column of large preview cards; each card paints a gradient placeholder via `project.previewGradient` and keeps the project title visible inside a base band that hugs the screenshot edge.
-- Hover/focus reveals the detail overlay by sliding it from the bottom: summary, impact, stack chips, and CTA icons animate upward using the shared cubic-bezier stored in `cardVariants`. Touch breakpoints keep the overlay visible and hide the duplicated base band.
+- Renders a staggered column of large preview cards; each card prefers an uploaded screenshot referenced via `project.previewImage` (falling back to the gradient defined in `project.previewGradient`) and keeps the project title visible inside a base band that hugs the screenshot edge.
+- Place screenshots inside `public/projects/` and point `project.previewImage` at the file (e.g. `/projects/your-project.png`). Omit the field to continue using the gradient placeholder.
+- Hover/focus reveals the detail overlay by sliding it from the bottom: summary, impact, stack chips, and CTA icons animate upward using the shared cubic-bezier stored in `cardVariants`. Touch breakpoints keep the overlay visible and hide the duplicated base band while the hover state gently darkens/soft-blurs the preview image instead of adding an opaque scrim.
 - GitHub and optional demo buttons live in the overlay footer beside the tech stack with translated `aria-label`s assembled from the project title.
 - Tweak sizing in `ProjectsSection.css` (`projects-river__card` width/height, overlay padding) and mirror any changes against Tailwind spacing in the JSX to maintain alignment for alternating left/right nodes.
 
