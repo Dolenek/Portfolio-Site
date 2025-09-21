@@ -19,7 +19,7 @@
                  "headline":  {
                                   "lead":  "Learning,",
                                   "accent":  "Automating,",
-                                  "trail":  "Programming"
+                                  "trail":  "Programming!"
                               },
                  "subheadline":  "Full-stack Developer",
                  "description":  "I develop software with modern technologies that solve real\u2011world problems and save time.",
@@ -29,25 +29,25 @@
                      "heading":  "Projects",
                      "subheading":  "",
                      "items":  {
-                                   "network-automation":  {
-                                                              "title":  "Network automation toolkit",
-                                                              "summary":  "Composable CLI and workflow library that orchestrates configuration drift checks, intent validation, and zero-downtime changes across Cisco Nexus and Juniper fabrics.",
-                                                              "impact":  "Reduced manual change windows by 45% and prevented misconfigurations with pre-flight guardrails."
+                                   "discord-automation":  {
+                                                              "title":  "Discord Automation",
+                                                              "summary":  "Desktop WPF (.NET 4.8) app embedding the Discord web client in WebView2; bot sends commands via DevTools Input.insertText and key events, polls the DOM for messages, and exposes last-5 messages plus structured logs.",
+                                                              "impact":  "Provides robust DevTools-driven automation (originally Selenium), deterministic start/deduplication logic, and observable logging/buffers for reliable, continuous bot operation."
                                                           },
-                                   "incident-simulator":  {
-                                                              "title":  "Incident readiness simulator",
-                                                              "summary":  "Browser-based lab that spins up containerized network topologies, injects latency or packet loss, and guides responders through incident runbooks.",
-                                                              "impact":  "Improved on-call response time by 30% and created reusable training scenarios for new hires."
+                                   "smithing-master-bot":  {
+                                                              "title":  "Bot using Pyautogui",
+                                                              "summary":  "Desktop automation bot using PyAutoGUI and OpenCV for screenshot-based computer-vision (template matching) to control an Android emulator",
+                                                              "impact":  "Fully automated time intesive and repetitive of a mobile game via screen\u2011based computer vision."
                                                           },
                                    "portfolio":  {
                                                      "title":  "Personal portfolio",
-                                                     "summary":  "The site you are browsing! Crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
+                                                     "summary":  "The site you are browsing! Crafted with React, Tailwind, and thoughtful micro\u2011animations to present my work and background.",
                                                      "impact":  "Highlights core projects, skills, and a bit of personality while keeping performance and accessibility in check."
                                                  },
                                    "mobile-game-unity":  {
                                                              "title":  "Mobile game in Unity",
-                                                             "summary":  "Casual arcade platformer built with Unity where players dodge obstacles and collect power-ups across handcrafted levels.",
-                                                             "impact":  "Shipped a polished prototype with analytics instrumentation and live balancing hooks for future updates."
+                                                             "summary":  "Casual RPG with strong clicker and crafting \u0022Brewing\u0022 mechanics with very simple combat using C# and Unity game engine.",
+                                                             "impact":  "Made a working prototype of a RPG mobile game with fully working progession system."
                                                          }
                                },
                      "techLabel":  "Stack",

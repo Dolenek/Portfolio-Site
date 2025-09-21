@@ -34,7 +34,7 @@
                                                               "summary":  "Modulďż˝rnďż˝ CLI a workflow knihovna, kterďż˝ spouďż˝tďż˝ kontroly konfigurace, ovďż˝ďż˝uje zďż˝mďż˝r a zajiďż˝ďż˝uje bezvďż˝padkovďż˝ zmďż˝ny napďż˝ďż˝ďż˝ Cisco Nexus a Juniper prostďż˝edďż˝mi.",
                                                               "impact":  "Zkrďż˝cenďż˝ manuďż˝lnďż˝ch servisnďż˝ch oken o 45 % a prevence chyb dďż˝ky pďż˝edbďż˝nďż˝m kontrolďż˝m."
                                                           },
-                                   "incident-simulator":  {
+                                   "smithing-master-bot":  {
                                                               "title":  "Simulďż˝tor incidentďż˝",
                                                               "summary":  "Webovďż˝ laboratoďż˝, kterďż˝ pďż˝ipravďż˝ kontejnerovďż˝ topologie, injektuje zpoďż˝dďż˝nďż˝ ďż˝i ztrďż˝tu paketďż˝ a provede tďż˝m krok za krokem provoznďż˝m runbookem.",
                                                               "impact":  "Zlepďż˝enďż˝ reakďż˝nďż˝ doby pohotovosti o 30 % a vytvoďż˝enďż˝ opakovatelnďż˝ch scďż˝nďż˝ďż˝ďż˝ pro novďż˝ kolegy."
@@ -45,9 +45,9 @@
                                                     "impact":  "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
                                                  },
                                    "mobile-game-unity":  {
-                                                             "title":  "Mobilni hra v Unity",
-                                                             "summary":  "Arkadova plosinovka vytvorena v Unity, kde hraci sbiraji power-upy a vyhybaji se nastraham na rucne navrzenych levelech.",
-                                                             "impact":  "Dodali jsme vyladeny prototyp s analyzou chovani hracu a pripravou na budouci aktualizace."
+                                                             "title":  "Mobilnďż˝ hra v Unity",
+                                                             "summary":  "Arkďż˝dovďż˝ ploďż˝inovka vytvoďż˝enďż˝ v Unity, kde hrďż˝i sbďż˝rajďż˝ power-upy a vyhďż˝bajďż˝ se nďż˝strahďż˝m na ruďż˝nďż˝ navrďż˝enďż˝ch levelech.",
+                                                             "impact":  "Dodali jsme vyladďż˝nďż˝ prototyp s analďż˝zou chovďż˝nďż˝ hrďż˝ďż˝ďż˝ a hďż˝ky pro budoucďż˝balancovďż˝nďż˝."
                                                          }
                                },
                      "techLabel":  "Technologie",

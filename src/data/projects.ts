@@ -1,7 +1,7 @@
 export type ProjectId =
   | "portfolio"
-  | "network-automation"
-  | "incident-simulator"
+  | "discord-automation"
+  | "smithing-master-bot"
   | "mobile-game-unity";
 
 export type Project = {
@@ -27,36 +27,38 @@ export const projects: Project[] = [
     },
     accent: "from-emerald-400/40 via-teal-400/30 to-cyan-400/30",
     previewGradient: ["#3ab795", "#0b3d5d"],
-    previewImage: "/projects/portfolio-cover.svg"
+    previewImage: "/projects/SiteScreen.png"
   },
   {
-    id: "network-automation",
+    id: "discord-automation",
     year: "2024",
-    tech: ["TypeScript", "Terraform", "Ansible"],
+    tech: ["C#", "Selenium", ".NET", "WebView2"],
     links: {
-      github: "https://github.com/Dolenek"
+      github: "https://github.com/Dolenek/Projekt-ERDB"
     },
     accent: "from-brand/40 via-blue-400/30 to-indigo-500/40",
-    previewGradient: ["#4c6ef5", "#0e2344"]
-  },
-  {
-    id: "incident-simulator",
-    year: "2023",
-    tech: ["React", "Docker", "Grafana"],
-    links: {
-      github: "https://github.com/Dolenek"
-    },
-    accent: "from-amber-400/40 via-orange-400/30 to-rose-500/30",
-    previewGradient: ["#ff903b", "#5a1f53"]
+    previewGradient: ["#4c6ef5", "#0e2344"],
+    previewImage: "/projects/ERDB.png"
   },
   {
     id: "mobile-game-unity",
     year: "2022",
-    tech: ["Unity", "C#", "Firebase"],
+    tech: ["Unity", "C#", "Android"],
     links: {
-      github: "https://github.com/Dolenek"
+      github: "https://github.com/Dolenek/Magicians-Cauldron"
     },
     accent: "from-sky-400/40 via-blue-500/25 to-indigo-600/35",
-    previewGradient: ["#5ec9ff", "#1b2a6b"]
+    previewGradient: ["#5ec9ff", "#1b2a6b"],
+    previewImage: "/projects/UnityGame.png"
+  },
+  {
+    id: "smithing-master-bot",
+    year: "2023",
+    tech: ["Python", "pyautogui", "BlueStacks"],
+    links: {
+      github: "https://github.com/Dolenek/Smithing-Master-Bot"
+    },
+    accent: "from-amber-400/40 via-orange-400/30 to-rose-500/30",
+    previewGradient: ["#ff903b", "#5a1f53"]
   }
 ];

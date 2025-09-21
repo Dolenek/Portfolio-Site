@@ -51,13 +51,13 @@ html.dark .projects-river__subtitle {
   display: flex;
   flex-direction: column;
   gap: clamp(3rem, 8vw, 5rem);
-  max-width: min(1120px, 100%);
+  max-width: min(1440px, 100%);
 }
 
 .projects-river__node {
   display: flex;
   pointer-events: none;
-  height: 460px;
+  min-height: 0;
 }
 
 .projects-river__node--left {
@@ -73,8 +73,10 @@ html.dark .projects-river__subtitle {
 .projects-river__card {
   pointer-events: auto;
   position: relative;
-  width: min(660px, 96%);
-  height: 100%;
+  width: min(1280px, 96%);
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
   border-radius: 36px;
   overflow: hidden;
   box-shadow: 0 38px 90px -46px rgba(12, 26, 58, 0.5);
@@ -290,11 +292,11 @@ html.dark .projects-river__base {
   }
 
   .projects-river__node {
-    height: 410px;
+    min-height: 0;
   }
 
   .projects-river__card {
-    width: min(600px, 100%);
+    width: min(960px, 100%);
   }
 
   .projects-river__node--left {
