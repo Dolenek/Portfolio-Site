@@ -4,8 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { profile } from "../data/profile";
-
-const TRANSITION_EASE = [0.16, 1, 0.3, 1] as const;
+import { MOTION_EASE } from "../utils/animation";
 
 type TimelineItem = {
   id: string;
@@ -42,7 +41,7 @@ export const AboutPage = () => {
         className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]"
         initial={{ opacity: 0, y: 32 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: TRANSITION_EASE }}
+        transition={{ duration: 0.7, ease: MOTION_EASE }}
       >
         <div className="space-y-6">
           <h1 className="text-4xl font-semibold text-slate-900 dark:text-white">{t("about.title")}</h1>
@@ -86,7 +85,7 @@ export const AboutPage = () => {
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-120px" }}
-        transition={{ duration: 0.7, ease: TRANSITION_EASE }}
+        transition={{ duration: 0.7, ease: MOTION_EASE }}
       >
         <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t("about.timelineHeading")}</h2>
         <div className="mt-8 space-y-6">
@@ -125,7 +124,7 @@ export const AboutPage = () => {
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-120px" }}
-        transition={{ duration: 0.7, ease: TRANSITION_EASE }}
+        transition={{ duration: 0.7, ease: MOTION_EASE }}
       >
         <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t("about.valuesHeading")}</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { profile } from "../../data/profile";
+import { MOTION_EASE } from "../../utils/animation";
 import "./HeroSection.css";
 
 type CSSVariableStyles = CSSProperties & Record<string, string>;
@@ -274,8 +275,6 @@ const createHeroCloudField = (count: number): CloudConfig[] => {
 
 const HERO_DAY_CLOUDS = createHeroCloudField(11);
 
-const TRANSITION_EASE = [0.16, 1, 0.3, 1] as const;
-
 const containerVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: (delay = 0) => ({
@@ -284,7 +283,7 @@ const containerVariants = {
     transition: {
       duration: 0.6,
       delay,
-      ease: TRANSITION_EASE
+      ease: MOTION_EASE
     }
   })
 };
@@ -366,7 +365,7 @@ export const HeroSection = () => {
           className="hero-portrait-wrapper"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25, ease: TRANSITION_EASE }}
+          transition={{ duration: 0.8, delay: 0.25, ease: MOTION_EASE }}
         >
           <div className="hero-portrait-card">
             <div className="hero-portrait-glow" />

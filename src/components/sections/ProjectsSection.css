@@ -3,6 +3,7 @@
   --overlay-text: rgba(230, 239, 255, 0.94);
   --overlay-muted: rgba(200, 210, 230, 0.78);
   --overlay-chip: rgba(17, 39, 65, 0.72);
+  --projects-river-gutter: clamp(1.5rem, 6vw, 4.5rem);
   position: relative;
   padding-bottom: clamp(4rem, 10vw, 7rem);
 }
@@ -15,6 +16,7 @@ html.dark .projects-river {
 }
 
 .projects-river__header {
+  margin-left: var(--projects-river-gutter);
   margin-bottom: clamp(2.5rem, 6vw, 4rem);
   max-width: 40rem;
 }
@@ -45,7 +47,7 @@ html.dark .projects-river__subtitle {
 .projects-river__list {
   list-style: none;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 6vw, 4.5rem);
+  padding: 0 var(--projects-river-gutter);
   display: flex;
   flex-direction: column;
   gap: clamp(3rem, 8vw, 5rem);
@@ -268,8 +270,8 @@ html.dark .projects-river__base {
 }
 
 @media (max-width: 1024px) {
-  .projects-river__list {
-    padding: 0 clamp(1rem, 5vw, 3.5rem);
+  .projects-river {
+    --projects-river-gutter: clamp(1rem, 5vw, 3.5rem);
   }
 
   .projects-river__node {
@@ -290,9 +292,13 @@ html.dark .projects-river__base {
 }
 
 @media (max-width: 768px) {
+  .projects-river {
+    --projects-river-gutter: clamp(1rem, 4vw, 2.5rem);
+  }
+
   .projects-river__list {
     gap: 2rem;
-    padding: 0 clamp(1rem, 4vw, 2.5rem);
+    padding: 0 var(--projects-river-gutter);
   }
 
   .projects-river__node {

@@ -2,32 +2,21 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { skillCategories } from "../../data/skills";
+import { createStaggerFade } from "../../utils/animation";
 
-const TRANSITION_EASE = [0.16, 1, 0.3, 1] as const;
+const SKILL_CARD_VARIANTS = createStaggerFade();
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      delay: index * 0.08,
-      ease: TRANSITION_EASE
-    }
-  })
+type SkillCopy = {
+  title: string;
+  description: string;
+  items: string[];
 };
+
+type SkillCopyMap = Record<string, SkillCopy>;
 
 export const SkillsSection = () => {
   const { t } = useTranslation();
-  const categories = t("skills.categories", { returnObjects: true }) as Record<
-    string,
-    {
-      title: string;
-      description: string;
-      items: string[];
-    }
-  >;
+  const categories = t("skills.categories", { returnObjects: true }) as SkillCopyMap;
 
   return (
     <section id="skills" data-section="skills" className="container-xl">
@@ -50,7 +39,7 @@ export const SkillsSection = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              variants={cardVariants}
+              variants={SKILL_CARD_VARIANTS}
               custom={index}
             >
               <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand/10 blur-3xl transition duration-500 group-hover:bg-brand/25" />

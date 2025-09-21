@@ -4,20 +4,9 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { profile } from "../../data/profile";
+import { createStaggerFade } from "../../utils/animation";
 
-const TRANSITION_EASE = [0.16, 1, 0.3, 1] as const;
-
-const containerVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: TRANSITION_EASE
-    }
-  }
-};
+const CONTACT_CARD_VARIANTS = createStaggerFade({ distance: 20, duration: 0.6, stagger: 0 });
 
 export const ContactSection = () => {
   const { t } = useTranslation();
@@ -40,7 +29,7 @@ export const ContactSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-120px" }}
-        variants={containerVariants}
+        variants={CONTACT_CARD_VARIANTS}
       >
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
