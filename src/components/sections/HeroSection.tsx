@@ -352,6 +352,8 @@ export const HeroSection = () => {
     .join("")
     .slice(0, 2)
     .toUpperCase();
+  const portraitImage = profile.portraitImage;
+  const portraitAlt = profile.portraitAlt ?? `${profile.name} portrait`;
 
   return (
     <section
@@ -370,8 +372,20 @@ export const HeroSection = () => {
           <div className="hero-portrait-card">
             <div className="hero-portrait-glow" />
             <div className="hero-portrait-inner">
-              <div className="hero-portrait-ring">
-                <span className="hero-portrait-initials">{initials}</span>
+              <div className="hero-portrait-media">
+                {portraitImage ? (
+                  <img
+                    src={portraitImage}
+                    alt={portraitAlt}
+                    className="hero-portrait-media-image"
+                    loading="eager"
+                  />
+                ) : (
+                  <div className="hero-portrait-placeholder">
+                    <span className="hero-portrait-initials">{initials}</span>
+                  </div>
+                )}
+                <div className="hero-portrait-media-overlay" aria-hidden="true" />
               </div>
               <p className="hero-portrait-caption">{portraitCaption}</p>
             </div>

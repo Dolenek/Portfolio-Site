@@ -1,4 +1,8 @@
-export type ProjectId = "portfolio" | "network-automation" | "incident-simulator";
+export type ProjectId =
+  | "portfolio"
+  | "network-automation"
+  | "incident-simulator"
+  | "mobile-game-unity";
 
 export type Project = {
   id: ProjectId;
@@ -23,7 +27,7 @@ export const projects: Project[] = [
     },
     accent: "from-emerald-400/40 via-teal-400/30 to-cyan-400/30",
     previewGradient: ["#3ab795", "#0b3d5d"],
-    previewImage: "public/projects/portfolio-cover.svg"
+    previewImage: "/projects/portfolio-cover.svg"
   },
   {
     id: "network-automation",
@@ -44,5 +48,15 @@ export const projects: Project[] = [
     },
     accent: "from-amber-400/40 via-orange-400/30 to-rose-500/30",
     previewGradient: ["#ff903b", "#5a1f53"]
+  },
+  {
+    id: "mobile-game-unity",
+    year: "2022",
+    tech: ["Unity", "C#", "Firebase"],
+    links: {
+      github: "https://github.com/Dolenek"
+    },
+    accent: "from-sky-400/40 via-blue-500/25 to-indigo-600/35",
+    previewGradient: ["#5ec9ff", "#1b2a6b"]
   }
 ];

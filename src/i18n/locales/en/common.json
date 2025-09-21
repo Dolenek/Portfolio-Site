@@ -1,4 +1,4 @@
-{
+﻿{
     "nav":  {
                 "home":  "Home",
                 "projects":  "Projects",
@@ -15,19 +15,19 @@
                                    }
             },
     "hero":  {
-                 "intro":  "I\u0027m Jakub Dol�nek, and I can\u0027t resist automating the boring stuff.",
+                 "intro":  "Hi, I\u0027m Jakub Dolének, and I enjoy",
                  "headline":  {
-                                  "lead":  "Designing human-centered",
-                                  "accent":  "automation",
-                                  "trail":  "that keeps teams in flow."
+                                  "lead":  "Learning,",
+                                  "accent":  "Automating,",
+                                  "trail":  "Programming"
                               },
-                 "subheadline":  "Full-stack engineer",
-                 "description":  "I love turning repeatable workflows into orchestrated systems so products ship faster without losing the personal touch.",
-                 "portraitCaption":  "Automation frees me to focus on the craft and the people behind every project."
+                 "subheadline":  "Full-stack Developer",
+                 "description":  "I develop software with modern technologies that solve real\u2011world problems and save time.",
+                 "portraitCaption":  ""
              },
     "projects":  {
                      "heading":  "Projects",
-                     "subheading":  "Follow the river to explore each build, its story, and stack.",
+                     "subheading":  "",
                      "items":  {
                                    "network-automation":  {
                                                               "title":  "Network automation toolkit",
@@ -41,9 +41,14 @@
                                                           },
                                    "portfolio":  {
                                                      "title":  "Personal portfolio",
-                                                     "summary":  "The site you are browsing�crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
+                                                     "summary":  "The site you are browsing! Crafted with React, Tailwind, and thoughtful micro-animations to present my work and background.",
                                                      "impact":  "Highlights core projects, skills, and a bit of personality while keeping performance and accessibility in check."
-                                                 }
+                                                 },
+                                   "mobile-game-unity":  {
+                                                             "title":  "Mobile game in Unity",
+                                                             "summary":  "Casual arcade platformer built with Unity where players dodge obstacles and collect power-ups across handcrafted levels.",
+                                                             "impact":  "Shipped a polished prototype with analytics instrumentation and live balancing hooks for future updates."
+                                                         }
                                },
                      "techLabel":  "Stack",
                      "ctaLabel":  "View case study",
@@ -174,6 +179,6 @@
                   "backCta":  "Back to home"
               },
     "footer":  {
-                   "note":  "� {{year}} Jakub Dolének. Built with care and plenty of coffee."
+                   "note":  "© {{year}} Jakub Dolének. Built with love for technology. ❤️"
                }
 }

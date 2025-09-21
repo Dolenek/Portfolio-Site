@@ -39,11 +39,16 @@
                                                               "summary":  "Webovďż˝ laboratoďż˝, kterďż˝ pďż˝ipravďż˝ kontejnerovďż˝ topologie, injektuje zpoďż˝dďż˝nďż˝ ďż˝i ztrďż˝tu paketďż˝ a provede tďż˝m krok za krokem provoznďż˝m runbookem.",
                                                               "impact":  "Zlepďż˝enďż˝ reakďż˝nďż˝ doby pohotovosti o 30 % a vytvoďż˝enďż˝ opakovatelnďż˝ch scďż˝nďż˝ďż˝ďż˝ pro novďż˝ kolegy."
                                                           },
-                                   "portfolio":  {
-                                                     "title":  "Osobnďż˝ portfolio",
-                                                     "summary":  "Web, na kterďż˝m prďż˝vďż˝ jste ďż˝ postavenďż˝ v Reactu a Tailwindu s jemnďż˝mi animacemi, kterďż˝ pďż˝edstavujďż˝ mou prďż˝ci i zkuďż˝enosti.",
-                                                     "impact":  "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
-                                                 }
+                                  "portfolio":  {
+                                                    "title":  "Osobnďż˝ portfolio",
+                                                    "summary":  "Web, na kterďż˝m prďż˝vďż˝ jste ďż˝ postavenďż˝ v Reactu a Tailwindu s jemnďż˝mi animacemi, kterďż˝ pďż˝edstavujďż˝ mou prďż˝ci i zkuďż˝enosti.",
+                                                    "impact":  "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
+                                                 },
+                                   "mobile-game-unity":  {
+                                                             "title":  "Mobilni hra v Unity",
+                                                             "summary":  "Arkadova plosinovka vytvorena v Unity, kde hraci sbiraji power-upy a vyhybaji se nastraham na rucne navrzenych levelech.",
+                                                             "impact":  "Dodali jsme vyladeny prototyp s analyzou chovani hracu a pripravou na budouci aktualizace."
+                                                         }
                                },
                      "techLabel":  "Technologie",
                      "ctaLabel":  "Zobrazit detail",

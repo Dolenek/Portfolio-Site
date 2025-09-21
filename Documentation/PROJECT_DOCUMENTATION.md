@@ -64,11 +64,11 @@ npm install
 This project uses a `package-lock.json`; prefer npm over other package managers.
 
 ### Available Scripts
-- `npm run dev` – Start the Vite development server with hot module replacement.
-- `npm run build` – Type-check via `tsc -b` and create a production bundle.
-- `npm run preview` – Serve the built assets locally (runs `vite preview`).
-- `npm run lint` – Run ESLint with `--max-warnings=0` (ensure fast-refresh rules pass).
-- `npm run typecheck` – Run TypeScript without emitting files.
+- `npm run dev`  Start the Vite development server with hot module replacement.
+- `npm run build`  Type-check via `tsc -b` and create a production bundle.
+- `npm run preview`  Serve the built assets locally (runs `vite preview`).
+- `npm run lint`  Run ESLint with `--max-warnings=0` (ensure fast-refresh rules pass).
+- `npm run typecheck`  Run TypeScript without emitting files.
 
 ## Project Structure
 ```
@@ -97,7 +97,7 @@ Styling blends Tailwind utilities with targeted CSS modules for art-heavy sectio
 
 ### Section-Specific Styling
 Complex visuals (e.g. animated mountains, sun/moon, portrait card) are managed via dedicated CSS files:
-- `HeroSection.css` – Handles background gradients, star animations, mountain layers, sun/moon/cloud animations, and the portrait card styling.
+- `HeroSection.css`  Handles background gradients, star animations, mountain layers, sun/moon/cloud animations, and the portrait card styling.
 - `ProjectsSection.css` - Shapes the river path, alternating project card anchors, and icon states.
 Tailwind classes complement these styles for spacing, typography, and general layout.
 
@@ -110,7 +110,7 @@ Tailwind classes complement these styles for spacing, typography, and general la
 ## Theme Management
 - Theme preference is persisted in localStorage under the key `portfolio-site-theme` (see `ThemeProvider.tsx`).
 - Initial theme respects saved preference or `prefers-color-scheme` media query.
-- The `<html>` element gets a `dark` class toggle, allowing Tailwind’s `dark:` variants to react.
+- The `<html>` element gets a `dark` class toggle, allowing Tailwinds `dark:` variants to react.
 - `ThemeToggle.tsx` toggles the theme via context, updating the provider state and DOM class list.
 - The hero section listens to the `dark` class to swap between night/day DOM elements.
 
@@ -145,7 +145,7 @@ Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in lo
 - The front-most ridge colour matches the site background (`#e3ebf8`) and the section applies a negative top margin so the mountains rise behind the transparent header without leaving a dark strip.
 - Uses Framer Motion for staged entrance animations.
 - Pulls dynamic strings `hero.intro`, `hero.headline` (object with `lead`, `accent`, `trail`), `hero.subheadline`, `hero.description`, `hero.portraitCaption`.
-- Portrait card currently displays initials derived from `profile.name`; swap with actual imagery by replacing the markup within `.hero-portrait-ring`.
+- Portrait media renders the optional `profile.portraitImage` (sourced from `/public/projects/` or similar); omit the field to fall back to initials derived from `profile.name`.
 - Adjust ridge heights or glow in `HERO_MOUNTAIN_LAYERS` and `.hero-mountain-path--ridge-*` respectively.
 
 ### Projects
@@ -159,7 +159,7 @@ Files: `ProjectsSection.tsx`, `ProjectsSection.css`.
 ### Contact
 File: `ContactSection.tsx`.
 - Provides contact CTA, email copy-to-clipboard interaction, and social links from `profile.ts` using icons.
-- Exposes copy feedback (`Copy` › `Copied!`) sourced from i18n.
+- Exposes copy feedback (`Copy`  `Copied!`) sourced from i18n.
 
 ### About Page
 File: `pages/AboutPage.tsx`.
@@ -167,13 +167,13 @@ File: `pages/AboutPage.tsx`.
 - Consumes the same locale schema for consistent translations.
 
 ## Data Sources
-- `profile.ts` – Centralised personal info (name, email, social URLs, location). Hero initials derive from `profile.name`.
-- `projects.ts` – Metadata for portfolio entries: slug, type, tech stack, summary, and optional links.
+- `profile.ts`  Centralised personal info (name, email, social URLs, location). Set `profile.portraitImage` to surface a portrait in the hero (falls back to initials from `profile.name`).
+- `projects.ts`  Metadata for portfolio entries: slug, type, tech stack, summary, and optional links.
 - `skills.ts` - Legacy skill categories retained for potential future use; currently unmounted on the homepage.
 These modules keep presentation components stateless and easy to localise.
 
 ## Utilities
-- `utils/cn.ts` – Class name combiner built on `clsx` semantics, allowing conditional Tailwind usage.
+- `utils/cn.ts`  Class name combiner built on `clsx` semantics, allowing conditional Tailwind usage.
 - Additional helpers (e.g. scroll spy registration) live inside provider files.
 
 ## Animations & Motion
