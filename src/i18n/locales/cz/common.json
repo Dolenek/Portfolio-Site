@@ -1,184 +1,154 @@
-﻿{
-    "nav":  {
-                "home":  "Domďż˝",
-                "projects":  "Projekty",
-                "about":  "O mnďż˝",
-                "contact":  "Kontakt",
-                "themeToggle":  {
-                                    "light":  "Svďż˝tlďż˝ reďż˝im",
-                                    "dark":  "Tmavďż˝ reďż˝im"
-                                },
-                "languageToggle":  {
-                                       "label":  "Jazyk",
-                                       "en":  "EN",
-                                       "cz":  "CZ"
-                                   }
-            },
-    "hero":  {
-                 "intro":  "Jsem Jakub Dolínek a automatizace mě prostě baví.",
-                 "headline":  {
-                                  "lead":  "Navrhuji na lidi zaměřenou",
-                                  "accent":  "automatizaci",
-                                  "trail":  "která drží týmy v tempu."
-                              },
-                 "subheadline":  "Full-stack vývojář zaměřený na automatizaci",
-                 "description":  "Rád proměňuji opakující se postupy na orkestrované systémy, díky nimž mohou týmy dodávat rychleji bez ztráty kvality.",
-                 "portraitCaption":  "Automatizace mi nechává prostor soustředit se na detail i lidi v projektu."
-             },
-    "projects":  {
-                     "heading":  "Projekty",
-                     "subheading":  "Sledujte řeku a objevte každý projekt, jeho příběh i stack.",
-                     "items":  {
-                                   "network-automation":  {
-                                                              "title":  "Toolkit pro sďż˝ovou automatizaci",
-                                                              "summary":  "Modulďż˝rnďż˝ CLI a workflow knihovna, kterďż˝ spouďż˝tďż˝ kontroly konfigurace, ovďż˝ďż˝uje zďż˝mďż˝r a zajiďż˝ďż˝uje bezvďż˝padkovďż˝ zmďż˝ny napďż˝ďż˝ďż˝ Cisco Nexus a Juniper prostďż˝edďż˝mi.",
-                                                              "impact":  "Zkrďż˝cenďż˝ manuďż˝lnďż˝ch servisnďż˝ch oken o 45 % a prevence chyb dďż˝ky pďż˝edbďż˝nďż˝m kontrolďż˝m."
-                                                          },
-                                   "smithing-master-bot":  {
-                                                              "title":  "Simulďż˝tor incidentďż˝",
-                                                              "summary":  "Webovďż˝ laboratoďż˝, kterďż˝ pďż˝ipravďż˝ kontejnerovďż˝ topologie, injektuje zpoďż˝dďż˝nďż˝ ďż˝i ztrďż˝tu paketďż˝ a provede tďż˝m krok za krokem provoznďż˝m runbookem.",
-                                                              "impact":  "Zlepďż˝enďż˝ reakďż˝nďż˝ doby pohotovosti o 30 % a vytvoďż˝enďż˝ opakovatelnďż˝ch scďż˝nďż˝ďż˝ďż˝ pro novďż˝ kolegy."
-                                                          },
-                                  "portfolio":  {
-                                                    "title":  "Osobnďż˝ portfolio",
-                                                    "summary":  "Web, na kterďż˝m prďż˝vďż˝ jste ďż˝ postavenďż˝ v Reactu a Tailwindu s jemnďż˝mi animacemi, kterďż˝ pďż˝edstavujďż˝ mou prďż˝ci i zkuďż˝enosti.",
-                                                    "impact":  "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
-                                                 },
-                                   "mobile-game-unity":  {
-                                                             "title":  "Mobilnďż˝ hra v Unity",
-                                                             "summary":  "Arkďż˝dovďż˝ ploďż˝inovka vytvoďż˝enďż˝ v Unity, kde hrďż˝i sbďż˝rajďż˝ power-upy a vyhďż˝bajďż˝ se nďż˝strahďż˝m na ruďż˝nďż˝ navrďż˝enďż˝ch levelech.",
-                                                             "impact":  "Dodali jsme vyladďż˝nďż˝ prototyp s analďż˝zou chovďż˝nďż˝ hrďż˝ďż˝ďż˝ a hďż˝ky pro budoucďż˝balancovďż˝nďż˝."
-                                                         }
-                               },
-                     "techLabel":  "Technologie",
-                     "ctaLabel":  "Zobrazit detail",
-                     "repoLabel":  "Zdroj"
-                 },
-    "skills":  {
-                   "heading":  "Pďż˝ehled expertďż˝zy",
-                   "subheading":  "Od sďż˝ovďż˝ch zďż˝kladďż˝ po frontend ďż˝ nďż˝stroje, se kterďż˝mi pracuji kaďż˝dďż˝ den.",
-                   "categories":  {
-                                      "networking":  {
-                                                         "title":  "Sďż˝tďż˝ a infrastruktura",
-                                                         "description":  "Routovďż˝nďż˝, switching, WAN, SD-WAN, firewally a hybridnďż˝ konektivita.",
-                                                         "items":  [
-                                                                       "Cisco IOS/NX-OS",
-                                                                       "Juniper",
-                                                                       "MikroTik",
-                                                                       "VyOS",
-                                                                       "Fortinet"
-                                                                   ]
-                                                     },
-                                      "automation":  {
-                                                         "title":  "Automatizace a spolehlivost",
-                                                         "description":  "Opakovatelnďż˝ nasazovďż˝nďż˝, testovacďż˝ pipeline a observabilita.",
-                                                         "items":  [
-                                                                       "Ansible",
-                                                                       "Terraform",
-                                                                       "Python",
-                                                                       "TypeScript",
-                                                                       "GitHub Actions"
-                                                                   ]
-                                                     },
-                                      "cloud":  {
-                                                    "title":  "Cloud a platformy",
-                                                    "description":  "Modernďż˝ prostďż˝edďż˝ pro doruďż˝ovďż˝nďż˝ aplikacďż˝ a sluďż˝eb.",
-                                                    "items":  [
-                                                                  "AWS",
-                                                                  "Azure",
-                                                                  "Docker",
-                                                                  "Kubernetes",
-                                                                  "Proxmox"
-                                                              ]
-                                                },
-                                      "frontend":  {
-                                                       "title":  "UI a spoluprďż˝ce",
-                                                       "description":  "Pomďż˝hďż˝m tďż˝mďż˝m chďż˝pat komplexnďż˝ systďż˝my skrze promyďż˝lenďż˝ rozhranďż˝.",
-                                                       "items":  [
-                                                                     "React",
-                                                                     "Tailwind CSS",
-                                                                     "Framer Motion",
-                                                                     "Figma",
-                                                                     "Miro"
-                                                                 ]
-                                                   }
-                                  }
-               },
-    "contact":  {
-                    "heading":  "Pojďż˝me vybudovat odolnďż˝ ďż˝eďż˝enďż˝",
-                    "description":  "Potďż˝ebujete ďż˝kďż˝lovat sďż˝, zlepďż˝it spolehlivost nebo promďż˝nit nďż˝pad v realitu? Budu rďż˝d, kdyďż˝ se ozvete.",
-                    "emailLabel":  "E-mail",
-                    "copy":  "Zkopďż˝rovat",
-                    "copied":  "Zkopďż˝rovďż˝no!",
-                    "platforms":  {
-                                      "github":  "GitHub",
-                                      "linkedin":  "LinkedIn"
-                                  }
-                },
-    "about":  {
-                  "title":  "O Jakubovi",
-                  "intro":  "Ke svďż˝tu sďż˝tďż˝ mďż˝ pďż˝ivedla zvďż˝davost, jak se data dostanou z bodu A do bodu B. Dnes pomďż˝hďż˝m tďż˝mďż˝m doruďż˝ovat spolehlivďż˝ sluďż˝by dďż˝ky kombinaci kvalitnďż˝ infrastruktury, automatizace a observability.",
-                  "snapshot":  {
-                                   "location":  "Sďż˝dlďż˝m v Brnďż˝, ďż˝eskďż˝ republika",
-                                   "focus":  "Zamďż˝ďż˝enďż˝: nďż˝vrh sďż˝tďż˝, automatizace a spolehlivost sluďż˝eb",
-                                   "mindset":  "Pďż˝ďż˝stup: spoluprďż˝ce, mďż˝ďż˝enďż˝ vďż˝sledkďż˝ a klid v krizďż˝ch"
-                               },
-                  "timelineHeading":  "Zkuďż˝enosti a vzdďż˝lďż˝nďż˝",
-                  "timeline":  [
-                                   {
-                                       "id":  "network-engineer",
-                                       "title":  "Sďż˝ovďż˝ inďż˝enďż˝r",
-                                       "period":  "2023 ďż˝ souďż˝asnost",
-                                       "location":  "Poskytovatel sluďż˝eb ďż˝ Brno, ďż˝R",
-                                       "description":  "Technickďż˝ vedenďż˝ pďż˝i redesignu WAN sďż˝tďż˝, automatizace compliance pomocďż˝ Terraformu a zavedenďż˝ IaC pipeline.",
-                                       "tags":  [
-                                                    "Terraform",
-                                                    "IaC",
-                                                    "Monitoring"
-                                                ]
-                                   },
-                                   {
-                                       "id":  "noc-analyst",
-                                       "title":  "NOC / infrastruktura analytik",
-                                       "period":  "2020 ďż˝ 2023",
-                                       "location":  "Managed services ďż˝ Remote",
-                                       "description":  "Zajiďż˝tďż˝nďż˝ 24/7 provozu, tvorba internďż˝ch dashboardďż˝ pro sledovďż˝nďż˝ incidentďż˝ a koordinace zďż˝sahďż˝ napďż˝ďż˝ďż˝ tďż˝my.",
-                                       "tags":  [
-                                                    "On-call",
-                                                    "Dashboardy",
-                                                    "Skriptovďż˝nďż˝"
-                                                ]
-                                   },
-                                   {
-                                       "id":  "education",
-                                       "title":  "Vysokďż˝ uďż˝enďż˝ technickďż˝ v Brnďż˝",
-                                       "period":  "2016 ďż˝ 2020",
-                                       "location":  "Fakulta informaďż˝nďż˝ch technologiďż˝",
-                                       "description":  "Bakalďż˝ďż˝skďż˝ studium se zamďż˝ďż˝enďż˝m na poďż˝ďż˝taďż˝ovďż˝ sďż˝tďż˝, distribuovanďż˝ systďż˝my a aplikovanou bezpeďż˝nost.",
-                                       "tags":  [
-                                                    "Sďż˝tďż˝",
-                                                    "Distribuovanďż˝ systďż˝my"
-                                                ]
-                                   }
-                               ],
-                  "valuesHeading":  "Jak pracuji",
-                  "values":  [
-                                 {
-                                     "title":  "Spolehlivost na prvnďż˝m mďż˝stďż˝",
-                                     "description":  "Nasazenďż˝ pďż˝ipravuji s moďż˝nostďż˝ rollbacku, metrikami a nďż˝cviky selhďż˝nďż˝, aby ďż˝lo vďż˝e hladce."
-                                 },
-                                 {
-                                     "title":  "Empatie k operďż˝torďż˝m",
-                                     "description":  "Srozumitelnďż˝ runbooky, observabilita a nďż˝stroje pďż˝ďż˝vďż˝tivďż˝ pro lidi pomďż˝hajďż˝ tďż˝mu pracovat rychleji i jistďż˝ji."
-                                 },
-                                 {
-                                     "title":  "Neustďż˝lďż˝ uďż˝enďż˝",
-                                     "description":  "Od laborovďż˝nďż˝ s novďż˝mi protokoly po experimenty s UI animacemi ďż˝ stďż˝le hledďż˝m novďż˝ postupy."
-                                 }
-                             ],
-                  "backCta":  "Zpďż˝t na hlavnďż˝ strďż˝nku"
-              },
-    "footer":  {
-                   "note":  "ďż˝ {{year}} Jakub Dolďż˝nek. Vytvoďż˝eno s pďż˝ďż˝ďż˝ a ďż˝ďż˝lkem kďż˝vy."
-               }
+{
+  "nav": {
+    "home": "Domďż˝",
+    "projects": "Projekty",
+    "about": "O mnďż˝",
+    "contact": "Kontakt",
+    "themeToggle": {
+      "light": "Svďż˝tlďż˝ reďż˝im",
+      "dark": "Tmavďż˝ reďż˝im"
+    },
+    "languageToggle": {
+      "label": "Jazyk",
+      "en": "EN",
+      "cz": "CZ",
+      "switch": "Přepnout jazyk na {{lang}}"
+    }
+  },
+  "hero": {
+    "intro": "Jsem Jakub Dolínek a automatizace mě prostě baví.",
+    "headline": {
+      "lead": "Navrhuji na lidi zaměřenou",
+      "accent": "automatizaci",
+      "trail": "která drží týmy v tempu."
+    },
+    "subheadline": "Full-stack vývojář zaměřený na automatizaci",
+    "description": "Rád proměňuji opakující se postupy na orkestrované systémy, díky nimž mohou týmy dodávat rychleji bez ztráty kvality.",
+    "portraitCaption": "Automatizace mi nechává prostor soustředit se na detail i lidi v projektu."
+  },
+  "projects": {
+    "heading": "Projekty",
+    "subheading": "Sledujte řeku a objevte každý projekt, jeho příběh i stack.",
+    "items": {
+      "network-automation": {
+        "title": "Toolkit pro sďż˝ovou automatizaci",
+        "summary": "Modulďż˝rnďż˝ CLI a workflow knihovna, kterďż˝ spouďż˝tďż˝ kontroly konfigurace, ovďż˝ďż˝uje zďż˝mďż˝r a zajiďż˝ďż˝uje bezvďż˝padkovďż˝ zmďż˝ny napďż˝ďż˝ďż˝ Cisco Nexus a Juniper prostďż˝edďż˝mi.",
+        "impact": "Zkrďż˝cenďż˝ manuďż˝lnďż˝ch servisnďż˝ch oken o 45 % a prevence chyb dďż˝ky pďż˝edbďż˝nďż˝m kontrolďż˝m."
+      },
+      "smithing-master-bot": {
+        "title": "Simulďż˝tor incidentďż˝",
+        "summary": "Webovďż˝ laboratoďż˝, kterďż˝ pďż˝ipravďż˝ kontejnerovďż˝ topologie, injektuje zpoďż˝dďż˝nďż˝ ďż˝i ztrďż˝tu paketďż˝ a provede tďż˝m krok za krokem provoznďż˝m runbookem.",
+        "impact": "Zlepďż˝enďż˝ reakďż˝nďż˝ doby pohotovosti o 30 % a vytvoďż˝enďż˝ opakovatelnďż˝ch scďż˝nďż˝ďż˝ďż˝ pro novďż˝ kolegy."
+      },
+      "portfolio": {
+        "title": "Osobnďż˝ portfolio",
+        "summary": "Web, na kterďż˝m prďż˝vďż˝ jste ďż˝ postavenďż˝ v Reactu a Tailwindu s jemnďż˝mi animacemi, kterďż˝ pďż˝edstavujďż˝ mou prďż˝ci i zkuďż˝enosti.",
+        "impact": "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
+      },
+      "mobile-game-unity": {
+        "title": "Mobilnďż˝ hra v Unity",
+        "summary": "Arkďż˝dovďż˝ ploďż˝inovka vytvoďż˝enďż˝ v Unity, kde hrďż˝i sbďż˝rajďż˝ power-upy a vyhďż˝bajďż˝ se nďż˝strahďż˝m na ruďż˝nďż˝ navrďż˝enďż˝ch levelech.",
+        "impact": "Dodali jsme vyladďż˝nďż˝ prototyp s analďż˝zou chovďż˝nďż˝ hrďż˝ďż˝ďż˝ a hďż˝ky pro budoucďż˝balancovďż˝nďż˝."
+      }
+    },
+    "techLabel": "Technologie",
+    "ctaLabel": "Zobrazit detail",
+    "repoLabel": "Zdroj"
+  },
+  "skills": {
+    "eyebrow": "Dovednosti",
+    "heading": "Můj stack v kostce",
+    "subheading": "Najetím na ikonu zjistíte nástroje, které používám pro projekty s automatizací.",
+    "highlightLabels": {
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "tailwind": "Tailwind CSS",
+      "framerMotion": "Framer Motion",
+      "python": "Python",
+      "supabase": "Supabase",
+      "postgresql": "PostgreSQL",
+      "sql": "SQL",
+      "node": "Node.js",
+      "githubActions": "GitHub Actions",
+      "docker": "Docker"
+    }
+  },
+  "contact": {
+    "heading": "Pojďż˝me vybudovat odolnďż˝ ďż˝eďż˝enďż˝",
+    "description": "Potďż˝ebujete ďż˝kďż˝lovat sďż˝, zlepďż˝it spolehlivost nebo promďż˝nit nďż˝pad v realitu? Budu rďż˝d, kdyďż˝ se ozvete.",
+    "emailLabel": "E-mail",
+    "copy": "Zkopďż˝rovat",
+    "copied": "Zkopďż˝rovďż˝no!",
+    "platforms": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "about": {
+    "title": "O Jakubovi",
+    "intro": "Ke svďż˝tu sďż˝tďż˝ mďż˝ pďż˝ivedla zvďż˝davost, jak se data dostanou z bodu A do bodu B. Dnes pomďż˝hďż˝m tďż˝mďż˝m doruďż˝ovat spolehlivďż˝ sluďż˝by dďż˝ky kombinaci kvalitnďż˝ infrastruktury, automatizace a observability.",
+    "snapshot": {
+      "location": "Sďż˝dlďż˝m v Brnďż˝, ďż˝eskďż˝ republika",
+      "focus": "Zamďż˝ďż˝enďż˝: nďż˝vrh sďż˝tďż˝, automatizace a spolehlivost sluďż˝eb",
+      "mindset": "Pďż˝ďż˝stup: spoluprďż˝ce, mďż˝ďż˝enďż˝ vďż˝sledkďż˝ a klid v krizďż˝ch"
+    },
+    "timelineHeading": "Zkuďż˝enosti a vzdďż˝lďż˝nďż˝",
+    "timeline": [
+      {
+        "id": "network-engineer",
+        "title": "Sďż˝ovďż˝ inďż˝enďż˝r",
+        "period": "2023 ďż˝ souďż˝asnost",
+        "location": "Poskytovatel sluďż˝eb ďż˝ Brno, ďż˝R",
+        "description": "Technickďż˝ vedenďż˝ pďż˝i redesignu WAN sďż˝tďż˝, automatizace compliance pomocďż˝ Terraformu a zavedenďż˝ IaC pipeline.",
+        "tags": [
+          "Terraform",
+          "IaC",
+          "Monitoring"
+        ]
+      },
+      {
+        "id": "noc-analyst",
+        "title": "NOC / infrastruktura analytik",
+        "period": "2020 ďż˝ 2023",
+        "location": "Managed services ďż˝ Remote",
+        "description": "Zajiďż˝tďż˝nďż˝ 24/7 provozu, tvorba internďż˝ch dashboardďż˝ pro sledovďż˝nďż˝ incidentďż˝ a koordinace zďż˝sahďż˝ napďż˝ďż˝ďż˝ tďż˝my.",
+        "tags": [
+          "On-call",
+          "Dashboardy",
+          "Skriptovďż˝nďż˝"
+        ]
+      },
+      {
+        "id": "education",
+        "title": "Vysokďż˝ uďż˝enďż˝ technickďż˝ v Brnďż˝",
+        "period": "2016 ďż˝ 2020",
+        "location": "Fakulta informaďż˝nďż˝ch technologiďż˝",
+        "description": "Bakalďż˝ďż˝skďż˝ studium se zamďż˝ďż˝enďż˝m na poďż˝ďż˝taďż˝ovďż˝ sďż˝tďż˝, distribuovanďż˝ systďż˝my a aplikovanou bezpeďż˝nost.",
+        "tags": [
+          "Sďż˝tďż˝",
+          "Distribuovanďż˝ systďż˝my"
+        ]
+      }
+    ],
+    "valuesHeading": "Jak pracuji",
+    "values": [
+      {
+        "title": "Spolehlivost na prvnďż˝m mďż˝stďż˝",
+        "description": "Nasazenďż˝ pďż˝ipravuji s moďż˝nostďż˝ rollbacku, metrikami a nďż˝cviky selhďż˝nďż˝, aby ďż˝lo vďż˝e hladce."
+      },
+      {
+        "title": "Empatie k operďż˝torďż˝m",
+        "description": "Srozumitelnďż˝ runbooky, observabilita a nďż˝stroje pďż˝ďż˝vďż˝tivďż˝ pro lidi pomďż˝hajďż˝ tďż˝mu pracovat rychleji i jistďż˝ji."
+      },
+      {
+        "title": "Neustďż˝lďż˝ uďż˝enďż˝",
+        "description": "Od laborovďż˝nďż˝ s novďż˝mi protokoly po experimenty s UI animacemi ďż˝ stďż˝le hledďż˝m novďż˝ postupy."
+      }
+    ],
+    "backCta": "Zpďż˝t na hlavnďż˝ strďż˝nku"
+  },
+  "footer": {
+    "note": "ďż˝ {{year}} Jakub Dolďż˝nek. Vytvoďż˝eno s pďż˝ďż˝ďż˝ a ďż˝ďż˝lkem kďż˝vy."
+  }
 }

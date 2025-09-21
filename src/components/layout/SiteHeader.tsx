@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,7 @@ import { useScrollSpy, type SectionId } from "../../providers/ScrollSpyProvider"
 import { profile } from "../../data/profile";
 import { cn } from "../../utils/cn";
 import { ThemeToggle } from "../common/ThemeToggle";
+import { LanguageToggle } from "../common/LanguageToggle";
 
 const NAV_ITEMS = [
   { id: "home", labelKey: "nav.home", kind: "home" as const },
@@ -89,8 +90,9 @@ export const SiteHeader = () => {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 md:gap-2">
           <ThemeToggle />
+          <LanguageToggle />
           <button
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand md:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
@@ -127,3 +129,4 @@ export const SiteHeader = () => {
     </header>
   );
 };
+

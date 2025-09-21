@@ -391,17 +391,7 @@ html:not(.dark) .hero-portrait-media-overlay {
   letter-spacing: 0.2em;
 }
 
-.hero-portrait-caption {
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.6;
-  opacity: 0.92;
-  text-shadow: 0 20px 40px rgba(2, 6, 23, 0.35);
-}
 
-html:not(.dark) .hero-portrait-caption {
-  color: rgba(30, 41, 59, 0.78);
-}
 
 .hero-headline-accent {
   display: inline-block;
@@ -436,3 +426,6 @@ html:not(.dark) .hero-headline-accent {
     border-radius: 2rem;
   }
 }
+
+
+

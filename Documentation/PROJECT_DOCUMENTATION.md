@@ -1,4 +1,4 @@
-# Portfolio Site Documentation
+﻿# Portfolio Site Documentation
 
 ## Table of Contents
 - [Overview](#overview)
@@ -19,7 +19,7 @@
   - [ThemeProvider](#themeprovider)
 - [Content Sections](#content-sections)
   - [Hero](#hero)
-  - [Projects](#projects)
+  - [Projects](#projects)\n  - [Skills](#skills)
   - [Contact](#contact)
   - [About Page](#about-page)
 - [Data Sources](#data-sources)
@@ -75,7 +75,7 @@ This project uses a `package-lock.json`; prefer npm over other package managers.
 src/
   assets/               // Static assets (SVGs, images)
   components/
-    common/             // Reusable UI primitives (ThemeToggle, LocaleToggle)
+    common/             // Reusable UI primitives (ThemeToggle, LanguageToggle)
     layout/             // Shell layout components (header, footer, layout)
     sections/           // Page sections (Hero, Projects river, Contact)
   data/                 // Static data consumed by sections (profile, projects, skills)
@@ -105,7 +105,7 @@ Tailwind classes complement these styles for spacing, typography, and general la
 - Configured in `src/i18n/index.ts` using `react-i18next`.
 - Locale bundles live in `src/i18n/locales/{en,cz}/common.json` and mirror a common schema.
 - Components request strings with `useTranslation`. For grouped content (e.g. hero headline pieces), `{ returnObjects: true }` retrieves structured objects.
-- `LocaleToggle.tsx` (in `components/common`) switches i18n language state.
+- `LanguageToggle.tsx` (in `components/common`) switches i18n language state.
 
 ## Theme Management
 - Theme preference is persisted in localStorage under the key `portfolio-site-theme` (see `ThemeProvider.tsx`).
@@ -144,7 +144,7 @@ Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in lo
 - Day clouds are seeded by `createHeroCloudField` (HeroSection.tsx), which pseudo-randomises spawn height, scale, travel duration, and opacity for 11 drifting layers. Tweak density or range by adjusting the generator constants.
 - The front-most ridge colour matches the site background (`#e3ebf8`) and the section applies a negative top margin so the mountains rise behind the transparent header without leaving a dark strip.
 - Uses Framer Motion for staged entrance animations.
-- Pulls dynamic strings `hero.intro`, `hero.headline` (object with `lead`, `accent`, `trail`), `hero.subheadline`, `hero.description`, `hero.portraitCaption`.
+- Pulls dynamic strings `hero.intro`, `hero.headline` (object with `lead`, `accent`, `trail`), `hero.subheadline`, and `hero.description`. The accent span uses the `.hero-headline-accent` gradient so update colours in CSS when you tweak branding.
 - Portrait media renders the optional `profile.portraitImage` (sourced from `/public/projects/` or similar); omit the field to fall back to initials derived from `profile.name`.
 - Adjust ridge heights or glow in `HERO_MOUNTAIN_LAYERS` and `.hero-mountain-path--ridge-*` respectively.
 
@@ -156,6 +156,11 @@ Files: `ProjectsSection.tsx`, `ProjectsSection.css`.
 - GitHub and optional demo buttons live in the overlay footer beside the tech stack with translated `aria-label`s assembled from the project title.
 - Tweak sizing in `ProjectsSection.css` (`projects-river__card` width/height, overlay padding) and mirror any changes against Tailwind spacing in the JSX to maintain alignment for alternating left/right nodes.
 
+### Skills
+Files: `SkillsSection.tsx`, `SkillsSection.css`.
+- Showcases four skill clusters sourced from `skillClusters` and the `skills` locale subtree; cards animate via the shared stagger variants.
+- The highlight constellation reads from `skillHighlights` and the `skills.callout` list (keep JavaScript, Python, Supabase, PostgreSQL, SQL visible in copy).
+- Tweak gradients or chip styles in `skills.ts` and `SkillsSection.css`; always update both locale files when adding or reordering skills.
 ### Contact
 File: `ContactSection.tsx`.
 - Provides contact CTA, email copy-to-clipboard interaction, and social links from `profile.ts` using icons.
@@ -169,7 +174,7 @@ File: `pages/AboutPage.tsx`.
 ## Data Sources
 - `profile.ts`  Centralised personal info (name, email, social URLs, location). Set `profile.portraitImage` to surface a portrait in the hero (falls back to initials from `profile.name`).
 - `projects.ts`  Metadata for portfolio entries: slug, type, tech stack, summary, and optional links.
-- `skills.ts` - Legacy skill categories retained for potential future use; currently unmounted on the homepage.
+- `skills.ts`  Stores `skillHighlights` (icon + gradient accent) consumed by the skills icon row; edit `skills.highlightLabels` in the locale files so tooltips stay translated.
 These modules keep presentation components stateless and easy to localise.
 
 ## Utilities
@@ -200,7 +205,7 @@ These modules keep presentation components stateless and easy to localise.
 1. Duplicate `src/i18n/locales/en/common.json` into a new language folder.
 2. Update `src/i18n/index.ts` to include the new namespace.
 3. Ensure translation keys follow the existing structure to avoid runtime `undefined` content.
-4. Update `LocaleToggle.tsx` to surface the new language option.
+4. Update `LanguageToggle.tsx` to surface the new language option.
 
 ### Customising Theme Tokens
 - Update `tailwind.config.js` to adjust colour palette or shadows.
@@ -215,6 +220,15 @@ These modules keep presentation components stateless and easy to localise.
 
 ---
 For further questions or enhancements, review the component-specific comments inside the codebase or reach out to the maintainer listed in `profile.ts`.
+
+
+
+
+
+
+
+
+
 
 
 

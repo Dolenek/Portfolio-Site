@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+﻿import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -344,7 +344,6 @@ export const HeroSection = () => {
   const intro = t("hero.intro");
   const subheadline = t("hero.subheadline");
   const description = t("hero.description");
-  const portraitCaption = t("hero.portraitCaption");
 
   const initials = profile.name
     .split(/\s+/)
@@ -386,9 +385,7 @@ export const HeroSection = () => {
                   </div>
                 )}
                 <div className="hero-portrait-media-overlay" aria-hidden="true" />
-              </div>
-              <p className="hero-portrait-caption">{portraitCaption}</p>
-            </div>
+              </div>            </div>
           </div>
         </motion.div>
 
@@ -437,4 +434,6 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+
 
