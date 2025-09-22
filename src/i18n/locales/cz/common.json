@@ -58,20 +58,21 @@
   "skills": {
     "eyebrow": "Dovednosti",
     "heading": "Můj stack v kostce",
-    "subheading": "Najetím na ikonu zjistíte nástroje, které používám pro projekty s automatizací.",
-    "highlightLabels": {
-      "javascript": "JavaScript",
+    "subheading": "Rychlý přehled nástrojů, na které spoléhám napříč designem, frontendem i backendem.",
+    "cards": {
       "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "python": "Python",
       "react": "React",
       "tailwind": "Tailwind CSS",
       "framerMotion": "Framer Motion",
-      "python": "Python",
+      "firebase": "Firebase",
       "supabase": "Supabase",
-      "postgresql": "PostgreSQL",
       "sql": "SQL",
-      "node": "Node.js",
-      "githubActions": "GitHub Actions",
-      "docker": "Docker"
+      "csharp": "C#",
+      "unity": "Unity",
+      "linux": "Linux",
+      "proxmox": "Proxmox"
     }
   },
   "contact": {

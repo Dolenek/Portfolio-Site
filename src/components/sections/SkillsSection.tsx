@@ -5,13 +5,13 @@ import { skillHighlights } from "../../data/skills";
 import { createStaggerFade } from "../../utils/animation";
 import "./SkillsSection.css";
 
-const ICON_VARIANTS = createStaggerFade({ distance: 24, duration: 0.6, stagger: 0.08 });
+const CARD_VARIANTS = createStaggerFade({ distance: 28, duration: 0.55, stagger: 0.09 });
 
-type HighlightLabelMap = Record<string, string>;
+type SkillCardCopyMap = Record<string, string>;
 
 export const SkillsSection = () => {
   const { t } = useTranslation();
-  const labels = t("skills.highlightLabels", { returnObjects: true }) as HighlightLabelMap;
+  const cards = t("skills.cards", { returnObjects: true }) as SkillCardCopyMap;
 
   return (
     <section id="skills" data-section="skills" className="skills-panel container-xl">
@@ -22,25 +22,27 @@ export const SkillsSection = () => {
       </header>
 
       <motion.ul
-        className="skills-panel__icon-row"
+        className="skills-panel__grid"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
       >
-        {skillHighlights.map(({ id, Icon, accent }, index) => {
-          const label = labels[id] ?? id;
+        {skillHighlights.map(({ id, accent, initial, iconSrc }, index) => {
+          const title = cards[id] ?? id;
           return (
-            <motion.li key={id} className="skills-panel__icon-item" variants={ICON_VARIANTS} custom={index}>
-              <button
-                type="button"
-                className={`skills-panel__icon-trigger bg-gradient-to-br ${accent}`}
-                aria-label={label}
-              >
-                <Icon className="skills-panel__icon-glyph" aria-hidden="true" />
-              </button>
-              <span className="skills-panel__icon-tooltip" aria-hidden="true">
-                {label}
-              </span>
+            <motion.li key={id} className="skills-panel__grid-item" variants={CARD_VARIANTS} custom={index}>
+              <article className="skills-grid__card" tabIndex={0} aria-label={title}>
+                <div className={`skills-grid__icon bg-gradient-to-br ${accent}`} aria-hidden="true">
+                  {iconSrc ? (
+                    <img src={iconSrc} alt="" className="skills-grid__icon-image" loading="lazy" />
+                  ) : (
+                    <span>{initial}</span>
+                  )}
+                </div>
+                <div className="skills-grid__content">
+                  <h3 className="skills-grid__title">{title}</h3>
+                </div>
+              </article>
             </motion.li>
           );
         })}

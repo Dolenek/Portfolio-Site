@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Home",
     "projects": "Projects",
@@ -58,20 +58,21 @@
   "skills": {
     "eyebrow": "Capabilities",
     "heading": "Skills at a glance",
-    "subheading": "Hover an icon to see the stack I lean on for automation-heavy projects.",
-    "highlightLabels": {
-      "javascript": "JavaScript",
+    "subheading": "",
+    "cards": {
       "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "python": "Python",
       "react": "React",
       "tailwind": "Tailwind CSS",
       "framerMotion": "Framer Motion",
-      "python": "Python",
+      "firebase": "Firebase",
       "supabase": "Supabase",
-      "postgresql": "PostgreSQL",
       "sql": "SQL",
-      "node": "Node.js",
-      "githubActions": "GitHub Actions",
-      "docker": "Docker"
+      "csharp": "C#",
+      "unity": "Unity",
+      "linux": "Linux",
+      "proxmox": "Proxmox"
     }
   },
   "contact": {
@@ -86,7 +87,7 @@
     }
   },
   "about": {
-    "title": "About Jakub",
+    "title": "About me",
     "intro": "My path into networking started with curiosity about how packets find their way across the world. Today, I help teams ship dependable services by pairing solid infrastructure with automation and observability.",
     "snapshot": {
       "location": "Based in Brno, Czech Republic",

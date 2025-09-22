@@ -1,98 +1,102 @@
-﻿import type { LucideIcon } from "lucide-react";
-import {
-  Atom,
-  Binary,
-  Braces,
-  Cloud,
-  Code2,
-  Container,
-  Database,
-  Hexagon,
-  Sparkles,
-  Table,
-  Wind,
-  Workflow
-} from "lucide-react";
-
-export type SkillHighlightId =
-  | "javascript"
+﻿export type SkillHighlightId =
   | "typescript"
+  | "javascript"
+  | "python"
   | "react"
   | "tailwind"
   | "framerMotion"
-  | "python"
+  | "firebase"
   | "supabase"
-  | "postgresql"
   | "sql"
-  | "node"
-  | "githubActions"
-  | "docker";
+  | "csharp"
+  | "unity"
+  | "linux"
+  | "proxmox";
 
 export type SkillHighlight = {
   id: SkillHighlightId;
-  Icon: LucideIcon;
   accent: string;
+  initial: string;
+  iconSrc?: string;
 };
 
 export const skillHighlights: SkillHighlight[] = [
   {
-    id: "javascript",
-    Icon: Code2,
-    accent: "from-amber-300/60 via-orange-400/40 to-amber-500/55"
-  },
-  {
     id: "typescript",
-    Icon: Braces,
-    accent: "from-sky-400/60 via-blue-500/40 to-indigo-500/55"
+    initial: "TS",
+    accent: "from-sky-500/70 via-blue-600/60 to-indigo-600/70",
+    iconSrc: "/skills/typescript.svg"
   },
   {
-    id: "react",
-    Icon: Atom,
-    accent: "from-cyan-400/60 via-sky-400/40 to-blue-500/55"
-  },
-  {
-    id: "tailwind",
-    Icon: Wind,
-    accent: "from-teal-400/60 via-emerald-400/40 to-cyan-500/55"
-  },
-  {
-    id: "framerMotion",
-    Icon: Sparkles,
-    accent: "from-pink-400/60 via-purple-400/40 to-violet-500/55"
+    id: "javascript",
+    initial: "JS",
+    accent: "from-amber-400/70 via-orange-500/60 to-amber-600/70",
+    iconSrc: "/skills/javascript.svg"
   },
   {
     id: "python",
-    Icon: Binary,
-    accent: "from-amber-400/60 via-rose-400/40 to-orange-500/55"
+    initial: "PY",
+    accent: "from-blue-500/70 via-amber-400/60 to-blue-700/70",
+    iconSrc: "/skills/python.svg"
+  },
+  {
+    id: "react",
+    initial: "R",
+    accent: "from-cyan-400/70 via-sky-400/60 to-blue-500/70",
+    iconSrc: "/skills/react.svg"
+  },
+  {
+    id: "tailwind",
+    initial: "TW",
+    accent: "from-teal-500/70 via-cyan-500/60 to-emerald-500/70",
+    iconSrc: "/skills/tailwindcss.svg"
+  },
+  {
+    id: "framerMotion",
+    initial: "FM",
+    accent: "from-fuchsia-400/70 via-purple-500/60 to-violet-600/70",
+    iconSrc: "/skills/framermotion.svg"
+  },
+  {
+    id: "firebase",
+    initial: "FB",
+    accent: "from-orange-500/80 via-amber-500/60 to-yellow-500/70",
+    iconSrc: "/skills/firebase.svg"
   },
   {
     id: "supabase",
-    Icon: Cloud,
-    accent: "from-emerald-400/60 via-green-400/40 to-teal-500/55"
-  },
-  {
-    id: "postgresql",
-    Icon: Database,
-    accent: "from-blue-500/60 via-slate-500/40 to-indigo-600/55"
+    initial: "S",
+    accent: "from-emerald-500/70 via-green-500/60 to-teal-600/70",
+    iconSrc: "/skills/supabase.svg"
   },
   {
     id: "sql",
-    Icon: Table,
-    accent: "from-slate-400/60 via-slate-500/40 to-slate-600/55"
+    initial: "SQL",
+    accent: "from-slate-400/70 via-slate-500/60 to-slate-600/70",
+    iconSrc: "/skills/postgresql.svg"
   },
   {
-    id: "node",
-    Icon: Hexagon,
-    accent: "from-lime-400/60 via-emerald-400/40 to-green-500/55"
+    id: "csharp",
+    initial: "C#",
+    accent: "from-indigo-500/70 via-slate-600/60 to-blue-700/70",
+    iconSrc: "/skills/csharp.svg"
   },
   {
-    id: "githubActions",
-    Icon: Workflow,
-    accent: "from-indigo-400/60 via-blue-500/40 to-sky-500/55"
+    id: "unity",
+    initial: "U",
+    accent: "from-slate-700/70 via-stone-700/60 to-slate-800/70",
+    iconSrc: "/skills/unity.svg"
   },
   {
-    id: "docker",
-    Icon: Container,
-    accent: "from-sky-400/60 via-slate-400/40 to-blue-500/55"
+    id: "linux",
+    initial: "LX",
+    accent: "from-zinc-800/80 via-slate-800/60 to-neutral-900/80",
+    iconSrc: "/skills/linux.svg"
+  },
+  {
+    id: "proxmox",
+    initial: "PX",
+    accent: "from-orange-600/80 via-slate-700/60 to-orange-800/80",
+    iconSrc: "/skills/proxmox.svg"
   }
 ];
