@@ -66,7 +66,7 @@
       "framerMotion": "Framer Motion",
       "firebase": "Firebase",
       "supabase": "Supabase",
-      "sql": "SQL",
+      "sql": "postgreSQL",
       "csharp": "C#",
       "unity": "Unity",
       "linux": "Linux",
@@ -99,37 +99,32 @@
     "timeline": [
       {
         "id": "network-engineer",
-        "title": "Network engineer",
-        "period": "2023 � Present",
-        "location": "Enterprise service provider � Brno, CZ",
-        "description": "Lead technical ownership for multi-site WAN redesign, implemented IaC pipelines with Terraform, and automated configuration compliance.",
+        "title": "Cloud Software Specialist",
+        "period": "2025 - Present",
+        "location": "Full-stack engineer @ TOP TECH, s.r.o., CZ",
+        "description": "...",
         "tags": [
-          "Terraform",
-          "IaC",
-          "Monitoring"
+          
         ]
       },
       {
         "id": "noc-analyst",
-        "title": "NOC / infrastructure analyst",
-        "period": "2020 � 2023",
-        "location": "Managed services � Remote",
-        "description": "Maintained 24/7 operations, built internal dashboards for incident visibility, and coordinated cross-team response routines.",
+        "title": "University of Hradec Králové",
+        "period": "2024 - Present",
+        "location": "Applied Informatics - Software Engineering @ Faculty of Informatics and Management",
+        "description": "...",
         "tags": [
-          "On-call",
-          "Dashboards",
-          "Scripting"
+          
         ]
       },
       {
         "id": "education",
-        "title": "Brno University of Technology",
-        "period": "2016 � 2020",
-        "location": "Faculty of Information Technology",
-        "description": "Bachelor studies focused on computer networks, distributed systems, and applied security.",
+        "title": "Secondary Technical School Hradec Králové",
+        "period": "2020 - 2024",
+        "location": "Electrical Engineering - Computer Systems",
+        "description": "....",
         "tags": [
-          "Networking",
-          "Distributed systems"
+         
         ]
       }
     ],

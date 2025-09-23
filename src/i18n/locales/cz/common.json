@@ -23,7 +23,7 @@
       "trail": "Programování!"
     },
     "subheadline": "Full-stack vývojář",
-    "description": "Vyvíjím software v moderních technologiích, který řeší skutečné problémy a šetří čas.",
+    "description": "Vyvíjím software pomocí moderních technologií, který řeší skutečné problémy a šetří čas.",
     "portraitCaption": ""
   },
   "projects": {
@@ -48,7 +48,7 @@
       "mobile-game-unity": {
         "title": "Mobilní hra v Unity",
         "summary": "Casual RPG se silnými clicker a crafting \"Brewing\" mechanikami a jednoduchým bojem vytvořeným v C# a herním enginu Unity.",
-        "impact": "Vznikl funkční prototyp RPG mobilní hry s kompletně fungujícím progresním systémem."
+        "impact": "Vytvořil funkční prototyp RPG mobilní hry s kompletně fungujícím systémem progrese."
       }
     },
     "techLabel": "Technologie",
@@ -66,7 +66,7 @@
       "framerMotion": "Framer Motion",
       "firebase": "Firebase",
       "supabase": "Supabase",
-      "sql": "SQL",
+      "sql": "postgreSQL",
       "csharp": "C#",
       "unity": "Unity",
       "linux": "Linux",
@@ -91,7 +91,7 @@
     "title": "O mně",
     "intro": "K síťování mě přivedla zvědavost, jak se pakety dostanou přes celý svět. Dnes pomáhám týmům dodávat spolehlivé služby díky kombinaci kvalitní infrastruktury, automatizace a observability.",
     "snapshot": {
-      "location": "Sídlím v Brně, Česká republika",
+      "location": "Sídlím České republice",
       "focus": "Zaměření: návrh sítí, automatizace a spolehlivost služeb",
       "mindset": "Přístup: spolupracující, řízený daty a klidný i pod tlakem"
     },
