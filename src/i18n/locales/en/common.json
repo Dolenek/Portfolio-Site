@@ -1,4 +1,4 @@
-﻿{
+{
   "nav": {
     "home": "Home",
     "projects": "Projects",
@@ -38,7 +38,7 @@
       "smithing-master-bot": {
         "title": "Bot using Pyautogui",
         "summary": "Desktop automation bot using PyAutoGUI and OpenCV for screenshot-based computer-vision (template matching) to control an Android emulator",
-        "impact": "Fully automated time intesive and repetitive of a mobile game via screen‑based computer vision."
+        "impact": "Fully automated time intesive and repetitive tasks in a mobile game via screen‑based computer vision."
       },
       "portfolio": {
         "title": "Personal portfolio",
@@ -56,9 +56,7 @@
     "repoLabel": "Source"
   },
   "skills": {
-    "eyebrow": "Capabilities",
-    "heading": "Skills at a glance",
-    "subheading": "",
+    "heading": "Skills",
     "cards": {
       "typescript": "TypeScript",
       "javascript": "JavaScript",
@@ -76,8 +74,11 @@
     }
   },
   "contact": {
-    "heading": "Let's build something resilient",
-    "description": "Whether you need help scaling a network, hardening reliability, or bringing ideas to life, I'd love to hear from you.",
+    "heading": {
+      "lead": "Let's build something",
+      "accent": "together!"
+    },
+    "description": "Connect with me, here are my socials.",
     "emailLabel": "Email",
     "copy": "Copy email",
     "copied": "Copied!",

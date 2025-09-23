@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { skillHighlights } from "../../data/skills";
@@ -16,9 +16,7 @@ export const SkillsSection = () => {
   return (
     <section id="skills" data-section="skills" className="skills-panel container-xl">
       <header className="skills-panel__header">
-        <p className="skills-panel__eyebrow">{t("skills.eyebrow")}</p>
         <h2 className="skills-panel__title">{t("skills.heading")}</h2>
-        <p className="skills-panel__subtitle">{t("skills.subheading")}</p>
       </header>
 
       <motion.ul
@@ -50,3 +48,4 @@ export const SkillsSection = () => {
     </section>
   );
 };
+

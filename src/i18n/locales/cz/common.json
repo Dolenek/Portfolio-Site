@@ -1,12 +1,12 @@
 {
   "nav": {
-    "home": "Domďż˝",
+    "home": "Domů",
     "projects": "Projekty",
-    "about": "O mnďż˝",
+    "about": "O mně",
     "contact": "Kontakt",
     "themeToggle": {
-      "light": "Svďż˝tlďż˝ reďż˝im",
-      "dark": "Tmavďż˝ reďż˝im"
+      "light": "Světlý režim",
+      "dark": "Tmavý režim"
     },
     "languageToggle": {
       "label": "Jazyk",
@@ -16,49 +16,47 @@
     }
   },
   "hero": {
-    "intro": "Jsem Jakub Dolínek a automatizace mě prostě baví.",
+    "intro": "Ahoj, jsem Jakub Dolének a baví mě",
     "headline": {
-      "lead": "Navrhuji na lidi zaměřenou",
-      "accent": "automatizaci",
-      "trail": "která drží týmy v tempu."
+      "lead": "Učení,",
+      "accent": "Automatizace,",
+      "trail": "Programování!"
     },
-    "subheadline": "Full-stack vývojář zaměřený na automatizaci",
-    "description": "Rád proměňuji opakující se postupy na orkestrované systémy, díky nimž mohou týmy dodávat rychleji bez ztráty kvality.",
-    "portraitCaption": "Automatizace mi nechává prostor soustředit se na detail i lidi v projektu."
+    "subheadline": "Full-stack vývojář",
+    "description": "Vyvíjím software v moderních technologiích, který řeší skutečné problémy a šetří čas.",
+    "portraitCaption": ""
   },
   "projects": {
     "heading": "Projekty",
-    "subheading": "Sledujte řeku a objevte každý projekt, jeho příběh i stack.",
+    "subheading": "",
     "items": {
-      "network-automation": {
-        "title": "Toolkit pro sďż˝ovou automatizaci",
-        "summary": "Modulďż˝rnďż˝ CLI a workflow knihovna, kterďż˝ spouďż˝tďż˝ kontroly konfigurace, ovďż˝ďż˝uje zďż˝mďż˝r a zajiďż˝ďż˝uje bezvďż˝padkovďż˝ zmďż˝ny napďż˝ďż˝ďż˝ Cisco Nexus a Juniper prostďż˝edďż˝mi.",
-        "impact": "Zkrďż˝cenďż˝ manuďż˝lnďż˝ch servisnďż˝ch oken o 45 % a prevence chyb dďż˝ky pďż˝edbďż˝nďż˝m kontrolďż˝m."
+      "discord-automation": {
+        "title": "Automatizace pro Discord",
+        "summary": "Desktopová WPF (.NET 4.8) aplikace s vloženým webovým klientem Discordu přes WebView2; bot posílá příkazy pomocí DevTools Input.insertText a klávesových událostí, sleduje DOM pro nové zprávy a vystavuje posledních 5 zpráv včetně strukturovaných logů.",
+        "impact": "Poskytuje robustní automatizaci přes DevTools (původně Selenium), deterministický start i deduplikaci a přehledné logování pro spolehlivý nepřetržitý provoz bota."
       },
       "smithing-master-bot": {
-        "title": "Simulďż˝tor incidentďż˝",
-        "summary": "Webovďż˝ laboratoďż˝, kterďż˝ pďż˝ipravďż˝ kontejnerovďż˝ topologie, injektuje zpoďż˝dďż˝nďż˝ ďż˝i ztrďż˝tu paketďż˝ a provede tďż˝m krok za krokem provoznďż˝m runbookem.",
-        "impact": "Zlepďż˝enďż˝ reakďż˝nďż˝ doby pohotovosti o 30 % a vytvoďż˝enďż˝ opakovatelnďż˝ch scďż˝nďż˝ďż˝ďż˝ pro novďż˝ kolegy."
+        "title": "Bot s PyAutoGUI",
+        "summary": "Desktopová automatizace využívající PyAutoGUI a OpenCV pro snímkovou počítačovou vizi (template matching) k ovládání Android emulátoru.",
+        "impact": "Plně automatizuje časově náročné a opakované úkoly v mobilní hře díky vizuálnímu rozpoznávání obrazovky."
       },
       "portfolio": {
-        "title": "Osobnďż˝ portfolio",
-        "summary": "Web, na kterďż˝m prďż˝vďż˝ jste ďż˝ postavenďż˝ v Reactu a Tailwindu s jemnďż˝mi animacemi, kterďż˝ pďż˝edstavujďż˝ mou prďż˝ci i zkuďż˝enosti.",
-        "impact": "Zdďż˝razďż˝uje klďż˝ďż˝ovďż˝ projekty, dovednosti a osobnďż˝ pďż˝ďż˝stup pďż˝i zachovďż˝nďż˝ vďż˝konu a pďż˝ďż˝stupnosti."
+        "title": "Osobní portfolio",
+        "summary": "Web, na kterém právě jste! Vznikl v Reactu, Tailwindu a s jemnými mikroanimacemi, aby představil mou práci i zázemí.",
+        "impact": "Zvýrazňuje klíčové projekty, dovednosti a kousek osobnosti při zachování výkonu i přístupnosti."
       },
       "mobile-game-unity": {
-        "title": "Mobilnďż˝ hra v Unity",
-        "summary": "Arkďż˝dovďż˝ ploďż˝inovka vytvoďż˝enďż˝ v Unity, kde hrďż˝i sbďż˝rajďż˝ power-upy a vyhďż˝bajďż˝ se nďż˝strahďż˝m na ruďż˝nďż˝ navrďż˝enďż˝ch levelech.",
-        "impact": "Dodali jsme vyladďż˝nďż˝ prototyp s analďż˝zou chovďż˝nďż˝ hrďż˝ďż˝ďż˝ a hďż˝ky pro budoucďż˝balancovďż˝nďż˝."
+        "title": "Mobilní hra v Unity",
+        "summary": "Casual RPG se silnými clicker a crafting \"Brewing\" mechanikami a jednoduchým bojem vytvořeným v C# a herním enginu Unity.",
+        "impact": "Vznikl funkční prototyp RPG mobilní hry s kompletně fungujícím progresním systémem."
       }
     },
     "techLabel": "Technologie",
-    "ctaLabel": "Zobrazit detail",
-    "repoLabel": "Zdroj"
+    "ctaLabel": "Zobrazit případovou studii",
+    "repoLabel": "Zdrojový kód"
   },
   "skills": {
-    "eyebrow": "Dovednosti",
-    "heading": "Můj stack v kostce",
-    "subheading": "Rychlý přehled nástrojů, na které spoléhám napříč designem, frontendem i backendem.",
+    "heading": "Dovednosti",
     "cards": {
       "typescript": "TypeScript",
       "javascript": "JavaScript",
@@ -76,32 +74,35 @@
     }
   },
   "contact": {
-    "heading": "Pojďż˝me vybudovat odolnďż˝ ďż˝eďż˝enďż˝",
-    "description": "Potďż˝ebujete ďż˝kďż˝lovat sďż˝, zlepďż˝it spolehlivost nebo promďż˝nit nďż˝pad v realitu? Budu rďż˝d, kdyďż˝ se ozvete.",
+    "heading": {
+      "lead": "Pojďme něco vybudovat",
+      "accent": "společně!"
+    },
+    "description": "Spojte se se mnou, tady najdete mé profily.",
     "emailLabel": "E-mail",
-    "copy": "Zkopďż˝rovat",
-    "copied": "Zkopďż˝rovďż˝no!",
+    "copy": "Zkopírovat e-mail",
+    "copied": "Zkopírováno!",
     "platforms": {
       "github": "GitHub",
       "linkedin": "LinkedIn"
     }
   },
   "about": {
-    "title": "O Jakubovi",
-    "intro": "Ke svďż˝tu sďż˝tďż˝ mďż˝ pďż˝ivedla zvďż˝davost, jak se data dostanou z bodu A do bodu B. Dnes pomďż˝hďż˝m tďż˝mďż˝m doruďż˝ovat spolehlivďż˝ sluďż˝by dďż˝ky kombinaci kvalitnďż˝ infrastruktury, automatizace a observability.",
+    "title": "O mně",
+    "intro": "K síťování mě přivedla zvědavost, jak se pakety dostanou přes celý svět. Dnes pomáhám týmům dodávat spolehlivé služby díky kombinaci kvalitní infrastruktury, automatizace a observability.",
     "snapshot": {
-      "location": "Sďż˝dlďż˝m v Brnďż˝, ďż˝eskďż˝ republika",
-      "focus": "Zamďż˝ďż˝enďż˝: nďż˝vrh sďż˝tďż˝, automatizace a spolehlivost sluďż˝eb",
-      "mindset": "Pďż˝ďż˝stup: spoluprďż˝ce, mďż˝ďż˝enďż˝ vďż˝sledkďż˝ a klid v krizďż˝ch"
+      "location": "Sídlím v Brně, Česká republika",
+      "focus": "Zaměření: návrh sítí, automatizace a spolehlivost služeb",
+      "mindset": "Přístup: spolupracující, řízený daty a klidný i pod tlakem"
     },
-    "timelineHeading": "Zkuďż˝enosti a vzdďż˝lďż˝nďż˝",
+    "timelineHeading": "Zkušenosti a vzdělání",
     "timeline": [
       {
         "id": "network-engineer",
-        "title": "Sďż˝ovďż˝ inďż˝enďż˝r",
-        "period": "2023 ďż˝ souďż˝asnost",
-        "location": "Poskytovatel sluďż˝eb ďż˝ Brno, ďż˝R",
-        "description": "Technickďż˝ vedenďż˝ pďż˝i redesignu WAN sďż˝tďż˝, automatizace compliance pomocďż˝ Terraformu a zavedenďż˝ IaC pipeline.",
+        "title": "Síťový inženýr",
+        "period": "2023 – současnost",
+        "location": "Podnikový poskytovatel služeb – Brno, Česko",
+        "description": "Vedl jsem technickou stránku redesignu vícelokační WAN, zavedl IaC pipeline s Terraformem a automatizoval kontrolu konfigurace.",
         "tags": [
           "Terraform",
           "IaC",
@@ -110,46 +111,46 @@
       },
       {
         "id": "noc-analyst",
-        "title": "NOC / infrastruktura analytik",
-        "period": "2020 ďż˝ 2023",
-        "location": "Managed services ďż˝ Remote",
-        "description": "Zajiďż˝tďż˝nďż˝ 24/7 provozu, tvorba internďż˝ch dashboardďż˝ pro sledovďż˝nďż˝ incidentďż˝ a koordinace zďż˝sahďż˝ napďż˝ďż˝ďż˝ tďż˝my.",
+        "title": "Analytik NOC / infrastruktury",
+        "period": "2020 – 2023",
+        "location": "Managed services – na dálku",
+        "description": "Zajišťoval jsem nepřetržitý provoz 24/7, budoval interní dashboardy pro přehled incidentů a koordinoval reakci napříč týmy.",
         "tags": [
           "On-call",
           "Dashboardy",
-          "Skriptovďż˝nďż˝"
+          "Skriptování"
         ]
       },
       {
         "id": "education",
-        "title": "Vysokďż˝ uďż˝enďż˝ technickďż˝ v Brnďż˝",
-        "period": "2016 ďż˝ 2020",
-        "location": "Fakulta informaďż˝nďż˝ch technologiďż˝",
-        "description": "Bakalďż˝ďż˝skďż˝ studium se zamďż˝ďż˝enďż˝m na poďż˝ďż˝taďż˝ovďż˝ sďż˝tďż˝, distribuovanďż˝ systďż˝my a aplikovanou bezpeďż˝nost.",
+        "title": "Vysoké učení technické v Brně",
+        "period": "2016 – 2020",
+        "location": "Fakulta informačních technologií",
+        "description": "Bakalářské studium zaměřené na počítačové sítě, distribuované systémy a aplikovanou bezpečnost.",
         "tags": [
-          "Sďż˝tďż˝",
-          "Distribuovanďż˝ systďż˝my"
+          "Sítě",
+          "Distribuované systémy"
         ]
       }
     ],
     "valuesHeading": "Jak pracuji",
     "values": [
       {
-        "title": "Spolehlivost na prvnďż˝m mďż˝stďż˝",
-        "description": "Nasazenďż˝ pďż˝ipravuji s moďż˝nostďż˝ rollbacku, metrikami a nďż˝cviky selhďż˝nďż˝, aby ďż˝lo vďż˝e hladce."
+        "title": "Spolehlivost na prvním místě",
+        "description": "Plánuji s rollbacky, metrikami i simulacemi selhání, aby nasazení probíhala klidně a bez překvapení."
       },
       {
-        "title": "Empatie k operďż˝torďż˝m",
-        "description": "Srozumitelnďż˝ runbooky, observabilita a nďż˝stroje pďż˝ďż˝vďż˝tivďż˝ pro lidi pomďż˝hajďż˝ tďż˝mu pracovat rychleji i jistďż˝ji."
+        "title": "Empatie pro operátory",
+        "description": "Srozumitelné runbooky, observabilita a nástroje přívětivé pro lidi pomáhají týmům pracovat rychleji a s jistotou."
       },
       {
-        "title": "Neustďż˝lďż˝ uďż˝enďż˝",
-        "description": "Od laborovďż˝nďż˝ s novďż˝mi protokoly po experimenty s UI animacemi ďż˝ stďż˝le hledďż˝m novďż˝ postupy."
+        "title": "Nepřetržité učení",
+        "description": "Od laborování s novými směrovacími protokoly po experimenty s mikrointerakcemi v UI neustále zkoumám nové možnosti."
       }
     ],
-    "backCta": "Zpďż˝t na hlavnďż˝ strďż˝nku"
+    "backCta": "Zpět na domovskou stránku"
   },
   "footer": {
-    "note": "ďż˝ {{year}} Jakub Dolďż˝nek. Vytvoďż˝eno s pďż˝ďż˝ďż˝ a ďż˝ďż˝lkem kďż˝vy."
+    "note": "© {{year}} Jakub Dolének. Vytvořeno s láskou k technologiím. ❤️"
   }
 }

@@ -1,6 +1,6 @@
 # Jakub Dolének � Portfolio Site
 
-This repository hosts my personal portfolio built with React, Vite, and Tailwind�CSS. The site showcases experience, featured projects, and contact details with smooth scroll navigation, theme switching, and room for localisation.
+This repository hosts my personal portfolio built with React, Vite, and Tailwind CSS. The site showcases experience, featured projects, and contact details with smooth scroll navigation, theme switching, and room for localisation.
 
 ## Features
 - **Modern stack** | React 19 + Vite 7 with TypeScript, Tailwind CSS, and Framer Motion animations.
@@ -53,36 +53,8 @@ The dev server runs on <http://localhost:5173>. Update content in `src/data` and
 - Text copy is stored under semantic keys (e.g., `hero`, `projects`, `about`).
 - To finish CZ localisation, translate entries in `src/i18n/locales/cz/common.json` and add a language switcher back to the header.
 
-## Deployment (self-hosted Linux)
-1. **Build artifacts**: `npm run build` outputs static assets in `dist/`.
-2. **Install Node runtime** (for future updates) and a static file server (e.g., Nginx). Sample Nginx block:
-   ```nginx
-   server {
-     listen 80;
-     server_name jakubdolenek.cz;
-     root /var/www/portfolio/dist;
-
-     location / {
-       try_files $uri /index.html;
-     }
-   }
-   ```
-3. **Copy build**: rsync or scp `dist/` to `/var/www/portfolio/dist` (or your chosen path).
-4. **Enable HTTPS via Cloudflare**: point the domain�s A record at your public IP, enable the Cloudflare proxy (orange cloud), and issue SSL (Full/Strict mode recommended). Optionally enable �Always Use HTTPS�.
-5. **Systemd service (optional)**: if serving with a Node static server (e.g., `serve`), create a unit to keep it alive.
-6. **CI hint**: hook up GitHub Actions or a simple script to run `npm run build` before deploying to keep output reproducible.
-
-## Updating content
-- **Projects**: edit `src/data/projects.ts` for metadata and corresponding copy in `common.json`.
-- **Skills**: update categories in `src/data/skills.ts` and maintain icon mapping.
-- **Profile info**: adjust `src/data/profile.ts` for name, email, GitHub, LinkedIn.
-- **About timeline**: extend the array in translations (`about.timeline`).
-
 ## Future enhancements
 - Complete Czech localisation and reintroduce the language toggle.
-- Replace placeholder assets (hero imagery, favicons, OG image).
-- Add analytics (e.g., Plausible) and contact form integration.
-- Automate deployment (GitHub Actions SSH/rsync or container image push).
 
 ---
 Feel free to open issues or suggestions in the repo once published.

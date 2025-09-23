@@ -33,8 +33,11 @@ export const ContactSection = () => {
       >
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl dark:text-white">
-              {t("contact.heading")}
+            <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl dark:text-white">
+              {t("contact.heading.lead")} {" "}
+              <span className="bg-gradient-to-r from-[#61dafb] via-[#21a1f1] to-[#087ea4] bg-clip-text text-transparent">
+                {t("contact.heading.accent")}
+              </span>
             </h2>
             <p className="mt-4 max-w-2xl text-base text-slate-600 dark:text-slate-300">
               {t("contact.description")}
@@ -102,3 +105,6 @@ export const ContactSection = () => {
     </section>
   );
 };
+
+
+
