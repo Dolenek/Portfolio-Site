@@ -89,11 +89,11 @@
   },
   "about": {
     "title": "About me",
-    "intro": "My path into networking started with curiosity about how packets find their way across the world. Today, I help teams ship dependable services by pairing solid infrastructure with automation and observability.",
+    "intro": "...",
     "snapshot": {
-      "location": "Based in Brno, Czech Republic",
-      "focus": "Focus: network design, automation, and site reliability",
-      "mindset": "Mindset: collaborative, measurement-driven, and calm under pressure"
+      "location": "Czech Republic",
+      "focus": "Focus: ",
+      "mindset": "Mindset: "
     },
     "timelineHeading": "Experience & education",
     "timeline": [
@@ -102,7 +102,7 @@
         "title": "Cloud Software Specialist",
         "period": "2025 - Present",
         "location": "Full-stack engineer @ TOP TECH, s.r.o., CZ",
-        "description": "...",
+        "description": "I develop automation software and scripts tailored to each customer and their needs.",
         "tags": [
           
         ]
@@ -112,7 +112,7 @@
         "title": "University of Hradec Králové",
         "period": "2024 - Present",
         "location": "Applied Informatics - Software Engineering @ Faculty of Informatics and Management",
-        "description": "...",
+        "description": "Studying Software Engineering with a focus on software architecture, algorithms and databases; I work on full-stack team projects and apply best practices in testing, design and deployment.",
         "tags": [
           
         ]
@@ -121,8 +121,8 @@
         "id": "education",
         "title": "Secondary Technical School Hradec Králové",
         "period": "2020 - 2024",
-        "location": "Electrical Engineering - Computer Systems",
-        "description": "....",
+        "location": "Electrical Engineering - Computer Systems @ hradebni.cz",
+        "description": "I gained knowledge in the field of computer hardware, networking fundamentals, and programming. At this time, I also began developing my first real software, mainly using the C# language.",
         "tags": [
          
         ]
