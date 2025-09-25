@@ -90,18 +90,18 @@
   "about": {
     "title": "About me",
     "intro": "...",
-    "snapshot": {
-      "location": "Czech Republic",
-      "focus": "Focus: ",
-      "mindset": "Mindset: "
-    },
     "timelineHeading": "Experience & education",
+    "timelineAt": "@",
     "timeline": [
       {
         "id": "network-engineer",
         "title": "Cloud Software Specialist",
         "period": "2025 - Present",
-        "location": "Full-stack engineer @ TOP TECH, s.r.o., CZ",
+        "location": "Full-stack engineer",
+        "link": {
+          "label": "TOP TECH, s.r.o., CZ",
+          "href": "https://www.top-tech.cz/"
+        },
         "description": "I develop automation software and scripts tailored to each customer and their needs.",
         "tags": [
           
@@ -111,7 +111,11 @@
         "id": "noc-analyst",
         "title": "University of Hradec Králové",
         "period": "2024 - Present",
-        "location": "Applied Informatics - Software Engineering @ Faculty of Informatics and Management",
+        "location": "Applied Informatics - Software Engineering",
+        "link": {
+          "label": "Faculty of Informatics and Management",
+          "href": "https://www.uhk.cz/en/fim"
+        },
         "description": "Studying Software Engineering with a focus on software architecture, algorithms and databases; I work on full-stack team projects and apply best practices in testing, design and deployment.",
         "tags": [
           
@@ -121,26 +125,15 @@
         "id": "education",
         "title": "Secondary Technical School Hradec Králové",
         "period": "2020 - 2024",
-        "location": "Electrical Engineering - Computer Systems @ hradebni.cz",
+        "location": "Electrical Engineering - Computer Systems",
+        "link": {
+          "label": "hradebni.cz",
+          "href": "https://www.hradebni.cz/"
+        },
         "description": "I gained knowledge in the field of computer hardware, networking fundamentals, and programming. At this time, I also began developing my first real software, mainly using the C# language.",
         "tags": [
          
         ]
-      }
-    ],
-    "valuesHeading": "Working style",
-    "values": [
-      {
-        "title": "Reliability-first",
-        "description": "I design with rollback plans, metrics, and failure drills in mind so launches feel boring (in the best way)."
-      },
-      {
-        "title": "Empathy for operators",
-        "description": "Clear runbooks, observability, and human-friendly tooling help teams move faster and feel confident."
-      },
-      {
-        "title": "Continuous learning",
-        "description": "From labbing new routing protocols to experimenting with UI micro-interactions, I'm always exploring."
       }
     ],
     "backCta": "Back to home"

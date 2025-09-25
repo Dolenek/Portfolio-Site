@@ -105,6 +105,7 @@ Tailwind classes complement these styles for spacing, typography, and general la
 - Configured in `src/i18n/index.ts` using `react-i18next`.
 - Locale bundles live in `src/i18n/locales/{en,cz}/common.json` and mirror a common schema.
 - Components request strings with `useTranslation`. For grouped content (e.g. hero headline pieces), `{ returnObjects: true }` retrieves structured objects.
+- About page timeline entries accept an optional `link` object (`label`, `href`) and rely on the locale-specific `about.timelineAt` connector; snapshot cards and values copy were removed from the schema to keep the page focused on the introduction plus the experience timeline.
 - `LanguageToggle.tsx` (in `components/common`) switches i18n language state.
 
 ## Theme Management
@@ -168,8 +169,9 @@ File: `ContactSection.tsx`.
 
 ### About Page
 File: `pages/AboutPage.tsx`.
-- Expands on biography, timeline (experience, education), and working values.
-- Consumes the same locale schema for consistent translations.
+- Shows a brief introduction followed by the "Experience & education" timeline pulled from locale data.
+- Each timeline item can surface a clickable organisation link by supplying a `link` object, which renders alongside `about.timelineAt` for language-appropriate phrasing.
+- Consumes the shared locale schema; ensure new locales include `timelineAt` and any `link` metadata you want rendered.
 
 ## Data Sources
 - `profile.ts`  Centralised personal info (name, email, social URLs, location). Set `profile.portraitImage` to surface a portrait in the hero (falls back to initials from `profile.name`).

@@ -89,63 +89,51 @@
   },
   "about": {
     "title": "O mně",
-    "intro": "K síťování mě přivedla zvědavost, jak se pakety dostanou přes celý svět. Dnes pomáhám týmům dodávat spolehlivé služby díky kombinaci kvalitní infrastruktury, automatizace a observability.",
-    "snapshot": {
-      "location": "Sídlím České republice",
-      "focus": "Zaměření: návrh sítí, automatizace a spolehlivost služeb",
-      "mindset": "Přístup: spolupracující, řízený daty a klidný i pod tlakem"
-    },
+    "intro": "...",
     "timelineHeading": "Zkušenosti a vzdělání",
+    "timelineAt": "@",
     "timeline": [
       {
         "id": "network-engineer",
-        "title": "Síťový inženýr",
-        "period": "2023 – současnost",
-        "location": "Podnikový poskytovatel služeb – Brno, Česko",
-        "description": "Vedl jsem technickou stránku redesignu vícelokační WAN, zavedl IaC pipeline s Terraformem a automatizoval kontrolu konfigurace.",
+        "title": "Specialista na cloudový software",
+        "period": "2025 - současnost",
+        "location": "Full-stack vývojář",
+        "link": {
+          "label": "TOP TECH, s.r.o., ČR",
+          "href": "https://www.top-tech.cz/"
+        },
+        "description": "Vyvíjím automatizační software a skripty na míru každému zákazníkovi a jeho potřebám.",
         "tags": [
-          "Terraform",
-          "IaC",
-          "Monitoring"
+          
         ]
       },
       {
         "id": "noc-analyst",
-        "title": "Analytik NOC / infrastruktury",
-        "period": "2020 – 2023",
-        "location": "Managed services – na dálku",
-        "description": "Zajišťoval jsem nepřetržitý provoz 24/7, budoval interní dashboardy pro přehled incidentů a koordinoval reakci napříč týmy.",
+        "title": "Univerzita Hradec Králové",
+        "period": "2024 - současnost",
+        "location": "Aplikovaná informatika - softwarové inženýrství",
+        "link": {
+          "label": "Fakulta informatiky a managementu",
+          "href": "https://www.uhk.cz/en/fim"
+        },
+        "description": "Studuji softwarové inženýrství se zaměřením na softwarovou architekturu, algoritmy a databáze; pracuji na full-stack týmových projektech a uplatňuji osvědčené postupy v testování, návrhu a nasazení.",
         "tags": [
-          "On-call",
-          "Dashboardy",
-          "Skriptování"
+          
         ]
       },
       {
         "id": "education",
-        "title": "Vysoké učení technické v Brně",
-        "period": "2016 – 2020",
-        "location": "Fakulta informačních technologií",
-        "description": "Bakalářské studium zaměřené na počítačové sítě, distribuované systémy a aplikovanou bezpečnost.",
+        "title": "Střední technická škola Hradec Králové",
+        "period": "2020 - 2024",
+        "location": "Elektrotechnika - počítačové systémy",
+        "link": {
+          "label": "hradebni.cz",
+          "href": "https://www.hradebni.cz/"
+        },
+        "description": "Získal jsem znalosti v oblasti počítačového hardwaru, základů sítí a programování. V té době jsem také začal vyvíjet svůj první skutečný software, především v jazyce C#.",
         "tags": [
-          "Sítě",
-          "Distribuované systémy"
+          
         ]
-      }
-    ],
-    "valuesHeading": "Jak pracuji",
-    "values": [
-      {
-        "title": "Spolehlivost na prvním místě",
-        "description": "Plánuji s rollbacky, metrikami i simulacemi selhání, aby nasazení probíhala klidně a bez překvapení."
-      },
-      {
-        "title": "Empatie pro operátory",
-        "description": "Srozumitelné runbooky, observabilita a nástroje přívětivé pro lidi pomáhají týmům pracovat rychleji a s jistotou."
-      },
-      {
-        "title": "Nepřetržité učení",
-        "description": "Od laborování s novými směrovacími protokoly po experimenty s mikrointerakcemi v UI neustále zkoumám nové možnosti."
       }
     ],
     "backCta": "Zpět na domovskou stránku"
