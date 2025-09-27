@@ -89,12 +89,12 @@
   },
   "about": {
     "title": "O mně",
-    "intro": "...",
+    "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci se aktuálně zaměřuji hlavně na backend, ale ve volném čase rád vytvářím <highlight>full\u2011stack</highlight> aplikace.\nV poslední době mě pohltil <highlight>self\u2011hosting</highlight>. Provozuji laboratoř v Proxmoxu na linuxových serverech s Dockerem.\nProgramování je moje <highlight>vášeň</highlight> a dlouholetý koníček, proto neustále hledám nové výzvy a příležitosti k učení.",
     "timelineHeading": "Zkušenosti a vzdělání",
     "timelineAt": "@",
     "timeline": [
       {
-        "id": "network-engineer",
+        "id": "cloud-software-specialist",
         "title": "Specialista na cloudový software",
         "period": "2025 - současnost",
         "location": "Full-stack vývojář",
@@ -102,13 +102,13 @@
           "label": "TOP TECH, s.r.o., ČR",
           "href": "https://www.top-tech.cz/"
         },
-        "description": "Vyvíjím automatizační software a skripty na míru každému zákazníkovi a jeho potřebám.",
+        "description": "Vyvíjím automatizační software a skripty na míru každému zákazníkovi a jeho ERP potřebám. Mimo to také vytvářím edukační a propagační materiál na naše sociální sítě.",
         "tags": [
           
         ]
       },
       {
-        "id": "noc-analyst",
+        "id": "uhk-applied-informatics",
         "title": "Univerzita Hradec Králové",
         "period": "2024 - současnost",
         "location": "Aplikovaná informatika - softwarové inženýrství",
@@ -122,7 +122,7 @@
         ]
       },
       {
-        "id": "education",
+        "id": "secondary-technical-school",
         "title": "Střední technická škola Hradec Králové",
         "period": "2020 - 2024",
         "location": "Elektrotechnika - počítačové systémy",

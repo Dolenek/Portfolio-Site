@@ -89,26 +89,24 @@
   },
   "about": {
     "title": "About me",
-    "intro": "...",
+    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work I currently focus mainly on the backend, but in my free time I enjoy building <highlight>full‑stack</highlight> applications.\nRecently I've been deep into <highlight>self‑hosting</highlight>. I run a lab in Proxmox on Linux servers with Docker.\nProgramming is my <highlight>passion</highlight> and long-time hobby, so I'm constantly looking for new challenges and learning opportunities.",
     "timelineHeading": "Experience & education",
     "timelineAt": "@",
     "timeline": [
       {
-        "id": "network-engineer",
+        "id": "cloud-software-specialist",
         "title": "Cloud Software Specialist",
         "period": "2025 - Present",
-        "location": "Full-stack engineer",
+        "location": "Full-stack Developer",
         "link": {
           "label": "TOP TECH, s.r.o., CZ",
           "href": "https://www.top-tech.cz/"
         },
-        "description": "I develop automation software and scripts tailored to each customer and their needs.",
-        "tags": [
-          
-        ]
+        "description": "I develop automation software and scripts tailored to each customer and their ERP needs. I also create educational and promotional content for our social media.",
+        "tags": []
       },
       {
-        "id": "noc-analyst",
+        "id": "uhk-applied-informatics",
         "title": "University of Hradec Králové",
         "period": "2024 - Present",
         "location": "Applied Informatics - Software Engineering",
@@ -116,13 +114,11 @@
           "label": "Faculty of Informatics and Management",
           "href": "https://www.uhk.cz/en/fim"
         },
-        "description": "Studying Software Engineering with a focus on software architecture, algorithms and databases; I work on full-stack team projects and apply best practices in testing, design and deployment.",
-        "tags": [
-          
-        ]
+        "description": "Studying Software Engineering with a focus on software architecture, algorithms and databases. I work on full-stack team projects and apply best practices in testing, design and deployment.",
+        "tags": []
       },
       {
-        "id": "education",
+        "id": "secondary-technical-school",
         "title": "Secondary Technical School Hradec Králové",
         "period": "2020 - 2024",
         "location": "Electrical Engineering - Computer Systems",
@@ -131,9 +127,7 @@
           "href": "https://www.hradebni.cz/"
         },
         "description": "I gained knowledge in the field of computer hardware, networking fundamentals, and programming. At this time, I also began developing my first real software, mainly using the C# language.",
-        "tags": [
-         
-        ]
+        "tags": []
       }
     ],
     "backCta": "Back to home"

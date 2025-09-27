@@ -1,26 +1,28 @@
-# Jakub Dolének � Portfolio Site
+# Jakub Dolének – Portfolio Site
 
-This repository hosts my personal portfolio built with React, Vite, and Tailwind CSS. The site showcases experience, featured projects, and contact details with smooth scroll navigation, theme switching, and room for localisation.
+This repository hosts my personal portfolio built with React, Vite, and Tailwind CSS. The site showcases experience, featured projects, and contact details with smooth scroll navigation, theme switching, and localisation.
 
 ## Features
 - **Modern stack** | React 19 + Vite 7 with TypeScript, Tailwind CSS, and Framer Motion animations.
 - **Single-page flow with deep links** | sticky header navigates sections on the home view (hero, projects, skills, contact) and routes to a dedicated About page.
 - **Theme persistence** | light/dark mode remembered in `localStorage` and synced with OS preference changes.
 - **Content driven** | projects, skills, and personal data stored in typed modules for easy updates without touching layout code.
-- **Internationalisation ready** | `react-i18next` scaffolded (EN ready, CZ placeholder) with language detector cache.
+- **Internationalisation** | English and Czech copy powered by `react-i18next` with browser-language detection and manual toggle.
+- **Timeline resilience** | About page timeline replay guarded by a scroll-to-top reset hook so users see the animation even when arriving from the bottom of the Home view.
 - **Production friendly** | ESLint, TypeScript strictness, and Tailwind plugins for forms/typography.
 
 ## Project structure
 ```
 src/
   components/
-    common/        # Shared UI atoms (theme toggle, etc.)
+    common/        # Shared UI atoms (theme toggle, language toggle, etc.)
     layout/        # Header, footer, layout shell
     sections/      # Home page sections (hero/projects/skills/contact)
   data/            # Structured content (profile, projects, skill categories)
   i18n/            # i18next setup and locale JSONs
   pages/           # Route components (HomePage, AboutPage)
   providers/       # Scroll spy + theme context providers
+  hooks/           # Reusable React hooks (scroll-to-top animation reset, ...)
   utils/           # Shared utilities (e.g., class name helper)
 ```
 
@@ -31,7 +33,7 @@ npm install
 npm run dev
 ```
 
-The dev server runs on <http://localhost:5173>. Update content in `src/data` and translation strings in `src/i18n/locales/en/common.json`. The Czech locale can be completed later by mirroring keys in `locales/cz`.
+The dev server runs on <http://localhost:5173>. Update content in `src/data` and keep translation strings in `src/i18n/locales/en/common.json` and `src/i18n/locales/cz/common.json` aligned when editing copy.
 
 ### Available scripts
 - `npm run dev`       | launch Vite development server with HMR.
@@ -51,10 +53,10 @@ The dev server runs on <http://localhost:5173>. Update content in `src/data` and
 ## Internationalisation primer
 - i18next initialises with English and Czech namespaces (`src/i18n/index.ts`).
 - Text copy is stored under semantic keys (e.g., `hero`, `projects`, `about`).
-- To finish CZ localisation, translate entries in `src/i18n/locales/cz/common.json` and add a language switcher back to the header.
+- Language preferences persist via `localStorage` (`portfolio-site-language`) and respect browser defaults on first visit.
 
 ## Future enhancements
-- Complete Czech localisation and reintroduce the language toggle.
+- Expand locale coverage, add more project write-ups, and integrate automated visual regression checks for animated sections.
 
 ---
 Feel free to open issues or suggestions in the repo once published.

@@ -172,6 +172,7 @@ File: `pages/AboutPage.tsx`.
 - Shows a brief introduction followed by the "Experience & education" timeline pulled from locale data.
 - Each timeline item can surface a clickable organisation link by supplying a `link` object, which renders alongside `about.timelineAt` for language-appropriate phrasing.
 - Consumes the shared locale schema; ensure new locales include `timelineAt` and any `link` metadata you want rendered.
+- The timeline's Framer Motion reveal is safeguarded by `useScrollTopReset` so a fresh animation triggers when visitors reach the About page after scrolling to the bottom of Home; once the timeline has entered the viewport, the reset is disabled to avoid flicker when returning to the top.
 
 ## Data Sources
 - `profile.ts`  Centralised personal info (name, email, social URLs, location). Set `profile.portraitImage` to surface a portrait in the hero (falls back to initials from `profile.name`).
@@ -182,6 +183,7 @@ These modules keep presentation components stateless and easy to localise.
 ## Utilities
 - `utils/cn.ts`  Class name combiner built on `clsx` semantics, allowing conditional Tailwind usage.
 - Additional helpers (e.g. scroll spy registration) live inside provider files.
+- `hooks/useScrollTopReset.ts`  Lightweight listener that calls a callback the first time the window scrolls back to the top, handy for replaying entrance animations without forcing global scroll resets.
 
 ## Animations & Motion
 - Framer Motion is imported directly in sections requiring motion.

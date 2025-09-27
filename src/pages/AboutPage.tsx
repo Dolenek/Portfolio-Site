@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { MOTION_EASE } from "../utils/animation";
+import { useScrollTopReset } from "../hooks/useScrollTopReset";
 
 type TimelineItem = {
   id: string;
@@ -22,6 +25,12 @@ export const AboutPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const timeline = t("about.timeline", { returnObjects: true }) as TimelineItem[];
+  const [timelineKey, setTimelineKey] = useState(0);
+  const [timelineAnimated, setTimelineAnimated] = useState(false);
+
+  useScrollTopReset(() => {
+    setTimelineKey((key) => key + 1);
+  }, { enabled: !timelineAnimated });
 
   return (
     <div className="container-xl pb-24 pt-12 sm:pt-16">
@@ -40,14 +49,29 @@ export const AboutPage = () => {
         transition={{ duration: 0.7, ease: MOTION_EASE }}
       >
         <h1 className="text-4xl font-semibold text-slate-900 dark:text-white">{t("about.title")}</h1>
-        <p className="text-lg text-slate-600 dark:text-slate-300">{t("about.intro")}</p>
+        <p className="whitespace-pre-line text-lg text-slate-600 dark:text-slate-300">
+          <Trans
+            i18nKey="about.intro"
+            components={{
+              highlight: (
+                <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent" />
+              ),
+            }}
+          />
+        </p>
       </motion.section>
 
       <motion.section
         className="mt-16"
+        key={timelineKey}
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-120px" }}
+        onViewportEnter={() => {
+          if (!timelineAnimated) {
+            setTimelineAnimated(true);
+          }
+        }}
         transition={{ duration: 0.7, ease: MOTION_EASE }}
       >
         <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t("about.timelineHeading")}</h2>
