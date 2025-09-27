@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { ArrowLeft } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -21,16 +21,34 @@ type TimelineItem = {
   tags: string[];
 };
 
+const TIMELINE_VARIANTS = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: MOTION_EASE },
+  },
+} as const;
+
 export const AboutPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const timeline = t("about.timeline", { returnObjects: true }) as TimelineItem[];
-  const [timelineKey, setTimelineKey] = useState(0);
-  const [timelineAnimated, setTimelineAnimated] = useState(false);
+  const [hasTimelineAnimated, setHasTimelineAnimated] = useState(false);
+  const timelineControls = useAnimation();
+  const timelineRef = useRef<HTMLDivElement | null>(null);
+  const timelineInView = useInView(timelineRef, { margin: "-120px 0px 0px 0px" });
+
+  useEffect(() => {
+    if (timelineInView && !hasTimelineAnimated) {
+      timelineControls.start("visible");
+      setHasTimelineAnimated(true);
+    }
+  }, [timelineControls, timelineInView, hasTimelineAnimated]);
 
   useScrollTopReset(() => {
-    setTimelineKey((key) => key + 1);
-  }, { enabled: !timelineAnimated });
+    timelineControls.set("hidden");
+  }, { enabled: !hasTimelineAnimated });
 
   return (
     <div className="container-xl pb-24 pt-12 sm:pt-16">
@@ -62,17 +80,11 @@ export const AboutPage = () => {
       </motion.section>
 
       <motion.section
+        ref={timelineRef}
         className="mt-16"
-        key={timelineKey}
-        initial={{ opacity: 0, y: 32 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-120px" }}
-        onViewportEnter={() => {
-          if (!timelineAnimated) {
-            setTimelineAnimated(true);
-          }
-        }}
-        transition={{ duration: 0.7, ease: MOTION_EASE }}
+        initial="hidden"
+        animate={timelineControls}
+        variants={TIMELINE_VARIANTS}
       >
         <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t("about.timelineHeading")}</h2>
         <div className="mt-8 space-y-6">
