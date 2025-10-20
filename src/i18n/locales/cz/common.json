@@ -35,6 +35,11 @@
         "summary": "Desktopová WPF (.NET 4.8) aplikace s vloženým webovým klientem Discordu přes WebView2; bot posílá příkazy pomocí DevTools Input.insertText a klávesových událostí, sleduje DOM pro nové zprávy a vystavuje posledních 5 zpráv včetně strukturovaných logů.",
         "impact": "Poskytuje robustní automatizaci přes DevTools (původně Selenium), deterministický start i deduplikaci a přehledné logování pro spolehlivý nepřetržitý provoz bota."
       },
+      "kuchar-v-akci": {
+        "title": "Recepty v Akci",
+        "summary": "Self-hosted stránka s recepty, které jsou inspirovány supermarketovými letáky, který prezentuje každý recept se strukturovanými surovinami a postupem přípravy.",
+        "impact": "Automatizace v n8n převádí každý den PDF letáků do receptů v Supabase, takže se web aktualizuje od začátku do konce bez ruční správy."
+      },
       "smithing-master-bot": {
         "title": "Bot s PyAutoGUI",
         "summary": "Desktopová automatizace využívající PyAutoGUI a OpenCV pro snímkovou počítačovou vizi (template matching) k ovládání Android emulátoru.",
@@ -89,7 +94,7 @@
   },
   "about": {
     "title": "O mně",
-    "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci se aktuálně zaměřuji hlavně na backend, ale ve volném čase rád vytvářím <highlight>full\u2011stack</highlight> aplikace.\nV poslední době mě pohltil <highlight>self\u2011hosting</highlight>. Provozuji laboratoř v Proxmoxu na linuxových serverech s Dockerem.\nProgramování je moje <highlight>vášeň</highlight> a dlouholetý koníček, proto neustále hledám nové výzvy a příležitosti k učení.",
+    "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci se aktuálně zaměřuji hlavně na backend, ale ve volném čase rád vytvářím <highlight>full\u2011stack</highlight> aplikace.\nV poslední době mě pohltil <highlight>self\u2011hosting</highlight>. Provozuji laboratoř v Proxmoxu na linuxových serverech s Dockerem.\nProgramování mě <highlight>baví</highlight> a je to můj dlouholetý koníček, proto neustále hledám nové výzvy a příležitosti k učení.",
     "timelineHeading": "Zkušenosti a vzdělání",
     "timelineAt": "@",
     "timeline": [

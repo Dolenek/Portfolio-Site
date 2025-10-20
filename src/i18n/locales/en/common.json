@@ -35,6 +35,11 @@
         "summary": "Desktop WPF (.NET 4.8) app embedding the Discord web client in WebView2; bot sends commands via DevTools Input.insertText and key events, polls the DOM for messages, and exposes last-5 messages plus structured logs.",
         "impact": "Provides robust DevTools-driven automation (originally Selenium), deterministic start/deduplication logic, and observable logging/buffers for reliable, continuous bot operation."
       },
+      "kuchar-v-akci": {
+        "title": "Recepty v Akci",
+        "summary": "A self-hosted website with recipes inspired by supermarket flyers, presenting each recipe with structured ingredients and preparation instructions.",
+        "impact": "n8n automations transform daily flyer PDFs into Supabase recipes, keeping the site refreshed end-to-end without manual publishing."
+      },
       "smithing-master-bot": {
         "title": "Bot using Pyautogui",
         "summary": "Desktop automation bot using PyAutoGUI and OpenCV for screenshot-based computer-vision (template matching) to control an Android emulator",
@@ -89,7 +94,7 @@
   },
   "about": {
     "title": "About me",
-    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work I currently focus mainly on the backend, but in my free time I enjoy building <highlight>full‑stack</highlight> applications.\nRecently I've been deep into <highlight>self‑hosting</highlight>. I run a lab in Proxmox on Linux servers with Docker.\nProgramming is my <highlight>passion</highlight> and long-time hobby, so I'm constantly looking for new challenges and learning opportunities.",
+    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work I currently focus mainly on the backend, but in my free time I enjoy building <highlight>full‑stack</highlight> applications.\nRecently I've been deep into <highlight>self‑hosting</highlight>. I run a lab in Proxmox on Linux servers with Docker.\nI <highlight>enjoy</highlight> programming and it has been my hobby for many years, which is why I'm constantly looking for new challenges and learning opportunities.",
     "timelineHeading": "Experience & education",
     "timelineAt": "@",
     "timeline": [

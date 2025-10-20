@@ -11,6 +11,13 @@ This repository hosts my personal portfolio built with React, Vite, and Tailwind
 - **Timeline resilience** | About page timeline replay guarded by a scroll-to-top reset hook so users see the animation even when arriving from the bottom of the Home view.
 - **Production friendly** | ESLint, TypeScript strictness, and Tailwind plugins for forms/typography.
 
+## Featured projects
+- **Recepty v Akci** — Self-hosted recipe portal styled after supermarket flyers. Supabase and n8n automations ingest daily PDF leaflets, generate structured recipes, and surface them through a React + TanStack Query frontend with leaflet-style layouts.
+- **Discord Automation** — Desktop WPF app embedding the Discord client via WebView2. A custom automation layer drives DevTools input events, deduplicates outgoing messages, and captures structured logs for review.
+- **Smithing Master Bot** — Python automation toolkit using PyAutoGUI and OpenCV to control an Android emulator, removing repetitive in-game crafting loops.
+- **Mobile Game in Unity** — Casual RPG prototype for Android with crafting-heavy mechanics, built in Unity with C# scripting.
+- **Portfolio Site** — The site itself, powered by React, Tailwind CSS, and Framer Motion, localised in English and Czech with animated hero artwork.
+
 ## Project structure
 ```
 src/

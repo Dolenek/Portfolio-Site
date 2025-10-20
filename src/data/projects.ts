@@ -1,4 +1,5 @@
 export type ProjectId =
+  | "kuchar-v-akci"
   | "portfolio"
   | "discord-automation"
   | "smithing-master-bot"
@@ -18,6 +19,18 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "kuchar-v-akci",
+    year: "2025",
+    tech: ["React", "TypeScript", "Supabase", "n8n"],
+    links: {
+      github: "https://github.com/Dolenek/KucharVAkci",
+      demo: "https://www.receptyvakci.com"
+    },
+    accent: "from-lime-400/40 via-emerald-400/30 to-amber-400/35",
+    previewGradient: ["#b9f6a5", "#1d4c3a"],
+    previewImage: "/projects/KucharVAkci.png"
+  },
   {
     id: "portfolio",
     year: "2025",
