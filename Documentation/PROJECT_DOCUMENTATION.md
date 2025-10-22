@@ -166,6 +166,9 @@ Files: `SkillsSection.tsx`, `SkillsSection.css`.
 ### Contact
 File: `ContactSection.tsx`.
 - Provides contact CTA, email copy-to-clipboard interaction, and social links from `profile.ts` using icons.
+- A follow-up `Learn more about me` link routes visitors to the About page directly from the contact copy.
+- Mobile layout stacks the action buttons vertically while preserving left-aligned copy; actions return to side-by-side layout from `sm` and up.
+- Email label and address sit inline with wrapping to keep the icon/text pairing balanced on narrow screens.
 - Exposes copy feedback (`Copy`  `Copied!`) sourced from i18n.
 
 ### About Page
