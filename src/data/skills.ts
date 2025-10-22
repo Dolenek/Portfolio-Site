@@ -8,6 +8,7 @@
   | "firebase"
   | "supabase"
   | "sql"
+  | "mssql"
   | "csharp"
   | "unity"
   | "linux"
@@ -74,6 +75,11 @@ export const skillHighlights: SkillHighlight[] = [
     initial: "SQL",
     accent: "from-slate-400/70 via-slate-500/60 to-slate-600/70",
     iconSrc: "/skills/postgresql.svg"
+  },
+  {
+    id: "mssql",
+    initial: "MS",
+    accent: "from-rose-500/75 via-red-500/60 to-orange-500/70"
   },
   {
     id: "csharp",

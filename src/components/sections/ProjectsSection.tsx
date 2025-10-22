@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState, type KeyboardEvent, type MediaQueryListEvent } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -24,9 +25,21 @@ type ProjectCardProps = {
   align: "left" | "right";
   index: number;
   techLabel: string;
+  isTouchLayout: boolean;
+  isActive: boolean;
+  onToggle: (projectId: string) => void;
 };
 
-const ProjectCard = ({ project, copy, align, index, techLabel }: ProjectCardProps) => {
+const ProjectCard = ({
+  project,
+  copy,
+  align,
+  index,
+  techLabel,
+  isTouchLayout,
+  isActive,
+  onToggle
+}: ProjectCardProps) => {
   const hasImage = Boolean(project.previewImage);
   const previewStyle = hasImage
     ? undefined
@@ -34,6 +47,27 @@ const ProjectCard = ({ project, copy, align, index, techLabel }: ProjectCardProp
         backgroundImage: `linear-gradient(135deg, ${project.previewGradient[0]}, ${project.previewGradient[1]})`
       } as const);
   const previewAlt = `${copy?.title ?? project.id} preview`;
+
+  const toggleOverlay = useCallback(() => {
+    if (!isTouchLayout) {
+      return;
+    }
+    onToggle(project.id);
+  }, [isTouchLayout, onToggle, project.id]);
+
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent<HTMLElement>) => {
+      if (!isTouchLayout) {
+        return;
+      }
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onToggle(project.id);
+      }
+    },
+    [isTouchLayout, onToggle, project.id]
+  );
 
   return (
     <motion.li
@@ -47,7 +81,18 @@ const ProjectCard = ({ project, copy, align, index, techLabel }: ProjectCardProp
       variants={PROJECT_CARD_VARIANTS}
       custom={index}
     >
-      <article className="projects-river__card">
+      <article
+        className={cn("projects-river__card", {
+          "projects-river__card--touch": isTouchLayout,
+          "projects-river__card--active": isTouchLayout && isActive
+        })}
+        role={isTouchLayout ? "button" : undefined}
+        tabIndex={isTouchLayout ? 0 : undefined}
+        aria-expanded={isTouchLayout ? isActive : undefined}
+        aria-label={isTouchLayout ? copy?.title ?? project.id : undefined}
+        onClick={toggleOverlay}
+        onKeyDown={handleKeyDown}
+      >
         <div className="projects-river__media" style={previewStyle}>
           {project.previewImage ? (
             <img
@@ -119,9 +164,50 @@ const ProjectCard = ({ project, copy, align, index, techLabel }: ProjectCardProp
 };
 
 export const ProjectsSection = () => {
+  const [isTouchLayout, setIsTouchLayout] = useState(false);
+  const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const { t } = useTranslation();
   const projectCopy = t("projects.items", { returnObjects: true }) as ProjectCopyMap;
   const techLabel = t("projects.techLabel");
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const updateMatch = (event: MediaQueryList | MediaQueryListEvent) => {
+      setIsTouchLayout(event.matches);
+    };
+    const handleChange = (event: MediaQueryListEvent) => {
+      updateMatch(event);
+    };
+
+    updateMatch(mediaQuery);
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleChange);
+      return () => {
+        mediaQuery.removeEventListener("change", handleChange);
+      };
+    }
+
+    mediaQuery.addListener(handleChange);
+
+    return () => {
+      mediaQuery.removeListener(handleChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isTouchLayout && activeProjectId !== null) {
+      setActiveProjectId(null);
+    }
+  }, [isTouchLayout, activeProjectId]);
+
+  const handleToggle = useCallback((projectId: string) => {
+    setActiveProjectId((current) => (current === projectId ? null : projectId));
+  }, []);
 
   return (
     <section id="projects" data-section="projects" className="projects-river container-xl">
@@ -139,6 +225,9 @@ export const ProjectsSection = () => {
             align={index % 2 === 0 ? "left" : "right"}
             index={index}
             techLabel={techLabel}
+            isTouchLayout={isTouchLayout}
+            isActive={activeProjectId === project.id}
+            onToggle={handleToggle}
           />
         ))}
       </ol>

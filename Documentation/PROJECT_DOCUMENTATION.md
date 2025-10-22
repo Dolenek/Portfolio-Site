@@ -153,16 +153,16 @@ Files: `HeroSection.tsx`, `HeroSection.css`, hero strings under `hero` key in lo
 Files: `ProjectsSection.tsx`, `ProjectsSection.css`.
 - Renders a staggered column of large preview cards; each card prefers an uploaded screenshot referenced via `project.previewImage` (falling back to the gradient defined in `project.previewGradient`) and keeps the project title visible inside a base band that hugs the screenshot edge.
 - Place screenshots inside `public/projects/` and point `project.previewImage` at the file (e.g. `/projects/your-project.png`). Omit the field to continue using the gradient placeholder.
-- Hover/focus reveals the detail overlay by sliding it from the bottom: summary, impact, stack chips, and CTA icons animate upward using the shared cubic-bezier stored in `cardVariants`. Touch breakpoints keep the overlay visible and hide the duplicated base band while the hover state gently darkens/soft-blurs the preview image instead of adding an opaque scrim.
+- Hover/focus reveals the detail overlay by sliding it from the bottom: summary, impact, stack chips, and CTA icons animate upward using the shared cubic-bezier stored in `cardVariants`. On mobile we now keep the banner visible, require a tap to toggle the overlay, pin the title copy to the top, anchor the stack footer bottom-left, and compress typography/padding so even long summaries leave room for the stack and link buttons. The hover/tap state still applies the softened preview darkening.
 - GitHub and optional demo buttons live in the overlay footer beside the tech stack with translated `aria-label`s assembled from the project title.
 - Tweak sizing in `ProjectsSection.css` (`projects-river__card` width/height, overlay padding) and mirror any changes against Tailwind spacing in the JSX to maintain alignment for alternating left/right nodes.
 - Recent addition: `kuchar-v-akci` pairs `previewImage: "/projects/KucharVAkci.png"` with both GitHub and live demo links, and uses a warm green-to-amber accent to distinguish the automation-driven cooking workflow.
 
 ### Skills
 Files: `SkillsSection.tsx`, `SkillsSection.css`.
-- Showcases four skill clusters sourced from `skillClusters` and the `skills` locale subtree; cards animate via the shared stagger variants.
-- The highlight constellation reads from `skillHighlights` and the `skills.callout` list (keep JavaScript, Python, Supabase, PostgreSQL, SQL visible in copy).
-- Tweak gradients or chip styles in `skills.ts` and `SkillsSection.css`; always update both locale files when adding or reordering skills.
+- Showcases four skill clusters sourced from `skillClusters` and the `skills` locale subtree; cards animate via the shared stagger variants and collapse to icon-only, square tiles below 640px while keeping spoken labels via `aria-label`. The mobile grid now uses compact multi-column rows so icons sit neatly beside one another.
+- The highlight constellation reads from `skillHighlights` and the `skills.callout` list (keep JavaScript, Python, Supabase, PostgreSQL, MSSQL visible in copy).
+- Tweak gradients or chip styles in `skills.ts` and `SkillsSection.css`; always update both locale files when adding or reordering skills. Latest addition: `mssql` (accent-only badge after PostgreSQL) joins the highlight array.
 ### Contact
 File: `ContactSection.tsx`.
 - Provides contact CTA, email copy-to-clipboard interaction, and social links from `profile.ts` using icons.

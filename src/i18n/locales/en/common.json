@@ -72,6 +72,7 @@
       "firebase": "Firebase",
       "supabase": "Supabase",
       "sql": "postgreSQL",
+      "mssql": "MSSQL",
       "csharp": "C#",
       "unity": "Unity",
       "linux": "Linux",
