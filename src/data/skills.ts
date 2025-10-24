@@ -79,7 +79,8 @@ export const skillHighlights: SkillHighlight[] = [
   {
     id: "mssql",
     initial: "MS",
-    accent: "from-rose-500/75 via-red-500/60 to-orange-500/70"
+    accent: "from-sky-600/90 via-blue-600/75 to-indigo-500/65",
+    iconSrc: "/skills/mssql.svg"
   },
   {
     id: "csharp",

@@ -11,8 +11,26 @@
     "languageToggle": {
       "label": "Jazyk",
       "en": "EN",
-      "cz": "CZ",
+      "cs": "CZ",
       "switch": "Přepnout jazyk na {{lang}}"
+    }
+  },
+  "seo": {
+    "siteName": "Jakub Dolének | portfolio",
+    "ogImageAlt": "Portrét Jakuba Dolénka",
+    "home": {
+      "title": "Jakub Dolének | Full-stack vývojář",
+      "description": "Portfolio Jakuba Dolénka představuje projekty z automatizace, vývoj full-stack aplikací a nabízí kontakt pro spolupráci.",
+      "breadcrumb": "Domů"
+    },
+    "about": {
+      "title": "O mně | Jakub Dolének",
+      "description": "Zjistěte více o zkušenostech, vzdělání a technologiích, se kterými Jakub Dolének pracuje jako full-stack vývojář.",
+      "breadcrumb": "O mně"
+    },
+    "person": {
+      "jobTitle": "Full-stack vývojář",
+      "description": "Full-stack vývojář specializující se na automatizaci procesů, backendové služby a self-hosting ve vlastním labu."
     }
   },
   "hero": {

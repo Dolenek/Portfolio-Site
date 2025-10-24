@@ -11,8 +11,26 @@
     "languageToggle": {
       "label": "Language",
       "en": "EN",
-      "cz": "CZ",
+      "cs": "CZ",
       "switch": "Switch language to {{lang}}"
+    }
+  },
+  "seo": {
+    "siteName": "Jakub Dolének | portfolio",
+    "ogImageAlt": "Portrait of Jakub Dolének",
+    "home": {
+      "title": "Jakub Dolének | Full-stack Developer",
+      "description": "Explore Jakub Dolének’s portfolio with automation projects, full-stack builds, and get in touch to collaborate.",
+      "breadcrumb": "Home"
+    },
+    "about": {
+      "title": "About | Jakub Dolének",
+      "description": "Learn more about the experience, education, and technologies Jakub Dolének works with as a full-stack developer.",
+      "breadcrumb": "About"
+    },
+    "person": {
+      "jobTitle": "Full-stack Developer",
+      "description": "Full-stack developer focused on process automation, backend services, and self-hosting in a personal homelab."
     }
   },
   "hero": {

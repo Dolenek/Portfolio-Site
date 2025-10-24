@@ -1,18 +1,33 @@
 import { useTranslation } from "react-i18next";
 
+import { siteMeta } from "../../data/siteMeta";
 import { cn } from "../../utils/cn";
 
 const LANGUAGES = [
-  { code: "en", labelKey: "nav.languageToggle.en" },
-  { code: "cz", labelKey: "nav.languageToggle.cz" }
+  { code: "cs", labelKey: "nav.languageToggle.cs" },
+  { code: "en", labelKey: "nav.languageToggle.en" }
 ] as const;
 
 export const LocaleToggle = () => {
   const { i18n, t } = useTranslation();
-  const current = i18n.language.split("-")[0];
+  const resolved = i18n.resolvedLanguage ?? i18n.language;
+  const current = resolved.toLowerCase().startsWith("cz") ? "cs" : resolved.split("-")[0];
 
   const handleSwitch = (code: string) => {
-    void i18n.changeLanguage(code);
+    const target = code === "cz" ? "cs" : code;
+    void i18n.changeLanguage(target).then(() => {
+      if (typeof window === "undefined") {
+        return;
+      }
+
+      const url = new URL(window.location.href);
+      if (target === siteMeta.defaultLocale) {
+        url.searchParams.delete("lang");
+      } else {
+        url.searchParams.set("lang", target);
+      }
+      window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+    });
   };
 
   return (

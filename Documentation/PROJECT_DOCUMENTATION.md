@@ -26,6 +26,7 @@
 - [Utilities](#utilities)
 - [Animations & Motion](#animations--motion)
 - [Accessibility Considerations](#accessibility-considerations)
+- [SEO & Discoverability](#seo--discoverability)
 - [Extending the Project](#extending-the-project)
   - [Adding a New Section](#adding-a-new-section)
   - [Adding a New Locale](#adding-a-new-locale)
@@ -125,12 +126,14 @@ Tailwind classes complement these styles for spacing, typography, and general la
 
 ### ScrollSpyProvider
 Location: `src/providers/ScrollSpyProvider.tsx`.
+- Hook: `src/providers/useScrollSpy.ts` consumes the provider context for components.
 - Observes intersections between sections and viewport using `IntersectionObserver`.
 - Exposes `activeSection`, `scrollToSection`, `scrollToTop`, and a registration API via context.
 - Sections opt-in by setting `data-section` attributes and using helper hooks.
 
 ### ThemeProvider
 Location: `src/providers/ThemeProvider.tsx`.
+- Hook: `src/providers/useTheme.ts` shares the context with UI elements like `ThemeToggle`.
 - Manages theme state (`light` | `dark`) and exposes `toggleTheme` / `setTheme`.
 - Syncs DOM class list and localStorage, and listens to system theme changes to keep defaults in line when no explicit preference is stored.
 
@@ -200,6 +203,13 @@ These modules keep presentation components stateless and easy to localise.
 - Focus states rely on Tailwind ring utilities for keyboard navigation visibility.
 - Copy-to-clipboard button announces status changes via text updates.
 - Hero art is decorative only; imagery elements are implemented as background divs/spans with no semantic burden.
+
+## SEO & Discoverability
+- `Seo` component (`src/components/common/Seo.tsx`) manages document head updates: canonical URLs, `hreflang` alternates, Open Graph/Twitter cards, robots directives, and the `<html lang>` attribute adapt to the active route and locale.
+- `siteMeta` (`src/data/siteMeta.ts`) centralises canonical origins, locale metadata (Czech default, English alternate), and the shared social preview image path used by the SEO helper.
+- `HomePage` and `AboutPage` mount `Seo` with locale-aware metadata plus JSON-LD (`Person`, `WebSite`, `WebPage`, `BreadcrumbList`) so search engines understand ownership, navigation, and contact calls-to-action.
+- Language toggles synchronise the `?lang=` query parameter (removed for Czech) so shareable URLs match the generated canonical/alternate tags and sitemap entries.
+- `public/robots.txt` and `public/sitemap.xml` advertise crawl rules and expose `cs`/`en` alternates for the home and about routes with `x-default` fallbacks.
 
 ## Extending the Project
 

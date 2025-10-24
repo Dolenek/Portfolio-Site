@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ArrowLeft } from "lucide-react";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 import { MOTION_EASE } from "../utils/animation";
 import { useScrollTopReset } from "../hooks/useScrollTopReset";
+import { Seo } from "../components/common/Seo";
+import { siteMeta } from "../data/siteMeta";
+import { buildLocalizedUrl, resolveLocale } from "../utils/seo";
 
 type TimelineItem = {
   id: string;
@@ -31,13 +34,70 @@ const TIMELINE_VARIANTS = {
 } as const;
 
 export const AboutPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const timeline = t("about.timeline", { returnObjects: true }) as TimelineItem[];
   const [hasTimelineAnimated, setHasTimelineAnimated] = useState(false);
   const timelineControls = useAnimation();
   const timelineRef = useRef<HTMLDivElement | null>(null);
   const timelineInView = useInView(timelineRef, { margin: "-120px 0px 0px 0px" });
+  const structuredData = useMemo(() => {
+    const locale = resolveLocale(i18n.resolvedLanguage ?? i18n.language);
+    const localeConfig = siteMeta.locales[locale];
+    const homepageUrl = buildLocalizedUrl("/", locale);
+    const aboutUrl = buildLocalizedUrl("/about", locale);
+
+    return [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        url: aboutUrl,
+        name: t("seo.about.title"),
+        description: t("seo.about.description"),
+        inLanguage: localeConfig.hrefLang,
+        isPartOf: {
+          "@type": "WebSite",
+          url: homepageUrl,
+          name: t("seo.siteName")
+        },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: t("seo.home.breadcrumb"),
+              item: homepageUrl
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("seo.about.breadcrumb"),
+              item: aboutUrl
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: t("seo.home.breadcrumb"),
+            item: homepageUrl
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: t("seo.about.breadcrumb"),
+            item: aboutUrl
+          }
+        ]
+      }
+    ];
+  }, [i18n.language, i18n.resolvedLanguage, t]);
 
   useEffect(() => {
     if (timelineInView && !hasTimelineAnimated) {
@@ -51,10 +111,18 @@ export const AboutPage = () => {
   }, { enabled: !hasTimelineAnimated });
 
   return (
-    <div className="container-xl pb-24 pt-12 sm:pt-16">
-      <button
-        onClick={() => navigate("/", { state: { scrollTo: "hero" } })}
-        className="group mb-8 inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-800/70 dark:bg-slate-900/80 dark:text-slate-200"
+    <>
+      <Seo
+        titleKey="seo.about.title"
+        descriptionKey="seo.about.description"
+        path="/about"
+        structuredData={structuredData}
+      />
+
+      <div className="container-xl pb-24 pt-12 sm:pt-16">
+        <button
+          onClick={() => navigate("/", { state: { scrollTo: "hero" } })}
+          className="group mb-8 inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-800/70 dark:bg-slate-900/80 dark:text-slate-200"
       >
         <ArrowLeft className="h-4 w-4 transition group-hover:-translate-x-1" />
         {t("about.backCta")}
@@ -133,6 +201,7 @@ export const AboutPage = () => {
           ))}
         </div>
       </motion.section>
-    </div>
+      </div>
+    </>
   );
 };

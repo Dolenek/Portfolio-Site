@@ -1,23 +1,6 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode
-} from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 
-export type SectionId = "hero" | "projects" | "contact";
-
-type ScrollSpyContextValue = {
-  activeSection: SectionId;
-  setActiveSection: (section: SectionId) => void;
-  scrollToSection: (section: SectionId) => void;
-  scrollToTop: () => void;
-};
-
-const ScrollSpyContext = createContext<ScrollSpyContextValue | undefined>(undefined);
+import { ScrollSpyContext, type SectionId } from "./scrollSpyContext";
 
 const observerOptions: IntersectionObserverInit = {
   root: null,
@@ -81,14 +64,4 @@ export const ScrollSpyProvider = ({ children }: Props) => {
   );
 
   return <ScrollSpyContext.Provider value={value}>{children}</ScrollSpyContext.Provider>;
-};
-
-export const useScrollSpy = () => {
-  const context = useContext(ScrollSpyContext);
-
-  if (!context) {
-    throw new Error("useScrollSpy must be used within ScrollSpyProvider");
-  }
-
-  return context;
 };

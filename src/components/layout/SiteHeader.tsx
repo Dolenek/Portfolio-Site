@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { useScrollSpy, type SectionId } from "../../providers/ScrollSpyProvider";
+import { useScrollSpy } from "../../providers/useScrollSpy";
+import type { SectionId } from "../../providers/scrollSpyContext";
 import { profile } from "../../data/profile";
 import { cn } from "../../utils/cn";
 import { ThemeToggle } from "../common/ThemeToggle";

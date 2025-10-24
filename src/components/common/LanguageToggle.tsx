@@ -1,32 +1,62 @@
-﻿import { useCallback, useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-const LANGUAGE_ORDER = ["en", "cz"] as const;
+import { siteMeta, type SupportedLocale } from "../../data/siteMeta";
+
+const LANGUAGE_SEQUENCE: SupportedLocale[] = ["cs", "en"];
+
+const normalizeLanguage = (value: string | undefined): SupportedLocale => {
+  const fallback = LANGUAGE_SEQUENCE[0];
+  if (!value) {
+    return fallback;
+  }
+
+  const normalized = value.toLowerCase();
+  if (normalized.startsWith("cz")) {
+    return "cs";
+  }
+
+  const match = LANGUAGE_SEQUENCE.find((lang) => normalized.startsWith(lang));
+  return match ?? fallback;
+};
 
 export const LanguageToggle = () => {
   const { i18n, t } = useTranslation();
 
-  const currentLanguage = useMemo(() => {
-    const resolved = i18n.resolvedLanguage ?? i18n.language ?? LANGUAGE_ORDER[0];
-    const normalized = resolved.toLowerCase();
-    return LANGUAGE_ORDER.find((lang) => normalized.startsWith(lang)) ?? LANGUAGE_ORDER[0];
-  }, [i18n.language, i18n.resolvedLanguage]);
+  const currentLanguage = useMemo(
+    () => normalizeLanguage(i18n.resolvedLanguage ?? i18n.language),
+    [i18n.language, i18n.resolvedLanguage]
+  );
 
   const nextLanguage = useMemo(() => {
-    const currentIndex = LANGUAGE_ORDER.indexOf(currentLanguage);
-    const nextIndex = (currentIndex + 1) % LANGUAGE_ORDER.length;
-    return LANGUAGE_ORDER[nextIndex];
+    const currentIndex = LANGUAGE_SEQUENCE.indexOf(currentLanguage);
+    const nextIndex = (currentIndex + 1) % LANGUAGE_SEQUENCE.length;
+    return LANGUAGE_SEQUENCE[nextIndex];
   }, [currentLanguage]);
 
-  const labelKey = `nav.languageToggle.${currentLanguage}` as const;
+  const currentLabelKey = `nav.languageToggle.${currentLanguage}` as const;
   const nextLabelKey = `nav.languageToggle.${nextLanguage}` as const;
-  const visualLabel = t(labelKey);
+  const visualLabel = t(currentLabelKey);
   const actionLabel = t("nav.languageToggle.switch", { lang: t(nextLabelKey) });
 
   const handleToggle = useCallback(() => {
-    if (nextLanguage !== currentLanguage) {
-      void i18n.changeLanguage(nextLanguage);
+    if (nextLanguage === currentLanguage) {
+      return;
     }
+
+    void i18n.changeLanguage(nextLanguage).then(() => {
+      if (typeof window === "undefined") {
+        return;
+      }
+
+      const url = new URL(window.location.href);
+      if (nextLanguage === siteMeta.defaultLocale) {
+        url.searchParams.delete("lang");
+      } else {
+        url.searchParams.set("lang", nextLanguage);
+      }
+      window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+    });
   }, [currentLanguage, i18n, nextLanguage]);
 
   return (
@@ -41,5 +71,3 @@ export const LanguageToggle = () => {
     </button>
   );
 };
-
-

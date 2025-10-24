@@ -2,15 +2,15 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-import cz from "./locales/cz/common.json";
+import cs from "./locales/cs/common.json";
 import en from "./locales/en/common.json";
 
 export const resources = {
+  cs: {
+    translation: cs
+  },
   en: {
     translation: en
-  },
-  cz: {
-    translation: cz
   }
 } as const;
 
@@ -19,16 +19,27 @@ void i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en",
-    supportedLngs: ["en", "cz"],
+    fallbackLng: "cs",
+    supportedLngs: ["cs", "en"],
     defaultNS: "translation",
     interpolation: {
       escapeValue: false
     },
     detection: {
-      order: ["localStorage", "navigator"],
+      order: ["querystring", "localStorage", "navigator", "htmlTag"],
       caches: ["localStorage"],
-      lookupLocalStorage: "portfolio-site-language"
+      lookupQuerystring: "lang",
+      lookupLocalStorage: "portfolio-site-language",
+      convertDetectedLanguage: (lng: string) => {
+        const normalized = lng.toLowerCase();
+        if (normalized.startsWith("cs") || normalized.startsWith("cz")) {
+          return "cs";
+        }
+        if (normalized.startsWith("en")) {
+          return "en";
+        }
+        return lng;
+      }
     }
   });
 
