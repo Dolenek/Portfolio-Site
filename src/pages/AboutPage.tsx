@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 
 import { ArrowLeft } from "lucide-react";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -110,6 +110,16 @@ export const AboutPage = () => {
     timelineControls.set("hidden");
   }, { enabled: !hasTimelineAnimated });
 
+  const renderDivider = (labelKey: string) => (
+    <div className="flex items-center gap-3 px-1 text-base sm:text-lg">
+      <span className="h-px flex-1 bg-slate-300 dark:bg-slate-800" />
+      <span className="rounded-full bg-slate-900 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-sm shadow-slate-900/20 dark:bg-white dark:text-slate-900">
+        {t(labelKey)}
+      </span>
+      <span className="h-px flex-1 bg-slate-300 dark:bg-slate-800" />
+    </div>
+  );
+
   return (
     <>
       <Seo
@@ -154,50 +164,55 @@ export const AboutPage = () => {
         animate={timelineControls}
         variants={TIMELINE_VARIANTS}
       >
-        <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">{t("about.timelineHeading")}</h2>
+        <h2 className="sr-only">{t("about.timelineHeading")}</h2>
         <div className="mt-8 space-y-6">
-          {timeline.map((item) => (
-            <div
-              key={item.id}
-              className="group relative flex flex-col gap-4 rounded-3xl border border-slate-200/70 bg-white/70 p-6 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10 dark:border-slate-800/70 dark:bg-slate-900/70"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{item.title}</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {item.location}
-                    {item.link ? (
-                      <>
-                        {" "}
-                        {t("about.timelineAt")}{" "}
-                        <a
-                          href={item.link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-medium text-brand transition hover:underline"
-                        >
-                          {item.link.label}
-                        </a>
-                      </>
-                    ) : null}
-                  </p>
-                </div>
-                <span className="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white dark:bg-white dark:text-slate-900">
-                  {item.period}
-                </span>
-              </div>
-              <p className="text-sm text-slate-600 dark:text-slate-300">{item.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {item.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-slate-200/70 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600 transition group-hover:border-brand group-hover:text-brand dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-300"
-                  >
-                    {tag}
+          {timeline.map((item, index) => (
+            <Fragment key={item.id}>
+              {index === 0 ? renderDivider("about.experienceDivider") : null}
+              <div
+                className="group relative flex flex-col gap-4 rounded-3xl border border-slate-200/70 bg-white/70 p-6 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10 dark:border-slate-800/70 dark:bg-slate-900/70"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{item.title}</h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      {item.location}
+                      {item.link ? (
+                        <>
+                          {" "}
+                          {t("about.timelineAt")}{" "}
+                          <a
+                            href={item.link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-brand transition hover:underline"
+                          >
+                            {item.link.label}
+                          </a>
+                        </>
+                      ) : null}
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white dark:bg-white dark:text-slate-900">
+                    {item.period}
                   </span>
-                ))}
+                </div>
+                <p className="text-sm text-slate-600 dark:text-slate-300">{item.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-slate-200/70 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600 transition group-hover:border-brand group-hover:text-brand dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+              {item.id === "cloud-software-specialist" ? (
+                renderDivider("about.educationDivider")
+              ) : null}
+            </Fragment>
           ))}
         </div>
       </motion.section>

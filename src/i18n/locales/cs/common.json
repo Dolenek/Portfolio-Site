@@ -117,6 +117,8 @@
     "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci se aktuálně zaměřuji hlavně na backend, ale ve volném čase rád vytvářím <highlight>full\u2011stack</highlight> aplikace.\nV poslední době mě pohltil <highlight>self\u2011hosting</highlight>. Provozuji laboratoř v Proxmoxu na linuxových serverech s Dockerem.\nProgramování mě <highlight>baví</highlight> a je to můj dlouholetý koníček, proto neustále hledám nové výzvy a příležitosti k učení.",
     "timelineHeading": "Zkušenosti a vzdělání",
     "timelineAt": "@",
+    "experienceDivider": "Zkušenosti",
+    "educationDivider": "Vzdělání",
     "timeline": [
       {
         "id": "cloud-software-specialist",

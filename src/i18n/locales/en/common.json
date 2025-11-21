@@ -117,6 +117,8 @@
     "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work I currently focus mainly on the backend, but in my free time I enjoy building <highlight>full‑stack</highlight> applications.\nRecently I've been deep into <highlight>self‑hosting</highlight>. I run a lab in Proxmox on Linux servers with Docker.\nI <highlight>enjoy</highlight> programming and it has been my hobby for many years, which is why I'm constantly looking for new challenges and learning opportunities.",
     "timelineHeading": "Experience & education",
     "timelineAt": "@",
+    "experienceDivider": "Experience",
+    "educationDivider": "Education",
     "timeline": [
       {
         "id": "cloud-software-specialist",

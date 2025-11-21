@@ -196,10 +196,11 @@ export const Seo = ({
       return;
     }
 
-    const script = existing ?? document.createElement("script");
-    script.type = "application/ld+json";
+    const script =
+      existing instanceof HTMLScriptElement ? existing : document.createElement("script");
+    script.setAttribute("type", "application/ld+json");
     script.id = JSON_LD_ELEMENT_ID;
-    script.text = JSON.stringify(structuredDataPayload);
+    script.textContent = JSON.stringify(structuredDataPayload);
     if (!existing) {
       document.head.appendChild(script);
     }
