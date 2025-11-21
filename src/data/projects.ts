@@ -1,4 +1,5 @@
 export type ProjectId =
+  | "levne-deskovky"
   | "kuchar-v-akci"
   | "portfolio"
   | "discord-automation"
@@ -19,6 +20,18 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "levne-deskovky",
+    year: "2025",
+    tech: ["React", "TypeScript", "Supabase", "Recharts", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/Dolenek/DeskovkyLevne",
+      demo: "https://www.deskovkylevne.com"
+    },
+    accent: "from-amber-300/45 via-orange-400/35 to-rose-500/30",
+    previewGradient: ["#f9d976", "#b8325f"],
+    previewImage: "/projects/DeskovkyLevne.png"
+  },
   {
     id: "kuchar-v-akci",
     year: "2025",

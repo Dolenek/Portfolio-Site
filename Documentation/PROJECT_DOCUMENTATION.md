@@ -159,7 +159,7 @@ Files: `ProjectsSection.tsx`, `ProjectsSection.css`.
 - Hover/focus reveals the detail overlay by sliding it from the bottom: summary, impact, stack chips, and CTA icons animate upward using the shared cubic-bezier stored in `cardVariants`. On mobile we now keep the banner visible, require a tap to toggle the overlay, pin the title copy to the top, anchor the stack footer bottom-left, and compress typography/padding so even long summaries leave room for the stack and link buttons. The hover/tap state still applies the softened preview darkening.
 - GitHub and optional demo buttons live in the overlay footer beside the tech stack with translated `aria-label`s assembled from the project title.
 - Tweak sizing in `ProjectsSection.css` (`projects-river__card` width/height, overlay padding) and mirror any changes against Tailwind spacing in the JSX to maintain alignment for alternating left/right nodes.
-- Recent addition: `kuchar-v-akci` pairs `previewImage: "/projects/KucharVAkci.png"` with both GitHub and live demo links, and uses a warm green-to-amber accent to distinguish the automation-driven cooking workflow.
+- Recent additions: `kuchar-v-akci` pairs `previewImage: "/projects/KucharVAkci.png"` with both GitHub and live demo links, and uses a warm green-to-amber accent to distinguish the automation-driven cooking workflow; `levne-deskovky` now sits first with an amber-to-rose accent using the uploaded `/projects/DeskovkyLevne.png` screenshot.
 
 ### Skills
 Files: `SkillsSection.tsx`, `SkillsSection.css`.
@@ -238,8 +238,6 @@ These modules keep presentation components stateless and easy to localise.
 
 ---
 For further questions or enhancements, review the component-specific comments inside the codebase or reach out to the maintainer listed in `profile.ts`.
-
-
 
 
 

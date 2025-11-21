@@ -48,6 +48,11 @@
     "heading": "Projekty",
     "subheading": "",
     "items": {
+      "levne-deskovky": {
+        "title": "Levné Deskovky",
+        "summary": "Český sledovač cen deskových her, který spojuje všechny prodejce pod kanonickými slugy; nabízí dvojjazyčné vyhledávání, filtry a detailní stránky s cenovou historií pro každého prodejce v Recharts.",
+        "impact": "Zvyšuje přehled o cenách díky legendám pro každý obchod, badge dostupnosti, sloučeným galeriím a katalogovým aktualizacím přes Supabase."
+      },
       "discord-automation": {
         "title": "Automatizace pro Discord",
         "summary": "Desktopová WPF (.NET 4.8) aplikace s vloženým webovým klientem Discordu přes WebView2; bot posílá příkazy pomocí DevTools Input.insertText a klávesových událostí, sleduje DOM pro nové zprávy a vystavuje posledních 5 zpráv včetně strukturovaných logů.",

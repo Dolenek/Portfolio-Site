@@ -48,6 +48,11 @@
     "heading": "Projects",
     "subheading": "",
     "items": {
+      "levne-deskovky": {
+        "title": "Levné Deskovky",
+        "summary": "Czech board-game price tracker that merges every seller under canonical slugs, with bilingual search, filters, and detailed offer pages plus Recharts history per seller.",
+        "impact": "Improves price transparency with per-seller legends, availability badges, merged galleries, and Supabase-backed catalog updates."
+      },
       "discord-automation": {
         "title": "Discord Automation",
         "summary": "Desktop WPF (.NET 4.8) app embedding the Discord web client in WebView2; bot sends commands via DevTools Input.insertText and key events, polls the DOM for messages, and exposes last-5 messages plus structured logs.",
