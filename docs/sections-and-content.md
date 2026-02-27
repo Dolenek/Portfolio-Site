@@ -1,41 +1,44 @@
 # Sections and Content
 
-## Home Page Sections
+## Home Sections
 
-### Hero (`HeroSection.tsx`, `HeroSection.css`)
-- Theme-aware mountain artwork uses shared shape layers for day/night variants.
-- Day scene includes generated drifting clouds (`createHeroCloudField`).
-- Night scene includes generated star field.
-- Portrait image comes from `profile.portraitImage`; fallback renders initials.
-- Header is transparent, so foreground ridge and app background should stay visually aligned.
+### Hero (`HeroSection.tsx` + `sections/hero/*`)
+- Theme-aware day/night backdrop.
+- Animated stars/clouds generated from deterministic config.
+- Portrait image from `profile.portraitImage` with initials fallback.
 
-### Projects (`ProjectsSection.tsx`, `ProjectsSection.css`)
-- Renders alternating left/right project cards from `src/data/projects.ts`.
-- Card media prefers `previewImage`; falls back to gradient placeholder.
-- Desktop behavior: hover/focus overlay reveals details and links.
-- Mobile/touch behavior: tap toggles active overlay state.
-- Maintain translated copy in locale `projects.items` keys aligned to project IDs.
+### Projects (`ProjectsSection.tsx` + `sections/projects/*`)
+- Card list generated from `src/data/projects.ts`.
+- Desktop: hover/focus overlay reveals summary + actions.
+- Mobile: tap toggles active overlay.
+- Every card links to `/projects/:slug` case-study route.
 
-### Skills (`SkillsSection.tsx`, `SkillsSection.css`)
-- Renders skill icon cards from `skillHighlights` in `src/data/skills.ts`.
-- Localized labels come from `skills.cards` in locale resources.
-- Keep skill IDs synchronized between data and locale maps.
+### Skills (`SkillsSection.tsx`)
+- Card grid generated from `skillHighlights`.
+- Skill labels are localized via `skills.cards` keys.
 
 ### Contact (`ContactSection.tsx`)
-- Uses data from `profile.ts` (email and social links).
-- Includes localized email copy feedback (`copy`/`copied`).
-- Includes CTA route to the About page.
+- Direct contact actions only:
+  - copy email
+  - open GitHub
+  - open LinkedIn
+- Includes localized copied feedback for screen readers.
 
 ## About Page (`AboutPage.tsx`)
-- Renders localized intro and timeline (`about.timeline`).
-- Supports optional timeline link object (`label`, `href`) per item.
-- Uses `useScrollTopReset` to replay timeline reveal logic after top reset.
+- Localized intro paragraph with emphasized fragments.
+- Timeline list from locale key `about.timeline`.
+- Optional timeline links (`label`, `href`) per item.
+
+## Project Detail Page (`ProjectDetailPage.tsx`)
+- Renders case-study sections from localized typed data.
+- Uses slug-to-project mapping from `projects.ts`.
+- Falls back to home redirect when slug is unknown.
 
 ## Content Update Rules
-- Add/edit structured content in `src/data/*`.
-- Add/edit user-facing copy in:
+- Project metadata: `src/data/projects.ts`.
+- Case-study body content:
+  - `src/data/case-studies/en.ts`
+  - `src/data/case-studies/cs.ts`
+- Locale UI copy:
   - `src/i18n/locales/en/common.json`
   - `src/i18n/locales/cs/common.json`
-- Keep locale schemas aligned to avoid missing runtime text.
-- Add project screenshots/icons under `public/projects` and `public/skills`.
-

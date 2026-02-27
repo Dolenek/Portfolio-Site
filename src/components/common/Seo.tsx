@@ -6,14 +6,12 @@ import { siteMeta, type SupportedLocale } from "../../data/siteMeta";
 import { buildLocalizedUrl, resolveLocale } from "../../utils/seo";
 
 const MANAGED_ATTRIBUTE = "data-seo-managed";
+const LINK_SCOPE_ATTRIBUTE = "data-seo-link-scope";
+const LINK_KEY_ATTRIBUTE = "data-seo-link-key";
 const JSON_LD_ELEMENT_ID = "seo-jsonld";
 const DEFAULT_OG_TYPE = "website";
 
 type MetaKey = "name" | "property";
-
-type CanonicalOptions = {
-  path?: string;
-};
 
 type StructuredData =
   | Record<string, unknown>
@@ -21,9 +19,12 @@ type StructuredData =
   | null
   | undefined;
 
-export type SeoProps = CanonicalOptions & {
+export type SeoProps = {
   titleKey: string;
   descriptionKey: string;
+  title?: string;
+  description?: string;
+  path?: string;
   index?: boolean;
   ogType?: "website" | "profile" | "article";
   structuredData?: StructuredData | (() => StructuredData);
@@ -52,16 +53,37 @@ const removeManagedMeta = (scope: string) => {
   document.head.querySelectorAll(selector).forEach((node) => node.remove());
 };
 
-const upsertLink = (rel: string, attrs: Record<string, string>, scope: string) => {
-  const selector = `link[rel="${rel}"][${MANAGED_ATTRIBUTE}="${scope}"]`;
-  let element = document.head.querySelector<HTMLLinkElement>(selector);
+type LinkOptions = {
+  rel: string;
+  attrs: Record<string, string>;
+  scope: string;
+  key: string;
+  preferAnyExistingRel?: boolean;
+};
+
+const upsertManagedLink = ({
+  rel,
+  attrs,
+  scope,
+  key,
+  preferAnyExistingRel = false
+}: LinkOptions) => {
+  const managedSelector = `link[rel="${rel}"][${LINK_SCOPE_ATTRIBUTE}="${scope}"][${LINK_KEY_ATTRIBUTE}="${key}"]`;
+  let element = document.head.querySelector<HTMLLinkElement>(managedSelector);
+
+  if (!element && preferAnyExistingRel) {
+    element = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+  }
 
   if (!element) {
     element = document.createElement("link");
-    element.setAttribute("rel", rel);
-    element.setAttribute(MANAGED_ATTRIBUTE, scope);
     document.head.appendChild(element);
   }
+
+  element.setAttribute("rel", rel);
+  element.setAttribute(MANAGED_ATTRIBUTE, "true");
+  element.setAttribute(LINK_SCOPE_ATTRIBUTE, scope);
+  element.setAttribute(LINK_KEY_ATTRIBUTE, key);
 
   Object.entries(attrs).forEach(([attr, value]) => {
     if (attr !== "rel") {
@@ -71,7 +93,7 @@ const upsertLink = (rel: string, attrs: Record<string, string>, scope: string) =
 };
 
 const removeManagedLinks = (scope: string) => {
-  const selector = `link[${MANAGED_ATTRIBUTE}="${scope}"]`;
+  const selector = `link[${LINK_SCOPE_ATTRIBUTE}="${scope}"]`;
   document.head.querySelectorAll(selector).forEach((node) => node.remove());
 };
 
@@ -85,6 +107,8 @@ const resolveStructuredData = (input: SeoProps["structuredData"]) => {
 export const Seo = ({
   titleKey,
   descriptionKey,
+  title: titleOverride,
+  description: descriptionOverride,
   path = "/",
   index = true,
   ogType = DEFAULT_OG_TYPE,
@@ -96,17 +120,15 @@ export const Seo = ({
     () => resolveLocale(i18n.resolvedLanguage ?? i18n.language),
     [i18n.language, i18n.resolvedLanguage]
   );
+
   const localeConfig = siteMeta.locales[locale];
   const siteName = t("seo.siteName");
   const socialImageAlt = t("seo.ogImageAlt");
-  const title = t(titleKey);
-  const description = t(descriptionKey);
+  const title = titleOverride ?? t(titleKey);
+  const description = descriptionOverride ?? t(descriptionKey);
   const canonicalUrl = buildLocalizedUrl(path, locale);
   const socialImageUrl = new URL(siteMeta.socialImage, siteMeta.baseUrl).toString();
-  const structuredDataPayload = useMemo(
-    () => resolveStructuredData(structuredData),
-    [structuredData]
-  );
+  const structuredDataPayload = useMemo(() => resolveStructuredData(structuredData), [structuredData]);
 
   useEffect(() => {
     document.title = title;
@@ -167,40 +189,49 @@ export const Seo = ({
   ]);
 
   useEffect(() => {
-    upsertLink("canonical", { href: canonicalUrl }, "canonical");
+    upsertManagedLink({
+      rel: "canonical",
+      attrs: { href: canonicalUrl },
+      scope: "canonical",
+      key: "page",
+      preferAnyExistingRel: true
+    });
 
     removeManagedLinks("alternate");
 
     (Object.keys(siteMeta.locales) as SupportedLocale[]).forEach((lang) => {
       const config = siteMeta.locales[lang];
       const href = buildLocalizedUrl(path, lang);
-      upsertLink(
-        "alternate",
-        { href, hrefLang: config.hrefLang },
-        "alternate"
-      );
+      upsertManagedLink({
+        rel: "alternate",
+        attrs: { href, hrefLang: config.hrefLang },
+        scope: "alternate",
+        key: lang
+      });
     });
 
     const defaultHref = buildLocalizedUrl(path, siteMeta.defaultLocale);
-    upsertLink(
-      "alternate",
-      { href: defaultHref, hrefLang: "x-default" },
-      "alternate-default"
-    );
+    upsertManagedLink({
+      rel: "alternate",
+      attrs: { href: defaultHref, hrefLang: "x-default" },
+      scope: "alternate",
+      key: "default"
+    });
   }, [canonicalUrl, path]);
 
   useEffect(() => {
     const existing = document.getElementById(JSON_LD_ELEMENT_ID);
-    if (!structuredDataPayload || structuredDataPayload === null) {
+
+    if (!structuredDataPayload) {
       existing?.remove();
       return;
     }
 
-    const script =
-      existing instanceof HTMLScriptElement ? existing : document.createElement("script");
+    const script = existing instanceof HTMLScriptElement ? existing : document.createElement("script");
     script.setAttribute("type", "application/ld+json");
     script.id = JSON_LD_ELEMENT_ID;
     script.textContent = JSON.stringify(structuredDataPayload);
+
     if (!existing) {
       document.head.appendChild(script);
     }

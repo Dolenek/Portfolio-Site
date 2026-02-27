@@ -13,20 +13,26 @@
       "en": "EN",
       "cs": "CZ",
       "switch": "Switch language to {{lang}}"
-    }
+    },
+    "mobileToggle": "Toggle navigation",
+    "skipToContent": "Skip to content"
   },
   "seo": {
-    "siteName": "Jakub Dolének | portfolio",
+    "siteName": "Jakub Dolének | Portfolio",
     "ogImageAlt": "Portrait of Jakub Dolének",
     "home": {
       "title": "Jakub Dolének | Full-stack Developer",
-      "description": "Explore Jakub Dolének’s portfolio with automation projects, full-stack builds, and get in touch to collaborate.",
+      "description": "Portfolio of Jakub Dolének featuring full-stack projects, automation systems, and collaboration contact.",
       "breadcrumb": "Home"
     },
     "about": {
       "title": "About | Jakub Dolének",
-      "description": "Learn more about the experience, education, and technologies Jakub Dolének works with as a full-stack developer.",
+      "description": "Experience, education, and engineering focus of Jakub Dolének as a full-stack developer.",
       "breadcrumb": "About"
+    },
+    "project": {
+      "title": "Project case study | Jakub Dolének",
+      "description": "Technical case study with architecture, decisions, tradeoffs, and outcomes."
     },
     "person": {
       "jobTitle": "Full-stack Developer",
@@ -41,47 +47,65 @@
       "trail": "Programming!"
     },
     "subheadline": "Full-stack Developer",
-    "description": "I develop software with modern technologies that solve real‑world problems and save time.",
+    "description": "I build software with modern technologies that solves real-world problems and saves time.",
     "portraitCaption": ""
   },
   "projects": {
     "heading": "Projects",
-    "subheading": "",
+    "subheading": "Selected work with measurable engineering impact.",
     "items": {
       "levne-deskovky": {
         "title": "Levné Deskovky",
-        "summary": "Czech board-game price tracker that merges every seller under canonical slugs, with bilingual search, filters, and detailed offer pages plus Recharts history per seller.",
-        "impact": "Improves price transparency with per-seller legends, availability badges, merged galleries, and Supabase-backed catalog updates."
+        "summary": "Czech board-game price tracker that unifies seller data under canonical slugs with bilingual search, filtering, and seller price history.",
+        "impact": "Improves price transparency through merged offers, availability states, and automated Supabase catalog updates."
       },
       "discord-automation": {
         "title": "Discord Automation",
-        "summary": "Desktop WPF (.NET 4.8) app embedding the Discord web client in WebView2; bot sends commands via DevTools Input.insertText and key events, polls the DOM for messages, and exposes last-5 messages plus structured logs.",
-        "impact": "Provides robust DevTools-driven automation (originally Selenium), deterministic start/deduplication logic, and observable logging/buffers for reliable, continuous bot operation."
+        "summary": "Desktop WPF app that embeds Discord via WebView2 and automates command dispatch through DevTools with DOM polling.",
+        "impact": "Improved reliability with deterministic deduplication logic, structured logs, and stable long-running operation."
       },
       "kuchar-v-akci": {
         "title": "Recepty v Akci",
-        "summary": "A self-hosted website with recipes inspired by supermarket flyers, presenting each recipe with structured ingredients and preparation instructions.",
-        "impact": "n8n automations transform daily flyer PDFs into Supabase recipes, keeping the site refreshed end-to-end without manual publishing."
+        "summary": "Self-hosted recipe platform inspired by supermarket flyers with structured ingredients and preparation steps.",
+        "impact": "n8n workflows convert daily flyer PDFs into Supabase recipes, enabling end-to-end automated publishing."
       },
       "smithing-master-bot": {
-        "title": "Bot using Pyautogui",
-        "summary": "Desktop automation bot using PyAutoGUI and OpenCV for screenshot-based computer-vision (template matching) to control an Android emulator",
-        "impact": "Fully automated time intesive and repetitive tasks in a mobile game via screen‑based computer vision."
+        "title": "Bot using PyAutoGUI",
+        "summary": "Desktop automation bot using PyAutoGUI and OpenCV template matching to control an Android emulator.",
+        "impact": "Fully automates time-intensive repetitive tasks in a mobile game using screen-based computer vision."
       },
       "portfolio": {
-        "title": "Personal portfolio",
-        "summary": "The site you are browsing! Crafted with React, Tailwind, and thoughtful micro‑animations to present my work and background.",
-        "impact": "Highlights core projects, skills, and a bit of personality while keeping performance and accessibility in check."
+        "title": "Personal Portfolio",
+        "summary": "This site, built with React, Tailwind CSS, and Framer Motion to present work with a strong engineering-first narrative.",
+        "impact": "Provides bilingual content, SEO metadata, and structured case studies while keeping performance and accessibility in focus."
       },
       "mobile-game-unity": {
-        "title": "Mobile game in Unity",
-        "summary": "Casual RPG with strong clicker and crafting \"Brewing\" mechanics with very simple combat using C# and Unity game engine.",
-        "impact": "Made a working prototype of a RPG mobile game with fully working progession system."
+        "title": "Mobile Game in Unity",
+        "summary": "Casual RPG prototype with clicker and crafting mechanics built with C# in Unity.",
+        "impact": "Delivered a functional progression system and playable Android prototype."
       }
     },
     "techLabel": "Stack",
-    "ctaLabel": "View case study",
-    "repoLabel": "Source"
+    "caseStudyLabel": "Case study",
+    "backToProjects": "Back to projects",
+    "backHome": "Back to home",
+    "liveDemo": "Live demo",
+    "meta": {
+      "role": "Role",
+      "team": "Team",
+      "duration": "Duration",
+      "year": "Year"
+    },
+    "caseStudy": {
+      "problem": "Problem",
+      "constraints": "Constraints",
+      "architecture": "Architecture",
+      "decisions": "Key decisions",
+      "rationale": "Rationale",
+      "tradeoff": "Tradeoff",
+      "outcomes": "Outcomes",
+      "next": "What I'd improve next"
+    }
   },
   "skills": {
     "heading": "Skills",
@@ -94,7 +118,7 @@
       "framerMotion": "Framer Motion",
       "firebase": "Firebase",
       "supabase": "Supabase",
-      "sql": "postgreSQL",
+      "sql": "PostgreSQL",
       "mssql": "MSSQL",
       "csharp": "C#",
       "unity": "Unity",
@@ -107,7 +131,7 @@
       "lead": "Let's build something",
       "accent": "together!"
     },
-    "description": "Connect with me, here are my socials.",
+    "description": "If you are hiring or building, feel free to reach out.",
     "learnMore": "Learn more about me",
     "emailLabel": "Email",
     "copy": "Copy email",
@@ -119,7 +143,7 @@
   },
   "about": {
     "title": "About me",
-    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work I currently focus mainly on the backend, but in my free time I enjoy building <highlight>full‑stack</highlight> applications.\nRecently I've been deep into <highlight>self‑hosting</highlight>. I run a lab in Proxmox on Linux servers with Docker.\nI <highlight>enjoy</highlight> programming and it has been my hobby for many years, which is why I'm constantly looking for new challenges and learning opportunities.",
+    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work, I currently focus mainly on backend systems, while in my free time I build <highlight>full-stack</highlight> applications.\nRecently, I have been deep into <highlight>self-hosting</highlight>. I run a lab on Linux servers with Proxmox and Docker.\nProgramming has been my hobby for many years, so I am always looking for new challenges and opportunities to learn.",
     "timelineHeading": "Experience & education",
     "timelineAt": "@",
     "experienceDivider": "Experience",
@@ -134,7 +158,7 @@
           "label": "TOP TECH, s.r.o., CZ",
           "href": "https://www.top-tech.cz/"
         },
-        "description": "I develop automation software and scripts tailored to each customer and their ERP needs. I also create educational and promotional content for our social media.",
+        "description": "I develop automation software and scripts tailored to each customer and their ERP processes. I also create educational and promotional content for social media.",
         "tags": []
       },
       {
@@ -146,7 +170,7 @@
           "label": "Faculty of Informatics and Management",
           "href": "https://www.uhk.cz/en/fim"
         },
-        "description": "Studying Software Engineering with a focus on software architecture, algorithms and databases. I work on full-stack team projects and apply best practices in testing, design and deployment.",
+        "description": "I study software engineering with focus on architecture, algorithms, and databases. I work on full-stack team projects and apply best practices in testing, design, and deployment.",
         "tags": []
       },
       {
@@ -158,13 +182,13 @@
           "label": "hradebni.cz",
           "href": "https://www.hradebni.cz/"
         },
-        "description": "I gained knowledge in the field of computer hardware, networking fundamentals, and programming. At this time, I also began developing my first real software, mainly using the C# language.",
+        "description": "I gained a strong foundation in computer hardware, networking, and programming. During this period I also started building my first production-like software in C#.",
         "tags": []
       }
     ],
     "backCta": "Back to home"
   },
   "footer": {
-    "note": "© {{year}} Jakub Dolének. Built with love for technology. ❤️"
+    "note": "© {{year}} Jakub Dolének. Built with focus on practical engineering."
   }
 }

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { siteMeta, type SupportedLocale } from "../../data/siteMeta";
 
-const LANGUAGE_SEQUENCE: SupportedLocale[] = ["cs", "en"];
+const LANGUAGE_SEQUENCE: SupportedLocale[] = ["en", "cs"];
 
 const normalizeLanguage = (value: string | undefined): SupportedLocale => {
   const fallback = LANGUAGE_SEQUENCE[0];

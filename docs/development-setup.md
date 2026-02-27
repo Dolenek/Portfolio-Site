@@ -1,30 +1,54 @@
 # Development Setup
 
 ## Prerequisites
-- Node.js `^20.19.0 || >=22.12.0` (required by Vite 7 in this project).
-- npm (the repository is locked with `package-lock.json`).
+- Node.js 20+
+- npm 10+
+- Optional Docker + Docker Compose for container deployment
 
-## Installation
+## Frontend Local Run
 ```bash
 npm install
+npm run dev
 ```
 
-## Scripts
-- `npm run dev` - Start Vite dev server with HMR.
-- `npm run build` - Run `tsc -b` and create production bundle.
-- `npm run preview` - Serve built assets locally.
-- `npm run lint` - ESLint with zero-warning budget.
-- `npm run typecheck` - TypeScript no-emit type check.
+The Vite app runs at `http://localhost:5173`.
 
-## Local Development Notes
-- Default dev URL is `http://localhost:5173`.
-- Keep typed content in `src/data/*`.
-- Keep translatable strings aligned in:
-  - `src/i18n/locales/en/common.json`
-  - `src/i18n/locales/cs/common.json`
+## API Local Run
+```bash
+cd api
+npm install
+npm run dev
+```
 
-## Deployment Basics
-- Build with `npm run build`.
-- Deploy `dist/` to static hosting.
-- Host must serve `index.html` for unknown routes to support client routing.
+API default address: `http://localhost:8080`.
 
+### API Environment
+Copy `api/.env.example` to `api/.env` and set values:
+- `CONTACT_TO`
+- `CONTACT_FROM`
+- `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`
+- `ALLOWED_ORIGINS`
+- `RATE_LIMIT_WINDOW_MS`, `RATE_LIMIT_MAX`
+
+## Root Scripts
+- `npm run dev` - start Vite dev server.
+- `npm run lint` - run ESLint.
+- `npm run typecheck` - run TypeScript type checks.
+- `npm run build` - produce production frontend build.
+- `npm run api:dev` - run API in watch mode.
+- `npm run api:start` - run API once.
+
+## Docker Deployment
+From `deploy/`:
+```bash
+docker compose up --build
+```
+
+Services:
+- `reverse-proxy` on `http://localhost:8081`
+- `frontend` internal service
+- `api` internal service
+
+Proxy routes:
+- `/` -> frontend
+- `/api/*` -> API

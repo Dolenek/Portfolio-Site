@@ -1,14 +1,15 @@
 # Overview
 
-This project is a React + TypeScript portfolio site built with Vite.  
-It presents projects, skills, and contact details with localized content and theme-aware visuals.
+This project is a React + TypeScript portfolio site built with Vite.
+It presents featured projects, engineering case studies, skills, experience, and direct contact links.
 
 ## Core Capabilities
-- Single-page home flow with deep-section navigation (`hero`, `projects`, `skills`, `contact`).
-- Dedicated `/about` route with timeline content.
-- Light/dark theme toggle with persistence and OS preference fallback.
-- English/Czech localization with browser detection and manual language switch.
-- SEO metadata, canonical/alternate locale links, and structured data.
+- Home page with section navigation (`hero`, `projects`, `skills`, `contact`).
+- Dedicated About route (`/about`) with timeline content.
+- Dedicated project case-study routes (`/projects/:slug`).
+- Light/dark theme with persistence.
+- English/Czech localization with URL syncing (`?lang=cs` for Czech).
+- Route-aware SEO metadata + JSON-LD.
 
 ## Technology Stack
 - React 19
@@ -21,17 +22,18 @@ It presents projects, skills, and contact details with localized content and the
 
 ## Runtime Surface
 - Routes:
-  - `/` (home with sections)
-  - `/about` (timeline/about content)
+  - `/`
+  - `/about`
+  - `/projects/:slug`
   - `*` redirects to `/`
-- Public assets are served from `public/` (project screenshots, skill icons, SEO files).
+- Public assets are served from `public/`.
+- Optional backend service for contact delivery runs from `api/`.
 
 ## Source Layout (High Level)
-- `src/components/common` - Reusable controls (`Seo`, theme/language toggles).
-- `src/components/layout` - Shell (`AppLayout`, `SiteHeader`, `SiteFooter`).
-- `src/components/sections` - Home sections.
-- `src/pages` - Route pages (`HomePage`, `AboutPage`).
-- `src/providers` - Theme and scroll-spy context providers.
-- `src/data` - Typed content metadata (profile, projects, skills, site meta).
-- `src/i18n` - i18n setup and locale resources (`cs`, `en`).
-
+- `src/components/common` - Shared controls (`Seo`, toggles).
+- `src/components/layout` - App shell (`AppLayout`, `SiteHeader`, `SiteFooter`).
+- `src/components/sections` - Home sections and section-specific styles.
+- `src/pages` - Route pages (`HomePage`, `AboutPage`, `ProjectDetailPage`).
+- `src/data` - Typed content and project case-study data.
+- `src/i18n` - i18n setup and locale resources.
+- `api` - Express contact API (`/api/contact`, `/healthz`).

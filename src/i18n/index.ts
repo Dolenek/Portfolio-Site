@@ -19,7 +19,7 @@ void i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "cs",
+    fallbackLng: "en",
     supportedLngs: ["cs", "en"],
     defaultNS: "translation",
     interpolation: {

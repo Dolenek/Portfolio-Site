@@ -150,7 +150,7 @@ export const AboutPage = () => {
             i18nKey="about.intro"
             components={{
               highlight: (
-                <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent" />
+                <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent" />
               ),
             }}
           />
@@ -198,16 +198,18 @@ export const AboutPage = () => {
                   </span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-300">{item.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-slate-200/70 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600 transition group-hover:border-brand group-hover:text-brand dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {item.tags.length > 0 ? (
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-slate-200/70 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600 transition group-hover:border-brand group-hover:text-brand dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
               </div>
               {item.id === "cloud-software-specialist" ? (
                 renderDivider("about.educationDivider")

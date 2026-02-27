@@ -14,7 +14,7 @@ export const siteMeta = {
       ogLocale: "en_US"
     }
   } as const,
-  defaultLocale: "cs"
+  defaultLocale: "en"
 } as const;
 
 export type SupportedLocale = keyof typeof siteMeta.locales;

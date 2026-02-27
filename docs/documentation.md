@@ -11,10 +11,11 @@ This `docs/` directory is the canonical documentation source for this repository
 
 ## Documentation Map
 - `docs/overview.md` - Product overview, stack, routes, and main capabilities.
-- `docs/development-setup.md` - Prerequisites, install flow, scripts, and deployment basics.
+- `docs/development-setup.md` - Local setup, scripts, API service, and Docker deployment.
 - `docs/architecture.md` - Codebase structure, routing/layout, providers, and data boundaries.
-- `docs/sections-and-content.md` - Home/About sections and how to update content safely.
-- `docs/i18n-theme-seo.md` - Localization, theming, and SEO behavior.
+- `docs/sections-and-content.md` - Home/About sections and content schema.
+- `docs/i18n-theme-seo.md` - Localization, theming, metadata, and crawl/index behavior.
+- `docs/case-studies-and-contact-api.md` - Project case-study model and contact API contract.
 
 ## Minimum Doc Impact Review
 For substantial changes, review whether updates are needed in:
@@ -23,5 +24,5 @@ For substantial changes, review whether updates are needed in:
 - `docs/architecture.md` for structure/provider/data-flow changes.
 - `docs/sections-and-content.md` for section behavior or content-schema changes.
 - `docs/i18n-theme-seo.md` for locale, theme, URL, or metadata changes.
+- `docs/case-studies-and-contact-api.md` for case-study or API contract updates.
 - `docs/development-setup.md` for scripts, tooling, and deployment prerequisites.
-

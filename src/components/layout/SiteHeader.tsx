@@ -69,6 +69,7 @@ export const SiteHeader = () => {
     <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-transparent backdrop-blur-md transition dark:border-slate-800/50 dark:bg-transparent">
       <div className="container-xl flex h-16 items-center justify-between gap-4">
         <button
+          type="button"
           onClick={() => handleNavigate(NAV_ITEMS[0])}
           className="text-sm font-semibold uppercase tracking-widest text-slate-600 transition hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-300"
         >
@@ -79,6 +80,7 @@ export const SiteHeader = () => {
           {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
+              type="button"
               onClick={() => handleNavigate(item)}
               className={cn(
                 "text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
@@ -100,7 +102,7 @@ export const SiteHeader = () => {
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-nav"
-            aria-label="Toggle navigation"
+            aria-label={t("nav.mobileToggle")}
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -113,6 +115,7 @@ export const SiteHeader = () => {
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
+                type="button"
                 onClick={() => handleNavigate(item)}
                 className={cn(
                   "rounded-full px-4 py-2 text-left text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",

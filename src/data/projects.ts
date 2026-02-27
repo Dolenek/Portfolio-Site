@@ -8,7 +8,12 @@ export type ProjectId =
 
 export type Project = {
   id: ProjectId;
+  slug: string;
   year: string;
+  role: string;
+  teamSize: string;
+  duration: string;
+  featured: boolean;
   tech: string[];
   links: {
     github?: string;
@@ -22,7 +27,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "levne-deskovky",
+    slug: "levne-deskovky",
     year: "2025",
+    role: "Full-stack Developer",
+    teamSize: "Solo",
+    duration: "4 months",
+    featured: true,
     tech: ["React", "TypeScript", "Supabase", "Recharts", "Tailwind CSS"],
     links: {
       github: "https://github.com/Dolenek/DeskovkyLevne",
@@ -34,7 +44,12 @@ export const projects: Project[] = [
   },
   {
     id: "kuchar-v-akci",
+    slug: "recepty-v-akci",
     year: "2025",
+    role: "Full-stack Developer",
+    teamSize: "Solo",
+    duration: "3 months",
+    featured: true,
     tech: ["React", "TypeScript", "Supabase", "n8n"],
     links: {
       github: "https://github.com/Dolenek/KucharVAkci",
@@ -46,8 +61,13 @@ export const projects: Project[] = [
   },
   {
     id: "portfolio",
+    slug: "portfolio-site",
     year: "2025",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    role: "Full-stack Developer",
+    teamSize: "Solo",
+    duration: "Ongoing",
+    featured: true,
+    tech: ["React", "Tailwind CSS", "Framer Motion", "i18next"],
     links: {
       github: "https://github.com/Dolenek/Portfolio-Site"
     },
@@ -57,7 +77,12 @@ export const projects: Project[] = [
   },
   {
     id: "discord-automation",
+    slug: "discord-automation",
     year: "2024",
+    role: "Desktop Automation Developer",
+    teamSize: "Solo",
+    duration: "2 months",
+    featured: false,
     tech: ["C#", "Selenium", ".NET", "WebView2"],
     links: {
       github: "https://github.com/Dolenek/Projekt-ERDB"
@@ -68,7 +93,12 @@ export const projects: Project[] = [
   },
   {
     id: "mobile-game-unity",
+    slug: "mobile-game-unity",
     year: "2022",
+    role: "Gameplay Programmer",
+    teamSize: "Solo",
+    duration: "6 months",
+    featured: false,
     tech: ["Unity", "C#", "Android"],
     links: {
       github: "https://github.com/Dolenek/Magicians-Cauldron"
@@ -79,8 +109,13 @@ export const projects: Project[] = [
   },
   {
     id: "smithing-master-bot",
+    slug: "smithing-master-bot",
     year: "2023",
-    tech: ["Python", "pyautogui", "BlueStacks"],
+    role: "Automation Developer",
+    teamSize: "Solo",
+    duration: "2 months",
+    featured: false,
+    tech: ["Python", "PyAutoGUI", "OpenCV", "BlueStacks"],
     links: {
       github: "https://github.com/Dolenek/Smithing-Master-Bot"
     },
@@ -88,3 +123,6 @@ export const projects: Project[] = [
     previewGradient: ["#ff903b", "#5a1f53"]
   }
 ];
+
+export const findProjectBySlug = (slug: string) =>
+  projects.find((project) => project.slug === slug);

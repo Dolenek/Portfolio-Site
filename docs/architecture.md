@@ -3,39 +3,37 @@
 ## App Composition
 - Entry point: `src/main.tsx`.
 - Root app and route map: `src/App.tsx`.
-- Shared route shell: `src/components/layout/AppLayout.tsx`.
+- Shared shell: `src/components/layout/AppLayout.tsx`.
 
 ## Routing Model
 - Browser router with nested routes under `AppLayout`.
-- Home route (`/`) renders section-based landing content.
-- About route (`/about`) renders profile timeline content.
+- `/` -> `HomePage` (section-based layout).
+- `/about` -> `AboutPage`.
+- `/projects/:slug` -> `ProjectDetailPage`.
 - Unknown routes redirect to `/`.
 
 ## Providers
 - `ThemeProvider`
-  - Stores theme in localStorage key `portfolio-site-theme`.
+  - Stores theme in `localStorage` key `portfolio-site-theme`.
   - Applies/removes `dark` class on `<html>`.
-  - Falls back to OS preference when no explicit stored preference exists.
 - `ScrollSpyProvider`
-  - Tracks section visibility via `IntersectionObserver`.
-  - Exposes active section and scroll helpers for header navigation.
+  - Tracks active section visibility on home.
+  - Exposes `scrollToSection` and `scrollToTop` for header navigation.
 
-## Layout Responsibilities
-- `SiteHeader` handles:
-  - route navigation (`/about`)
-  - section scrolling on home
-  - theme and language controls
-  - responsive mobile menu
-- `SiteFooter` renders localized footer text.
+## Content Boundaries
+- `src/data/profile.ts` - Identity/contact links.
+- `src/data/projects.ts` - Project metadata and slugs.
+- `src/data/case-studies/*.ts` - Localized case-study bodies.
+- `src/data/projectCaseStudies.ts` - Locale resolution + access API.
+- `src/data/skills.ts` - Skill card model.
+- `src/data/siteMeta.ts` - Canonical URLs and locale metadata.
 
-## Data Boundaries
-- `src/data/profile.ts` - Personal identity/contact/social links.
-- `src/data/projects.ts` - Project cards metadata and external links.
-- `src/data/skills.ts` - Skill icon list and visual accents.
-- `src/data/siteMeta.ts` - Base URL, locale metadata, and social image config.
+## SEO Layer
+- `src/components/common/Seo.tsx` manages document title, meta tags, canonical/hreflang links, and JSON-LD.
+- Links are keyed by managed scope to avoid accidental canonical/alternate collisions.
 
-## Utility Boundaries
-- `src/utils/animation.ts` - Shared motion easing/variant helpers (`MOTION_EASE`).
-- `src/utils/cn.ts` - Class name composition utility.
-- `src/utils/seo.ts` - Locale and canonical URL helpers.
-
+## API Service
+- `api/server.mjs` exposes:
+  - `GET /healthz`
+  - `POST /api/contact`
+- Includes body validation, honeypot handling, rate limiting, and structured logs.

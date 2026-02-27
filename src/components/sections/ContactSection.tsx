@@ -50,6 +50,7 @@ export const ContactSection = () => {
 
           <div className="flex w-full max-w-xl flex-col gap-4 lg:max-w-none">
             <button
+              type="button"
               onClick={copyEmail}
               className="group flex w-full items-center gap-4 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70"
             >
@@ -64,10 +65,9 @@ export const ContactSection = () => {
                   <p className="font-semibold text-slate-900 dark:text-white break-all">{profile.email}</p>
                 </div>
               </div>
-              <span className="ml-auto text-sm font-medium text-brand">
-                {copied ? t("contact.copied") : t("contact.copy")}
-              </span>
+              <span className="ml-auto text-sm font-medium text-brand">{copied ? t("contact.copied") : t("contact.copy")}</span>
             </button>
+            <span className="sr-only" aria-live="polite">{copied ? t("contact.copied") : ""}</span>
 
             <div className="flex w-full flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-start">
               <a
@@ -109,6 +109,3 @@ export const ContactSection = () => {
     </section>
   );
 };
-
-
-

@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="https://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.jakubdolenek.xyz/</loc>
-    <lastmod>2025-03-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/?lang=en" />
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/?lang=cs" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/" />
   </url>
   <url>
     <loc>https://www.jakubdolenek.xyz/about</loc>
-    <lastmod>2025-03-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/about?lang=en" />
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/about" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/about?lang=cs" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/about" />
+  </url>
+  <url>
+    <loc>https://www.jakubdolenek.xyz/projects/levne-deskovky</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/projects/levne-deskovky" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/projects/levne-deskovky?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/projects/levne-deskovky" />
+  </url>
+  <url>
+    <loc>https://www.jakubdolenek.xyz/projects/recepty-v-akci</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/projects/recepty-v-akci" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/projects/recepty-v-akci?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/projects/recepty-v-akci" />
+  </url>
+  <url>
+    <loc>https://www.jakubdolenek.xyz/projects/portfolio-site</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/projects/portfolio-site" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/projects/portfolio-site?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/projects/portfolio-site" />
+  </url>
+  <url>
+    <loc>https://www.jakubdolenek.xyz/projects/discord-automation</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/projects/discord-automation" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/projects/discord-automation?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/projects/discord-automation" />
+  </url>
+  <url>
+    <loc>https://www.jakubdolenek.xyz/projects/mobile-game-unity</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/projects/mobile-game-unity" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/projects/mobile-game-unity?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/projects/mobile-game-unity" />
+  </url>
+  <url>
+    <loc>https://www.jakubdolenek.xyz/projects/smithing-master-bot</loc>
+    <lastmod>2026-02-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jakubdolenek.xyz/projects/smithing-master-bot" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.jakubdolenek.xyz/projects/smithing-master-bot?lang=cs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jakubdolenek.xyz/projects/smithing-master-bot" />
   </url>
 </urlset>
