@@ -40,7 +40,11 @@ npm install
 npm run dev
 ```
 
-The dev server runs on <http://localhost:5173>. Update content in `src/data` and keep translation strings in `src/i18n/locales/en/common.json` and `src/i18n/locales/cz/common.json` aligned when editing copy.
+The dev server runs on <http://localhost:5173>. Update content in `src/data` and keep translation strings in `src/i18n/locales/en/common.json` and `src/i18n/locales/cs/common.json` aligned when editing copy.
+
+## Documentation
+- Canonical docs index: `docs/documentation.md`
+- Focused docs are split by domain (`overview`, `architecture`, `sections/content`, `i18n/theme/seo`, `development setup`).
 
 ### Available scripts
 - `npm run dev`       | launch Vite development server with HMR.
