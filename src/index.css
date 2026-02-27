@@ -31,3 +31,10 @@
     @apply container mx-auto max-w-6xl px-6 sm:px-10;
   }
 }
+
+@layer utilities {
+  .deferred-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 960px;
+  }
+}

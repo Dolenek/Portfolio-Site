@@ -48,7 +48,7 @@ const pseudoRandom = (seed: number) => {
   return x - Math.floor(x);
 };
 
-const createHeroStarField = (count: number): StarConfig[] => {
+export const createHeroStarField = (count: number): StarConfig[] => {
   const stars: StarConfig[] = [];
 
   for (let index = 0; index < count; index += 1) {
@@ -81,7 +81,7 @@ const createHeroStarField = (count: number): StarConfig[] => {
   return stars;
 };
 
-const createHeroCloudField = (count: number): CloudConfig[] => {
+export const createHeroCloudField = (count: number): CloudConfig[] => {
   const clouds: CloudConfig[] = [];
 
   for (let index = 0; index < count; index += 1) {
@@ -199,6 +199,3 @@ export const HERO_MOUNTAIN_PALETTE: Record<MountainVariant, MountainVariantPalet
     }
   }
 };
-
-export const HERO_STAR_FIELD = createHeroStarField(120);
-export const HERO_DAY_CLOUDS = createHeroCloudField(11);

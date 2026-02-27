@@ -1,9 +1,12 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { profile } from "../../data/profile";
+import { useTheme } from "../../providers/useTheme";
 import { MOTION_EASE } from "../../utils/animation";
 import { HeroBackdrop } from "./hero/HeroBackdrop";
+import { useHeroPerformanceProfile } from "./hero/useHeroPerformanceProfile";
 import "./hero/HeroBackdrop.css";
 import "./hero/HeroPortrait.css";
 import "./hero/HeroSection.css";
@@ -27,8 +30,10 @@ const containerVariants = {
   })
 };
 
-export const HeroSection = () => {
+const HeroSectionComponent = () => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
+  const { clouds, stars, reduceVisualEffects, disableTwinkle } = useHeroPerformanceProfile();
 
   const headline = t("hero.headline", { returnObjects: true }) as HeroHeadline;
   const intro = t("hero.intro");
@@ -48,7 +53,13 @@ export const HeroSection = () => {
       data-section="hero"
       className="hero-section relative isolate -mt-16 min-h-[75vh] overflow-hidden pb-24 pt-16 sm:-mt-20 sm:pb-32 sm:pt-20"
     >
-      <HeroBackdrop />
+      <HeroBackdrop
+        theme={theme}
+        clouds={clouds}
+        stars={stars}
+        reduceVisualEffects={reduceVisualEffects}
+        disableTwinkle={disableTwinkle}
+      />
 
       <div className="container-xl relative z-10 grid items-center gap-16 lg:grid-cols-[minmax(0,_420px)_minmax(0,_1fr)]">
         <motion.div
@@ -124,3 +135,5 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+export const HeroSection = memo(HeroSectionComponent);

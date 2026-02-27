@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +10,7 @@ const CARD_VARIANTS = createStaggerFade({ distance: 28, duration: 0.55, stagger:
 
 type SkillCardCopyMap = Record<string, string>;
 
-export const SkillsSection = () => {
+const SkillsSectionComponent = () => {
   const { t } = useTranslation();
   const cards = t("skills.cards", { returnObjects: true }) as SkillCardCopyMap;
 
@@ -48,4 +49,6 @@ export const SkillsSection = () => {
     </section>
   );
 };
+
+export const SkillsSection = memo(SkillsSectionComponent);
 

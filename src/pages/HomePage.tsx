@@ -104,9 +104,15 @@ export const HomePage = () => {
       />
       <div className="space-y-28 pb-24 pt-12 sm:space-y-32 sm:pt-16">
         <HeroSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
+        <div className="deferred-section">
+          <ProjectsSection />
+        </div>
+        <div className="deferred-section">
+          <SkillsSection />
+        </div>
+        <div className="deferred-section">
+          <ContactSection />
+        </div>
       </div>
     </>
   );

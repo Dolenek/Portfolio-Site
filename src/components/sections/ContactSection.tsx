@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -9,7 +9,7 @@ import { createStaggerFade } from "../../utils/animation";
 
 const CONTACT_CARD_VARIANTS = createStaggerFade({ distance: 20, duration: 0.6, stagger: 0 });
 
-export const ContactSection = () => {
+const ContactSectionComponent = () => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
@@ -109,3 +109,5 @@ export const ContactSection = () => {
     </section>
   );
 };
+
+export const ContactSection = memo(ContactSectionComponent);

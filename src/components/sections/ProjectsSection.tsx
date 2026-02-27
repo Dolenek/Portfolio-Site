@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { projects } from "../../data/projects";
@@ -16,7 +16,7 @@ type ProjectCopy = {
 
 type ProjectCopyMap = Record<string, ProjectCopy>;
 
-export const ProjectsSection = () => {
+const ProjectsSectionComponent = () => {
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
   const isTouchLayout = useIsTouchLayout();
   const { t } = useTranslation();
@@ -60,3 +60,5 @@ export const ProjectsSection = () => {
     </section>
   );
 };
+
+export const ProjectsSection = memo(ProjectsSectionComponent);
