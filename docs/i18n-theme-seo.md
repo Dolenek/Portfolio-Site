@@ -32,7 +32,6 @@
 ## Structured Data
 - Home: `Person`, `WebSite`, `WebPage`.
 - About: `WebPage`, `BreadcrumbList`.
-- Project detail: `CreativeWork`.
 
 ## Crawl and Index Files
 - `public/robots.txt`

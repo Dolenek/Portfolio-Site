@@ -30,10 +30,6 @@
       "description": "Experience, education, and engineering focus of Jakub Dolének as a full-stack developer.",
       "breadcrumb": "About"
     },
-    "project": {
-      "title": "Project case study | Jakub Dolének",
-      "description": "Technical case study with architecture, decisions, tradeoffs, and outcomes."
-    },
     "person": {
       "jobTitle": "Full-stack Developer",
       "description": "Full-stack developer focused on process automation, backend services, and self-hosting in a personal homelab."
@@ -77,7 +73,7 @@
       "portfolio": {
         "title": "Personal Portfolio",
         "summary": "This site, built with React, Tailwind CSS, and Framer Motion to present work with a strong engineering-first narrative.",
-        "impact": "Provides bilingual content, SEO metadata, and structured case studies while keeping performance and accessibility in focus."
+        "impact": "Provides bilingual content, SEO metadata, and polished project presentation while keeping performance and accessibility in focus."
       },
       "mobile-game-unity": {
         "title": "Mobile Game in Unity",
@@ -85,27 +81,7 @@
         "impact": "Delivered a functional progression system and playable Android prototype."
       }
     },
-    "techLabel": "Stack",
-    "caseStudyLabel": "Case study",
-    "backToProjects": "Back to projects",
-    "backHome": "Back to home",
-    "liveDemo": "Live demo",
-    "meta": {
-      "role": "Role",
-      "team": "Team",
-      "duration": "Duration",
-      "year": "Year"
-    },
-    "caseStudy": {
-      "problem": "Problem",
-      "constraints": "Constraints",
-      "architecture": "Architecture",
-      "decisions": "Key decisions",
-      "rationale": "Rationale",
-      "tradeoff": "Tradeoff",
-      "outcomes": "Outcomes",
-      "next": "What I'd improve next"
-    }
+    "techLabel": "Stack"
   },
   "skills": {
     "heading": "Skills",
@@ -151,7 +127,7 @@
     "timeline": [
       {
         "id": "cloud-software-specialist",
-        "title": "Cloud Software Specialist",
+        "title": "Programmer",
         "period": "2025 - Present",
         "location": "Full-stack Developer",
         "link": {

@@ -120,31 +120,7 @@
 .projects-river__actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   margin-left: auto;
-}
-
-.projects-river__case-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  color: var(--overlay-text);
-  background: rgba(9, 20, 35, 0.35);
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.projects-river__case-link:hover,
-.projects-river__case-link:focus-visible {
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-1px);
-  outline: none;
 }
 
 .projects-river__links {

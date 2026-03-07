@@ -22,7 +22,6 @@ const ProjectsSectionComponent = () => {
   const { t } = useTranslation();
   const projectCopy = t("projects.items", { returnObjects: true }) as ProjectCopyMap;
   const techLabel = t("projects.techLabel");
-  const caseStudyLabel = t("projects.caseStudyLabel");
 
   useEffect(() => {
     if (!isTouchLayout && activeProjectId !== null) {
@@ -50,7 +49,6 @@ const ProjectsSectionComponent = () => {
             align={index % 2 === 0 ? "left" : "right"}
             index={index}
             techLabel={techLabel}
-            caseStudyLabel={caseStudyLabel}
             isTouchLayout={isTouchLayout}
             isActive={activeProjectId === project.id}
             onToggle={handleToggle}

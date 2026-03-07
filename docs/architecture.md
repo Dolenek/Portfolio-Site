@@ -9,7 +9,6 @@
 - Browser router with nested routes under `AppLayout`.
 - `/` -> `HomePage` (section-based layout).
 - `/about` -> `AboutPage`.
-- `/projects/:slug` -> `ProjectDetailPage`.
 - Unknown routes redirect to `/`.
 
 ## Providers
@@ -22,9 +21,7 @@
 
 ## Content Boundaries
 - `src/data/profile.ts` - Identity/contact links.
-- `src/data/projects.ts` - Project metadata and slugs.
-- `src/data/case-studies/*.ts` - Localized case-study bodies.
-- `src/data/projectCaseStudies.ts` - Locale resolution + access API.
+- `src/data/projects.ts` - Project metadata for cards and outbound links.
 - `src/data/skills.ts` - Skill card model.
 - `src/data/siteMeta.ts` - Canonical URLs and locale metadata.
 

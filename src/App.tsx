@@ -4,7 +4,6 @@ import { ScrollSpyProvider } from "./providers/ScrollSpyProvider";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import { AboutPage } from "./pages/AboutPage";
 import { HomePage } from "./pages/HomePage";
-import { ProjectDetailPage } from "./pages/ProjectDetailPage";
 import { AppLayout } from "./components/layout/AppLayout";
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
             <Route element={<AppLayout />}>
               <Route index element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />
-              <Route path="projects/:slug" element={<ProjectDetailPage />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

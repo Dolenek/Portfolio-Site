@@ -5,7 +5,6 @@ Personal portfolio built with React, TypeScript, Vite, and Tailwind CSS.
 ## Highlights
 - Home page with section navigation (`hero`, `projects`, `skills`, `contact`).
 - Dedicated `/about` route for experience and education timeline.
-- Dedicated project detail routes (`/projects/:slug`) with engineering case-study structure.
 - English/Czech localization with query-parameter language sync.
 - Theme toggle with persistence and system preference fallback.
 - Route-aware SEO metadata and JSON-LD.
@@ -30,7 +29,6 @@ src/
       hero/
       projects/
   data/
-    case-studies/
   i18n/
   pages/
   providers/

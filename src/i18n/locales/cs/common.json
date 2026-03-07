@@ -30,10 +30,6 @@
       "description": "Zkušenosti, vzdělání a technické zaměření Jakuba Dolénka jako full-stack vývojáře.",
       "breadcrumb": "O mně"
     },
-    "project": {
-      "title": "Projektová případová studie | Jakub Dolének",
-      "description": "Technická případová studie s architekturou, klíčovými rozhodnutími, tradeoffy a výsledky."
-    },
     "person": {
       "jobTitle": "Full-stack vývojář",
       "description": "Full-stack vývojář zaměřený na automatizaci procesů, backendové služby a self-hosting ve vlastním labu."
@@ -77,7 +73,7 @@
       "portfolio": {
         "title": "Osobní portfolio",
         "summary": "Tento web postavený v Reactu, Tailwind CSS a Framer Motion s důrazem na technicky věrohodnou prezentaci práce.",
-        "impact": "Poskytuje dvojjazyčný obsah, SEO metadata a strukturované case studies při zachování výkonu a přístupnosti."
+        "impact": "Poskytuje dvojjazyčný obsah, SEO metadata a kvalitní prezentaci projektů při zachování výkonu a přístupnosti."
       },
       "mobile-game-unity": {
         "title": "Mobilní hra v Unity",
@@ -85,27 +81,7 @@
         "impact": "Doručen funkční systém progrese a hratelný Android prototyp."
       }
     },
-    "techLabel": "Stack",
-    "caseStudyLabel": "Detail projektu",
-    "backToProjects": "Zpět na projekty",
-    "backHome": "Zpět na domů",
-    "liveDemo": "Živé demo",
-    "meta": {
-      "role": "Role",
-      "team": "Tým",
-      "duration": "Délka",
-      "year": "Rok"
-    },
-    "caseStudy": {
-      "problem": "Problém",
-      "constraints": "Omezení",
-      "architecture": "Architektura",
-      "decisions": "Klíčová rozhodnutí",
-      "rationale": "Důvod",
-      "tradeoff": "Tradeoff",
-      "outcomes": "Výsledky",
-      "next": "Co bych zlepšil dál"
-    }
+    "techLabel": "Stack"
   },
   "skills": {
     "heading": "Dovednosti",
@@ -151,7 +127,7 @@
     "timeline": [
       {
         "id": "cloud-software-specialist",
-        "title": "Specialista na cloudový software",
+        "title": "Programátor",
         "period": "2025 - současnost",
         "location": "Full-stack vývojář",
         "link": {

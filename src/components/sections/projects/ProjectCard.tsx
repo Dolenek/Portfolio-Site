@@ -1,7 +1,6 @@
 import { useCallback, type KeyboardEvent, type MouseEvent } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 import type { Project } from "../../../data/projects";
 import { createStaggerFade } from "../../../utils/animation";
@@ -19,7 +18,6 @@ type ProjectCardProps = {
   align: "left" | "right";
   index: number;
   techLabel: string;
-  caseStudyLabel: string;
   isTouchLayout: boolean;
   isActive: boolean;
   onToggle: (projectId: string) => void;
@@ -37,7 +35,6 @@ export const ProjectCard = ({
   align,
   index,
   techLabel,
-  caseStudyLabel,
   isTouchLayout,
   isActive,
   onToggle
@@ -138,10 +135,6 @@ export const ProjectCard = ({
               </div>
 
               <div className="projects-river__actions" onClick={stopOverlayToggle}>
-                <Link to={`/projects/${project.slug}`} className="projects-river__case-link">
-                  {caseStudyLabel}
-                </Link>
-
                 <div className="projects-river__links">
                   {project.links.github ? (
                     <a

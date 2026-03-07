@@ -8,7 +8,6 @@ export type ProjectId =
 
 export type Project = {
   id: ProjectId;
-  slug: string;
   year: string;
   role: string;
   teamSize: string;
@@ -27,13 +26,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "levne-deskovky",
-    slug: "levne-deskovky",
     year: "2025",
     role: "Full-stack Developer",
     teamSize: "Solo",
     duration: "4 months",
     featured: true,
-    tech: ["React", "TypeScript", "Supabase", "Recharts", "Tailwind CSS"],
+    tech: ["React", "TypeScript", "PostgreSQL", "Recharts", "Tailwind CSS"],
     links: {
       github: "https://github.com/Dolenek/DeskovkyLevne",
       demo: "https://www.deskovkylevne.com"
@@ -44,7 +42,6 @@ export const projects: Project[] = [
   },
   {
     id: "kuchar-v-akci",
-    slug: "recepty-v-akci",
     year: "2025",
     role: "Full-stack Developer",
     teamSize: "Solo",
@@ -61,7 +58,6 @@ export const projects: Project[] = [
   },
   {
     id: "portfolio",
-    slug: "portfolio-site",
     year: "2025",
     role: "Full-stack Developer",
     teamSize: "Solo",
@@ -77,7 +73,6 @@ export const projects: Project[] = [
   },
   {
     id: "discord-automation",
-    slug: "discord-automation",
     year: "2024",
     role: "Desktop Automation Developer",
     teamSize: "Solo",
@@ -93,7 +88,6 @@ export const projects: Project[] = [
   },
   {
     id: "mobile-game-unity",
-    slug: "mobile-game-unity",
     year: "2022",
     role: "Gameplay Programmer",
     teamSize: "Solo",
@@ -109,7 +103,6 @@ export const projects: Project[] = [
   },
   {
     id: "smithing-master-bot",
-    slug: "smithing-master-bot",
     year: "2023",
     role: "Automation Developer",
     teamSize: "Solo",
@@ -123,6 +116,3 @@ export const projects: Project[] = [
     previewGradient: ["#ff903b", "#5a1f53"]
   }
 ];
-
-export const findProjectBySlug = (slug: string) =>
-  projects.find((project) => project.slug === slug);
