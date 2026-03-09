@@ -86,20 +86,13 @@
   "skills": {
     "heading": "Skills",
     "cards": {
-      "typescript": "TypeScript",
+      "csharp": "C#",
       "javascript": "JavaScript",
       "python": "Python",
       "react": "React",
-      "tailwind": "Tailwind CSS",
-      "framerMotion": "Framer Motion",
-      "firebase": "Firebase",
-      "supabase": "Supabase",
       "sql": "PostgreSQL",
       "mssql": "MSSQL",
-      "csharp": "C#",
-      "unity": "Unity",
-      "linux": "Linux",
-      "proxmox": "Proxmox"
+      "linux": "Linux"
     }
   },
   "contact": {
@@ -134,7 +127,7 @@
           "label": "TOP TECH, s.r.o., CZ",
           "href": "https://www.top-tech.cz/"
         },
-        "description": "I develop automation software and scripts tailored to each customer and their ERP processes. I also create educational and promotional content for social media.",
+        "description": "I develop automation software and scripts tailored to each customer and their ERP processes. I also create educational and promotional materials for company social media.",
         "tags": []
       },
       {
