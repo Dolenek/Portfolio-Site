@@ -50,10 +50,15 @@
     "heading": "Projects",
     "subheading": "Selected work with measurable engineering impact.",
     "items": {
+      "deadlock-patch-notes": {
+        "title": "Deadlock Patch Notes",
+        "summary": "Community archive for Deadlock updates with structured patch history, hero changes, item timelines, and spell timelines.",
+        "impact": "An automated ingestion pipeline turns official changelogs into PostgreSQL read models served by a Go API, Next.js frontend, RSS feeds, and public JSON endpoints."
+      },
       "levne-deskovky": {
         "title": "Levné Deskovky",
-        "summary": "Czech board-game price tracker that unifies seller data under canonical slugs with bilingual search, filtering, and seller price history.",
-        "impact": "Improves price transparency through merged offers, availability states, and automated Supabase catalog updates."
+        "summary": "Czech board-game price tracker that aggregates multi-seller offers, availability, filters, and per-store price history under slug-first product pages.",
+        "impact": "Combines a React frontend, Go read API, PostgreSQL read models, optional Redis cache, and SEO prerendering for a production-ready comparison site."
       },
       "discord-automation": {
         "title": "Discord Automation",
@@ -112,7 +117,7 @@
   },
   "about": {
     "title": "About me",
-    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work, I currently focus mainly on backend systems, while in my free time I build <highlight>full-stack</highlight> applications.\nRecently, I have been deep into <highlight>self-hosting</highlight>. I run a lab on Linux servers with Proxmox and Docker.\nProgramming has been my hobby for many years, so I am always looking for new challenges and opportunities to learn.",
+    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work, I design and build <highlight>full-stack internal solutions</highlight> for business and <highlight>ERP processes</highlight>. I enjoy turning real operational requirements into practical tools built with <highlight>modern technologies</highlight>, with a focus on usability and <highlight>saving people time</highlight>.\nRecently, I have been deep into <highlight>self-hosting</highlight>. I run a lab on Linux servers with Proxmox and Docker.\nProgramming has been my hobby for many years, so I am always looking for new challenges and opportunities to learn.",
     "timelineHeading": "Experience & education",
     "timelineAt": "@",
     "experienceDivider": "Experience",
@@ -127,7 +132,7 @@
           "label": "TOP TECH, s.r.o., CZ",
           "href": "https://www.top-tech.cz/"
         },
-        "description": "I develop automation software and scripts tailored to each customer and their ERP processes. I also create educational and promotional materials for company social media.",
+        "description": "I design and implement internal automation solutions from initial analysis through deployment. My work focuses on tools that solve concrete operational problems, speed up business processes, and make day-to-day work easier for colleagues. I work with MSSQL daily and translate requirements from client projects into concrete ERP system extensions and customizations, covering both the technical design and implementation.",
         "tags": []
       },
       {
@@ -158,6 +163,6 @@
     "backCta": "Back to home"
   },
   "footer": {
-    "note": "© {{year}} Jakub Dolének. Built with focus on practical engineering."
+    "note": "© {{year}} Jakub Dolének."
   }
 }

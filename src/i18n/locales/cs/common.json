@@ -50,10 +50,15 @@
     "heading": "Projekty",
     "subheading": "Vybraná práce s měřitelným technickým dopadem.",
     "items": {
+      "deadlock-patch-notes": {
+        "title": "Deadlock Patch Notes",
+        "summary": "Komunitní archiv aktualizací Deadlocku se strukturovanou historií patchů, změn hrdinů, předmětů a schopností.",
+        "impact": "Automatická ingest pipeline převádí oficiální changelogy do PostgreSQL read modelů, které obsluhuje Go API, Next.js frontend, RSS a veřejné JSON endpointy."
+      },
       "levne-deskovky": {
         "title": "Levné Deskovky",
-        "summary": "Český sledovač cen deskových her, který sjednocuje data prodejců pod kanonickými slugy a nabízí dvojjazyčné vyhledávání i historii cen.",
-        "impact": "Zlepšuje cenovou transparentnost díky sloučeným nabídkám, stavu dostupnosti a automatizovaným aktualizacím katalogu v Supabase."
+        "summary": "Český sledovač cen deskových her, který agreguje nabídky více prodejců, dostupnost, filtry a historii cen po jednotlivých e-shopech.",
+        "impact": "Spojuje React frontend, Go read API, PostgreSQL read modely, volitelnou Redis cache a SEO prerendering do produkčně připraveného srovnávače."
       },
       "discord-automation": {
         "title": "Automatizace pro Discord",
@@ -112,7 +117,7 @@
   },
   "about": {
     "title": "O mně",
-    "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci se aktuálně zaměřuji hlavně na backend, ale ve volném čase rád tvořím <highlight>full-stack</highlight> aplikace.\nV poslední době mě pohltil <highlight>self-hosting</highlight>. Provozuji vlastní lab na Linux serverech s Proxmoxem a Dockerem.\nProgramování mě dlouhodobě baví, proto neustále hledám nové výzvy a příležitosti k učení.",
+    "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci navrhuji a vyvíjím <highlight>full-stack interní řešení</highlight> pro firemní a <highlight>ERP procesy</highlight>. Baví mě převádět požadavky z praxe do konkrétních nástrojů postavených na <highlight>moderních technologiích</highlight>, které jsou dobře použitelné a lidem reálně <highlight>šetří čas</highlight>.\nV poslední době mě pohltil <highlight>self-hosting</highlight>. Provozuji vlastní lab na Linux serverech s Proxmoxem a Dockerem.\nProgramování mě dlouhodobě baví, proto neustále hledám nové výzvy a příležitosti k učení.",
     "timelineHeading": "Zkušenosti a vzdělání",
     "timelineAt": "@",
     "experienceDivider": "Zkušenosti",
@@ -127,7 +132,7 @@
           "label": "TOP TECH, s.r.o., ČR",
           "href": "https://www.top-tech.cz/"
         },
-        "description": "Vyvíjím automatizační software a skripty na míru každému zákazníkovi a jeho ERP procesům. Současně připravuji edukační a propagační materiály pro firemní sociální sítě.",
+        "description": "Navrhuji a implementuji interní automatizační řešení od prvotní analýzy až po nasazení. Zaměřuji se na nástroje, které řeší konkrétní provozní problémy, zrychlují firemní procesy a usnadňují každodenní práci kolegům. Denně pracuji s MSSQL a převádím požadavky z klientských zakázek do konkrétních rozšíření a úprav ERP systému, kde navrhuji technické řešení i jeho implementaci.",
         "tags": []
       },
       {
@@ -158,6 +163,6 @@
     "backCta": "Zpět na domů"
   },
   "footer": {
-    "note": "© {{year}} Jakub Dolének. Postaveno s důrazem na praktické inženýrství."
+    "note": "© {{year}} Jakub Dolének."
   }
 }

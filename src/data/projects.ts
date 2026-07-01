@@ -1,4 +1,5 @@
 export type ProjectId =
+  | "deadlock-patch-notes"
   | "levne-deskovky"
   | "kuchar-v-akci"
   | "portfolio"
@@ -25,20 +26,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "deadlock-patch-notes",
+    year: "2026",
+    role: "Full-stack Developer",
+    teamSize: "Solo",
+    duration: "Ongoing",
+    featured: true,
+    tech: ["Next.js", "TypeScript", "Go", "PostgreSQL", "Docker"],
+    links: {
+      github: "https://github.com/Dolenek/DeadlockPatchNotes",
+      demo: "https://www.deadlockpatchnotes.com"
+    },
+    accent: "from-sky-300/40 via-blue-500/35 to-amber-400/30",
+    previewGradient: ["#25364f", "#c27a3d"],
+    previewImage: "/projects/DeadlockPatchNotes.PNG"
+  },
+  {
     id: "levne-deskovky",
     year: "2025",
     role: "Full-stack Developer",
     teamSize: "Solo",
     duration: "4 months",
     featured: true,
-    tech: ["React", "TypeScript", "PostgreSQL", "Recharts", "Tailwind CSS"],
+    tech: ["React", "TypeScript", "Go", "PostgreSQL", "Redis", "Tailwind CSS"],
     links: {
       github: "https://github.com/Dolenek/DeskovkyLevne",
       demo: "https://www.deskovkylevne.com"
     },
     accent: "from-amber-300/45 via-orange-400/35 to-rose-500/30",
     previewGradient: ["#f9d976", "#b8325f"],
-    previewImage: "/projects/DeskovkyLevne.png"
+    previewImage: "/projects/DeskovkyLevne.PNG"
   },
   {
     id: "kuchar-v-akci",
