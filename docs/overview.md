@@ -25,7 +25,6 @@ It presents featured projects, skills, experience, and direct contact links.
   - `/about`
   - `*` redirects to `/`
 - Public assets are served from `public/`.
-- Optional backend service for contact delivery runs from `api/`.
 
 ## Source Layout (High Level)
 - `src/components/common` - Shared controls (`Seo`, toggles).
@@ -34,4 +33,3 @@ It presents featured projects, skills, experience, and direct contact links.
 - `src/pages` - Route pages (`HomePage`, `AboutPage`).
 - `src/data` - Typed content and localized UI data.
 - `src/i18n` - i18n setup and locale resources.
-- `api` - Express contact API (`/api/contact`, `/healthz`).

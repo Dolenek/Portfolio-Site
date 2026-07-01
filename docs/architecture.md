@@ -28,9 +28,3 @@
 ## SEO Layer
 - `src/components/common/Seo.tsx` manages document title, meta tags, canonical/hreflang links, and JSON-LD.
 - Links are keyed by managed scope to avoid accidental canonical/alternate collisions.
-
-## API Service
-- `api/server.mjs` exposes:
-  - `GET /healthz`
-  - `POST /api/contact`
-- Includes body validation, honeypot handling, rate limiting, and structured logs.

@@ -8,7 +8,6 @@ Personal portfolio built with React, TypeScript, Vite, and Tailwind CSS.
 - English/Czech localization with query-parameter language sync.
 - Theme toggle with persistence and system preference fallback.
 - Route-aware SEO metadata and JSON-LD.
-- Optional Dockerized contact API (`/api/contact`) for infrastructure-ready deployment.
 
 ## Stack
 - React 19
@@ -34,8 +33,6 @@ src/
   providers/
   hooks/
   utils/
-api/
-  server.mjs
 deploy/
   docker-compose.yml
 ```
@@ -48,23 +45,11 @@ npm run dev
 
 Runs on `http://localhost:5173`.
 
-## API Local Setup (optional)
-```bash
-cd api
-npm install
-cp .env.example .env
-npm run dev
-```
-
-Runs on `http://localhost:8080`.
-
 ## Scripts (root)
 - `npm run dev`
 - `npm run lint`
 - `npm run typecheck`
 - `npm run build`
-- `npm run api:dev`
-- `npm run api:start`
 
 ## Docker Deployment
 From `deploy/`:
@@ -73,8 +58,6 @@ docker compose up --build
 ```
 
 Entrypoint: `http://localhost:8081`
-- `/` -> frontend
-- `/api/*` -> API
 
 ## SEO and i18n Notes
 - Default locale is English (`en`); Czech is `?lang=cs`.
