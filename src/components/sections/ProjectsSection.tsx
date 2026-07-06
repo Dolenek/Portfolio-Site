@@ -37,7 +37,6 @@ const ProjectsSectionComponent = () => {
     <section id="projects" data-section="projects" className="projects-river container-xl">
       <header className="projects-river__header">
         <h2 className="projects-river__title">{t("projects.heading")}</h2>
-        <p className="projects-river__subtitle">{t("projects.subheading")}</p>
       </header>
 
       <ol className="projects-river__list">

@@ -1,20 +1,94 @@
-.hero-headline-accent {
-  display: inline-block;
-  padding: 0.02em 0 0.14em;
-  margin-bottom: -0.14em;
-  line-height: inherit;
-  background: linear-gradient(90deg, rgba(96, 165, 250, 1) 0%, rgba(56, 189, 248, 1) 48%, rgba(37, 99, 235, 1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+.hero-section {
+  background: #eff1f5;
+  color: #4c4f69;
 }
 
-html:not(.dark) .hero-headline-accent {
-  background: linear-gradient(90deg, rgba(37, 99, 235, 1) 0%, rgba(59, 130, 246, 1) 55%, rgba(14, 165, 233, 1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(239, 241, 245, 0.08) 0%, rgba(239, 241, 245, 0.24) 58%, rgba(248, 250, 252, 0) 100%),
+    radial-gradient(80% 90% at 74% 34%, rgba(30, 102, 245, 0.1) 0%, rgba(239, 241, 245, 0) 62%);
+}
+
+html.dark .hero-section {
+  background: #1e1e2e;
+  color: #cdd6f4;
+}
+
+html.dark .hero-section::after {
+  background:
+    linear-gradient(180deg, rgba(30, 30, 46, 0.08) 0%, rgba(30, 30, 46, 0.48) 58%, rgba(2, 6, 23, 0) 100%),
+    radial-gradient(80% 90% at 74% 34%, rgba(137, 180, 250, 0.12) 0%, rgba(30, 30, 46, 0) 62%);
+}
+
+.hero-title {
+  color: #4c4f69;
+}
+
+html.dark .hero-title {
+  color: #cdd6f4;
+}
+
+.hero-copy {
+  color: #6c6f85;
+}
+
+html.dark .hero-copy {
+  color: #a6adc8;
+}
+
+.hero-headline-accent {
+  display: inline-block;
+  line-height: inherit;
+  color: #d20f39;
+}
+
+html.dark .hero-headline-accent {
+  color: #f5e0dc;
+}
+
+.hero-copy-highlight {
+  color: #d20f39;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(210, 15, 57, 0.38);
+  text-underline-offset: 0.22em;
+}
+
+html.dark .hero-copy-highlight {
+  color: #f5e0dc;
+  text-decoration-color: rgba(245, 224, 220, 0.46);
+}
+
+.hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #4c4f69;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-social-link:hover {
+  color: #d20f39;
+  transform: translateY(-1px);
+}
+
+html.dark .hero-social-link {
+  color: #cdd6f4;
+}
+
+html.dark .hero-social-link:hover {
+  color: #f5e0dc;
+}
+
+.hero-link-divider {
+  color: rgba(76, 79, 105, 0.42);
+}
+
+html.dark .hero-link-divider {
+  color: rgba(166, 173, 200, 0.45);
 }

@@ -1,3 +1,24 @@
+.projects-section-band {
+  --projects-section-background: #dce6f5;
+  position: relative;
+  isolation: isolate;
+}
+
+html.dark .projects-section-band {
+  --projects-section-background: #020617;
+}
+
+.projects-section-band::before {
+  content: "";
+  position: absolute;
+  top: -9rem;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: var(--projects-section-background);
+}
+
 .projects-river {
   --overlay-text: rgba(230, 239, 255, 0.94);
   --overlay-muted: rgba(200, 210, 230, 0.78);

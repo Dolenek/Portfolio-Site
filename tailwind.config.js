@@ -18,7 +18,8 @@ export default {
       },
       fontFamily: {
         sans: ["'Inter Variable'", "'Inter'", "system-ui", "sans-serif"],
-        display: ["'Cal Sans'", "'Inter Variable'", "system-ui", "sans-serif"]
+        display: ["'Cal Sans'", "'Inter Variable'", "system-ui", "sans-serif"],
+        mono: ["'JetBrains Mono'", "'Fira Code'", "Consolas", "monospace"]
       },
       boxShadow: {
         glow: "0 20px 45px -20px rgba(37, 99, 235, 0.55)",

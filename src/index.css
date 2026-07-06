@@ -5,7 +5,7 @@
 @layer base {
   :root {
     color-scheme: light;
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "JetBrains Mono", "Inter", system-ui, sans-serif;
   }
 
   html {

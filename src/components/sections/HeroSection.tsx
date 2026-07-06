@@ -1,6 +1,8 @@
 import { memo } from "react";
+import { ArrowRight, Github } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import { profile } from "../../data/profile";
 import { useTheme } from "../../providers/useTheme";
@@ -8,7 +10,6 @@ import { MOTION_EASE } from "../../utils/animation";
 import { HeroBackdrop } from "./hero/HeroBackdrop";
 import { useHeroPerformanceProfile } from "./hero/useHeroPerformanceProfile";
 import "./hero/HeroBackdrop.css";
-import "./hero/HeroPortrait.css";
 import "./hero/HeroSection.css";
 
 type HeroHeadline = {
@@ -37,21 +38,13 @@ const HeroSectionComponent = () => {
 
   const headline = t("hero.headline", { returnObjects: true }) as HeroHeadline;
   const intro = t("hero.intro");
-  const subheadline = t("hero.subheadline");
-  const description = t("hero.description");
-
-  const initials = profile.name
-    .split(/\s+/)
-    .map((segment) => segment.charAt(0))
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
+  const hasHeadlineTrail = headline.trail.trim().length > 0;
 
   return (
     <section
       id="home"
       data-section="hero"
-      className="hero-section relative isolate -mt-16 min-h-[75vh] overflow-hidden pb-24 pt-16 sm:-mt-20 sm:pb-32 sm:pt-20"
+      className="hero-section relative isolate -mt-16 min-h-[78vh] overflow-hidden pb-24 pt-16 font-mono sm:-mt-20 sm:pb-32 sm:pt-20"
     >
       <HeroBackdrop
         theme={theme}
@@ -61,75 +54,54 @@ const HeroSectionComponent = () => {
         disableTwinkle={disableTwinkle}
       />
 
-      <div className="container-xl relative z-10 grid items-center gap-16 lg:grid-cols-[minmax(0,_420px)_minmax(0,_1fr)]">
+      <div className="container-xl relative z-10 flex min-h-[calc(78vh-4rem)] items-center">
         <motion.div
-          className="hero-portrait-wrapper"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25, ease: MOTION_EASE }}
-        >
-          <div className="hero-portrait-card">
-            <div className="hero-portrait-glow" />
-            <div className="hero-portrait-inner">
-              <div className="hero-portrait-media">
-                {profile.portraitImage ? (
-                  <img
-                    src={profile.portraitImage}
-                    alt={profile.portraitAlt ?? `${profile.name} portrait`}
-                    className="hero-portrait-media-image"
-                    loading="eager"
-                    decoding="async"
-                    fetchPriority="high"
-                  />
-                ) : (
-                  <div className="hero-portrait-placeholder">
-                    <span className="hero-portrait-initials">{initials}</span>
-                  </div>
-                )}
-                <div className="hero-portrait-media-overlay" aria-hidden="true" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="flex flex-col gap-6 text-slate-900 dark:text-white"
+          className="max-w-3xl"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
           custom={0}
         >
-          <motion.p
-            className="text-base font-medium text-slate-700 dark:text-white/70 sm:text-lg"
+          <motion.h1
+            className="hero-title text-3xl font-bold leading-tight tracking-normal sm:text-4xl lg:text-5xl"
             variants={containerVariants}
             custom={0.05}
           >
-            {intro}
-          </motion.p>
-
-          <motion.h1
-            className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
-            variants={containerVariants}
-            custom={0.1}
-          >
-            {headline.lead} <span className="hero-headline-accent">{headline.accent}</span> {headline.trail}
+            {intro} <span className="hero-headline-accent">{headline.lead}</span>{" "}
+            <span className="hero-headline-accent">{headline.accent}</span>
+            {hasHeadlineTrail ? ` ${headline.trail}` : null}
           </motion.h1>
 
           <motion.p
-            className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500 dark:text-white/60"
+            className="hero-copy mt-6 max-w-2xl text-base font-medium leading-8 sm:text-lg"
             variants={containerVariants}
-            custom={0.18}
+            custom={0.12}
           >
-            {subheadline}
+            <Trans
+              i18nKey="hero.description"
+              components={{
+                highlight: <span className="hero-copy-highlight" />
+              }}
+            />
           </motion.p>
 
-          <motion.p
-            className="max-w-2xl text-base text-slate-600 dark:text-white/70 sm:text-lg"
+          <motion.div
+            className="mt-8 flex flex-wrap items-center gap-4 text-sm font-semibold"
             variants={containerVariants}
-            custom={0.24}
+            custom={0.2}
           >
-            {description}
-          </motion.p>
+            <a className="hero-social-link" href={profile.github} target="_blank" rel="noopener noreferrer">
+              <Github className="h-4 w-4" aria-hidden="true" />
+              {t("hero.links.github")}
+            </a>
+            <span className="hero-link-divider" aria-hidden="true">
+              |
+            </span>
+            <Link className="hero-social-link" to="/about">
+              {t("hero.links.about")}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>

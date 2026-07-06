@@ -3,9 +3,10 @@
 ## Home Sections
 
 ### Hero (`HeroSection.tsx` + `sections/hero/*`)
-- Theme-aware day/night backdrop.
-- Animated stars/clouds generated from deterministic config.
-- Portrait image from `profile.portraitImage` with initials fallback.
+- Monospace hero intro using JetBrains Mono.
+- Theme-aware nature backdrop: Latte light mode uses sun/clouds, dark mode uses stars/moon.
+- Copy is localized through `hero.*` keys and supports highlighted fragments in `hero.description`.
+- Social/about links use `profile.github` and the `/about` route.
 
 ### Projects (`ProjectsSection.tsx` + `sections/projects/*`)
 - Card list generated from `src/data/projects.ts`.
@@ -22,7 +23,6 @@
 - Direct contact actions only:
   - copy email
   - open GitHub
-  - open LinkedIn
 - Includes localized copied feedback for screen readers.
 
 ## About Page (`AboutPage.tsx`)

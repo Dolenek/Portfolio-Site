@@ -24,6 +24,40 @@ const HeroBackdropComponent = ({
   disableTwinkle
 }: HeroBackdropProps) => {
   const isDarkTheme = theme === "dark";
+  const renderStars = () =>
+    stars.map((star, index) => {
+      const style: CSSVariableStyles = {
+        top: `${formatCssNumber(star.top)}%`,
+        left: `calc(-${formatCssNumber(star.startOffset)}vw - 30px)`,
+        width: `${star.size}px`,
+        height: `${star.size}px`,
+        "--hero-star-distance": `${formatCssNumber(star.distance)}vw`,
+        "--hero-star-travel": `${formatCssNumber(star.travelDuration)}s`,
+        "--hero-star-travel-delay": `${formatCssNumber(star.travelDelay)}s`,
+        "--hero-star-twinkle": `${formatCssNumber(star.twinkleDuration)}s`,
+        "--hero-star-twinkle-delay": `${formatCssNumber(star.twinkleDelay)}s`,
+        "--hero-star-peak-opacity": `${formatCssNumber(star.opacity)}`,
+        "--hero-star-vertical": `${formatCssNumber(star.verticalShift)}px`
+      };
+
+      return <span key={`star-${index}`} className="hero-star" style={style} />;
+    });
+
+  const renderClouds = () =>
+    clouds.map((cloud, index) => {
+      const style: CSSVariableStyles = {
+        top: `${formatCssNumber(cloud.top)}%`,
+        left: `calc(100vw + ${formatCssNumber(cloud.startOffset)}vw)`,
+        animationDelay: `${formatCssNumber(cloud.travelDelay)}s`,
+        "--cloud-duration": `${formatCssNumber(cloud.travelDuration)}s`,
+        "--cloud-scale": `${formatCssNumber(cloud.scale)}`,
+        "--cloud-distance": `${formatCssNumber(cloud.distance)}vw`,
+        "--cloud-float-y": `${formatCssNumber(cloud.floatY)}px`,
+        "--cloud-opacity": `${formatCssNumber(cloud.opacity)}`
+      };
+
+      return <div key={`cloud-${index}`} className="hero-cloud" style={style} />;
+    });
 
   return (
     <div
@@ -38,23 +72,7 @@ const HeroBackdropComponent = ({
             <HeroMountainsSvg variant="night" />
           </div>
 
-          {stars.map((star, index) => {
-            const style: CSSVariableStyles = {
-              top: `${formatCssNumber(star.top)}%`,
-              left: `calc(-${formatCssNumber(star.startOffset)}vw - 30px)`,
-              width: `${star.size}px`,
-              height: `${star.size}px`,
-              "--hero-star-distance": `${formatCssNumber(star.distance)}vw`,
-              "--hero-star-travel": `${formatCssNumber(star.travelDuration)}s`,
-              "--hero-star-travel-delay": `${formatCssNumber(star.travelDelay)}s`,
-              "--hero-star-twinkle": `${formatCssNumber(star.twinkleDuration)}s`,
-              "--hero-star-twinkle-delay": `${formatCssNumber(star.twinkleDelay)}s`,
-              "--hero-star-peak-opacity": `${formatCssNumber(star.opacity)}`,
-              "--hero-star-vertical": `${formatCssNumber(star.verticalShift)}px`
-            };
-
-            return <span key={`star-${index}`} className="hero-star" style={style} />;
-          })}
+          {renderStars()}
 
           <div className="hero-moon" />
         </div>
@@ -65,20 +83,7 @@ const HeroBackdropComponent = ({
             <HeroMountainsSvg variant="day" />
           </div>
 
-          {clouds.map((cloud, index) => {
-            const style: CSSVariableStyles = {
-              top: `${formatCssNumber(cloud.top)}%`,
-              left: `calc(100vw + ${formatCssNumber(cloud.startOffset)}vw)`,
-              animationDelay: `${formatCssNumber(cloud.travelDelay)}s`,
-              "--cloud-duration": `${formatCssNumber(cloud.travelDuration)}s`,
-              "--cloud-scale": `${formatCssNumber(cloud.scale)}`,
-              "--cloud-distance": `${formatCssNumber(cloud.distance)}vw`,
-              "--cloud-float-y": `${formatCssNumber(cloud.floatY)}px`,
-              "--cloud-opacity": `${formatCssNumber(cloud.opacity)}`
-            };
-
-            return <div key={`cloud-${index}`} className="hero-cloud" style={style} />;
-          })}
+          {renderClouds()}
         </div>
       )}
     </div>

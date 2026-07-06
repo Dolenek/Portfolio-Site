@@ -36,19 +36,22 @@
     }
   },
   "hero": {
-    "intro": "Ahoj, jsem Jakub Dolének a baví mě",
+    "intro": "Ahoj! Jsem",
     "headline": {
-      "lead": "Učení,",
-      "accent": "Automatizace,",
-      "trail": "Programování!"
+      "lead": "Jakub",
+      "accent": "Dolének",
+      "trail": ""
     },
     "subheadline": "Full-stack vývojář",
-    "description": "Vyvíjím software pomocí moderních technologií, který řeší reálné problémy a šetří čas.",
+    "description": "Pracuji jako <highlight>full-stack vývojář</highlight> a stavím interní řešení pro firemní a <highlight>ERP procesy</highlight>. Baví mě převádět požadavky z praxe do nástrojů na <highlight>moderních technologiích</highlight>, které jsou dobře použitelné a lidem reálně <highlight>šetří čas</highlight>. Mimo práci provozuji <highlight>self-hosted lab</highlight> na Linux serverech s Proxmoxem a Dockerem.",
+    "links": {
+      "github": "GitHub",
+      "about": "Více o mně"
+    },
     "portraitCaption": ""
   },
   "projects": {
     "heading": "Projekty",
-    "subheading": "Vybraná práce s měřitelným technickým dopadem.",
     "items": {
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
@@ -111,8 +114,7 @@
     "copy": "Zkopírovat e-mail",
     "copied": "Zkopírováno!",
     "platforms": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "github": "GitHub"
     }
   },
   "about": {

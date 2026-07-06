@@ -16,14 +16,6 @@ export const SiteFooter = () => {
           >
             GitHub
           </a>
-          <a
-            href="https://www.linkedin.com/in/jakub-dolének-9861a2322/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition hover:text-brand"
-          >
-            LinkedIn
-          </a>
         </div>
       </div>
     </footer>

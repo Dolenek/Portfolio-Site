@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -52,20 +52,24 @@ const ContactSectionComponent = () => {
             <button
               type="button"
               onClick={copyEmail}
-              className="group flex w-full items-center gap-4 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70"
+              className="group flex w-full flex-col items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70 xl:flex-row xl:items-center"
             >
-              <div className="flex flex-1 min-w-0 items-center gap-4">
+              <div className="flex min-w-0 flex-1 items-center gap-4">
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-lg shadow-slate-900/30 transition group-hover:scale-105 dark:bg-white dark:text-slate-900">
                   <Mail className="h-5 w-5" />
                 </span>
-                <div className="min-w-0 flex flex-wrap items-center gap-x-3 gap-y-1 text-left">
+                <div className="min-w-0 text-left">
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
                     {t("contact.emailLabel")}
                   </p>
-                  <p className="font-semibold text-slate-900 dark:text-white break-all">{profile.email}</p>
+                  <p className="break-words font-semibold text-slate-900 [overflow-wrap:anywhere] dark:text-white">
+                    {profile.email}
+                  </p>
                 </div>
               </div>
-              <span className="ml-auto text-sm font-medium text-brand">{copied ? t("contact.copied") : t("contact.copy")}</span>
+              <span className="pl-16 text-sm font-medium text-brand xl:ml-auto xl:pl-0">
+                {copied ? t("contact.copied") : t("contact.copy")}
+              </span>
             </button>
             <span className="sr-only" aria-live="polite">{copied ? t("contact.copied") : ""}</span>
 
@@ -84,22 +88,6 @@ const ContactSectionComponent = () => {
                     {t("contact.platforms.github")}
                   </p>
                   <p className="text-sm font-semibold text-slate-900 dark:text-white">{profile.github.replace("https://", "")}</p>
-                </div>
-              </a>
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex w-full items-center gap-3 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70 sm:flex-1 sm:min-w-[220px]"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-lg shadow-slate-900/30 transition group-hover:scale-105 dark:bg-white dark:text-slate-900">
-                  <Linkedin className="h-5 w-5" />
-                </span>
-                <div className="min-w-0">
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-                    {t("contact.platforms.linkedin")}
-                  </p>
-                  <p className="text-sm font-semibold text-slate-900 dark:text-white">LinkedIn</p>
                 </div>
               </a>
             </div>

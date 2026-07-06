@@ -36,19 +36,22 @@
     }
   },
   "hero": {
-    "intro": "Hi, I'm Jakub Dolének, and I enjoy",
+    "intro": "Hey! I'm",
     "headline": {
-      "lead": "Learning,",
-      "accent": "Automating,",
-      "trail": "Programming!"
+      "lead": "Jakub",
+      "accent": "Dolének",
+      "trail": ""
     },
     "subheadline": "Full-stack Developer",
-    "description": "I build software with modern technologies that solves real-world problems and saves time.",
+    "description": "I work as a <highlight>full-stack developer</highlight>, building internal solutions for business and <highlight>ERP processes</highlight>. I enjoy turning real operational requirements into tools built with <highlight>modern technologies</highlight>, focused on usability and <highlight>saving people time</highlight>. Outside work, I run a <highlight>self-hosted lab</highlight> on Linux servers with Proxmox and Docker.",
+    "links": {
+      "github": "GitHub",
+      "about": "More about me"
+    },
     "portraitCaption": ""
   },
   "projects": {
     "heading": "Projects",
-    "subheading": "Selected work with measurable engineering impact.",
     "items": {
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
@@ -111,8 +114,7 @@
     "copy": "Copy email",
     "copied": "Copied!",
     "platforms": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "github": "GitHub"
     }
   },
   "about": {
