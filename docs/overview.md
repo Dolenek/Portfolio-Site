@@ -1,37 +1,32 @@
 # Overview
 
-This project is a React + TypeScript portfolio site built with Vite.
-It presents featured projects, skills, experience, and direct contact links.
+This repository contains a React + TypeScript portfolio site built with Vite.
+It presents selected projects, skills, experience, and contact actions for the portfolio owner.
 
-## Core Capabilities
-- Home page with section navigation (`hero`, `projects`, `skills`, `contact`).
-- Dedicated More Projects route (`/projects`) for non-featured project work.
-- Dedicated About route (`/about`) with timeline content.
-- Light/dark theme with persistence.
-- English/Czech localization with URL syncing (`?lang=cs` for Czech).
-- Route-aware SEO metadata + JSON-LD.
+## Capabilities
+- Home page with section navigation for `hero`, `projects`, `skills`, and `contact`.
+- `/projects` route for additional non-featured project work.
+- `/about` route with experience and education timeline content.
+- Light/dark theme with persisted preference.
+- English and Czech localization with URL synchronization.
+- Route-aware SEO metadata and JSON-LD.
 
-## Technology Stack
+## Routes
+- `/` - home sections.
+- `/projects` - additional project archive.
+- `/about` - profile timeline.
+- Unknown routes redirect to `/`.
+
+## Stack
 - React 19
 - TypeScript 5
 - Vite 7
-- Tailwind CSS 3
+- Tailwind CSS 3 with section CSS
 - Framer Motion
 - react-router-dom 7
-- react-i18next + i18next-browser-languagedetector
+- react-i18next with i18next-browser-languagedetector
 
-## Runtime Surface
-- Routes:
-  - `/`
-  - `/projects`
-  - `/about`
-  - `*` redirects to `/`
-- Public assets are served from `public/`.
-
-## Source Layout (High Level)
-- `src/components/common` - Shared controls (`Seo`, toggles).
-- `src/components/layout` - App shell (`AppLayout`, `SiteHeader`, `SiteFooter`).
-- `src/components/sections` - Home sections and section-specific styles.
-- `src/pages` - Route pages (`HomePage`, `AboutPage`).
-- `src/data` - Typed content and localized UI data.
-- `src/i18n` - i18n setup and locale resources.
+## Source References
+- App structure and provider ownership: [Architecture](architecture.md).
+- Section behavior and content ownership: [Sections and Content](sections-and-content.md).
+- Locale, theme, and SEO behavior: [i18n, Theme, and SEO](i18n-theme-seo.md).

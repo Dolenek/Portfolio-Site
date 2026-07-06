@@ -1,31 +1,26 @@
 # Performance and Memory
 
-## Hero Runtime Optimization
-- Hero scene uses a runtime performance profile (`useHeroPerformanceProfile`).
-- Scene complexity is adapted by device/browser signals:
-  - reduced motion preference
-  - low memory / low CPU hints
-  - Chrome-specific lean profile
-  - small viewport
-- The hero still renders the same visual concepts (sun/moon, mountains, clouds/stars), but with lower animation density on constrained profiles.
+## Hero Scene Profile
+- `useHeroPerformanceProfile` selects the hero scene budget.
+- The profile considers reduced motion preference, device memory, CPU hints, browser signals, and viewport size.
+- Scene budgets control star count, cloud count, twinkle behavior, and visual effect density.
 
 ## Theme Scene Rendering
-- The hero now renders only the active theme scene (day or night), not both at the same time.
-- This reduces DOM node count and active animation workload in the initial viewport.
+- The hero renders only the active theme scene.
+- Light theme renders sun, clouds, and day mountains.
+- Dark theme renders moon, stars, and night mountains.
 
 ## Animation Cost Controls
-- Expensive per-node animation pressure was reduced:
-  - lighter star glow and twinkle behavior
-  - twinkle can be disabled by performance profile
-  - reduced filter/shadow effects in lean mode
-- Backdrop uses paint containment (`contain: layout paint`) to limit repaint impact.
+- `prefers-reduced-motion` disables cloud and star animations in CSS.
+- Lean profiles disable twinkle and reduce shadow/filter intensity.
+- The backdrop uses `contain: layout paint` to constrain repaint scope.
+- CSS variables drive per-node movement and opacity without React state updates.
 
-## Below-the-Fold Rendering
-- Home sections below hero are wrapped with `deferred-section` utility.
-- `content-visibility: auto` delays full rendering cost until near viewport.
-- `contain-intrinsic-size` preserves layout predictability before content is rendered.
+## Deferred Sections
+- Below-the-fold home sections use the `deferred-section` utility.
+- `content-visibility: auto` delays rendering work until sections approach the viewport.
+- `contain-intrinsic-size` preserves predictable layout before full rendering.
 
-## Current Guarantees
-- No user-facing features were removed.
-- Theme toggle, animations, localized content, and section navigation remain intact.
-- Lint and typecheck pass with the optimization changes.
+## Verification Scope
+- Run `npm run build` after performance-sensitive rendering changes.
+- Use browser checks for visual regressions in both light and dark themes.

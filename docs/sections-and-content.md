@@ -1,42 +1,30 @@
 # Sections and Content
 
-## Home Sections
+## Home Page
+- `HeroSection` renders the localized intro, highlighted description text, GitHub link, and about link.
+- `ProjectsSection` renders `featuredProjects` on the home page.
+- `SkillsSection` renders `skillHighlights` with localized labels from `skills.cards`.
+- `ContactSection` renders copy-email and GitHub contact actions.
 
-### Hero (`HeroSection.tsx` + `sections/hero/*`)
-- Monospace hero intro using JetBrains Mono.
-- Theme-aware nature backdrop: Latte light mode uses sun/clouds, dark mode uses stars/moon.
-- Copy is localized through `hero.*` keys and supports highlighted fragments in `hero.description`.
-- Social/about links use `profile.github` and the `/about` route.
+## Project Content
+- Featured project cards come from `featuredProjects` in `src/data/projects.ts`.
+- Additional project cards come from `additionalProjects` in `src/data/projects.ts`.
+- Project card copy comes from `projects.items` in locale files.
+- Card actions expose GitHub and demo links when present.
 
-### Projects (`ProjectsSection.tsx` + `sections/projects/*`)
-- Home card list is generated from `featuredProjects` in `src/data/projects.ts`.
-- Project order follows the array order; place the newest or highest-priority portfolio work first.
-- Cards show preview media next to always-visible copy, stack, and actions.
-- The home section links to `/projects` through the "Show more projects" CTA.
-- Card actions expose outbound GitHub/demo links when available.
+## Additional Routes
+- `/projects` uses `ProjectsSection` with additional project data and route-specific heading copy.
+- `/about` renders localized intro text and timeline entries from `about.timeline`.
+- Timeline entries support optional outbound links through `label` and `href`.
 
-## More Projects Page (`/projects`)
-- Uses `additionalProjects` from `src/data/projects.ts`.
-- Presents non-featured project work with the same visible-detail card layout as the home section.
-- Includes route-specific SEO metadata and a back action to the home projects section.
+## Content Files
+- Project metadata and preview image paths: `src/data/projects.ts`.
+- Skill card metadata and icon paths: `src/data/skills.ts`.
+- Identity/contact links: `src/data/profile.ts`.
+- English copy: `src/i18n/locales/en/common.json`.
+- Czech copy: `src/i18n/locales/cs/common.json`.
 
-### Skills (`SkillsSection.tsx`)
-- Card grid generated from `skillHighlights`.
-- Skill labels are localized via `skills.cards` keys.
-
-### Contact (`ContactSection.tsx`)
-- Direct contact actions only:
-  - copy email
-  - open GitHub
-- Includes localized copied feedback for screen readers.
-
-## About Page (`AboutPage.tsx`)
-- Localized intro paragraph with emphasized fragments.
-- Timeline list from locale key `about.timeline`.
-- Optional timeline links (`label`, `href`) per item.
-
-## Content Update Rules
-- Project metadata, outbound links, stack labels, and preview image paths: `src/data/projects.ts`.
-- Locale UI copy:
-  - `src/i18n/locales/en/common.json`
-  - `src/i18n/locales/cs/common.json`
+## Asset Rules
+- Project preview images live under `public/projects/`.
+- Skill icons live under `public/skills/`.
+- Public asset paths in data files use root-relative paths such as `/projects/example.png`.

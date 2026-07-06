@@ -1,32 +1,37 @@
 # Architecture
 
 ## App Composition
-- Entry point: `src/main.tsx`.
-- Root app and route map: `src/App.tsx`.
-- Shared shell: `src/components/layout/AppLayout.tsx`.
+- `src/main.tsx` mounts the React app and initializes i18n.
+- `src/App.tsx` owns the browser router and route map.
+- `src/components/layout/AppLayout.tsx` provides the shared shell, skip link, header, footer, and background treatment.
 
-## Routing Model
-- Browser router with nested routes under `AppLayout`.
-- `/` -> `HomePage` (section-based layout).
-- `/projects` -> `ProjectsPage` (non-featured project archive).
-- `/about` -> `AboutPage`.
-- Unknown routes redirect to `/`.
+## Routing
+- Routes are nested under `AppLayout`.
+- `/` renders `HomePage`.
+- `/projects` renders `ProjectsPage`.
+- `/about` renders `AboutPage`.
+- `*` redirects to `/`.
 
 ## Providers
-- `ThemeProvider`
-  - Stores theme in `localStorage` key `portfolio-site-theme`.
-  - Applies/removes `dark` class on `<html>`.
-- `ScrollSpyProvider`
-  - Tracks active section visibility on home.
-  - Exposes `scrollToSection` and `scrollToTop` for header navigation.
+- `ThemeProvider` owns the active theme, persists it in `localStorage`, and applies the `dark` class on `<html>`.
+- `ScrollSpyProvider` tracks the active home section and exposes section/top scrolling commands for navigation.
 
-## Content Boundaries
-- `src/data/profile.ts` - Identity/contact links.
-- `src/data/projects.ts` - Project metadata for cards and outbound links.
-  - Exports `featuredProjects` for the home section and `additionalProjects` for `/projects`.
-- `src/data/skills.ts` - Skill card model.
-- `src/data/siteMeta.ts` - Canonical URLs and locale metadata.
+## Source Boundaries
+- `src/components/common` contains shared controls such as `Seo`, `ThemeToggle`, and `LanguageToggle`.
+- `src/components/layout` contains shell components.
+- `src/components/sections` contains home sections and section-local styles/helpers.
+- `src/pages` contains route-level pages.
+- `src/data` contains typed project, skill, profile, and site metadata.
+- `src/i18n` contains i18n setup, locale resources, and react-i18next typing.
+- `src/utils` contains shared utility functions.
 
-## SEO Layer
-- `src/components/common/Seo.tsx` manages document title, meta tags, canonical/hreflang links, and JSON-LD.
-- Links are keyed by managed scope to avoid accidental canonical/alternate collisions.
+## Data Ownership
+- `src/data/profile.ts` owns identity and contact links.
+- `src/data/projects.ts` exports `featuredProjects` and `additionalProjects`.
+- `src/data/skills.ts` owns skill card data and icon references.
+- `src/data/siteMeta.ts` owns canonical URL and locale metadata.
+
+## Extension Points
+- Add routes in `src/App.tsx` and create a route page in `src/pages`.
+- Add shared app state through focused providers under `src/providers`.
+- Add section-specific rendering helpers inside the owning section folder.

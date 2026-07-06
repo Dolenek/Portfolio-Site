@@ -1,28 +1,17 @@
-# Portfolio Documentation Index
+# Documentation Index
 
-This `docs/` directory is the canonical documentation source for this repository.
+`docs/` is the canonical documentation source for this repository.
 
-## Canonical Rules
-- Keep canonical docs English-first.
-- Describe current behavior only.
-- Do not keep changelog/history narrative in canonical pages.
-- Do not duplicate full specs across files; link to the canonical page instead.
-- Keep docs focused and small (prefer multiple files over one large page).
+## Start Here
+- [Overview](overview.md) - product scope, capabilities, routes, and stack.
+- [Development Setup](development-setup.md) - local scripts, build checks, and Docker entry points.
+- [Architecture](architecture.md) - app composition, routing shell, providers, and source boundaries.
+- [Sections and Content](sections-and-content.md) - home sections, route content, and content update locations.
+- [i18n, Theme, and SEO](i18n-theme-seo.md) - locale behavior, theme persistence, metadata, and crawl files.
+- [Performance and Memory](performance-and-memory.md) - rendering constraints for hero and deferred sections.
+- [Documentation Governance](documentation-governance.md) - documentation rules and impact-review routing.
 
-## Documentation Map
-- `docs/overview.md` - Product overview, stack, routes, and main capabilities.
-- `docs/development-setup.md` - Local setup, scripts, and Docker deployment.
-- `docs/architecture.md` - Codebase structure, routing/layout, providers, and data boundaries.
-- `docs/sections-and-content.md` - Home/About sections and content schema.
-- `docs/i18n-theme-seo.md` - Localization, theming, metadata, and crawl/index behavior.
-- `docs/performance-and-memory.md` - Runtime rendering and memory optimization rules for hero and deferred sections.
-
-## Minimum Doc Impact Review
-For substantial changes, review whether updates are needed in:
-- `README.md` for onboarding-level facts.
-- `docs/overview.md` for user-visible behavior and scope.
-- `docs/architecture.md` for structure/provider/data-flow changes.
-- `docs/sections-and-content.md` for section behavior or content-schema changes.
-- `docs/i18n-theme-seo.md` for locale, theme, URL, or metadata changes.
-- `docs/performance-and-memory.md` for animation, rendering, and memory behavior changes.
-- `docs/development-setup.md` for scripts, tooling, and deployment prerequisites.
+## Canonical Source Rule
+- Keep durable project knowledge in `docs/`.
+- Keep `README.md` onboarding-focused and link back to the relevant canonical docs.
+- For significant features or refactors, update or add a focused page under `docs/` and link it here.
