@@ -1,4 +1,4 @@
-﻿export type SkillHighlightId =
+﻿type SkillHighlightId =
   | "csharp"
   | "javascript"
   | "python"

@@ -24,18 +24,3 @@ export const createStaggerFade = ({
     }
   })
 });
-
-export const createSimpleFade = ({
-  duration = 0.6,
-  delay = 0
-}: Pick<FadeInOptions, "duration" | "delay"> = {}) => ({
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration,
-      delay,
-      ease: MOTION_EASE
-    }
-  }
-});

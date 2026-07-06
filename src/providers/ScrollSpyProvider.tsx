@@ -59,7 +59,7 @@ export const ScrollSpyProvider = ({ children }: Props) => {
   }, []);
 
   const value = useMemo(
-    () => ({ activeSection, setActiveSection, scrollToSection, scrollToTop }),
+    () => ({ activeSection, scrollToSection, scrollToTop }),
     [activeSection, scrollToSection, scrollToTop]
   );
 

@@ -24,12 +24,12 @@ export type CloudConfig = {
 
 export type MountainVariant = "day" | "night";
 
-export type MountainLayerDefinition = {
+type MountainLayerDefinition = {
   key: string;
   d: string;
 };
 
-export type MountainGradientStop = {
+type MountainGradientStop = {
   offset: string;
   color: string;
   opacity?: number;

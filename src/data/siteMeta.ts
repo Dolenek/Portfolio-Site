@@ -1,6 +1,5 @@
 export const siteMeta = {
   baseUrl: "https://www.jakubdolenek.xyz",
-  fallbackUrl: "https://jakubdolenek.xyz",
   socialImage: "/JD.png",
   locales: {
     cs: {

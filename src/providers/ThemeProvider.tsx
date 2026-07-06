@@ -52,10 +52,6 @@ export const ThemeProvider = ({ children }: Props) => {
     return () => media.removeEventListener("change", handler);
   }, []);
 
-  const setTheme = useCallback((next: Theme) => {
-    setThemeState(next);
-  }, []);
-
   const toggleTheme = useCallback(() => {
     setThemeState((current) => (current === "light" ? "dark" : "light"));
   }, []);
@@ -63,10 +59,9 @@ export const ThemeProvider = ({ children }: Props) => {
   const value = useMemo(
     () => ({
       theme,
-      toggleTheme,
-      setTheme
+      toggleTheme
     }),
-    [theme, toggleTheme, setTheme]
+    [theme, toggleTheme]
   );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

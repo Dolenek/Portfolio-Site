@@ -5,7 +5,7 @@ import { initReactI18next } from "react-i18next";
 import cs from "./locales/cs/common.json";
 import en from "./locales/en/common.json";
 
-export const resources = {
+const resources = {
   cs: {
     translation: cs
   },
@@ -42,5 +42,3 @@ void i18n
       }
     }
   });
-
-export default i18n;
