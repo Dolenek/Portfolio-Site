@@ -11,6 +11,7 @@ import "./projects/ProjectsSection.responsive.css";
 type ProjectCopy = {
   title: string;
   summary: string;
+  why: string;
   impact: string;
 };
 

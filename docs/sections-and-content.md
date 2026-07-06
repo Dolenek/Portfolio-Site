@@ -10,6 +10,7 @@
 - Featured project cards come from `featuredProjects` in `src/data/projects.ts`.
 - Additional project cards come from `additionalProjects` in `src/data/projects.ts`.
 - Project card copy comes from `projects.items` in locale files.
+- Each project copy entry contains a title, short summary, motivation sentence, and technical impact sentence.
 - Card actions expose GitHub and demo links when present.
 
 ## Additional Routes

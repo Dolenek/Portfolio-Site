@@ -56,6 +56,7 @@
 
 .skills-grid__icon {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   width: 3.1rem;
@@ -67,6 +68,7 @@
   font-size: 1.1rem;
   letter-spacing: -0.01em;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  overflow: hidden;
 }
 
 .skills-grid__icon span {
@@ -78,6 +80,13 @@
   height: 2.50rem;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.35));
+}
+
+.skills-grid__icon-image--ai-assisted {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 1rem;
+  max-width: none;
 }
 
 .skills-grid__content {

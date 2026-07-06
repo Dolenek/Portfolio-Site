@@ -61,37 +61,44 @@
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
         "summary": "Community archive for Deadlock updates with structured patch history, hero changes, item timelines, and spell timelines.",
-        "impact": "An automated ingestion pipeline turns official changelogs into PostgreSQL read models served by a Go API, Next.js frontend, RSS feeds, and public JSON endpoints."
+        "why": "I built it because official changelogs are hard to compare and difficult to navigate.",
+        "impact": "An automated Go ingestion pipeline parses official changelog sources into PostgreSQL read models served by a Go API, Next.js frontend, RSS feeds, and public JSON endpoints."
       },
       "levne-deskovky": {
         "title": "Deskovky Levně",
-        "summary": "Czech board-game price tracker that aggregates multi-seller offers, availability, filters, and per-store price history under slug-first product pages.",
+        "summary": "Czech board-game price tracker that aggregates offers from multiple stores, availability, filters, and per-store price history.",
+        "why": "I wanted a practical overview of board-game prices and how they change over time.",
         "impact": "Combines a React frontend, Go read API, PostgreSQL read models, optional Redis cache, and SEO prerendering for a production-ready comparison site."
       },
       "discord-automation": {
         "title": "Discord Automation",
         "summary": "Desktop WPF app that embeds Discord via WebView2 and automates command dispatch through DevTools with DOM polling.",
-        "impact": "Improved reliability with deterministic deduplication logic, structured logs, and stable long-running operation."
+        "why": "The project came from a need to automate repetitive actions that took too much manual time.",
+        "impact": "Synchronizes cooldowns from bot replies, deduplicates interactive prompts, handles guard/captcha incidents, and provides logs plus a control UI for long-running operation."
       },
       "kuchar-v-akci": {
         "title": "Recepty v Akci",
         "summary": "Self-hosted recipe platform inspired by supermarket flyers with structured ingredients and preparation steps.",
-        "impact": "n8n workflows convert daily flyer PDFs into Supabase recipes, enabling end-to-end automated publishing."
+        "why": "I wanted to use AI to create recipes only from products currently on sale, saving time in the store and when deciding what to cook.",
+        "impact": "A self-hosted n8n pipeline downloads flyer pages, converts them to images, extracts products into Supabase, and generates recipes for the React frontend."
       },
       "smithing-master-bot": {
         "title": "Bot using PyAutoGUI",
         "summary": "Desktop automation bot using PyAutoGUI and OpenCV template matching to control an Android emulator.",
-        "impact": "Fully automates time-intensive repetitive tasks in a mobile game using screen-based computer vision."
+        "why": "I used it as a practical experiment in screen-based automation without direct API access.",
+        "impact": "Detects on-screen templates and automates battles, rewards, and map progression in an Android emulator."
       },
       "portfolio": {
         "title": "Personal Portfolio",
-        "summary": "This site, built with React, Tailwind CSS, and Framer Motion to present work with a strong engineering-first narrative.",
-        "impact": "Provides bilingual content, SEO metadata, and polished project presentation while keeping performance and accessibility in focus."
+        "summary": "This site, built with React, TypeScript, and Tailwind CSS to present work with a credible engineering-first narrative.",
+        "why": "The goal was to own a space that presents projects in more depth than a standard resume.",
+        "impact": "Separates project and profile content into typed data, with bilingual content, dark mode, and a clear project presentation."
       },
       "mobile-game-unity": {
         "title": "Mobile Game in Unity",
-        "summary": "Casual RPG prototype with clicker and crafting mechanics built with C# in Unity.",
-        "impact": "Delivered a functional progression system and playable Android prototype."
+        "summary": "Android RPG prototype in Unity with equipment crafting, level progression, and saved player progress.",
+        "why": "I built it as my graduation project to practice a complete game loop from mechanics through an Android build.",
+        "impact": "Delivered a playable Android build with 30 levels, a progression system, equipment inventory, and mobile-screen optimization."
       }
     },
     "techLabel": "Stack",
@@ -116,7 +123,8 @@
       "react": "React",
       "sql": "PostgreSQL",
       "mssql": "MSSQL",
-      "linux": "Linux"
+      "linux": "Linux",
+      "ai-assisted-engineering": "AI-assisted Engineering"
     }
   },
   "contact": {

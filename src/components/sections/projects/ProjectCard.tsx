@@ -6,6 +6,7 @@ import { cn } from "../../../utils/cn";
 type ProjectCopy = {
   title: string;
   summary: string;
+  why: string;
   impact: string;
 };
 
@@ -71,6 +72,7 @@ const ProjectCopyBlock = ({ copy, projectTitle }: Pick<ProjectTitleProps, "proje
   <div className="projects-river__copy">
     <h3 className="projects-river__name">{projectTitle}</h3>
     <p className="projects-river__summary">{copy?.summary}</p>
+    <p className="projects-river__why">{copy?.why}</p>
     <p className="projects-river__impact">{copy?.impact}</p>
   </div>
 );

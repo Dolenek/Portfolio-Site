@@ -5,7 +5,8 @@
   | "react"
   | "sql"
   | "mssql"
-  | "linux";
+  | "linux"
+  | "ai-assisted-engineering";
 
 export type SkillHighlight = {
   id: SkillHighlightId;
@@ -56,5 +57,11 @@ export const skillHighlights: SkillHighlight[] = [
     initial: "LX",
     accent: "from-zinc-800/80 via-slate-800/60 to-neutral-900/80",
     iconSrc: "/skills/linux.svg"
+  },
+  {
+    id: "ai-assisted-engineering",
+    initial: "AI",
+    accent: "from-slate-900/85 via-stone-700/70 to-orange-500/75",
+    iconSrc: "/skills/ai-assisted-engineering.png"
   }
 ];

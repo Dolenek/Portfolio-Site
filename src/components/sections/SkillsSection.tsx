@@ -28,12 +28,21 @@ const SkillsSectionComponent = () => {
       >
         {skillHighlights.map(({ id, accent, initial, iconSrc }, index) => {
           const title = cards[id] ?? id;
+          const isAiAssistedEngineering = id === "ai-assisted-engineering";
+
           return (
             <motion.li key={id} className="skills-panel__grid-item" variants={CARD_VARIANTS} custom={index}>
               <article className="skills-grid__card" tabIndex={0} aria-label={title}>
                 <div className={`skills-grid__icon bg-gradient-to-br ${accent}`} aria-hidden="true">
                   {iconSrc ? (
-                    <img src={iconSrc} alt="" className="skills-grid__icon-image" loading="lazy" />
+                    <img
+                      src={iconSrc}
+                      alt=""
+                      className={`skills-grid__icon-image${
+                        isAiAssistedEngineering ? " skills-grid__icon-image--ai-assisted" : ""
+                      }`}
+                      loading="lazy"
+                    />
                   ) : (
                     <span>{initial}</span>
                   )}

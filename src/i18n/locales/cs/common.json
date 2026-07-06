@@ -61,37 +61,44 @@
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
         "summary": "Komunitní archiv aktualizací Deadlocku se strukturovanou historií patchů, změn hrdinů, předmětů a schopností.",
-        "impact": "Automatická ingest pipeline převádí oficiální changelogy do PostgreSQL read modelů, které obsluhuje Go API, Next.js frontend, RSS a veřejné JSON endpointy."
+        "why": "Vytvořil jsem ho, protože oficiální changelogy se špatně porovnávají a obtížně se v nich orientuje.",
+        "impact": "Automatická Go ingest pipeline parsuje oficiální changelog zdroje do PostgreSQL read modelů, které obsluhuje Go API, Next.js frontend, RSS a veřejné JSON endpointy."
       },
       "levne-deskovky": {
         "title": "Deskovky Levně",
         "summary": "Český sledovač cen deskových her, který agreguje nabídky více prodejců, dostupnost, filtry a historii cen po jednotlivých e-shopech.",
+        "why": "Chtěl jsem mít praktický přehled o cenách deskovek a jejich vývoji.",
         "impact": "Spojuje React frontend, Go read API, PostgreSQL read modely, volitelnou Redis cache a SEO prerendering do produkčně připraveného srovnávače."
       },
       "discord-automation": {
         "title": "Automatizace pro Discord",
         "summary": "Desktopová WPF aplikace s WebView2, která automatizuje posílání příkazů přes DevTools a sleduje zprávy přes DOM polling.",
-        "impact": "Vyšší spolehlivost díky deterministické deduplikaci, strukturovaným logům a stabilnímu dlouhodobému provozu."
+        "why": "Projekt vznikl z potřeby zautomatizovat opakované úkony, které ručně zabíraly zbytečně moc času.",
+        "impact": "Synchronizuje cooldowny z odpovědí bota, deduplikuje interaktivní výzvy, řeší guard/captcha incidenty a poskytuje logy i ovládací UI pro dlouhodobý provoz."
       },
       "kuchar-v-akci": {
         "title": "Recepty v Akci",
         "summary": "Self-hosted platforma s recepty inspirovanými supermarketovými letáky a se strukturovanými surovinami i postupem.",
-        "impact": "n8n workflow převádí denní PDF letáky do Supabase receptů a umožňuje plně automatizované publikování."
+        "why": "Chtěl jsem pomocí AI vytvářet recepty pouze z produktů, které jsou zrovna v akci, a ušetřit čas strávený v obchodě i vymýšlením, co uvařit.",
+        "impact": "Self-hosted n8n pipeline stahuje stránky letáků, převádí je na obrázky, extrahuje produkty do Supabase a generuje recepty pro React frontend."
       },
       "smithing-master-bot": {
         "title": "Bot s PyAutoGUI",
         "summary": "Desktopová automatizace využívající PyAutoGUI a OpenCV template matching pro ovládání Android emulátoru.",
-        "impact": "Plně automatizuje časově náročné opakované úkoly v mobilní hře pomocí screen-based computer vision."
+        "why": "Použil jsem ho jako praktický experiment s automatizací podle obrazu bez přímého API.",
+        "impact": "Detekuje šablony na obrazovce a automatizuje souboje, odměny i postup mapou v Android emulátoru."
       },
       "portfolio": {
         "title": "Osobní portfolio",
-        "summary": "Tento web postavený v Reactu, Tailwind CSS a Framer Motion s důrazem na technicky věrohodnou prezentaci práce.",
-        "impact": "Poskytuje dvojjazyčný obsah, SEO metadata a kvalitní prezentaci projektů při zachování výkonu a přístupnosti."
+        "summary": "Tento web postavený v Reactu, TypeScriptu a Tailwind CSS s důrazem na technicky věrohodnou prezentaci práce.",
+        "why": "Cílem bylo mít vlastní prostor, který ukazuje projekty víc do hloubky než běžný životopis.",
+        "impact": "Odděluje obsah projektů a profilu do typovaných dat, podporuje dvojjazyčný obsah, tmavý režim a přehlednou prezentaci projektů."
       },
       "mobile-game-unity": {
         "title": "Mobilní hra v Unity",
-        "summary": "Casual RPG prototyp s clicker a crafting mechanikami vytvořený v C# a Unity.",
-        "impact": "Doručen funkční systém progrese a hratelný Android prototyp."
+        "summary": "Android RPG prototyp v Unity s craftingem vybavení, postupem přes úrovně a ukládáním herního progresu.",
+        "why": "Projekt jsem vytvořil v rámci mé maturitní práce, abych si vyzkoušel kompletní herní smyčku od mechanik po Android build.",
+        "impact": "Doručil jsem hratelný Android build s 30 úrovněmi, progression systémem, inventářem vybavení a optimalizací pro mobilní obrazovky."
       }
     },
     "techLabel": "Stack",
@@ -116,7 +123,8 @@
       "react": "React",
       "sql": "PostgreSQL",
       "mssql": "MSSQL",
-      "linux": "Linux"
+      "linux": "Linux",
+      "ai-assisted-engineering": "AI-assisted Engineering"
     }
   },
   "contact": {
