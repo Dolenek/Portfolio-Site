@@ -11,7 +11,7 @@
 
 [Live web](https://www.jakubdolenek.xyz) | [English README](README.en.md) | [Dokumentace](docs/documentation.md)
 
-<img src="public/projects/SiteScreen.png" alt="Portfolio homepage screenshot" width="860">
+<img src="assets/source/projects/portfolio.png" alt="Portfolio homepage screenshot" width="860">
 
 </div>
 
