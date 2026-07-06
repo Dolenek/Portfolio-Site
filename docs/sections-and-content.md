@@ -9,11 +9,16 @@
 - Social/about links use `profile.github` and the `/about` route.
 
 ### Projects (`ProjectsSection.tsx` + `sections/projects/*`)
-- Card list generated from `src/data/projects.ts`.
+- Home card list is generated from `featuredProjects` in `src/data/projects.ts`.
 - Project order follows the array order; place the newest or highest-priority portfolio work first.
-- Desktop: hover/focus overlay reveals summary + actions.
-- Mobile: tap toggles active overlay.
+- Cards show preview media next to always-visible copy, stack, and actions.
+- The home section links to `/projects` through the "Show more projects" CTA.
 - Card actions expose outbound GitHub/demo links when available.
+
+## More Projects Page (`/projects`)
+- Uses `additionalProjects` from `src/data/projects.ts`.
+- Presents non-featured project work with the same visible-detail card layout as the home section.
+- Includes route-specific SEO metadata and a back action to the home projects section.
 
 ### Skills (`SkillsSection.tsx`)
 - Card grid generated from `skillHighlights`.

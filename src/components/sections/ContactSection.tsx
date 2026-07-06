@@ -52,22 +52,20 @@ const ContactSectionComponent = () => {
             <button
               type="button"
               onClick={copyEmail}
-              className="group flex w-full flex-col items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70 xl:flex-row xl:items-center"
+              className="group grid w-full grid-cols-[3rem_minmax(0,1fr)_auto] items-center gap-x-3 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70"
             >
-              <div className="flex min-w-0 flex-1 items-center gap-4">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-lg shadow-slate-900/30 transition group-hover:scale-105 dark:bg-white dark:text-slate-900">
-                  <Mail className="h-5 w-5" />
-                </span>
-                <div className="min-w-0 text-left">
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                    {t("contact.emailLabel")}
-                  </p>
-                  <p className="break-words font-semibold text-slate-900 [overflow-wrap:anywhere] dark:text-white">
-                    {profile.email}
-                  </p>
-                </div>
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-lg shadow-slate-900/30 transition group-hover:scale-105 dark:bg-white dark:text-slate-900">
+                <Mail className="h-5 w-5" />
+              </span>
+              <div className="min-w-0 text-left">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                  {t("contact.emailLabel")}
+                </p>
+                <p className="max-w-full whitespace-nowrap text-[0.82rem] font-semibold text-slate-900 dark:text-white sm:text-sm">
+                  {profile.email}
+                </p>
               </div>
-              <span className="pl-16 text-sm font-medium text-brand xl:ml-auto xl:pl-0">
+              <span className="justify-self-end rounded-full bg-brand/10 px-2.5 py-1.5 text-xs font-semibold text-brand">
                 {copied ? t("contact.copied") : t("contact.copy")}
               </span>
             </button>

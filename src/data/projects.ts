@@ -79,7 +79,7 @@ export const projects: Project[] = [
     role: "Full-stack Developer",
     teamSize: "Solo",
     duration: "Ongoing",
-    featured: true,
+    featured: false,
     tech: ["React", "Tailwind CSS", "Framer Motion", "i18next"],
     links: {
       github: "https://github.com/Dolenek/Portfolio-Site"
@@ -133,3 +133,7 @@ export const projects: Project[] = [
     previewGradient: ["#ff903b", "#5a1f53"]
   }
 ];
+
+export const featuredProjects = projects.filter((project) => project.featured);
+
+export const additionalProjects = projects.filter((project) => !project.featured);

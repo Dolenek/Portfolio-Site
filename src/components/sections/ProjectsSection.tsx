@@ -1,11 +1,11 @@
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo } from "react";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
-import { projects } from "../../data/projects";
+import { featuredProjects, type Project } from "../../data/projects";
 import { ProjectCard } from "./projects/ProjectCard";
-import { useIsTouchLayout } from "./projects/useIsTouchLayout";
 import "./projects/ProjectsSection.base.css";
-import "./projects/ProjectsSection.overlay.css";
 import "./projects/ProjectsSection.responsive.css";
 
 type ProjectCopy = {
@@ -16,44 +16,59 @@ type ProjectCopy = {
 
 type ProjectCopyMap = Record<string, ProjectCopy>;
 
-const ProjectsSectionComponent = () => {
-  const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
-  const isTouchLayout = useIsTouchLayout();
+type ProjectActionLabels = {
+  github: string;
+  demo: string;
+};
+
+type ProjectsSectionProps = {
+  headingKey?: string;
+  introKey?: string;
+  items?: Project[];
+  sectionId?: string;
+  showMoreLink?: boolean;
+};
+
+const ProjectsSectionComponent = ({
+  headingKey = "projects.heading",
+  introKey,
+  items = featuredProjects,
+  sectionId = "projects",
+  showMoreLink = true
+}: ProjectsSectionProps) => {
   const { t } = useTranslation();
   const projectCopy = t("projects.items", { returnObjects: true }) as ProjectCopyMap;
   const techLabel = t("projects.techLabel");
-
-  useEffect(() => {
-    if (!isTouchLayout && activeProjectId !== null) {
-      setActiveProjectId(null);
-    }
-  }, [isTouchLayout, activeProjectId]);
-
-  const handleToggle = useCallback((projectId: string) => {
-    setActiveProjectId((current) => (current === projectId ? null : projectId));
-  }, []);
+  const actionLabels = t("projects.actions", { returnObjects: true }) as ProjectActionLabels;
 
   return (
-    <section id="projects" data-section="projects" className="projects-river container-xl">
+    <section id={sectionId} data-section={sectionId} className="projects-river">
       <header className="projects-river__header">
-        <h2 className="projects-river__title">{t("projects.heading")}</h2>
+        <h2 className="projects-river__title">{t(headingKey)}</h2>
+        {introKey ? <p className="projects-river__subtitle">{t(introKey)}</p> : null}
       </header>
 
       <ol className="projects-river__list">
-        {projects.map((project, index) => (
+        {items.map((project, index) => (
           <ProjectCard
             key={project.id}
             project={project}
             copy={projectCopy[project.id]}
             align={index % 2 === 0 ? "left" : "right"}
-            index={index}
             techLabel={techLabel}
-            isTouchLayout={isTouchLayout}
-            isActive={activeProjectId === project.id}
-            onToggle={handleToggle}
+            actionLabels={actionLabels}
           />
         ))}
       </ol>
+
+      {showMoreLink ? (
+        <div className="projects-river__more">
+          <Link to="/projects" className="projects-river__more-link">
+            <span>{t("projects.moreCta")}</span>
+            <ArrowRight className="projects-river__more-icon" />
+          </Link>
+        </div>
+      ) : null}
     </section>
   );
 };

@@ -5,6 +5,7 @@ It presents featured projects, skills, experience, and direct contact links.
 
 ## Core Capabilities
 - Home page with section navigation (`hero`, `projects`, `skills`, `contact`).
+- Dedicated More Projects route (`/projects`) for non-featured project work.
 - Dedicated About route (`/about`) with timeline content.
 - Light/dark theme with persistence.
 - English/Czech localization with URL syncing (`?lang=cs` for Czech).
@@ -22,6 +23,7 @@ It presents featured projects, skills, experience, and direct contact links.
 ## Runtime Surface
 - Routes:
   - `/`
+  - `/projects`
   - `/about`
   - `*` redirects to `/`
 - Public assets are served from `public/`.

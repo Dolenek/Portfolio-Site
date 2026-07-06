@@ -30,6 +30,11 @@
       "description": "Experience, education, and engineering focus of Jakub Dolének as a full-stack developer.",
       "breadcrumb": "About"
     },
+    "projects": {
+      "title": "More Projects | Jakub Dolének",
+      "description": "Additional projects by Jakub Dolének, including older automation, web, and game development work.",
+      "breadcrumb": "More Projects"
+    },
     "person": {
       "jobTitle": "Full-stack Developer",
       "description": "Full-stack developer focused on process automation, backend services, and self-hosting in a personal homelab."
@@ -59,7 +64,7 @@
         "impact": "An automated ingestion pipeline turns official changelogs into PostgreSQL read models served by a Go API, Next.js frontend, RSS feeds, and public JSON endpoints."
       },
       "levne-deskovky": {
-        "title": "Levné Deskovky",
+        "title": "Deskovky Levně",
         "summary": "Czech board-game price tracker that aggregates multi-seller offers, availability, filters, and per-store price history under slug-first product pages.",
         "impact": "Combines a React frontend, Go read API, PostgreSQL read models, optional Redis cache, and SEO prerendering for a production-ready comparison site."
       },
@@ -89,7 +94,17 @@
         "impact": "Delivered a functional progression system and playable Android prototype."
       }
     },
-    "techLabel": "Stack"
+    "techLabel": "Stack",
+    "actions": {
+      "github": "GitHub",
+      "demo": "Live"
+    },
+    "moreCta": "Show more projects",
+    "morePage": {
+      "heading": "More Projects",
+      "description": "Older and supporting projects that show additional technologies, experiments, and automation work outside the featured selection.",
+      "backCta": "Back to projects"
+    }
   },
   "skills": {
     "heading": "Skills",

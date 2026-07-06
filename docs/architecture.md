@@ -8,6 +8,7 @@
 ## Routing Model
 - Browser router with nested routes under `AppLayout`.
 - `/` -> `HomePage` (section-based layout).
+- `/projects` -> `ProjectsPage` (non-featured project archive).
 - `/about` -> `AboutPage`.
 - Unknown routes redirect to `/`.
 
@@ -22,6 +23,7 @@
 ## Content Boundaries
 - `src/data/profile.ts` - Identity/contact links.
 - `src/data/projects.ts` - Project metadata for cards and outbound links.
+  - Exports `featuredProjects` for the home section and `additionalProjects` for `/projects`.
 - `src/data/skills.ts` - Skill card model.
 - `src/data/siteMeta.ts` - Canonical URLs and locale metadata.
 
