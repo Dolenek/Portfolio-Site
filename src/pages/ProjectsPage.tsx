@@ -1,11 +1,11 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { Seo } from "../components/common/Seo";
 import { ProjectsSection } from "../components/sections/ProjectsSection";
-import { additionalProjects } from "../data/projects";
+import { additionalProjects, featuredProjects } from "../data/projects";
 import { siteMeta } from "../data/siteMeta";
 import { buildLocalizedUrl, resolveLocale } from "../utils/seo";
 
@@ -53,10 +53,6 @@ export const ProjectsPage = () => {
     ];
   }, [i18n.language, i18n.resolvedLanguage, t]);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, []);
-
   return (
     <>
       <Seo
@@ -77,10 +73,20 @@ export const ProjectsPage = () => {
         </div>
         <ProjectsSection
           headingKey="projects.morePage.heading"
-          introKey="projects.morePage.description"
-          items={additionalProjects}
+          items={featuredProjects}
           showMoreLink={false}
         />
+        <div>
+          <ProjectsSection
+            alignOffset={featuredProjects.length}
+            headingKey="projects.morePage.additionalHeading"
+            items={additionalProjects}
+            sectionId="additional-projects"
+            showHeader={false}
+            showMoreLink={false}
+            trackInScrollSpy={false}
+          />
+        </div>
       </div>
     </>
   );

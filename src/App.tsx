@@ -6,12 +6,14 @@ import { AboutPage } from "./pages/AboutPage";
 import { HomePage } from "./pages/HomePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { AppLayout } from "./components/layout/AppLayout";
+import { RouteScrollReset } from "./components/common/RouteScrollReset";
 
 const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider>
         <ScrollSpyProvider>
+          <RouteScrollReset />
           <Routes>
             <Route element={<AppLayout />}>
               <Route index element={<HomePage />} />

@@ -31,9 +31,9 @@
       "breadcrumb": "O mně"
     },
     "projects": {
-      "title": "Další projekty | Jakub Dolének",
-      "description": "Další projekty Jakuba Dolénka včetně starších automatizačních, webových a herních prací.",
-      "breadcrumb": "Další projekty"
+      "title": "Projekty | Jakub Dolének",
+      "description": "Projekty Jakuba Dolénka včetně full-stack aplikací, automatizace, webových projektů a starší herní tvorby.",
+      "breadcrumb": "Projekty"
     },
     "person": {
       "jobTitle": "Full-stack vývojář",
@@ -48,7 +48,7 @@
       "trail": ""
     },
     "subheadline": "Full-stack vývojář",
-    "description": "Pracuji jako <highlight>full-stack vývojář</highlight> a stavím interní řešení pro firemní a <highlight>ERP procesy</highlight>. Baví mě převádět požadavky z praxe do nástrojů na <highlight>moderních technologiích</highlight>, které jsou dobře použitelné a lidem reálně <highlight>šetří čas</highlight>. Mimo práci provozuji <highlight>self-hosted lab</highlight> na Linux serverech s Proxmoxem a Dockerem.",
+    "description": "Pracuji jako <highlight>full-stack vývojář</highlight> a vyvíjím <highlight>interní aplikace</highlight> a rozšíření <highlight>ERP systémů</highlight>. Řešení dotahuji <highlight>od prvního rozhovoru s uživatelem až po nasazení</highlight> a snažím se jimi zjednodušovat práci kolegům i zákazníkům. Ve volném čase stavím vlastní projekty a provozuji <highlight>homelab</highlight> na Linuxu s Proxmoxem a Dockerem, na kterém běží i tento web.",
     "links": {
       "github": "GitHub",
       "about": "Více o mně"
@@ -101,7 +101,8 @@
     },
     "moreCta": "Zobrazit další projekty",
     "morePage": {
-      "heading": "Další projekty",
+      "heading": "Projekty",
+      "additionalHeading": "Další projekty",
       "description": "Starší a doplňkové projekty, které ukazují další technologie, experimenty a automatizace mimo hlavní výběr.",
       "backCta": "Zpět na projekty"
     }
@@ -134,7 +135,7 @@
   },
   "about": {
     "title": "O mně",
-    "intro": "Jsem <highlight>Jakub Dolének</highlight>, full-stack vývojář.\nV práci navrhuji a vyvíjím <highlight>full-stack interní řešení</highlight> pro firemní a <highlight>ERP procesy</highlight>. Baví mě převádět požadavky z praxe do konkrétních nástrojů postavených na <highlight>moderních technologiích</highlight>, které jsou dobře použitelné a lidem reálně <highlight>šetří čas</highlight>.\nV poslední době mě pohltil <highlight>self-hosting</highlight>. Provozuji vlastní lab na Linux serverech s Proxmoxem a Dockerem.\nProgramování mě dlouhodobě baví, proto neustále hledám nové výzvy a příležitosti k učení.",
+    "intro": "Ahoj! Jmenuji se <highlight>Jakub Dolének</highlight>, jsem full-stack vývojář a student aplikované informatiky na FIM UHK.\nRád vyvyjím aplikace a nástroje, které lidem šetří čas a opravdu je používají. V práci proto řešení dotahuji od prvního rozhovoru s uživatelem přes technický návrh až po nasazení.\nVe volném čase stavím <projectsLink>hustý projekty</projectsLink> a v poslední době mě pohltil <highlight>self-hosting</highlight>. Provozuji homelab na Linuxu s Proxmoxem a Dockerem, na kterém si zkouším nasazování, automatizaci a správu vlastních služeb.",
     "timelineHeading": "Zkušenosti a vzdělání",
     "timelineAt": "@",
     "experienceDivider": "Zkušenosti",
@@ -142,9 +143,9 @@
     "timeline": [
       {
         "id": "cloud-software-specialist",
-        "title": "Programátor",
-        "period": "2025 - současnost",
-        "location": "Full-stack vývojář",
+        "title": "Full-stack vývojář",
+        "period": "14.1. 2025 - současnost",
+        "location": "Programátor",
         "link": {
           "label": "TOP TECH, s.r.o., ČR",
           "href": "https://www.top-tech.cz/"
@@ -161,7 +162,7 @@
           "label": "Fakulta informatiky a managementu",
           "href": "https://www.uhk.cz/en/fim"
         },
-        "description": "Studuji softwarové inženýrství se zaměřením na architekturu, algoritmy a databáze. Pracuji na full-stack týmových projektech a aplikuji osvědčené postupy v testování, návrhu i nasazení.",
+        "description": "Studuji aplikovanou informatiku se zaměřením na softwarové inženýrství. Studium mi rozšiřuje praktické zkušenosti o hlubší základy softwarové architektury, algoritmů a databází. V týmových projektech se věnuji návrhu, implementaci a testování full-stack aplikací.",
         "tags": []
       },
       {
@@ -173,7 +174,7 @@
           "label": "hradebni.cz",
           "href": "https://www.hradebni.cz/"
         },
-        "description": "Získal jsem pevné základy v oblasti hardware, sítí a programování. V tomto období jsem začal vyvíjet svůj první produkčněji pojatý software v C#.",
+        "description": "Během studia jsem získal základy programování, počítačových sítí a hardwaru. V C# jsem v době studia také vytvořil svůj první větší projekt.",
         "tags": []
       }
     ],

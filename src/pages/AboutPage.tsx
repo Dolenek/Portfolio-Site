@@ -3,7 +3,7 @@ import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { MOTION_EASE } from "../utils/animation";
 import { useScrollTopReset } from "../hooks/useScrollTopReset";
@@ -32,6 +32,14 @@ const TIMELINE_VARIANTS = {
     transition: { duration: 0.7, ease: MOTION_EASE },
   },
 } as const;
+
+const ABOUT_HIGHLIGHT_CLASS_NAME =
+  "bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent";
+
+const ABOUT_PROJECTS_LINK_CLASS_NAME = [
+  ABOUT_HIGHLIGHT_CLASS_NAME,
+  "border-b border-dashed border-blue-400/80 pb-0.5 no-underline transition hover:border-cyan-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
+].join(" ");
 
 export const AboutPage = () => {
   const { t, i18n } = useTranslation();
@@ -149,9 +157,8 @@ export const AboutPage = () => {
           <Trans
             i18nKey="about.intro"
             components={{
-              highlight: (
-                <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent" />
-              ),
+              highlight: <span className={ABOUT_HIGHLIGHT_CLASS_NAME} />,
+              projectsLink: <Link className={ABOUT_PROJECTS_LINK_CLASS_NAME} to="/projects" />
             }}
           />
         </p>

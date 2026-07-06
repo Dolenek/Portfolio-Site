@@ -31,9 +31,9 @@
       "breadcrumb": "About"
     },
     "projects": {
-      "title": "More Projects | Jakub Dolének",
-      "description": "Additional projects by Jakub Dolének, including older automation, web, and game development work.",
-      "breadcrumb": "More Projects"
+      "title": "Projects | Jakub Dolének",
+      "description": "Projects by Jakub Dolének, including full-stack applications, automation, web projects, and older game development work.",
+      "breadcrumb": "Projects"
     },
     "person": {
       "jobTitle": "Full-stack Developer",
@@ -48,7 +48,7 @@
       "trail": ""
     },
     "subheadline": "Full-stack Developer",
-    "description": "I work as a <highlight>full-stack developer</highlight>, building internal solutions for business and <highlight>ERP processes</highlight>. I enjoy turning real operational requirements into tools built with <highlight>modern technologies</highlight>, focused on usability and <highlight>saving people time</highlight>. Outside work, I run a <highlight>self-hosted lab</highlight> on Linux servers with Proxmox and Docker.",
+    "description": "I work as a <highlight>full-stack developer</highlight>, building <highlight>internal applications</highlight> and <highlight>ERP system</highlight> extensions. I take solutions <highlight>from the first conversation with a user through deployment</highlight> and use them to simplify work for colleagues and customers. Outside work, I build my own projects and run a <highlight>homelab</highlight> on Linux with Proxmox and Docker, including this website.",
     "links": {
       "github": "GitHub",
       "about": "More about me"
@@ -101,7 +101,8 @@
     },
     "moreCta": "Show more projects",
     "morePage": {
-      "heading": "More Projects",
+      "heading": "Projects",
+      "additionalHeading": "More projects",
       "description": "Older and supporting projects that show additional technologies, experiments, and automation work outside the featured selection.",
       "backCta": "Back to projects"
     }
@@ -134,7 +135,7 @@
   },
   "about": {
     "title": "About me",
-    "intro": "I'm <highlight>Jakub Dolének</highlight>, a full-stack developer.\nAt work, I design and build <highlight>full-stack internal solutions</highlight> for business and <highlight>ERP processes</highlight>. I enjoy turning real operational requirements into practical tools built with <highlight>modern technologies</highlight>, with a focus on usability and <highlight>saving people time</highlight>.\nRecently, I have been deep into <highlight>self-hosting</highlight>. I run a lab on Linux servers with Proxmox and Docker.\nProgramming has been my hobby for many years, so I am always looking for new challenges and opportunities to learn.",
+    "intro": "Hi! My name is <highlight>Jakub Dolének</highlight>, and I am a full-stack developer and Applied Informatics student at FIM UHK.\nI enjoy building applications and tools that save people time and actually get used. At work, I take solutions from the first conversation with a user through technical design to deployment.\nIn my free time, I build <projectsLink>ambitious projects</projectsLink>, and lately I have been absorbed by <highlight>self-hosting</highlight>. I run a homelab on Linux with Proxmox and Docker, where I practice deployment, automation, and managing my own services.",
     "timelineHeading": "Experience & education",
     "timelineAt": "@",
     "experienceDivider": "Experience",
@@ -142,9 +143,9 @@
     "timeline": [
       {
         "id": "cloud-software-specialist",
-        "title": "Programmer",
-        "period": "2025 - Present",
-        "location": "Full-stack Developer",
+        "title": "Full-stack Developer",
+        "period": "January 14, 2025 - Present",
+        "location": "Programmer",
         "link": {
           "label": "TOP TECH, s.r.o., CZ",
           "href": "https://www.top-tech.cz/"
@@ -161,7 +162,7 @@
           "label": "Faculty of Informatics and Management",
           "href": "https://www.uhk.cz/en/fim"
         },
-        "description": "I study software engineering with focus on architecture, algorithms, and databases. I work on full-stack team projects and apply best practices in testing, design, and deployment.",
+        "description": "I study Applied Informatics with a focus on software engineering. The program extends my practical experience with deeper foundations in software architecture, algorithms, and databases. In team projects, I work on designing, implementing, and testing full-stack applications.",
         "tags": []
       },
       {
@@ -173,7 +174,7 @@
           "label": "hradebni.cz",
           "href": "https://www.hradebni.cz/"
         },
-        "description": "I gained a strong foundation in computer hardware, networking, and programming. During this period I also started building my first production-like software in C#.",
+        "description": "During my studies, I gained foundations in programming, computer networking, and hardware. I also built my first larger project in C# while studying there.",
         "tags": []
       }
     ],

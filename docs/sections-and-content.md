@@ -13,8 +13,10 @@
 - Card actions expose GitHub and demo links when present.
 
 ## Additional Routes
-- `/projects` uses `ProjectsSection` with additional project data and route-specific heading copy.
+- `/projects` renders featured projects first and additional projects below them.
+- The home-page "more projects" CTA opens `/projects` and scrolls to the additional project list.
 - `/about` renders localized intro text and timeline entries from `about.timeline`.
+- `/about` intro supports regular `<highlight>` spans and a `<projectsLink>` inline link to `/projects`.
 - Timeline entries support optional outbound links through `label` and `href`.
 
 ## Content Files

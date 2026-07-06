@@ -22,19 +22,25 @@ type ProjectActionLabels = {
 };
 
 type ProjectsSectionProps = {
+  alignOffset?: number;
   headingKey?: string;
   introKey?: string;
   items?: Project[];
   sectionId?: string;
+  showHeader?: boolean;
   showMoreLink?: boolean;
+  trackInScrollSpy?: boolean;
 };
 
 const ProjectsSectionComponent = ({
+  alignOffset = 0,
   headingKey = "projects.heading",
   introKey,
   items = featuredProjects,
   sectionId = "projects",
-  showMoreLink = true
+  showHeader = true,
+  showMoreLink = true,
+  trackInScrollSpy = true
 }: ProjectsSectionProps) => {
   const { t } = useTranslation();
   const projectCopy = t("projects.items", { returnObjects: true }) as ProjectCopyMap;
@@ -42,11 +48,18 @@ const ProjectsSectionComponent = ({
   const actionLabels = t("projects.actions", { returnObjects: true }) as ProjectActionLabels;
 
   return (
-    <section id={sectionId} data-section={sectionId} className="projects-river">
-      <header className="projects-river__header">
-        <h2 className="projects-river__title">{t(headingKey)}</h2>
-        {introKey ? <p className="projects-river__subtitle">{t(introKey)}</p> : null}
-      </header>
+    <section
+      id={sectionId}
+      data-section={trackInScrollSpy ? sectionId : undefined}
+      className="projects-river"
+      aria-label={showHeader ? undefined : t(headingKey)}
+    >
+      {showHeader ? (
+        <header className="projects-river__header">
+          <h2 className="projects-river__title">{t(headingKey)}</h2>
+          {introKey ? <p className="projects-river__subtitle">{t(introKey)}</p> : null}
+        </header>
+      ) : null}
 
       <ol className="projects-river__list">
         {items.map((project, index) => (
@@ -54,7 +67,7 @@ const ProjectsSectionComponent = ({
             key={project.id}
             project={project}
             copy={projectCopy[project.id]}
-            align={index % 2 === 0 ? "left" : "right"}
+            align={(index + alignOffset) % 2 === 0 ? "left" : "right"}
             techLabel={techLabel}
             actionLabels={actionLabels}
           />
