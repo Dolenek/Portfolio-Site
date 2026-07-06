@@ -21,13 +21,15 @@
 - Timeline entries support optional outbound links through `label` and `href`.
 
 ## Content Files
-- Project metadata and preview image paths: `src/data/projects.ts`.
-- Skill card metadata and icon paths: `src/data/skills.ts`.
+- Project metadata: `src/data/projects.ts`.
+- Generated project media manifest: `src/data/generated/media.ts`.
+- Skill card metadata and icon references: `src/data/skills.ts`.
 - Identity/contact links: `src/data/profile.ts`.
 - English copy: `src/i18n/locales/en/common.json`.
 - Czech copy: `src/i18n/locales/cs/common.json`.
 
 ## Asset Rules
-- Project preview images live under `public/projects/`.
-- Skill icons live under `public/skills/`.
-- Public asset paths in data files use root-relative paths such as `/projects/example.png`.
+- Large source images live under `assets/source/` and are not served directly.
+- `npm run images:optimize` writes responsive public assets under `public/assets/generated/`.
+- Project cards render generated AVIF/WebP sources with JPEG fallback.
+- Small static SVG skill icons live under `public/skills/`.

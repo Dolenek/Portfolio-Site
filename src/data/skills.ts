@@ -1,4 +1,6 @@
-﻿type SkillHighlightId =
+﻿import { skillImages } from "./generated/media";
+
+type SkillHighlightId =
   | "csharp"
   | "javascript"
   | "python"
@@ -62,6 +64,6 @@ export const skillHighlights: SkillHighlight[] = [
     id: "ai-assisted-engineering",
     initial: "AI",
     accent: "from-slate-900/85 via-stone-700/70 to-orange-500/75",
-    iconSrc: "/skills/ai-assisted-engineering.png"
+    iconSrc: skillImages.aiAssistedEngineering
   }
 ];

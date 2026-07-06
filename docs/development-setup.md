@@ -15,6 +15,7 @@ The Vite dev server runs at `http://localhost:5173` by default.
 
 ## Scripts
 - `npm run dev` starts the Vite dev server.
+- `npm run images:optimize` regenerates served image variants from `assets/source/`.
 - `npm run lint` runs ESLint with zero warnings allowed.
 - `npm run typecheck` runs TypeScript without emitting files.
 - `npm run build` runs TypeScript project build and Vite production build.

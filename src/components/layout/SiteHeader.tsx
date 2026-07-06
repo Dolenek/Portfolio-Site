@@ -66,7 +66,7 @@ export const SiteHeader = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-transparent backdrop-blur-md transition dark:border-slate-800/50 dark:bg-transparent">
+    <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-transparent transition md:backdrop-blur-sm dark:border-slate-800/50 dark:bg-transparent">
       <div className="container-xl flex h-16 items-center justify-between gap-4">
         <button
           type="button"
@@ -110,7 +110,7 @@ export const SiteHeader = () => {
       </div>
 
       {isMenuOpen ? (
-        <div id="mobile-nav" className="border-t border-slate-200/60 bg-white/90 backdrop-blur-md md:hidden dark:border-slate-800/60 dark:bg-slate-950/90">
+        <div id="mobile-nav" className="border-t border-slate-200/60 bg-white/95 md:hidden dark:border-slate-800/60 dark:bg-slate-950/95">
           <div className="container-xl flex flex-col gap-2 py-4">
             {NAV_ITEMS.map((item) => (
               <button

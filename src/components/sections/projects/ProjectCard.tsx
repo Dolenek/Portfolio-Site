@@ -37,13 +37,25 @@ const ProjectMedia = ({ project, projectTitle }: ProjectTitleProps) => {
   const mediaHref = project.links.demo ?? project.links.github;
   const mediaLabel = project.links.demo ? "Live" : "GitHub";
   const mediaContent = project.previewImage ? (
-    <img
-      src={project.previewImage}
-      alt={`${projectTitle} preview`}
-      className="projects-river__media-image"
-      loading="lazy"
-      decoding="async"
-    />
+    <picture>
+      {project.previewImage.sources.map((source) => (
+        <source
+          key={source.type}
+          type={source.type}
+          srcSet={source.srcSet}
+          sizes={project.previewImage?.sizes}
+        />
+      ))}
+      <img
+        src={project.previewImage.src}
+        alt={`${projectTitle} preview`}
+        className="projects-river__media-image"
+        loading="lazy"
+        decoding="async"
+        width={project.previewImage.width}
+        height={project.previewImage.height}
+      />
+    </picture>
   ) : null;
 
   if (!mediaHref) {

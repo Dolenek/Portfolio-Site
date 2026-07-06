@@ -1,3 +1,5 @@
+import { projectPreviewImages, type ResponsiveImage } from "./generated/media";
+
 type ProjectId =
   | "deadlock-patch-notes"
   | "levne-deskovky"
@@ -16,7 +18,7 @@ export type Project = {
     demo?: string;
   };
   previewGradient: [string, string];
-  previewImage?: string;
+  previewImage?: ResponsiveImage;
 };
 
 export const featuredProjects: Project[] = [
@@ -29,7 +31,7 @@ export const featuredProjects: Project[] = [
       demo: "https://www.deadlockpatchnotes.com"
     },
     previewGradient: ["#25364f", "#c27a3d"],
-    previewImage: "/projects/DeadlockPatchNotes.PNG"
+    previewImage: projectPreviewImages.deadlockPatchNotes
   },
   {
     id: "levne-deskovky",
@@ -40,7 +42,7 @@ export const featuredProjects: Project[] = [
       demo: "https://www.deskovkylevne.com"
     },
     previewGradient: ["#f9d976", "#b8325f"],
-    previewImage: "/projects/DeskovkyLevne.PNG"
+    previewImage: projectPreviewImages.levneDeskovky
   },
   {
     id: "kuchar-v-akci",
@@ -51,7 +53,7 @@ export const featuredProjects: Project[] = [
       demo: "https://www.receptyvakci.com"
     },
     previewGradient: ["#b9f6a5", "#1d4c3a"],
-    previewImage: "/projects/KucharVAkci.png"
+    previewImage: projectPreviewImages.kucharVAkci
   }
 ];
 
@@ -64,7 +66,7 @@ export const additionalProjects: Project[] = [
       github: "https://github.com/Dolenek/Portfolio-Site"
     },
     previewGradient: ["#3ab795", "#0b3d5d"],
-    previewImage: "/projects/SiteScreen.png"
+    previewImage: projectPreviewImages.portfolio
   },
   {
     id: "discord-automation",
@@ -74,7 +76,7 @@ export const additionalProjects: Project[] = [
       github: "https://github.com/Dolenek/Projekt-ERDB"
     },
     previewGradient: ["#4c6ef5", "#0e2344"],
-    previewImage: "/projects/ERDB.png"
+    previewImage: projectPreviewImages.discordAutomation
   },
   {
     id: "mobile-game-unity",
@@ -84,7 +86,7 @@ export const additionalProjects: Project[] = [
       github: "https://github.com/Dolenek/Magicians-Cauldron"
     },
     previewGradient: ["#5ec9ff", "#1b2a6b"],
-    previewImage: "/projects/UnityGame.png"
+    previewImage: projectPreviewImages.mobileGameUnity
   },
   {
     id: "smithing-master-bot",

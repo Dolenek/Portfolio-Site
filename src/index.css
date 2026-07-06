@@ -73,4 +73,28 @@
     content-visibility: auto;
     contain-intrinsic-size: 1px 960px;
   }
+
+  .reveal-on-view {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal-on-view--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-on-view {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      will-change: auto;
+    }
+  }
 }

@@ -1,13 +1,10 @@
 import { memo, useState } from "react";
 import { Github, Mail } from "lucide-react";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+import { RevealOnView } from "../common/RevealOnView";
 import { profile } from "../../data/profile";
-import { createStaggerFade } from "../../utils/animation";
-
-const CONTACT_CARD_VARIANTS = createStaggerFade({ distance: 20, duration: 0.6, stagger: 0 });
 
 const ContactSectionComponent = () => {
   const { t } = useTranslation();
@@ -25,12 +22,9 @@ const ContactSectionComponent = () => {
 
   return (
     <section id="contact" data-section="contact" className="container-xl">
-      <motion.div
+      <RevealOnView
         className="overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-lg shadow-slate-900/5 dark:border-slate-800/70 dark:bg-slate-900/80"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-120px" }}
-        variants={CONTACT_CARD_VARIANTS}
+        rootMargin="-120px 0px"
       >
         <div className="grid justify-items-stretch gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex w-full max-w-xl flex-col items-start text-left lg:max-w-none">
@@ -91,7 +85,7 @@ const ContactSectionComponent = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </RevealOnView>
     </section>
   );
 };

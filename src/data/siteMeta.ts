@@ -1,6 +1,8 @@
+import { siteImages } from "./generated/media";
+
 export const siteMeta = {
   baseUrl: "https://www.jakubdolenek.xyz",
-  socialImage: "/JD.png",
+  socialImage: siteImages.socialImage,
   locales: {
     cs: {
       htmlLang: "cs",

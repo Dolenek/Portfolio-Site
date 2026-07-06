@@ -52,10 +52,10 @@ const readRuntimeSignals = (): RuntimeSignals => {
 };
 
 const resolveAnimationBudget = (signals: RuntimeSignals) => {
-  let starCount = 96;
-  let cloudCount = 11;
-  let reduceVisualEffects = false;
-  let disableTwinkle = false;
+  let starCount = 48;
+  let cloudCount = 6;
+  let reduceVisualEffects = true;
+  let disableTwinkle = true;
 
   const shouldUseLeanProfile =
     signals.prefersReducedMotion ||
@@ -64,20 +64,20 @@ const resolveAnimationBudget = (signals: RuntimeSignals) => {
     (signals.isChrome && !signals.isBrave);
 
   if (shouldUseLeanProfile) {
-    starCount = 52;
-    cloudCount = 7;
+    starCount = 32;
+    cloudCount = 4;
     reduceVisualEffects = true;
     disableTwinkle = true;
   }
 
   if (signals.isSmallViewport) {
-    starCount = Math.min(starCount, 40);
-    cloudCount = Math.min(cloudCount, 5);
+    starCount = Math.min(starCount, 28);
+    cloudCount = Math.min(cloudCount, 3);
   }
 
   if (signals.prefersReducedMotion) {
-    starCount = Math.min(starCount, 20);
-    cloudCount = Math.min(cloudCount, 3);
+    starCount = Math.min(starCount, 16);
+    cloudCount = Math.min(cloudCount, 2);
   }
 
   return { starCount, cloudCount, reduceVisualEffects, disableTwinkle };

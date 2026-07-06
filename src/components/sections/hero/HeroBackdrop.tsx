@@ -14,6 +14,7 @@ type HeroBackdropProps = {
   stars: StarConfig[];
   reduceVisualEffects: boolean;
   disableTwinkle: boolean;
+  pauseAnimations: boolean;
 };
 
 const HeroBackdropComponent = ({
@@ -21,7 +22,8 @@ const HeroBackdropComponent = ({
   clouds,
   stars,
   reduceVisualEffects,
-  disableTwinkle
+  disableTwinkle,
+  pauseAnimations
 }: HeroBackdropProps) => {
   const isDarkTheme = theme === "dark";
   const renderStars = () =>
@@ -63,7 +65,8 @@ const HeroBackdropComponent = ({
     <div
       className={cn("hero-backdrop", {
         "hero-backdrop--reduced-effects": reduceVisualEffects,
-        "hero-backdrop--no-twinkle": disableTwinkle
+        "hero-backdrop--no-twinkle": disableTwinkle,
+        "hero-backdrop--paused": pauseAnimations
       })}
     >
       {isDarkTheme ? (
