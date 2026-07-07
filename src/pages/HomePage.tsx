@@ -102,7 +102,7 @@ export const HomePage = () => {
         path="/"
         structuredData={structuredData}
       />
-      <div className="space-y-28 pb-24 pt-12 sm:space-y-32 sm:pt-16">
+      <div className="space-y-28 pb-24 sm:space-y-32">
         <HeroSection />
         <div className="projects-section-band">
           <ProjectsSection />

@@ -111,7 +111,7 @@
       "heading": "Projects",
       "additionalHeading": "More projects",
       "description": "Older and supporting projects that show additional technologies, experiments, and automation work outside the featured selection.",
-      "backCta": "Back to projects"
+      "backCta": "Back home"
     }
   },
   "skills": {
@@ -186,7 +186,7 @@
         "tags": []
       }
     ],
-    "backCta": "Back to home"
+    "backCta": "Back home"
   },
   "footer": {
     "note": "© {{year}} Jakub Dolének."

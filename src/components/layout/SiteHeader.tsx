@@ -5,17 +5,27 @@ import { useTranslation } from "react-i18next";
 
 import { useScrollSpy } from "../../providers/useScrollSpy";
 import type { SectionId } from "../../providers/scrollSpyContext";
-import { profile } from "../../data/profile";
 import { cn } from "../../utils/cn";
 import { ThemeToggle } from "../common/ThemeToggle";
 import { LanguageToggle } from "../common/LanguageToggle";
 
 const NAV_ITEMS = [
   { id: "home", labelKey: "nav.home", kind: "home" as const },
-  { id: "projects", labelKey: "nav.projects", kind: "section" as const, target: "projects" as SectionId },
+  { id: "projects", labelKey: "nav.projects", kind: "route" as const, path: "/projects" },
   { id: "about", labelKey: "nav.about", kind: "route" as const, path: "/about" },
   { id: "contact", labelKey: "nav.contact", kind: "section" as const, target: "contact" as SectionId }
 ];
+
+const PROMPT_PATHS: Record<string, string> = {
+  "/": "~",
+  "/about": "/About",
+  "/projects": "/Projects"
+};
+
+const getHeaderPrompt = (pathname: string) => {
+  const promptPath = PROMPT_PATHS[pathname] ?? pathname;
+  return `kuba@Portfolio:${promptPath}`;
+};
 
 export const SiteHeader = () => {
   const { t } = useTranslation();
@@ -23,6 +33,7 @@ export const SiteHeader = () => {
   const location = useLocation();
   const { activeSection, scrollToSection, scrollToTop } = useScrollSpy();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerPrompt = getHeaderPrompt(location.pathname);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -71,9 +82,10 @@ export const SiteHeader = () => {
         <button
           type="button"
           onClick={() => handleNavigate(NAV_ITEMS[0])}
-          className="text-sm font-semibold uppercase tracking-widest text-slate-600 transition hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-300"
+          className="font-mono text-sm font-semibold text-slate-700 transition hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-200"
+          aria-label={t("nav.home")}
         >
-          {profile.name}
+          {headerPrompt}
         </button>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -133,4 +145,3 @@ export const SiteHeader = () => {
     </header>
   );
 };
-

@@ -4,6 +4,7 @@
 - `src/main.tsx` mounts the React app and initializes i18n.
 - `src/App.tsx` owns the browser router and route map.
 - `src/components/layout/AppLayout.tsx` provides the shared shell, skip link, header, footer, and background treatment.
+- `src/components/layout/SiteHeader.tsx` renders the primary navigation and a route-aware terminal prompt such as `kuba@Portfolio:~`.
 
 ## Routing
 - Routes are nested under `AppLayout`.

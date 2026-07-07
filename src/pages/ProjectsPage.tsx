@@ -64,7 +64,7 @@ export const ProjectsPage = () => {
       <div className="projects-section-band pt-12 sm:pt-16">
         <div className="container-xl mb-8">
           <button
-            onClick={() => navigate("/", { state: { scrollTo: "projects" } })}
+            onClick={() => navigate("/", { state: { scrollTo: "hero" } })}
             className="group inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-800/70 dark:bg-slate-900/80 dark:text-slate-200"
           >
             <ArrowLeft className="h-4 w-4 transition group-hover:-translate-x-1" />

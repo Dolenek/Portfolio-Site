@@ -111,7 +111,7 @@
       "heading": "Projekty",
       "additionalHeading": "Další projekty",
       "description": "Starší a doplňkové projekty, které ukazují další technologie, experimenty a automatizace mimo hlavní výběr.",
-      "backCta": "Zpět na projekty"
+      "backCta": "Zpět domů"
     }
   },
   "skills": {
@@ -186,7 +186,7 @@
         "tags": []
       }
     ],
-    "backCta": "Zpět na domů"
+    "backCta": "Zpět domů"
   },
   "footer": {
     "note": "© {{year}} Jakub Dolének."
