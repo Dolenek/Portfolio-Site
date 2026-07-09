@@ -60,15 +60,15 @@
     "items": {
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
-        "summary": "Komunitní archiv aktualizací Deadlocku se strukturovanou historií patchů, změn hrdinů, předmětů a schopností.",
-        "why": "Vytvořil jsem ho, protože oficiální changelogy se špatně porovnávají a obtížně se v nich orientuje.",
-        "impact": "Automatická Go ingest pipeline parsuje oficiální changelog zdroje do PostgreSQL read modelů, které obsluhuje Go API, Next.js frontend, RSS a veřejné JSON endpointy."
+        "summary": "Přehledný archiv aktualizací hry Deadlock, ve kterém lze na jednom místě procházet změny hrdinů, předmětů a schopností i jejich vývoj v čase.",
+        "why": "Vznikl proto, že jsou oficiální changelogy rozdělené mezi mnoho příspěvků a jejich porovnávání je zbytečně nepřehledné.",
+        "impact": "Next.js frontend využívá Go API nad PostgreSQL read modely. Go pipeline automaticky stahuje, parsuje a deduplikuje aktualizace; API má OpenAPI dokumentaci a aplikace běží v Dockeru."
       },
       "levne-deskovky": {
         "title": "Deskovky Levně",
-        "summary": "Český sledovač cen deskových her, který agreguje nabídky více prodejců, dostupnost, filtry a historii cen po jednotlivých e-shopech.",
-        "why": "Chtěl jsem mít praktický přehled o cenách deskovek a jejich vývoji.",
-        "impact": "Spojuje React frontend, Go read API, PostgreSQL read modely, volitelnou Redis cache a SEO prerendering do produkčně připraveného srovnávače."
+        "summary": "Český srovnávač cen deskových her, který na jednom místě ukazuje nabídky různých e-shopů, dostupnost a vývoj cen. Pomáhá rychle zjistit, kde hru koupit nejlevněji a zda je sleva opravdu výhodná.",
+        "why": "Vznikl, protože ruční porovnávání cen mezi obchody a hlídání oblíbených her zabíralo zbytečně moc času.",
+        "impact": "Frontend v Reactu a TypeScriptu komunikuje se samostatným Go API. PostgreSQL uchovává katalog a historii cen, Redis zrychluje opakované požadavky a aplikace má SEO prerendering, E2E testy v Playwrightu a Docker nasazení."
       },
       "discord-automation": {
         "title": "Automatizace pro Discord",
@@ -78,9 +78,9 @@
       },
       "kuchar-v-akci": {
         "title": "Recepty v Akci",
-        "summary": "Self-hosted platforma s recepty inspirovanými supermarketovými letáky a se strukturovanými surovinami i postupem.",
-        "why": "Chtěl jsem pomocí AI vytvářet recepty pouze z produktů, které jsou zrovna v akci, a ušetřit čas strávený v obchodě i vymýšlením, co uvařit.",
-        "impact": "Self-hosted n8n pipeline stahuje stránky letáků, převádí je na obrázky, extrahuje produkty do Supabase a generuje recepty pro React frontend."
+        "summary": "Platforma s recepty sestavenými z potravin, které jsou právě ve slevě v supermarketových letácích. Pomáhá naplánovat levnější nákup i to, co z něj uvařit.",
+        "why": "Vznikla z otázky, jak zjednodušit plánování nákupů a vaření bez procházení několika letáků a vymýšlení receptů.",
+        "impact": "React frontend je napojený na Supabase a self-hosted n8n pipeline. Ta každý den stahuje letáky, převádí je na obrázky, pomocí AI agentů extrahuje akční produkty, generuje recepty a publikuje je bez ručního zásahu."
       },
       "smithing-master-bot": {
         "title": "Bot s PyAutoGUI",

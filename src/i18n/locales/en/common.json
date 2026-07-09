@@ -60,15 +60,15 @@
     "items": {
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
-        "summary": "Community archive for Deadlock updates with structured patch history, hero changes, item timelines, and spell timelines.",
-        "why": "I built it because official changelogs are hard to compare and difficult to navigate.",
-        "impact": "An automated Go ingestion pipeline parses official changelog sources into PostgreSQL read models served by a Go API, Next.js frontend, RSS feeds, and public JSON endpoints."
+        "summary": "A clear archive of Deadlock updates where players can explore hero, item, and ability changes and follow how they evolve over time.",
+        "why": "It was built because official changelogs are spread across many posts and are unnecessarily difficult to compare.",
+        "impact": "The Next.js frontend uses a Go API backed by PostgreSQL read models. A Go pipeline automatically downloads, parses, and deduplicates updates; the API has OpenAPI documentation and the application runs in Docker."
       },
       "levne-deskovky": {
         "title": "Deskovky Levně",
-        "summary": "Czech board-game price tracker that aggregates offers from multiple stores, availability, filters, and per-store price history.",
-        "why": "I wanted a practical overview of board-game prices and how they change over time.",
-        "impact": "Combines a React frontend, Go read API, PostgreSQL read models, optional Redis cache, and SEO prerendering for a production-ready comparison site."
+        "summary": "A Czech board-game price comparison site that brings together offers from different stores, availability, and price history. It helps people quickly see where to buy a game for the best price and whether a discount is genuinely worthwhile.",
+        "why": "It was built because manually comparing store prices and keeping track of favourite games took too much time.",
+        "impact": "The React and TypeScript frontend communicates with a separate Go API. PostgreSQL stores the catalogue and price history, Redis speeds up repeated requests, and the app uses SEO prerendering, Playwright E2E tests, and Docker deployment."
       },
       "discord-automation": {
         "title": "Discord Automation",
@@ -78,9 +78,9 @@
       },
       "kuchar-v-akci": {
         "title": "Recepty v Akci",
-        "summary": "Self-hosted recipe platform inspired by supermarket flyers with structured ingredients and preparation steps.",
-        "why": "I wanted to use AI to create recipes only from products currently on sale, saving time in the store and when deciding what to cook.",
-        "impact": "A self-hosted n8n pipeline downloads flyer pages, converts them to images, extracts products into Supabase, and generates recipes for the React frontend."
+        "summary": "A recipe platform built around products currently on sale in supermarket flyers. It helps people plan a lower-cost shop and decide what to cook from it.",
+        "why": "It started with the question of how to simplify shopping and meal planning without reading several flyers and inventing recipes from scratch.",
+        "impact": "The React frontend connects to Supabase and a self-hosted n8n pipeline. Every day it downloads flyers, converts them to images, uses AI agents to extract discounted products, generates recipes, and publishes them without manual intervention."
       },
       "smithing-master-bot": {
         "title": "Bot using PyAutoGUI",

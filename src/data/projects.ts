@@ -25,7 +25,7 @@ export const featuredProjects: Project[] = [
   {
     id: "deadlock-patch-notes",
     year: "2026",
-    tech: ["Next.js", "TypeScript", "Go", "PostgreSQL", "Docker"],
+    tech: ["Next.js", "TypeScript", "Go", "PostgreSQL", "OpenAPI", "Docker"],
     links: {
       github: "https://github.com/Dolenek/DeadlockPatchNotes",
       demo: "https://www.deadlockpatchnotes.com"
@@ -36,7 +36,7 @@ export const featuredProjects: Project[] = [
   {
     id: "levne-deskovky",
     year: "2025",
-    tech: ["React", "TypeScript", "Go", "PostgreSQL", "Redis", "Tailwind CSS"],
+    tech: ["React", "TypeScript", "Go", "PostgreSQL", "Redis", "Playwright", "Docker"],
     links: {
       github: "https://github.com/Dolenek/DeskovkyLevne",
       demo: "https://www.deskovkylevne.com"
