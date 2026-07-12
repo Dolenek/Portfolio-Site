@@ -114,7 +114,7 @@ export const SiteHeader = () => {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-slate-200/50 bg-white/75 backdrop-blur-xl transition-[transform,background-color] duration-300 dark:border-slate-800/60 dark:bg-slate-950/75",
+        "sticky top-0 z-50 border-b border-slate-200/50 bg-transparent backdrop-blur-2xl transition-transform duration-300 dark:border-slate-800/60 dark:bg-transparent",
         isHeaderVisible ? "translate-y-0" : "-translate-y-full md:translate-y-0"
       )}
     >
@@ -164,7 +164,7 @@ export const SiteHeader = () => {
       {isMenuOpen ? (
         <div
           id="mobile-nav"
-          className="border-t border-slate-200/60 bg-white/70 backdrop-blur-xl md:hidden dark:border-slate-800/60 dark:bg-slate-950/70"
+          className="border-t border-slate-200/60 bg-transparent backdrop-blur-2xl md:hidden dark:border-slate-800/60 dark:bg-transparent"
         >
           <div className="container-xl flex flex-col gap-2 py-4">
             {NAV_ITEMS.map((item) => (
