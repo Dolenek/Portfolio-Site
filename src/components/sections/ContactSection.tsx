@@ -46,7 +46,7 @@ const ContactSectionComponent = () => {
             <button
               type="button"
               onClick={copyEmail}
-              className="group grid w-full grid-cols-[3rem_minmax(0,1fr)_auto] items-center gap-x-3 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70"
+              className="group grid w-full grid-cols-[3rem_minmax(0,1fr)] items-center gap-x-3 rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-4 transition hover:border-brand hover:shadow-lg hover:shadow-brand/10 dark:border-slate-800/70 dark:bg-slate-950/70 sm:grid-cols-[3rem_minmax(0,1fr)_auto]"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-lg shadow-slate-900/30 transition group-hover:scale-105 dark:bg-white dark:text-slate-900">
                 <Mail className="h-5 w-5" />
@@ -59,7 +59,7 @@ const ContactSectionComponent = () => {
                   {profile.email}
                 </p>
               </div>
-              <span className="justify-self-end rounded-full bg-brand/10 px-2.5 py-1.5 text-xs font-semibold text-brand">
+              <span className="hidden justify-self-end rounded-full bg-brand/10 px-2.5 py-1.5 text-xs font-semibold text-brand sm:inline-flex">
                 {copied ? t("contact.copied") : t("contact.copy")}
               </span>
             </button>

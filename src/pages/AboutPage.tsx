@@ -133,7 +133,7 @@ export const AboutPage = () => {
           </p>
         </RevealOnView>
 
-        <RevealOnView as="section" className="mt-16" rootMargin="-120px 0px">
+        <RevealOnView as="section" className="mt-16" disableOnMobile rootMargin="-120px 0px">
           <h2 className="sr-only">{t("about.timelineHeading")}</h2>
           <div className="mt-8 space-y-6">
             {timeline.map((item, index) => (

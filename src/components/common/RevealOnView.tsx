@@ -16,6 +16,7 @@ type RevealOnViewProps = HTMLAttributes<HTMLElement> & {
   as?: RevealTag;
   children: ReactNode;
   delay?: number;
+  disableOnMobile?: boolean;
   rootMargin?: string;
 };
 
@@ -52,6 +53,7 @@ export const RevealOnView = ({
   children,
   className,
   delay = 0,
+  disableOnMobile = false,
   rootMargin = "-80px 0px",
   style,
   ...rest
@@ -68,7 +70,12 @@ export const RevealOnView = ({
     {
       ...rest,
       ref: elementRef,
-      className: cn("reveal-on-view", hasRevealed && "reveal-on-view--visible", className),
+      className: cn(
+        "reveal-on-view",
+        hasRevealed && "reveal-on-view--visible",
+        disableOnMobile && "reveal-on-view--mobile-disabled",
+        className
+      ),
       style: revealStyle
     },
     children

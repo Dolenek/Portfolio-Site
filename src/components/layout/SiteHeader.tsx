@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -33,11 +34,45 @@ export const SiteHeader = () => {
   const location = useLocation();
   const { activeSection, scrollToSection, scrollToTop } = useScrollSpy();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const previousScrollY = useRef(0);
   const headerPrompt = getHeaderPrompt(location.pathname);
 
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsHeaderVisible(true);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
+    previousScrollY.current = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - previousScrollY.current;
+
+      if (!mobileQuery.matches || isMenuOpen || currentScrollY <= 16) {
+        setIsHeaderVisible(true);
+        previousScrollY.current = currentScrollY;
+      } else if (Math.abs(scrollDelta) >= 6) {
+        setIsHeaderVisible(scrollDelta < 0);
+        previousScrollY.current = currentScrollY;
+      }
+    };
+
+    const handleBreakpointChange = () => {
+      previousScrollY.current = window.scrollY;
+      setIsHeaderVisible(true);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    mobileQuery.addEventListener("change", handleBreakpointChange);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      mobileQuery.removeEventListener("change", handleBreakpointChange);
+    };
+  }, [isMenuOpen]);
 
   const handleNavigate = (item: (typeof NAV_ITEMS)[number]) => {
     if (item.kind === "route" && item.path) {
@@ -77,7 +112,12 @@ export const SiteHeader = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-transparent transition md:backdrop-blur-sm dark:border-slate-800/50 dark:bg-transparent">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b border-slate-200/50 bg-white/75 backdrop-blur-xl transition-[transform,background-color] duration-300 dark:border-slate-800/60 dark:bg-slate-950/75",
+        isHeaderVisible ? "translate-y-0" : "-translate-y-full md:translate-y-0"
+      )}
+    >
       <div className="container-xl flex h-16 items-center justify-between gap-4">
         <button
           type="button"
@@ -122,7 +162,10 @@ export const SiteHeader = () => {
       </div>
 
       {isMenuOpen ? (
-        <div id="mobile-nav" className="border-t border-slate-200/60 bg-white/95 md:hidden dark:border-slate-800/60 dark:bg-slate-950/95">
+        <div
+          id="mobile-nav"
+          className="border-t border-slate-200/60 bg-white/70 backdrop-blur-xl md:hidden dark:border-slate-800/60 dark:bg-slate-950/70"
+        >
           <div className="container-xl flex flex-col gap-2 py-4">
             {NAV_ITEMS.map((item) => (
               <button
