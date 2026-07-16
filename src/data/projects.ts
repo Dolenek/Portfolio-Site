@@ -54,10 +54,7 @@ export const featuredProjects: Project[] = [
     },
     previewGradient: ["#f9d976", "#b8325f"],
     previewImage: projectPreviewImages.levneDeskovky
-  }
-];
-
-export const additionalProjects: Project[] = [
+  },
   {
     id: "kuchar-v-akci",
     year: "2025",
@@ -68,7 +65,10 @@ export const additionalProjects: Project[] = [
     },
     previewGradient: ["#b9f6a5", "#1d4c3a"],
     previewImage: projectPreviewImages.kucharVAkci
-  },
+  }
+];
+
+export const additionalProjects: Project[] = [
   {
     id: "portfolio",
     year: "2025",

@@ -61,7 +61,7 @@
       "chat-context": {
         "title": "Chat Context",
         "summary": "A self-hosted web and desktop app for asking an LLM contextual questions over conversation archives, with answers grounded in original messages.",
-        "why": "I built it after my history passed two million messages and keyword search could no longer surface the information or context I needed.",
+        "why": "I built it after my history passed three million messages and keyword search could no longer surface the information or context I needed.",
         "impact": "A Python FastAPI backend combines hybrid RAG, full-text and vector retrieval, and tool calling. It atomically publishes generations across multiple embedding indexes, while one JavaScript UI runs in Electron and on the authenticated web."
       },
       "deadlock-patch-notes": {
