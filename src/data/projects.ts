@@ -1,6 +1,7 @@
 import { projectPreviewImages, type ResponsiveImage } from "./generated/media";
 
 type ProjectId =
+  | "chat-context"
   | "deadlock-patch-notes"
   | "levne-deskovky"
   | "kuchar-v-akci"
@@ -23,6 +24,16 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
+    id: "chat-context",
+    year: "2026",
+    tech: ["Electron", "JavaScript", "Python", "FastAPI", "PostgreSQL", "pgvector", "Docker"],
+    links: {
+      github: "https://github.com/Dolenek/ChatContextRAG"
+    },
+    previewGradient: ["#15243a", "#1aa69a"],
+    previewImage: projectPreviewImages.chatContext
+  },
+  {
     id: "deadlock-patch-notes",
     year: "2026",
     tech: ["Next.js", "TypeScript", "Go", "PostgreSQL", "OpenAPI", "Docker"],
@@ -43,7 +54,10 @@ export const featuredProjects: Project[] = [
     },
     previewGradient: ["#f9d976", "#b8325f"],
     previewImage: projectPreviewImages.levneDeskovky
-  },
+  }
+];
+
+export const additionalProjects: Project[] = [
   {
     id: "kuchar-v-akci",
     year: "2025",
@@ -54,10 +68,7 @@ export const featuredProjects: Project[] = [
     },
     previewGradient: ["#b9f6a5", "#1d4c3a"],
     previewImage: projectPreviewImages.kucharVAkci
-  }
-];
-
-export const additionalProjects: Project[] = [
+  },
   {
     id: "portfolio",
     year: "2025",

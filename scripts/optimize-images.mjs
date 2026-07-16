@@ -11,6 +11,7 @@ const PROJECT_WIDTHS = [480, 800, 1200, 1600];
 const PROJECT_SIZES = "(max-width: 900px) calc(100vw - 2rem), 720px";
 
 const projectImages = [
+  ["chatContext", "chat-context", "chat-context.png"],
   ["deadlockPatchNotes", "deadlock-patch-notes", "deadlock-patch-notes.png"],
   ["levneDeskovky", "levne-deskovky", "levne-deskovky.png"],
   ["kucharVAkci", "kuchar-v-akci", "kuchar-v-akci.png"],

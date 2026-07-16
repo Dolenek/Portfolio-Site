@@ -58,6 +58,12 @@
   "projects": {
     "heading": "Projekty",
     "items": {
+      "chat-context": {
+        "title": "Chat Context",
+        "summary": "Self-hosted webová a desktopová aplikace pro kontextové dotazování LLM nad archivem konverzací s odpověďmi podloženými původními zprávami.",
+        "why": "Vznikla, když moje historie přesáhla dva miliony zpráv a běžné hledání podle klíčových slov nedokázalo najít potřebné informace ani jejich souvislosti.",
+        "impact": "Python backend ve FastAPI kombinuje hybridní RAG, fulltextové a vektorové vyhledávání a tool calling. Generace několika embedding indexů publikuje atomicky. JavaScriptové UI běží v Electronu i na zabezpečeném webu."
+      },
       "deadlock-patch-notes": {
         "title": "Deadlock Patch Notes",
         "summary": "Přehledný archiv aktualizací hry Deadlock, ve kterém lze na jednom místě procházet změny hrdinů, předmětů a schopností i jejich vývoj v čase.",

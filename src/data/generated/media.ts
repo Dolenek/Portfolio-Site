@@ -12,6 +12,22 @@ export type ResponsiveImage = {
 };
 
 export const projectPreviewImages = {
+  chatContext: {
+    src: "/assets/generated/projects/chat-context-1600.jpeg",
+    width: 1600,
+    height: 833,
+    sizes: "(max-width: 900px) calc(100vw - 2rem), 720px",
+    sources: [
+      {
+        type: "image/avif",
+        srcSet: "/assets/generated/projects/chat-context-480.avif 480w, /assets/generated/projects/chat-context-800.avif 800w, /assets/generated/projects/chat-context-1200.avif 1200w, /assets/generated/projects/chat-context-1600.avif 1600w"
+      },
+      {
+        type: "image/webp",
+        srcSet: "/assets/generated/projects/chat-context-480.webp 480w, /assets/generated/projects/chat-context-800.webp 800w, /assets/generated/projects/chat-context-1200.webp 1200w, /assets/generated/projects/chat-context-1600.webp 1600w"
+      }
+    ]
+  },
   deadlockPatchNotes: {
     src: "/assets/generated/projects/deadlock-patch-notes-1600.jpeg",
     width: 1600,
